@@ -1,0 +1,30 @@
+---
+title: ""
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    footer: '<span style="color:#ee6331;">github.com/skaltman/conf-26</span>'
+editor: source
+knitr:
+  opts_chunk:
+    echo: true
+    collapse: true
+    comment: "#>"
+---
+
+## The prime directive
+
+
+## Problem nuance
+
+
+## Initial resolution: not a loop
+
+
+## Posit Assistant
+
+
+## Problem callback
+
+
+## commons
