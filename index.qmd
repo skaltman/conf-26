@@ -72,17 +72,30 @@ Maybe this is when the screenshot lands? Or we make a nod to Tareef's rstudio::c
 ![](figures/prime-directive-search-result.png){.rounded}
 
 :::notes
-Hard to overstate how often this comes up internally.
+This comes up internally a _lot_. Admittedly, many of those mentions are from our CEO.
+:::
+
+:::footer
 :::
 
 ##
 
 ![](figures/tareef-2019-prime-directive.png){.rounded}
 
+:::footer
+:::
+
+:::notes
+...he's been harping on the PD for a while
+:::
+
 ##
 
 ![](figures/tareef-2019-rate-of-change.png){.rounded}
 
+:::
+As aside: we were overwhelmed by how fast things were changing even back then.
+:::
 
 ## Problem nuance
 
