@@ -12,8 +12,55 @@ knitr:
     comment: "#>"
 ---
 
+##
+
+::: notes
+Simon starts off with the fake story about the first time he listened to this test set episode.
+:::
+
+##
+
 ![](figures/rogue-analysis-in-cursor.png){.rounded}
 
+::: notes
+Becoming normal to spin up a coding agent, ask a question, and go with whatever the answer is. Sets a low bar for reproducibility, transparency, and correctness.
+:::
+
+##
+
+:::notes
+The prime directive is very important at Posit. (Screenshot of the many slack or confluence listings with this phrase? But they don't show a total count in the UI.) Maybe a reference to Star Trek (and a joke about how I didn't actually know that was a thing.) 
+:::
+
+# The Prime Directive
+
+## The Prime Directive {.quote-slide}
+
+> ::: {.fragment}
+> _The complexity of the data processes and of the computations applied to them mean that those who receive the results of modern data analysis have limited opportunity to verify the results by direct observation._
+> ::: 
+>
+> ::: {.fragment}
+> _Users of the analysis have no option but to trust the analysis, and by extension the software that produced it._
+> ::: 
+> 
+> ::: {.fragment}
+> _Both the data analyst and the software provider therefore have a strong responsibility to produce a result that is trustworthy, and, if possible, one that can be_ shown _to be trustworthy._
+> ::: 
+>
+> ::: {.fragment}
+> _...This places an obligation on all creators of software to program is such a way that the computations can be understood and trusted. This obligation I label the_ Prime Directive.
+> ::: 
+
+:::notes
+re: the second-to-last point, this is "You don't have to trust me, here's how to reproduce it yourself."
+
+Maybe this is when the screenshot lands? Or we make a nod to Tareef's rstudio::conf(2019) talk?
+:::
+
+:::footer
+<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
+:::
 
 ## Problem nuance
 
