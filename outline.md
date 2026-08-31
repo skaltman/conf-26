@@ -1,6 +1,4 @@
-# Outline
-
-### Problem setup - the prime directive (Simon)
+# Problem setup - the prime directive (Simon)
 
 <!-- Sara Altman: main idea: the prime directive is in trouble! -->
 
@@ -17,11 +15,9 @@
 - The prime directive is losing/in danger
   - Cite Joe: "In the battle between convenience and correctness, convenience is winning"
 
-### Problem nuance I - the prime directive has always faced threats (Simon)
+# Problem nuance I - the prime directive has always faced threats (Simon)
 
-<!-- Simon Couch: maybe Simon, too
-
-setup might be 3-4 min -->
+<!-- setup might be 3-4 min -->
 
 <!-- Sara Altman: main idea: earlier point was an overstatement
 
@@ -46,30 +42,40 @@ Here, then, are two motivating principles: the mission, which is bold exploratio
   - Our LLM-related tools work much the same
 - The VPs vibe analyzing, claude hallucinating are new threats, but the presence of threats is not new
 
-### Problem nuance II - and so why go on at all? The mission (Sara)
+# Problem nuance II - the mission (Sara)
 
-- Transitional sentence:
-  - Point to the unsaid thing. All this talk about how difficult it is, why approach AI at all? This is a choice that we made. And it’s a choice everyone (or most) are making
+## The mission
+
+- [needs opening joke]
     <!-- Sara Altman: I've heard this, people come up to me and talk to me about this -->
-    <!-- Sara Altman: exploration has led me to where I am
+- And so you might be thinking: why are we doing this at all?!
+  - Why wade into the AI waters, if things were already bad and now we've introduced this unpredictable, possibly horrific tool that makes mistakes, and hallucinates, and uses too many em dashes, and is, in some ways, making our lives a little bit worse.  
+- There are a few reasons, but first, there's actually a second part of Chamber's discussion of the prime directive (and star trek's).
+- Prime directives don't live on its own. The reason it's there is to govern a mission often in tension with the prime directive.
+- So what's that mission? 
+- Chambers: “Exploration is our mission; we and those who use our software want to find new paths to understand the data and the underlying processes.”
+- Note that this isn't _Posit's_ mission, it's not the one you'll find on our website. 
+- But I do think it is sort of our collective mission, of me and Simon and most of you all in this room today.
+  - "to find new paths to understand the data and the underlying processes."
 
-    finding new paths to understand the data -->
-    <!-- Sara Altman: helping others to learn
-    laid the groundwork that I am a teacher. if the materials aren't working it's not the students work, it's the materials' -->
-    <!-- Sara Altman: got into data science because I learned R and suddenly had the tools to explore. satisfying feeling -->
-  - The PD does not live on its own. It governs a mission
-  - The tension between the two is purposeful
-- There’s a second part of Chambers’s intro (and star trek): the mission
-  - “Exploration is our mission; we and those who use our software want to find new paths to understand the data and the underlying processes.”
-  - Then put story about learning R/data science
-- Posit explores
-  - Quick hit example. You see that in x, y, z. (sql). Give people something to recognize and will make people smile and excited.
-- Also our users explore
-  - Instead of fighting those VPs vibe-analyzing (or x person, y person), we need to work with them
-    - If Simon hasn’t done it before, callback or do it now where we have empathy for them
-    - Lens of seeing people vibe coding as a positive because they are more interested than they have been before
-  - There’s nothing wrong with VPs wanting to answer questions with data – they are part of the mission
-  - Think about the actual environment people work in, and the entire agent-user system
+## Exploration
+
+- For me and many of you all I assume, exploration is not abstract.
+- Exploration and curiosity I imagine are what got most of us into this room today. Maybe it was curiosity about a scientific field and you got into data analysis that way, or curiosity about the tools themselves, or about how computers work, or about statistics
+- For me it was this. I have always been interested in many things at once. 
+- Data is great for this. There's data on everything!
+- Without the right tools, though your curiosity is limited. 
+- Looking at a dataset felt like looking at the ocean from above. You know things are there, that's there's in incredible amount there, but you can't see it. You have know when to access it. 
+- Even with knowledge about statistics and some knowledge of R as an undergrad, I felt like this. 
+- But when I learned the R and tidyverse and data science as a grad student, it felt like the ocean revealed itself to me. 
+- These tools gave me the ability to see the complexity below the surface and to dig into into data set on any topic -- on x, y, z -- and learn about the world 
+- Turn the data over in your hands and say huh that’s interesting and keep digging. Feeling curiosity and wonder just from sitting at my 2016 macbook in a florescently lit classroom typing -- hand typing! if you can imagine -- dplyr and ggplot code 
+- The tools enable the curiosity. exploration is the mission -- for the tools users and the tool makers
+
+## So why does Posit make tools for AI? 
+
+- Because that's the mission. Exploration, discovering of new ways to understand data. 
+- And the task is to do that while still fulfilling the prime directive. 
 
 ### An initial resolution (Sara)
 
