@@ -139,7 +139,7 @@ Because the prime directive has always been under threat, and reproducibility ha
 ![](figures/conviviality-spreadsheeting-error.png){.rounded}
 
 :::footer
-https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business
+<span style="color:#ee6331;">https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business</span>
 :::
 
 :::notes
@@ -160,7 +160,7 @@ https://www.louisepryor.com/2004/01/10/fanniemae/
 :::
 
 :::footer
-https://web.archive.org/web/20120917174753/https://www.pcworld.com/article/127189/article.html
+<span style="color:#ee6331;">https://web.archive.org/web/20120917174753/https://www.pcworld.com/article/127189/article.html</span>
 :::
 
 ##
