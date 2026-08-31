@@ -109,9 +109,16 @@ The code that models write often lives in a temp-file, and unless the user asks 
 
 ##
 
-> _"In the battle between convenience and correctness, convenience is winning"_ 
->
->     - A colleague
+<br><br><br>
+
+::: {.quote}
+_<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
+:::
+
+
+::: {.attribution}
+\- A colleague
+:::
 
 :::notes
 This is one possible way to summarize this effect
@@ -160,9 +167,15 @@ https://web.archive.org/web/20120917174753/https://www.pcworld.com/article/12718
 
 . . .
 
-> _"In the battle between convenience and correctness, convenience is winning"_ 
->
->     - A colleague
+<br><br><br>
+
+::: {.quote}
+_<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
+:::
+
+::: {.attribution}
+\- A colleague
+:::
 
 :::notes
 So, the Prime Directive has always been under threat. That said, convenience and correctness cannot be in a _battle_ (in the same way that you cannot be in a battle with your VP lol).

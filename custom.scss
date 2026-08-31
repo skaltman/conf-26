@@ -11,3 +11,23 @@
   font-size: 0.85em;
   font-weight: 300;
 }
+
+.reveal .quote {
+  font-size: 1.4em;
+  text-align: left;
+}
+
+.reveal .quote p {
+  position: relative;
+}
+
+.reveal .quote .opening-quote {
+  position: absolute;
+  right: 100%;
+}
+
+.reveal .attribution {
+  width: 80%;
+  margin-inline: auto;
+  text-align: right;
+}
