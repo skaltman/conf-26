@@ -1,8 +1,40 @@
 /*-- scss:rules --*/
 
+.reveal .slides section:has(img.rounded) {
+  height: 100%;
+}
+
 .reveal img.rounded {
-  display: block;
-  margin-inline: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
   border-radius: 0.75rem;
   box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%);
+}
+
+.reveal .quote-slide blockquote {
+  font-size: 0.85em;
+  font-weight: 300;
+}
+
+.reveal .quote {
+  font-size: 1.4em;
+  text-align: left;
+}
+
+.reveal .quote p {
+  position: relative;
+}
+
+.reveal .quote .opening-quote {
+  position: absolute;
+  right: 100%;
+}
+
+.reveal .attribution {
+  width: 80%;
+  margin-inline: auto;
+  text-align: right;
 }
