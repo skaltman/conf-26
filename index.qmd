@@ -12,7 +12,7 @@ knitr:
     comment: "#>"
 ---
 
-## The prime directive
+![](figures/rogue-analysis-in-cursor.png){.rounded}
 
 
 ## Problem nuance
