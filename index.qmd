@@ -111,11 +111,46 @@ Let's revisit this with the prime directive in mind...
 >
 >     - A colleague
 
-:::
+:::notes
 This is one possible way to summarize this effect
 :::
 
-## Problem nuance
+##
+
+:::notes
+Woah there buddy. Battle might be an overstatement.
+
+Things were not perfect before. Why would Tareef have been speaking about the PD in 2019? Why would John Chambers have written about it in 2008?
+
+Because the prime directive has always been under threat, and reproducibility has never been the norm.
+:::
+
+##
+
+![](figures/conviviality-spreadsheeting-error.png){.rounded}
+
+:::footer
+https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business
+:::
+
+:::notes
+Tareef might have had Conviviality in mind, which had been mistakely reporting healthy financials for years due to a "spreadsheet arithmetic error."
+
+> '£5.2m of that £14m came thanks to “a material error in the financial forecasts”. The error, it later admitted, was “a spreadsheet arithmetic error”.'
+:::
+
+##
+
+![](figures/moodys-modeling-error.png){.rounded}
+
+:::notes
+And, in 2008, John Chambers might have had Moody's in mind. The company
+> 'Moody’s awarded incorrect triple-A ratings to billions of dollars worth of a type of complex debt product due to a bug in its computer models'
+:::
+
+:::footer
+https://www.ft.com/content/0c82561a-2697-11dd-9c95-000077b07658
+:::
 
 
 ## Initial resolution: not a loop
