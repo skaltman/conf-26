@@ -37,7 +37,7 @@ The prime directive is very important at Posit. (Screenshot of the many slack or
 ## The Prime Directive {.quote-slide}
 
 > ::: {.fragment}
-> _The complexity of the data processes and of the computations applied to them mean that those who receive the results of modern data analysis have limited opportunity to verify the results by direct observation._
+> _...those who receive the results of modern data analysis have limited opportunity to verify the results by direct observation._
 > ::: 
 >
 > ::: {.fragment}
@@ -49,11 +49,13 @@ The prime directive is very important at Posit. (Screenshot of the many slack or
 > ::: 
 >
 > ::: {.fragment}
-> _...This places an obligation on all creators of software to program is such a way that the computations can be understood and trusted. This obligation I label the_ Prime Directive.
+> _...This obligation I label the_ Prime Directive.
 > ::: 
 
 :::notes
 re: the second-to-last point, this is "You don't have to trust me, here's how to reproduce it yourself."
+
+https://books.google.com.mt/books?id=UXneuOIvhEAC&lpg=PP1&pg=PA1#v=onepage&q&f=false
 
 Maybe this is when the screenshot lands? Or we make a nod to Tareef's rstudio::conf(2019) talk?
 :::
@@ -61,6 +63,11 @@ Maybe this is when the screenshot lands? Or we make a nod to Tareef's rstudio::c
 :::footer
 <span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
 :::
+
+##
+
+![](figures/tareef-2019-rate-of-change.png){.rounded}
+
 
 ## Problem nuance
 
