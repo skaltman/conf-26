@@ -97,6 +97,24 @@ This comes up internally a _lot_. Admittedly, many of those mentions are from ou
 As aside: we were overwhelmed by how fast things were changing even back then.
 :::
 
+##
+
+![](figures/rogue-analysis-in-cursor.png){.rounded}
+
+::: notes
+Let's revisit this with the prime directive in mind...
+:::
+
+##
+
+> _"In the battle between convenience and correctness, convenience is winning"_ 
+>
+>     - A colleague
+
+:::
+This is one possible way to summarize this effect
+:::
+
 ## Problem nuance
 
 
