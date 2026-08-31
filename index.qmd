@@ -93,7 +93,7 @@ This comes up internally a _lot_. Admittedly, many of those mentions are from ou
 
 ![](figures/tareef-2019-rate-of-change.png){.rounded}
 
-:::
+:::footer
 As aside: we were overwhelmed by how fast things were changing even back then.
 :::
 
