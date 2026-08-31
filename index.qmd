@@ -154,6 +154,27 @@ https://www.louisepryor.com/2004/01/10/fanniemae/
 https://web.archive.org/web/20120917174753/https://www.pcworld.com/article/127189/article.html
 :::
 
+##
+
+:::notes
+So, the Prime Directive has always been under threat. That said, convenience and correctness cannot be in a _battle_ (in the same way that you cannot be in a battle with your VP lol).
+
+The solution then, as it is now, it to make software that is both correct and also very convenient to use, both for the analyst and the end user of the analysis. This is the rationale behind our investment in OSS for R and Python, behind Shiny, behind Quarto, etc.
+
+To publish a Shiny app, you click one button that says publish in your IDE and then reproducible R code, with package versions backed by renv, is hosted on Connect and available for your collaborators.
+:::
+
+##
+
+![](figures/rogue-analysis-in-cursor.png){.rounded}
+
+:::notes
+Now, I promise this is the last time I'll show this screenshot.
+
+With AI, a new technology means that the Prime Directive is under threat in a new way. The code that models write often lives in a temp-file, and unless the user asks for it, is often not backed by an explicit registry of package versions. The chat transcripts from which they could be recovered are, by default, deleted after 30 or 60 days. And even with a reproducible analysis, the model might hallucinate findings, generalize findings beyond what the evidence actually shows, etc.
+
+How can we make software that is both correct _and_ convenient? Can we satisfy Chambers' Prime Directive while also making use of the leverage that these new tools provide?
+:::
 
 ## Initial resolution: not a loop
 
