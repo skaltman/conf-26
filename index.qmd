@@ -66,6 +66,21 @@ Maybe this is when the screenshot lands? Or we make a nod to Tareef's rstudio::c
 
 ##
 
+. . .
+
+<br><br>
+![](figures/prime-directive-search-result.png){.rounded}
+
+:::notes
+Hard to overstate how often this comes up internally.
+:::
+
+##
+
+![](figures/tareef-2019-prime-directive.png){.rounded}
+
+##
+
 ![](figures/tareef-2019-rate-of-change.png){.rounded}
 
 
