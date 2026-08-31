@@ -34,6 +34,12 @@ The prime directive is very important at Posit. (Screenshot of the many slack or
 
 # The Prime Directive
 
+:::notes
+Now, I've actually never seen Star Trek, and only in preparing for this talk did I learn it was a Star Trek reference when I typed just those two words into Google and couldn't find what I was looking for.
+
+I was looking for what _I_ knew as the Prime Directive, which is...
+:::
+
 ## The Prime Directive {.quote-slide}
 
 > ::: {.fragment}
@@ -56,8 +62,6 @@ The prime directive is very important at Posit. (Screenshot of the many slack or
 re: the second-to-last point, this is "You don't have to trust me, here's how to reproduce it yourself."
 
 https://books.google.com.mt/books?id=UXneuOIvhEAC&lpg=PP1&pg=PA1#v=onepage&q&f=false
-
-Maybe this is when the screenshot lands? Or we make a nod to Tareef's rstudio::conf(2019) talk?
 :::
 
 :::footer
@@ -175,9 +179,9 @@ To publish a Shiny app, you click one button that says publish in your IDE and t
 :::notes
 Now, I promise this is the last time I'll show this screenshot.
 
-With AI, a new technology means that the Prime Directive is under threat in a new way. 
+AI, as a new technology, means that the Prime Directive is under threat in a new way. 
 
-How can we make software that is both correct _and_ convenient? Can we satisfy Chambers' Prime Directive while also making use of the leverage that these new tools provide?
+How can we make software that is both correct _and_ convenient? Can we satisfy Chambers' Prime Directive while also making use of the leverage that these new tools provide? This is something that we've been focused on at Posit for the last year and change.
 :::
 
 ## Initial resolution: not a loop
