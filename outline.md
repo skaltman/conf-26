@@ -1,7 +1,5 @@
 # Problem setup - the prime directive (Simon)
 
-<!-- Sara Altman: main idea: the prime directive is in trouble! -->
-
 - Your VP is vibe-coding an analysis in Cursor right now
   <!-- Simon Couch: "it was a cold may day, i went out on a jog, cold swim in lake michigan"
   - increasingly absurd / fantastical
@@ -17,23 +15,6 @@
 
 # Problem nuance I - the prime directive has always faced threats (Simon)
 
-<!-- setup might be 3-4 min -->
-
-<!-- Sara Altman: main idea: earlier point was an overstatement
-
-it has always been threatened -->
-
-<!-- Sara Altman: I stray note I had somewhere else:
-
-the second part of the introduction -- the mission to explore -- fits in well too
-
-"The prime directive of the space explorers, notice, was not their mission but rather an important safeguard to apply in pursuing that mission. Their mission was to explore, to "boldly go where no one has gone before", and
-all that. That's really our mission too: to explore how software can add new abilities for data analysis. And our own prime directive, likewise, is an important caution and guiding principle as we create the software to support our mission.
-Here, then, are two motivating principles: the mission, which is bold exploration; and the prime directive, trustworthy software. We will examine in the rest of the book how to select and program software for data analysis, with these principles as guides. A few aspects of R will prove to be especially relevant; let's examine those next." -->
-
-<!-- Simon Couch: Or is this the tension between the mission and the PD? Probably not–keep for later
-“Posit shouldn’t be doing this bc of the Prime Directive” -->
-
 - This framing might be an overstatement; battle might be an overstatement
 - We didn’t live in a perfect world where everyone followed the prime directive before LLMs (There were prior adversaries to the prime directive)
   - Spreadsheeting? Or some story that speaks to the other ways this went wrong before, esp. if it’s my own experience
@@ -47,9 +28,8 @@ Here, then, are two motivating principles: the mission, which is bold exploratio
 ## The mission
 
 - [needs opening joke]
-    <!-- Sara Altman: I've heard this, people come up to me and talk to me about this -->
 - And so you might be thinking: why are we doing this at all?!
-  - Why wade into the AI waters, if things were already bad and now we've introduced this unpredictable, possibly horrific tool that makes mistakes, and hallucinates, and uses too many em dashes, and is, in some ways, making our lives a little bit worse.  
+  - Why wade into AI, if things were already bad and now we've introduced this unpredictable, possibly horrific tool that makes mistakes, and hallucinates, and uses too many em dashes, and is, in some ways, making our lives a little bit worse.  
 - There are a few reasons, but first, there's actually a second part of Chamber's discussion of the prime directive (and star trek's).
 - Prime directives don't live on its own. The reason it's there is to govern a mission often in tension with the prime directive.
 - So what's that mission? 
@@ -75,44 +55,51 @@ Here, then, are two motivating principles: the mission, which is bold exploratio
 ## So why does Posit make tools for AI? 
 
 - Because that's the mission. Exploration, discovering of new ways to understand data. 
+- AI is part of that exploration, not just because we want to explore it, but because our users are too. 
+- Want to meet them where they are with tools that make their work more correct and trustworthy, not less.
 - And the task is to do that while still fulfilling the prime directive. 
 
-### An initial resolution (Sara)
+
+# Posit Assistant lead-in: Adding a person is not enough (Sara)
+
+## A common thought
 
 - Here’s a common thought about AI
   - It’s untrustworthy, but useful.
-    - Possibly as an example of untrustworthiness: bluffbench/bluffbench2
-    - Example of usefulness: but they wrote the code to make the plots
-    <!-- Sara Altman: if not doing untrustworthy example, don't do usefulness example -->
-  - To make it trustworthy, humans need to verify the output from or supervise agents
-    - This is even pretty much what we said about Databot a year ago
-    - Show flotation device post. This was one of the first things I did on the AI team
-  - “Human in the loop”
-    <!-- Sara Altman: "slap a human on it" -->
-- There’s a few problems with this approach
-  <!-- Sara Altman: bring in things not from AI. bring in fun evidence from psychology about why this wouldn't work
+  <!-- Possible place to add bluffbench/bluffbench2 results. If we do that, also need a counter example of usefulness.-->
+  - To make it trustworthy, we need people to to verify the output from or supervise agents.
+  - This is a sort of naive "human in the loop" approach. Or what you might call the "slap a human on it" approach.
 
-  always click accept cookies -->
-  -
-    <!-- Sara Altman: call back to education in cognitive science
+## Databot 
 
-    everything that I learned is that this is the wrong place to put a human, presence of a human does not guarantee correctness -->
-    <!-- Sara Altman: or early experience with reproducibility/replicability crisis work.
+- And this is close to how we framed the risks of data analysis agents a year ago. 
+- Databot flotation device post. This was one of the first things I worked on the AI team. 
+- The message was basically: Databot is powerful, but can be wrong. Don't abandon your expertise. 
+- Now Databot did a bunch of things and did them well. Our framing, however, put most of the responsibility for correctness on the user, to be aware of the risks, to be skeptical of the output. Underneath it was really one implicit strategy: read the code.
+- We didn't really articulate a strategy for helping the user be correct. The strategy was just sort of "make sure you, the human, are there"
 
-    the presence of a human does not guarantee correctness -->
-  - Humans don’t excel at supervision and verification when it’s the only thing they do.
-    - Auto mode example
-  - Human decision-making is not a fixed process. Interaction style with the agent, how much they trust the agent, how frequently requests come in, etc. can affect how well this process goes. The presence of a human is not a panacea.
-- Transition: so AI is useful but not trustworthy, and humans are useful, but not trustworthy
-- So if we are going to move beyond human in a loop, we need a different idea: ecosystem
-  - Human affects the agent, agent affects the human
-- You are in an ecosystem with an agent, not a loop
-  - You were in an ecosystem before with various tools and players, now there’s just something new
-  - Figure out how to make that ecosystem function under the prime directive
-- Figure out how to make that ecosystem function well
-  - To fulfill the mission while still obeying the prime directive
-    - *Help the model not be wrong and make it less bad if it is wrong*
-      <!-- Sara Altman: the presence of a human is not enough. here's some ways we've designed Posit Assistant that we think are great -->
+## This doesn't work 
+
+- But just having a human there (the "slap a human on it" approach) is not a correctness strategy.
+- The specifics of the interaction matter. How you present information to people and the ways in which they engage with it shape their understanding, their trust, and therefore the decisions they make.
+- I started my career as an educator. And I've got to tell you, the idea that suddenly people should be reading code to verify that it is correct and that was our strategy for trust raised some red flags. I was skeptical that people were reading code in that way anyways, but also pure reading is not a good strategy for building mental models which is what you need to catch mistakes. It's passive, and I'd spent the past 6 ish years working on putting active learning everywhere I could, but that was really all we offered people in that post.
+- Automation bias, approval fatigue. Auto mode example. People accepted 93% of permission requests. 
+- The human isn't a fixed component. Humans are not deterministic functions. How they decide depends on trust, social cues, the interaction style, cognitive load, etc. It's mediated by context, and the agent is now part of that context. 
+  - Another example: config file 
+
+## Reframe
+
+- The presence of a human does not guarantee correctness.
+- The naive “slap a human on it” version of human in the loop assumes the person is a fixed safety component.
+- But the person and the agent interact, shaping how each other acts.
+- So simply adding a person can't be our strategy for upholding the prime directive.
+- The question is not “who checks the output?” but “how do we design the interaction so
+the entire system can produce trustworthy work?”
+- That gives us two goals:
+  - Help the model not be wrong.
+  - Make it less bad when it is wrong.
+
+<!-- another stray thought: reproducibility and transparency are really supporting legs of correctness. they both matter for their own reasons as well, but that also support correctness -->
 
 ### Posit Assistant  (Simon)
 
@@ -159,4 +146,3 @@ Here, then, are two motivating principles: the mission, which is bold exploratio
 - Reproducibility
 - Show examples
 - Junction of upholding prime directive and convenience
-
