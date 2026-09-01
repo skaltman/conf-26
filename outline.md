@@ -77,6 +77,25 @@
 - The message was basically: Databot is powerful, but can be wrong. Don't abandon your expertise. 
 - Now Databot did a bunch of things and did them well. Our framing, however, put most of the responsibility for correctness on the user, to be aware of the risks, to be skeptical of the output. Underneath it was really one implicit strategy: read the code.
 - We didn't really articulate a strategy for helping the user be correct. The strategy was just sort of "make sure you, the human, are there"
+- [joke: claude did it and i was there -- joe]
+
+- possible improvement to permissions systems 
+
+<!-- but then several things happened, including: the models got better -->
+<!-- correctness going up solves a lot of problems, but we still need to fulfill the prime directive: shown to be correct -->
+<!-- code is answer. conflicts: cursor also works by writing code. -->
+
+<!-- Posit Assistant. make it more likely to be right, less bad when it is. code first, code shown to user and easy to read, shared environment -->
+
+<!-- interaction style matters as well. just having a human there (the "slap a human on it" approach) is not a correctness strategy. talk about friction in posit assistant -->
+
+<!-- more why slap on a human on it doesn't work. and then introduce commons framework -->
+<!-- commons details -->
+
+
+
+<!-- another stray thought: reproducibility and transparency are really supporting legs of correctness. they both matter for their own reasons as well, but that also support correctness -->
+<!-- data cleaning mode -->
 
 ## This doesn't work 
 
@@ -93,11 +112,12 @@
 - The naive “slap a human on it” version of human in the loop assumes the person is a fixed safety component.
 - But the person and the agent interact, shaping how each other acts.
 - So simply adding a person can't be our strategy for upholding the prime directive.
-- The question is not “who checks the output?” but “how do we design the interaction so
+- The question is not “who checks the output?” but “how do we design the system so
 the entire system can produce trustworthy work?”
 - That gives us two goals:
   - Help the model not be wrong.
   - Make it less bad when it is wrong.
+- For data analysis, one important part of that system is code: it gives us a foundation for transparent, reproducible, and auditable work.
 
 <!-- another stray thought: reproducibility and transparency are really supporting legs of correctness. they both matter for their own reasons as well, but that also support correctness -->
 
