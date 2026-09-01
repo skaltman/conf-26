@@ -101,7 +101,7 @@ the entire system can produce trustworthy work?”
 
 <!-- another stray thought: reproducibility and transparency are really supporting legs of correctness. they both matter for their own reasons as well, but that also support correctness -->
 
-### Posit Assistant  (Simon)
+# Posit Assistant  (Simon)
 
 <!-- Sara Altman: assumes you have the expertise and gives you the right level of detail -->
 <!-- Sara Altman: friction -->
@@ -114,7 +114,7 @@ the entire system can produce trustworthy work?”
 - Code in shared environment, and having a *data scientist* be the one in the ecosystem in the first place, helps with reproducibility
 - Supposed to speak meaningfully to the idea that it’s an ecosystem
 
-### Call back to problem, lead in to commons (Sara)
+# Call back to problem, lead in to commons (Sara)
 
 <!-- Sara Altman: the big red button -->
 
@@ -134,7 +134,7 @@ the entire system can produce trustworthy work?”
   - Posit Assistant diagram is a subset of the commons loop diagram
 - Some kind of setup to commons
 
-### Commons (Simon (and Sara?))
+# Commons (Simon (and Sara?))
 
 <!-- Sara Altman: empower people. don't give up on convenience -->
 
