@@ -4,6 +4,7 @@ format:
   revealjs:
     theme: [default, custom.scss]
     footer: '<span style="color:#ee6331;">github.com/skaltman/conf-26</span>'
+    include-after-body: fragment-video.html
 editor: source
 knitr:
   opts_chunk:
@@ -42,6 +43,10 @@ I was looking for what _I_ knew as the Prime Directive, which is...
 
 ## The Prime Directive {.quote-slide}
 
+<video class="fragment fade-in-then-out attention-fragment attention-fragment-center" preload="auto" loop muted playsinline height="560">
+  <source src="figures/subway-surfers.mov">
+</video>
+
 > ::: {.fragment}
 > _...those who receive the results of modern data analysis have limited opportunity to verify the results by direct observation._
 > ::: 
@@ -58,7 +63,13 @@ I was looking for what _I_ knew as the Prime Directive, which is...
 > _...This obligation I label the_ Prime Directive.
 > ::: 
 
+<video class="fragment attention-fragment attention-fragment-bottom-right" preload="auto" loop muted playsinline height="400">
+  <source src="figures/subway-surfers.mov">
+</video>
+
 :::notes
+Now, it's 2026 and I've said I'll read a textbook entry...
+
 re: the second-to-last point, this is "You don't have to trust me, here's how to reproduce it yourself."
 
 https://books.google.com.mt/books?id=UXneuOIvhEAC&lpg=PP1&pg=PA1#v=onepage&q&f=false
@@ -121,7 +132,7 @@ _<span class="opening-quote">“</span>In the battle between convenience and cor
 :::
 
 :::notes
-This is one possible way to summarize this effect
+This is one possible way to summarize  this effect
 :::
 
 ##
@@ -178,7 +189,7 @@ _<span class="opening-quote">“</span>In the battle between convenience and cor
 :::
 
 :::notes
-So, the Prime Directive has always been under threat. That said, convenience and correctness cannot be in a _battle_ (in the same way that you cannot be in a battle with your VP lol).
+So, the Prime Directive has always been under threat. That said, I don't know that it's necessarily fair to say that convenience and correctness are at battle with each other. They can't be at battle, in the same way that you cannot be in a battle with your VP lol.
 
 The solution then, as it is now, it to make software that is both correct and also very convenient to use, both for the analyst and the end user of the analysis. This is the rationale behind our investment in Shiny, for example. To publish a Shiny app, you click one button that says publish in your IDE and then reproducible R or Python code, with package versions backed by renv or uv, is hosted on Connect and available for your collaborators.
 :::
