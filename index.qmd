@@ -193,7 +193,7 @@ _<span class="opening-quote">“</span>In the battle between convenience and cor
 :::notes
 So, the Prime Directive has always been under threat. That said, I don't know that it's necessarily fair to say that convenience and correctness are at battle with each other. They can't be at battle, in the same way that you cannot be in a battle with your VP lol.
 
-The solution then, as it is now, it to make software that is both correct and also very convenient to use, both for the analyst and the end user of the analysis. This is the rationale behind our investment in Shiny, for example. To publish a Shiny app, you click one button that says publish in your IDE and then reproducible R or Python code, with package versions backed by renv or uv, is hosted on Connect and available for your collaborators.
+The solution then, as it is now, it to make software that is both correct and also very convenient to use, both for the analyst and the end user of the analysis. This is the rationale behind our investment in Shiny, for example. To publish a Shiny app, you click one button that says publish in your IDE and then reproducible R or Python code is hosted on Connect and available for your collaborators.
 :::
 
 ##
