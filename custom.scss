@@ -19,6 +19,22 @@
   font-weight: 300;
 }
 
+.reveal .quote-slide .attention-fragment {
+  position: absolute;
+  z-index: 1;
+}
+
+.reveal .quote-slide .attention-fragment-center {
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reveal .quote-slide .attention-fragment-bottom-right {
+  right: 1rem;
+  bottom: 2.5rem;
+}
+
 .reveal .quote {
   font-size: 1.4em;
   text-align: left;

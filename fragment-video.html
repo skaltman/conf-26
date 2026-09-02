@@ -1,0 +1,23 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Reveal's autoplay fires when the slide opens, before this fragment appears.
+  const syncAttentionVideo = () => {
+    document.querySelectorAll("video.attention-fragment").forEach((video) => {
+      const isCurrent = video.classList.contains("current-fragment");
+      const isOnCurrentSlide = video.closest("section").classList.contains("present");
+
+      if (isCurrent && isOnCurrentSlide) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  };
+
+  Reveal.on("fragmentshown", syncAttentionVideo);
+  Reveal.on("fragmenthidden", syncAttentionVideo);
+  Reveal.on("slidechanged", syncAttentionVideo);
+});
+</script>
