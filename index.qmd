@@ -297,9 +297,7 @@ so what's the mission for statistical software?
 > :::
 
 ::: notes
-That is really our mission too. There is real tension between the mission to explore and create and the prime directive. And maybe more so now with AI. But that tension is the task.
-
-To be clear, this isn't Posit's formal mission statement or the one you'll find on our website. But I do think it is a collective mission for us, for Simon and me, and for many of you in this room.
+To be clear, this isn't Posit's formal mission statement or the one you'll find on our website. But I do think it is a collective mission for many of us
 :::
 
 :::footer
@@ -311,7 +309,9 @@ To be clear, this isn't Posit's formal mission statement or the one you'll find 
 ![](figures/mission-ocean.jpg){.rounded}
 
 ::: notes
-For me, and I imagine for many of you, exploration and curiosity are what got us into this room. Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.
+I imagine for many of you, exploration and curiosity are what got you into this room in the first place, listening to two people who apparently know nothing about star trek
+
+Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.
 
 For me, it was a little of all of those things. I have always been interested in many things at once. Data is great for that because there is data on everything.
 
@@ -328,7 +328,7 @@ learning the tidyverse, and data science...these tools gave me a way to investig
 
 ::: notes
 the right tools let us see below the surface
-The tools enable the curiosity. They reveal the complexity below the surface and let us keep exploring. You can feel curiosity and wonder from a laptop in a fluorescent classroom, typing dplyr and ggplot code by hand.
+The tools enable the curiosity. 
 :::
 
 ## {.quote-slide}
@@ -405,6 +405,10 @@ Human in the loop can mean many different things. Here I mean possibly the simpl
 ![](figures/flextape.png){width=100% style="border-radius: 0.75rem;"}
 :::
 :::
+:::
+
+::: notes
+there's one problem...this is not how people work 
 :::
 
 # {background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
