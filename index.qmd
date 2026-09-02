@@ -199,12 +199,21 @@ How can we make software that is both correct _and_ convenient? Can we satisfy C
 
 #
 
+::: notes
+and if you were here last year you might remember part of the keynote about databot 
+:::
+
 # 
 
 ![](figures/databot.png){style="display: block; margin: 0 auto;"}
 
 :::footer
 &lpar;2025&rpar;
+:::
+
+::: notes
+databot was an exploratory data analysis agent that lived in positron
+it was great
 :::
 
 # 
@@ -220,12 +229,11 @@ _<span class="opening-quote">“</span>In my 30-year career writing software pro
 :::
 
 ::: notes
-Last year, Joe stood on this stage and told you about Databot.
+and last year, Joe stood on this stage and told you about Databot.
+ 
+and Joe said said something a bit like this
 
-about a year ago we released databot 
-and Joe said said something like this
-
-we were so excited, and also so deeply worried 
+because we were so excited, and also so deeply worried 
 and so accompanying the databot announcment post we wrote this
 :::
 
@@ -273,9 +281,9 @@ and there are many answers
 ::: notes
 The prime directive does not float unattached. It governs people who are pursuing a mission, and the prime directive is an important safeguard for that mission.
 
-For Star Trek, the mission was to explore, to boldly go where no one has gone before. That is really our mission too: to explore how software can add new abilities for data analysis.
+For Star Trek, _obviously_ the mission was to explore, to boldly go where no one has gone before. I say obviously...
 
-This is Chambers' framing of the Star Trek reference: the prime directive is not the mission. It is the safeguard that governs how the mission is pursued.
+so what's the mission for statistical software? 
 :::
 
 :::footer
@@ -311,9 +319,7 @@ But without the right tools, looking at a data set can feel like looking at the 
 
 Even with knowledge of statistics and some R as an undergraduate, I felt like I was looking at that ocean from above.
 
-Even with knowledge of statistics and some R as an undergraduate, I felt like I was looking at that ocean from above.
-
-Then, as a graduate student, I learned R, the tidyverse, and data science. I could turn a data set over in my hands, say, "huh, that's interesting," and keep digging. Those tools gave me a way to investigate any topic and learn about the world.
+learning the tidyverse, and data science...these tools gave me a way to investigate any topic and learn about the world.
 :::
 
 ## 
@@ -340,7 +346,7 @@ AI is part of that exploration.
 :::
 
 ::: notes
-This is what Posit does when we make tools like the tidyverse, RStudio, Positron, ggsql, Workbench, and Connect. 
+This is what Posit does when we make tools like the tidyverse, RStudio, Positron, ... 
 
 and we as individuals are motivated by many things, and I know many of us care deeply about making useful tools 
 but I think on a day to day basis, what's often motivating us is curiosity and a sense of discovery, about the tools themselves and about what worlds they can unlock. 
