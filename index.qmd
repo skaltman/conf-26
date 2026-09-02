@@ -24,7 +24,9 @@ Simon starts off with the fake story about the first time he listened to this te
 ![](figures/rogue-analysis-in-cursor.png){.rounded}
 
 ::: notes
-Becoming normal to spin up a coding agent, ask a question, and go with whatever the answer is. Sets a low bar for reproducibility, transparency, and correctness.
+Becoming normal to spin up a coding agent, ask a question, and go with whatever the answer is.
+
+> Nell Thomas has spent two decades in data — from equity research to the DNC to Facebook to leading a 400-person data org at Shopify.
 :::
 
 ##
@@ -191,16 +193,12 @@ _<span class="opening-quote">“</span>In the battle between convenience and cor
 :::notes
 So, the Prime Directive has always been under threat. That said, I don't know that it's necessarily fair to say that convenience and correctness are at battle with each other. They can't be at battle, in the same way that you cannot be in a battle with your VP lol.
 
-The solution then, as it is now, it to make software that is both correct and also very convenient to use, both for the analyst and the end user of the analysis. This is the rationale behind our investment in Shiny, for example. To publish a Shiny app, you click one button that says publish in your IDE and then reproducible R or Python code, with package versions backed by renv or uv, is hosted on Connect and available for your collaborators.
+The solution then, as it is now, it to make software that is both correct and also very convenient to use, both for the analyst and the end user of the analysis. This is the rationale behind our investment in Shiny, for example. To publish a Shiny app, you click one button that says publish in your IDE and then reproducible R or Python code is hosted on Connect and available for your collaborators.
 :::
 
 ##
 
-![](figures/rogue-analysis-in-cursor.png){.rounded}
-
 :::notes
-Now, I promise this is the last time I'll show this screenshot.
-
 AI, as a new technology, means that the Prime Directive is under threat in a new way. 
 
 In the same way that we couldn't tell our collaborators not to use software that was convenient for them before AI, we can't do it now.
