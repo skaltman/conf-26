@@ -117,7 +117,7 @@ _<span class="opening-quote">“</span>In the battle between convenience and cor
 
 
 ::: {.attribution}
-\- A colleague
+\- Joe Cheng
 :::
 
 :::notes
@@ -174,7 +174,7 @@ _<span class="opening-quote">“</span>In the battle between convenience and cor
 :::
 
 ::: {.attribution}
-\- A colleague
+\- Joe Cheng
 :::
 
 :::notes
