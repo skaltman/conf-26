@@ -197,13 +197,149 @@ In the same way that we couldn't tell our collaborators not to use software that
 How can we make software that is both correct _and_ convenient? Can we satisfy Chambers' Prime Directive while also making use of the leverage that these new tools provide? This is something that we've been focused on at Posit for the last year and change.
 :::
 
-## Initial resolution: not a loop
+# ...but why?
+
+# The mission
+
+## {.quote-slide}
+
+> ::: {.fragment}
+> _The prime directive of the space explorers, notice, was not their mission but rather an important safeguard to apply in pursuing that mission._
+> :::
+>
+> ::: {.fragment}
+> _Their mission was to explore, to "boldly go where no one has gone before", and all that._
+> :::
+>
+
+::: notes
+The prime directive does not float unattached. It governs people who are pursuing a mission, and the prime directive is an important safeguard for that mission.
+
+For Star Trek, the mission was to explore, to boldly go where no one has gone before. That is really our mission too: to explore how software can add new abilities for data analysis.
+
+This is Chambers' framing of the Star Trek reference: the prime directive is not the mission. It is the safeguard that governs how the mission is pursued.
+:::
+
+:::footer
+<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
+:::
+
+## The mission {.quote-slide}
+
+> ::: {.fragment}
+> _Exploration is our mission; we and those who use our software want to find new paths to understand the data and the underlying processes._
+> :::
+
+::: notes
+That is really our mission too. There is real tension between the mission to explore and create and the prime directive. And maybe more so now with AI. But that tension is the task.
+:::
+
+:::footer
+<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
+:::
+
+## 
+
+![](figures/mission-mountain.jpg){.rounded}
+
+::: notes
+For me, and I imagine for many of you, exploration and curiosity are what got us into this room. Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.
+
+For me, it was a little of all of those things. I have always been interested in many things at once. Data is great for that because there is data on everything.
+
+But without the right tools, looking at a data set can feel like looking at the ocean from above. You know there is an incredible amount there, but you cannot see it. You have to know how to access it.
+
+Even with knowledge of statistics and some R as an undergraduate, I felt like I was looking at that ocean from above.
+:::
+
+## 
+
+![](figures/mission-rstudio.png){.rounded}
+
+:::footer
+<span style="color:#ee6331;">RStudio (2017)</span>
+:::
+
+::: notes
+Even with knowledge of statistics and some R as an undergraduate, I felt like I was looking at that ocean from above.
+
+Then, as a graduate student, I learned R, the tidyverse, and data science. I could turn a data set over in my hands, say, "huh, that's interesting," and keep digging. Those tools gave me a way to investigate any topic and learn about the world.
+:::
+
+## 
+
+![](figures/mission-reef.jpg){.rounded}
+
+::: notes
+the right tools let us see below the surface
+The tools enable the curiosity. They reveal the complexity below the surface and let us keep exploring. You can feel curiosity and wonder from a laptop in a fluorescent classroom, typing dplyr and ggplot code by hand.
+:::
+
+## {.quote-slide}
+
+> ::: {.fragment}
+> _Exploration is our mission; we and those who use our software want to find **new paths to understand the data and the underlying processes.**_
+> :::
+
+::: notes
+This is what Posit does when we make tools like the tidyverse, RStudio, Positron, ggsql, Workbench, and Connect. They do many things and they help people do their jobs, but fundamentally they add new abilities for data analysis. They let us explore data and explore the frontier of data analysis.
+
+It is not just us building tools who get to feel that sense of exploration. Many of you have felt the curiosity I just described.
+:::
+
+# AI is part of that exploration.
 
 
-## Posit Assistant
+::: notes
+That is a second reason to wade into AI. Our users, the data science community, and the communities around them are using these tools.
+
+You could say that a VP vibe-analyzing is lazy, or that it is slop. But often people have questions they are curious about, and they want answers. They are going to reach for the tool that gives them answers.
+
+We should meet them where they are with tools that make their work more correct and trustworthy, not less.
+:::
+
+# 
+
+# AI: untrustworthy, but useful?
+
+::: notes
+- Here’s a common thought about AI
+  - It’s untrustworthy, but useful.
+  <!-- Possible place to add bluffbench/bluffbench2 results. If we do that, also need a counter example of usefulness.-->
+  - To make it trustworthy, we need people to to verify the output from or supervise agents.
+:::
 
 
-## Problem callback
+## Naive human-in-the-loop*
+
+::: {.columns}
+::: {.column width="40%"}
+::: {.fragment}
+- or, the **"slap a human on it"** approach
+:::
+:::
+
+::: {.column width="60%"}
+::: {.fragment}
+![](figures/flextape.png){width=100%}
+:::
+:::
+:::
 
 
-## commons
+# 
+
+![](figures/databot-flotation.png){.rounded}
+
+# {.quote-slide}
+
+> ::: {.fragment}
+> Databot, and LLMs in general, aren’t at a point where you can abdicate responsibility or suspend skepticism when working with data. ...
+> Using it well requires the same fundamentals that any good analysis does...These skills help you **catch errors, interpret results in context, and avoid being misled by confident but incorrect claims.**
+> :::
+
+# but how?
+
+::: notes
+the subtext is just...make sure you're there?
+:::
