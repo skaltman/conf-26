@@ -499,3 +499,46 @@ For the rest of the talk, we're going to show you the concrete ways we've built 
 
 * Build trust and correctness into the system itself: **Help the agent be correct**
 * Consider how interaction works with the user and can support their expertise: **Make it less bad when it's wrong**
+
+# Posit Assistant
+
+
+<!-- commons lead in --> 
+
+# 
+
+* Help the model not be wrong
+* Make it less bad when it is wrong
+
+# but what if the user is not a data scientist?
+
+# 
+
+[show vp vibe analyzing again]
+[but add additional people who might want to vibe analyze, à la Joe]
+
+# 
+
+* Help the model not be wrong **by adding trusted code**
+* Make it less bad when it is wrong 
+
+# 
+
+* Help the model not be wrong **by adding trusted code**
+* Make it less bad when it is wrong **by signaling uncertainty and setting up feedback loops**
+
+# 
+
+[show diagram of HITL/SaHoi]
+
+# 
+
+[show commons diagram, but only at a high level]
+
+# Commons
+
+# Trust diagram
+
+# Trusted code 
+
+# Feedback loops
