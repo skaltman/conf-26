@@ -537,7 +537,7 @@ For the rest of the talk, we're going to show you the concrete ways we've built 
 
 # Commons
 
-# Trust diagram
+# Trust flow diagram
 
 # Trusted code 
 
