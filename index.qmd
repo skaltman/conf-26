@@ -499,3 +499,30 @@ For the rest of the talk, we're going to show you the concrete ways we've built 
 
 * Build trust and correctness into the system itself: **Help the agent be correct**
 * Consider how interaction works with the user and can support their expertise: **Make it less bad when it's wrong**
+
+
+# Posit Assistant
+
+## Posit Assistant
+
+It's a coding and data science agent
+
+:::notes
+You can think of it like other coding agents, such as Claude Code or Codex, but with some extra bells and whistles for data science.
+:::
+
+## Posit Assistant
+
+It's in RStudio, Positron, and the terminal
+
+:::notes
+In RStudio and Positron, it can talk to your R and Python sessions.
+:::
+
+## Posit Assistant
+
+You can use whatever model you want with it.
+
+:::notes
+We have a managed service called Posit AI Pass, where you don't have to deal with API keys. You get access to Claude models and a bunch of open weights models that we are excited about.
+:::
