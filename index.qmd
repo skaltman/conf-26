@@ -484,6 +484,8 @@ and design the interaction to support human expertise when the model will inevit
 In other words: help the agent be correct, and make it less bad when it's wrong.
 :::
 
+# Posit Assistant
+
 ##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
@@ -527,3 +529,140 @@ When playing the video:
 :::notes
 We've designed Posit Assistant to be more correct, and we've designed it to make better use of your expertise than other coding agents, so that you're more likely to know when it's wrong.
 :::
+
+<!-- commons lead in --> 
+
+# 
+
+* Build trust and correctness into the system itself: **Help the agent be correct**
+* Consider how interaction works with the user and can support their expertise: **Make it less bad when it's wrong**
+
+# but what if the user is not a data scientist?
+
+:::  notes
+in post assistant, the user is typically a data or code minded person
+this interface makes sense for them
+::: 
+
+# 
+
+## {.agent-story-slide}
+
+```{=html}
+<div class="agent-window">
+  <div class="agent-thread">
+        <div class="chat-turn chat-turn-user">
+          <div class="chat-message chat-message-user">
+            how is traffic trending for our site?
+          </div>
+        </div>
+        <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="0">
+          <div class="chat-message chat-message-agent">
+            <div class="agent-thinking"><span></span> Analyzing site traffic</div>
+            <div class="tool-card" style="--tool-delay: 0s">
+              <span class="tool-card-icon">⌕</span>
+              <span><strong>Searching workspace</strong><small>web analytics</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+            <div class="tool-card" style="--tool-delay: 1.05s">
+              <span class="tool-card-icon">◫</span>
+              <span><strong>Querying warehouse</strong><small>analytics.pageviews</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+            <div class="tool-card" style="--tool-delay: 2.1s">
+              <span class="tool-card-icon">∿</span>
+              <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+          </div>
+        </div>
+        <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="0">
+          <div class="chat-message chat-message-agent">
+            <p>Daily visits are down <strong>64%</strong> over the last 90 days.</p>
+            <div class="dau-chart">
+              <div class="dau-chart-title"><span>Daily site visits</span><strong>−64%</strong></div>
+              <svg viewBox="0 0 620 225" role="img" aria-label="Daily site visits rise unevenly, then fall sharply after a changepoint.">
+                <defs>
+                  <linearGradient id="dau-area" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ee6331" stop-opacity="0.28"/>
+                    <stop offset="100%" stop-color="#ee6331" stop-opacity="0.02"/>
+                  </linearGradient>
+                </defs>
+                <g class="chart-grid">
+                  <line x1="56" y1="34" x2="598" y2="34"/><line x1="56" y1="86" x2="598" y2="86"/>
+                  <line x1="56" y1="138" x2="598" y2="138"/><line x1="56" y1="190" x2="598" y2="190"/>
+                </g>
+                <g class="chart-labels">
+                  <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+                  <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+                </g>
+                <path class="chart-area" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145 L598,190 L56,190 Z"/>
+                <path class="chart-line" pathLength="1" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145"/>
+                <circle class="chart-end" cx="598" cy="145" r="6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+```
+
+::: notes
+
+[show vp vibe analyzing again]
+the vp is just a stand in
+someone who has questions to ask of data, but isn't the data scientist, statician, analyst.
+
+the lab PI, the medical director, a product manager, or even someone who is very technically capable but is working in an area not of their expertise
+:::
+
+# [_Trusted_ code]{style="color: #ee6331; font-size: 1.4em;"}
+
+::: notes
+in the story we told in the beginning
+the data scientist knew something was wrong
+they likely have code that they use to answer these kinds of questions, and that code might even live in quarto reports, packages, shiny apps, scripts
+
+trusted code
+leverage this instead of the model writing custom code each time
+:::
+
+# 
+
+* Help the model not be wrong **by adding trusted code**
+* Make it less bad when it is wrong 
+
+# 
+
+* Help the model not be wrong **by adding trusted code**
+* Make it less bad when it is wrong **by signaling trust and setting up feedback loops**
+
+::: notes
+a second idea: signal how much to trust that code in a deterministic way and set up feedback loops to continually improve the correctness of the system
+:::
+
+# 
+
+![](figures/hitl.excalidraw.svg){width=80%}
+
+::: notes
+earlier I showed you this diagram
+:::
+
+# 
+
+![](figures/commons-diagram.excalidraw.svg){width=80%}
+
+::: notes
+the system I'm proposing looks something like this
+:::
+
+# 
+
+![](figures/commons-hex.png){width=80% style="display: block; margin: 0 auto;"}
+
+# Trust flow diagram
+
+# Trusted code and context
+
+# Feedback loops
