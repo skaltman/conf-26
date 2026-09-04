@@ -13,11 +13,66 @@ knitr:
     comment: "#>"
 ---
 
-##
+## {.agent-story-slide}
 
-::: notes
-Simon starts off with the fake story about the first time he listened to this test set episode.
-:::
+```{=html}
+<div class="agent-window">
+  <div class="agent-thread">
+        <div class="chat-turn chat-turn-user">
+          <div class="chat-message chat-message-user">
+            How are daily active users trending for Beacon?
+          </div>
+        </div>
+        <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="0">
+          <div class="chat-message chat-message-agent">
+            <div class="agent-thinking"><span></span> Analyzing product usage</div>
+            <div class="tool-card" style="--tool-delay: 0s">
+              <span class="tool-card-icon">⌕</span>
+              <span><strong>Searching workspace</strong><small>product analytics</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+            <div class="tool-card" style="--tool-delay: 1.05s">
+              <span class="tool-card-icon">◫</span>
+              <span><strong>Querying warehouse</strong><small>prod.events</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+            <div class="tool-card" style="--tool-delay: 2.1s">
+              <span class="tool-card-icon">∿</span>
+              <span><strong>Calculating daily active users</strong><small>last 90 days</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+          </div>
+        </div>
+        <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="0">
+          <div class="chat-message chat-message-agent">
+            <p>Beacon’s daily active users are down <strong>64%</strong> over the last 90 days.</p>
+            <div class="dau-chart">
+              <div class="dau-chart-title"><span>Daily active users</span><strong>−64%</strong></div>
+              <svg viewBox="0 0 620 225" role="img" aria-label="Daily active users rise unevenly, then fall sharply after a changepoint.">
+                <defs>
+                  <linearGradient id="dau-area" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ee6331" stop-opacity="0.28"/>
+                    <stop offset="100%" stop-color="#ee6331" stop-opacity="0.02"/>
+                  </linearGradient>
+                </defs>
+                <g class="chart-grid">
+                  <line x1="56" y1="34" x2="598" y2="34"/><line x1="56" y1="86" x2="598" y2="86"/>
+                  <line x1="56" y1="138" x2="598" y2="138"/><line x1="56" y1="190" x2="598" y2="190"/>
+                </g>
+                <g class="chart-labels">
+                  <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+                  <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+                </g>
+                <path class="chart-area" d="M56,61 L69,59 L82,60 L95,56 L108,58 L121,54 L134,55 L147,51 L160,53 L173,50 L186,48 L199,49 L212,45 L225,47 L238,43 L251,44 L264,41 L277,43 L290,39 L303,37 L313,39 L319,42 L329,55 L340,61 L351,70 L362,75 L373,86 L384,89 L395,99 L406,103 L417,102 L428,112 L439,109 L450,119 L461,121 L472,127 L483,125 L494,132 L505,135 L516,133 L527,140 L538,138 L549,143 L560,141 L571,146 L582,143 L598,145 L598,190 L56,190 Z"/>
+                <path class="chart-line" pathLength="1" d="M56,61 L69,59 L82,60 L95,56 L108,58 L121,54 L134,55 L147,51 L160,53 L173,50 L186,48 L199,49 L212,45 L225,47 L238,43 L251,44 L264,41 L277,43 L290,39 L303,37 L313,39 L319,42 L329,55 L340,61 L351,70 L362,75 L373,86 L384,89 L395,99 L406,103 L417,102 L428,112 L439,109 L450,119 L461,121 L472,127 L483,125 L494,132 L505,135 L516,133 L527,140 L538,138 L549,143 L560,141 L571,146 L582,143 L598,145"/>
+                <circle class="chart-end" cx="598" cy="145" r="6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+```
 
 ##
 
@@ -27,183 +82,6 @@ Simon starts off with the fake story about the first time he listened to this te
 Becoming normal to spin up a coding agent, ask a question, and go with whatever the answer is.
 
 > Nell Thomas has spent two decades in data — from equity research to the DNC to Facebook to leading a 400-person data org at Shopify.
-:::
-
-##
-
-:::notes
-The prime directive is very important at Posit. (Screenshot of the many slack or confluence listings with this phrase? But they don't show a total count in the UI.) Maybe a reference to Star Trek (and a joke about how I didn't actually know that was a thing.) 
-:::
-
-# The Prime Directive
-
-:::notes
-Now, I've actually never seen Star Trek, and only in preparing for this talk did I learn it was a Star Trek reference when I typed just those two words into Google and couldn't find what I was looking for.
-
-I was looking for what _I_ knew as the Prime Directive, which is...
-:::
-
-## The Prime Directive {.quote-slide}
-
-<video class="fragment fade-in-then-out attention-fragment attention-fragment-center" preload="auto" loop muted playsinline height="560">
-  <source src="figures/subway-surfers.mov">
-</video>
-
-> ::: {.fragment}
-> _...those who receive the results of modern data analysis have limited opportunity to verify the results by direct observation._
-> ::: 
->
-> ::: {.fragment}
-> _Users of the analysis have no option but to trust the analysis, and by extension the software that produced it._
-> ::: 
-> 
-> ::: {.fragment}
-> _Both the data analyst and the software provider therefore have a strong responsibility to produce a result that is trustworthy, and, if possible, one that can be_ shown _to be trustworthy._
-> ::: 
->
-> ::: {.fragment}
-> _...This obligation I label the_ Prime Directive.
-> ::: 
-
-<video class="fragment attention-fragment attention-fragment-bottom-right" preload="auto" loop muted playsinline height="400">
-  <source src="figures/subway-surfers.mov">
-</video>
-
-:::notes
-Now, it's 2026 and I've said I'll read a textbook entry...
-
-re: the second-to-last point, this is "You don't have to trust me, here's how to reproduce it yourself."
-
-https://books.google.com.mt/books?id=UXneuOIvhEAC&lpg=PP1&pg=PA1#v=onepage&q&f=false
-:::
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
-:::
-
-##
-
-. . .
-
-<br><br>
-![](figures/prime-directive-search-result.png){.rounded}
-
-:::notes
-This comes up internally a _lot_. Admittedly, many of those mentions are from our CEO.
-:::
-
-:::footer
-:::
-
-##
-
-![](figures/tareef-2019-prime-directive.png){.rounded}
-
-:::footer
-:::
-
-:::notes
-...he's been harping on the PD for a while
-:::
-
-##
-
-![](figures/rogue-analysis-in-cursor.png){.rounded}
-
-::: notes
-Let's revisit this with the prime directive in mind...
-
-"Both the data analyst and the software provider therefore have a strong responsibility to produce a result that is trustworthy, and, if possible, one that can be _shown_ to be trustworthy."
-
-First we have to acknowledge that the models are writing code, so that's a good start. Kudos to them.
-
-The code that models write often lives in a temp-file, and unless the user asks for it, is often not backed by an explicit registry of package versions. The chat transcripts from which they could be recovered are, by default, deleted after 30 or 60 days. And even with a reproducible analysis, the model might hallucinate findings, generalize findings beyond what the evidence actually shows, etc.
-:::
-
-##
-
-<br><br><br>
-
-::: {.quote}
-_<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
-:::
-
-
-::: {.attribution}
-\- Joe Cheng
-:::
-
-:::notes
-This is one possible way to summarize  this effect
-:::
-
-##
-
-:::notes
-...This has always been the case.
-
-Things were not perfect before. Why would Tareef have been speaking about the PD in 2019? Why would John Chambers have written about it in 2008?
-
-Because the prime directive has always been under threat, and reproducibility has never been the norm.
-:::
-
-##
-
-![](figures/conviviality-spreadsheeting-error.png){.rounded}
-
-:::footer
-<span style="color:#ee6331;">https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business</span>
-:::
-
-:::notes
-Tareef might have had Conviviality in mind, which had been mistakely reporting healthy financials for years due to a "spreadsheet arithmetic error."
-
-> '£5.2m of that £14m came thanks to “a material error in the financial forecasts”. The error, it later admitted, was “a spreadsheet arithmetic error”.'
-:::
-
-##
-
-![](figures/fannie-mae-spreadsheeting-error.png){.rounded}
-
-:::notes
-And, in 2008, John Chambers might have had Fannie Mae in mind, which discovered a $1.136 billion error in total shareholder equity:
-> 'There were honest mistakes made in a spreadsheet used in the implementation of a new accounting standard.'
-
-https://www.louisepryor.com/2004/01/10/fanniemae/
-:::
-
-:::footer
-<span style="color:#ee6331;">https://web.archive.org/web/20120917174753/https://www.pcworld.com/article/127189/article.html</span>
-:::
-
-##
-
-. . .
-
-<br><br><br>
-
-::: {.quote}
-_<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
-:::
-
-::: {.attribution}
-\- Joe Cheng
-:::
-
-:::notes
-So, the Prime Directive has always been under threat. That said, I don't know that it's necessarily fair to say that convenience and correctness are at battle with each other. They can't be at battle, in the same way that you cannot be in a battle with your VP lol.
-
-The solution then, as it is now, it to make software that is both correct and also very convenient to use, both for the analyst and the end user of the analysis. This is the rationale behind our investment in Shiny, for example. To publish a Shiny app, you click one button that says publish in your IDE and then reproducible R or Python code is hosted on Connect and available for your collaborators.
-:::
-
-##
-
-:::notes
-AI, as a new technology, means that the Prime Directive is under threat in a new way. 
-
-In the same way that we couldn't tell our collaborators not to use software that was convenient for them before AI, we can't do it now.
-
-How can we make software that is both correct _and_ convenient? Can we satisfy Chambers' Prime Directive while also making use of the leverage that these new tools provide? This is something that we've been focused on at Posit for the last year and change.
 :::
 
 #
