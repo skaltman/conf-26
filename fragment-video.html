@@ -19,5 +19,28 @@ document.addEventListener("DOMContentLoaded", () => {
   Reveal.on("fragmentshown", syncAttentionVideo);
   Reveal.on("fragmenthidden", syncAttentionVideo);
   Reveal.on("slidechanged", syncAttentionVideo);
+
+  const toggleVideo = (video) => {
+    if (video.paused) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  };
+
+  document.querySelectorAll("video.click-to-toggle").forEach((video) => {
+    video.addEventListener("click", (event) => {
+      event.stopPropagation();
+      toggleVideo(video);
+    });
+
+    video.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleVideo(video);
+      }
+    });
+  });
 });
 </script>
