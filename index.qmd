@@ -206,10 +206,20 @@ In the same way that we couldn't tell our collaborators not to use software that
 How can we make software that is both correct _and_ convenient? Can we satisfy Chambers' Prime Directive while also making use of the leverage that these new tools provide? This is something that we've been focused on at Posit for the last year and change.
 :::
 
-#
+# 
+
+![](figures/2025.excalidraw.svg)
 
 ::: notes
-and if you were here last year you might remember part of the keynote about databot 
+and this question of correctness and convenience was maybe especially on our minds last year, in 2025
+:::
+
+# 
+
+![](figures/2025-warning.excalidraw.svg)
+
+::: notes
+and not just on our minds at posit, but I think for a lot of us, 2025 was the year AI for data science got seriously convenient, and so sparked a lot of concerns about correctness
 :::
 
 # 
@@ -221,8 +231,25 @@ and if you were here last year you might remember part of the keynote about data
 :::
 
 ::: notes
+for simon and i and the rest of the ai team at posit, it was on our minds especially because of a new agent we released right before posit conf called databot
 databot was an exploratory data analysis agent that lived in positron
 it was great
+:::
+
+# 
+
+::: {.fragment}
+![](figures/databot-flotation.png){.rounded}
+:::
+
+:::footer
+<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
+:::
+
+::: notes
+but it felt so powerful and so new that we essentially released it under a warning label
+- this is the image from a blog post joe and i wrote about Databot, and This was actually one of the first things I worked on the AI team. 
+- and we were all so excited about databot, but also so worried about people trusting its answers when it was wrong
 :::
 
 # 
@@ -238,29 +265,9 @@ _<span class="opening-quote">“</span>In my 30-year career writing software pro
 :::
 
 ::: notes
-and last year, Joe stood on this stage and told you about Databot.
- 
-and Joe said said something a bit like this
-
-because we were so excited, and also so deeply worried 
-and so accompanying the databot announcment post we wrote this
+and if you were here at conf last year, you might remember Joe's keynote where said somethign a bit like this
 :::
 
-
-# 
-
-![](figures/databot-flotation.png){.rounded}
-
-:::footer
-<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
-:::
-
-::: notes
-- Databot flotation device post. This was one of the first things I worked on the AI team. 
-- and before we talk about what that post said, I just want you to look at this image
-- we basically launched the agent, that we were so excited about, with a warning label
-- we were so worried about people trusting its answers when it was wrong
-:::
 
 #
 
@@ -274,43 +281,8 @@ I think is fair to ask and I think we all have asked ourselves in the past few y
 ::: notes
 if AI is this agent of chaos further disrupting the prime directive, why involve ourselves at all
 and there are many answers
-:::
 
-## The mission {.quote-slide}
-
-> ::: {.fragment}
-> _The prime directive of the space explorers, notice, was not their mission but rather an important safeguard to apply in pursuing that mission._
-> :::
->
-> ::: {.fragment}
-> _Their mission was to explore, to "boldly go where no one has gone before", and all that._
-> :::
->
-
-::: notes
-The prime directive does not float unattached. It governs people who are pursuing a mission, and the prime directive is an important safeguard for that mission.
-
-For Star Trek, _obviously_ the mission was to explore, to boldly go where no one has gone before. I say obviously...
-
-so what's the mission for statistical software? 
-:::
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
-:::
-
-## The mission {.quote-slide}
-
-> ::: {.fragment}
-> _Exploration is our mission; we and those who use our software want to find new paths to understand the data and the underlying processes._
-> :::
-
-::: notes
-To be clear, this isn't Posit's formal mission statement or the one you'll find on our website. But I do think it is a collective mission for many of us
-:::
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
+but for me at least much of the answer has to do with a sense of curiosity and exploration
 :::
 
 ## 
@@ -318,7 +290,7 @@ To be clear, this isn't Posit's formal mission statement or the one you'll find 
 ![](figures/mission-ocean.jpg){.rounded}
 
 ::: notes
-I imagine for many of you, exploration and curiosity are what got you into this room in the first place, listening to two people who apparently know nothing about star trek
+and I imagine for many of you, exploration and curiosity are what got you into this room in the first place
 
 Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.
 
@@ -355,6 +327,8 @@ AI is part of that exploration.
 :::
 
 ::: notes
+for us who make statistical software and use it, the mission is not to explore the universe but....
+
 This is what Posit does when we make tools like the tidyverse, RStudio, Positron, ... 
 
 and we as individuals are motivated by many things, and I know many of us care deeply about making useful tools 
@@ -418,6 +392,10 @@ Human in the loop can mean many different things. Here I mean possibly the simpl
 
 ::: notes
 there's one problem...this is not how people work 
+
+but think about this simple example: when your coding agent presents a command and asks you to approve it, how often do you carefully read it? and how often do you just hit accept?
+
+[possible active learning anecdote]
 :::
 
 # {background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
