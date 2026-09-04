@@ -565,9 +565,7 @@ someone who has questions to ask of data, but isn't the data scientist, staticia
 the lab PI, the medical director, a product manager, or even someone who is very technically capable but is working in an area not of their expertise
 :::
 
-# 
-
-trusted code
+# [_Trusted_ code]{style="color: #ee6331; font-size: 1.4em;"}
 
 ::: notes
 in the story we told in the beginning
@@ -614,6 +612,6 @@ the system I'm proposing looks something like this
 
 # Trust diagram
 
-# [Trusted code]{style="color: #ee6331; font-size: 1.4em;"}
+# Trusted code and context
 
 # Feedback loops
