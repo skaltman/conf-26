@@ -251,14 +251,12 @@ for us and for many of you I imagine 2025 was the year AI got very very convenie
 and we were so worried 
 :::
 
-# {.databot-flotation-slide}
+# 
 
-::: {.databot-flotation-layout}
-![](figures/databot-flotation.png){.rounded}
+![](figures/databot-flotation.png){.rounded height=500 style="top: 43%;"}
 
-::: {.slide-date-marker}
-August 2025
-:::
+::: {style="position: absolute; top: 81%; width: 100%; font-size: 1.05em; text-align: center;"}
+**August 2025**
 :::
 
 :::footer
