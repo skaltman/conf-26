@@ -206,10 +206,20 @@ In the same way that we couldn't tell our collaborators not to use software that
 How can we make software that is both correct _and_ convenient? Can we satisfy Chambers' Prime Directive while also making use of the leverage that these new tools provide? This is something that we've been focused on at Posit for the last year and change.
 :::
 
-#
+# 
+
+![](figures/databot-flotation.png){.rounded}
+
+:::footer
+<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
+:::
 
 ::: notes
-and if you were here last year you might remember part of the keynote about databot 
+and this question of correctness and convenience was maybe especially on our minds last year, in 2025
+
+we were so concerned about correctness that we essentially released a product with a warning label
+
+- this is the image from a blog post joe and i wrote, and this was actually one of the first things I worked on the AI team
 :::
 
 # 
@@ -221,8 +231,10 @@ and if you were here last year you might remember part of the keynote about data
 :::
 
 ::: notes
+that product was databot, a new agent we released right before posit conf
 databot was an exploratory data analysis agent that lived in positron
-it was great
+
+and we were all so excited about databot, but also so worried about people trusting its answers when it was wrong
 :::
 
 # 
@@ -238,29 +250,9 @@ _<span class="opening-quote">“</span>In my 30-year career writing software pro
 :::
 
 ::: notes
-and last year, Joe stood on this stage and told you about Databot.
- 
-and Joe said said something a bit like this
-
-because we were so excited, and also so deeply worried 
-and so accompanying the databot announcment post we wrote this
+and if you were here at conf last year, you might remember Joe's keynote where said somethign a bit like this
 :::
 
-
-# 
-
-![](figures/databot-flotation.png){.rounded}
-
-:::footer
-<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
-:::
-
-::: notes
-- Databot flotation device post. This was one of the first things I worked on the AI team. 
-- and before we talk about what that post said, I just want you to look at this image
-- we basically launched the agent, that we were so excited about, with a warning label
-- we were so worried about people trusting its answers when it was wrong
-:::
 
 #
 
@@ -274,43 +266,8 @@ I think is fair to ask and I think we all have asked ourselves in the past few y
 ::: notes
 if AI is this agent of chaos further disrupting the prime directive, why involve ourselves at all
 and there are many answers
-:::
 
-## The mission {.quote-slide}
-
-> ::: {.fragment}
-> _The prime directive of the space explorers, notice, was not their mission but rather an important safeguard to apply in pursuing that mission._
-> :::
->
-> ::: {.fragment}
-> _Their mission was to explore, to "boldly go where no one has gone before", and all that._
-> :::
->
-
-::: notes
-The prime directive does not float unattached. It governs people who are pursuing a mission, and the prime directive is an important safeguard for that mission.
-
-For Star Trek, _obviously_ the mission was to explore, to boldly go where no one has gone before. I say obviously...
-
-so what's the mission for statistical software? 
-:::
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
-:::
-
-## The mission {.quote-slide}
-
-> ::: {.fragment}
-> _Exploration is our mission; we and those who use our software want to find new paths to understand the data and the underlying processes._
-> :::
-
-::: notes
-To be clear, this isn't Posit's formal mission statement or the one you'll find on our website. But I do think it is a collective mission for many of us
-:::
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
+but for me at least much of the answer has to do with a sense of curiosity and exploration
 :::
 
 ## 
@@ -318,7 +275,7 @@ To be clear, this isn't Posit's formal mission statement or the one you'll find 
 ![](figures/mission-ocean.jpg){.rounded}
 
 ::: notes
-I imagine for many of you, exploration and curiosity are what got you into this room in the first place, listening to two people who apparently know nothing about star trek
+and I imagine for many of you, exploration and curiosity are what got you into this room in the first place
 
 Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.
 
@@ -340,46 +297,22 @@ the right tools let us see below the surface
 The tools enable the curiosity. 
 :::
 
-## {.quote-slide}
-
-> ::: {.fragment}
-> _Exploration is our mission; we and those who use our software want to find **new paths to understand the data and the underlying processes.**_
-> :::
-
-::: {.fragment}
-AI is part of that exploration.
-:::
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
-:::
+# AI is a continuation of this work
 
 ::: notes
-This is what Posit does when we make tools like the tidyverse, RStudio, Positron, ... 
+Much has been said about LLMs as a paradigm shift in technology and in our lives. and maybe that's true.
 
-and we as individuals are motivated by many things, and I know many of us care deeply about making useful tools 
-but I think on a day to day basis, what's often motivating us is curiosity and a sense of discovery, about the tools themselves and about what worlds they can unlock. 
+But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis. 
+
+Let's return to the VP who was vibe-analyzing earlier.
+
+It would be easy to call what she was doing lazy or dismiss it as slop. But there is another way to look at it: she had meaningful questions that she wanted answered, and she reached for the tool that she thought would give her those answers.
+
+That does not mean her answer was correct or that her process was trustworthy. But the curiosity was real.
+
+The problem was not that she wanted to explore. The problem was that getting an answer had become much easier than knowing whether that answer deserved her trust. We should meet them where they are with tools that make their work more correct and trustworthy, not less.
 :::
 
-## {.quote-slide}
-
-> _Exploration is our mission; we and **those who use our software** want to find new paths to understand the data and the underlying processes._
-
-AI is part of that exploration.
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
-:::
-
-::: notes
-and our users feel this too. we all want to understand our data in new ways!
-
-You could say that a VP vibe-analyzing is lazy, or that it is slop. But often people have questions they are curious about, and they want answers. They are going to reach for the tool that gives them answers.
-
-We should meet them where they are with tools that make their work more correct and trustworthy, not less.
-
-AI is part of our mission to explore. so how do we do that? 
-:::
 
 # 
 
@@ -389,7 +322,7 @@ AI is part of our mission to explore. so how do we do that?
 - Here’s a common thought about AI
   - It’s untrustworthy, but useful.
   <!-- Possible place to add bluffbench/bluffbench2 results. If we do that, also need a counter example of usefulness.-->
-  - To make it trustworthy, we need people to to verify the output from or supervise agents.
+  - To make it trustworthy, we need people to verify the output from or supervise agents.
 :::
 
 # 
@@ -397,34 +330,40 @@ AI is part of our mission to explore. so how do we do that?
 ![](figures/hitl.excalidraw.svg){width=80%}
 
 ::: notes
-Human in the loop can mean many different things. Here I mean possibly the simplest version: a human is there to verify that what the agent does is correct.
+Human in the loop can mean many different things. for now we're just talking about a really simple version: a human is there to verify that what the agent does is correct and provide appropriate redirection if not.
+
+it is an intuitively appealing division of labor. the agent does what it's good at, the human provides the judgment to keep it from going off the rails.
 :::
 
-## Naive human-in-the-loop*
+## 
 
-::: {.columns}
-::: {.column width="40%"}
-::: {.fragment}
-\* or, the **"slap a human on it"** approach
-:::
-:::
+::: {style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;"}
+![](figures/flextape.png){style="width: auto; max-height: 540px; margin: 0; border-radius: 0.75rem;"}
 
-::: {.column width="60%"}
-::: {.fragment}
-![](figures/flextape.png){width=100% style="border-radius: 0.75rem;"}
-:::
-:::
+<div class="fragment" style="min-height: 1.15em; margin: 0; font-size: 1.2em; line-height: 1.15;">*the <strong>slap a human on it</strong> approach</div>
 :::
 
 ::: notes
-there's one problem...this is not how people work 
+but you can't stop there and assume that just because a human is present and technically "in the loop," you've solved the issue of correctness by asking them to verify something.
+
+because this is not how people work--it's not how expertise works, and it's not how human decision-making works. you can't assume a human expert will automatically transfer expertise to an agent system just by being "in the loop."
+
+and so I like to call this simplistic division of labor the "slap a human on it" approach.
+
+and there's a lot of evidence that this won't work! but to convince you for now, I just want you to think about this:
+
+when your coding agent (or past coding agents) shows you a command and asks you to approve it, how often do you carefully read that command, and how often do you just hit accept?
+
+And that example sits within a much larger body of research: automation bias, approval fatigue, passive versus active learning, how trust is mediated, and how human decision-making is shaped by environmental and social factors.
+
+[when Anthropic measured this, they found...]
 :::
 
 # {background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
 
 ::: {.fragment style="position: absolute; top: 43%; left: 2%; width: 45%; margin: 0; padding: 0.75rem 1rem; background: #fff; box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%); font-size: 0.72em; font-weight: 300; text-align: left;"}
 "Databot, and LLMs in general, aren’t at a point where you can abdicate responsibility or suspend skepticism when working with data. ...
-Using it well requires the same fundamentals that any good analysis does...These skills help you **catch errors, interpret results in context, and avoid being misled by confident but incorrect claims."**
+These skills help you **catch errors, interpret results in context, and avoid being misled by confident but incorrect claims."**
 :::
 
 :::footer
@@ -432,59 +371,53 @@ Using it well requires the same fundamentals that any good analysis does...These
 :::
 
 ::: notes
-- And this is pretty close to how we framed the risks of data analysis agents a year ago. 
-- The message was basically: Databot is powerful, but can be wrong. Don't abandon your expertise. 
+but this simple model is honestly pretty close to how we framed risk mitigation in Databot.
 
-And we were so worried about databot giving wrong answer that we essentially just told people to be worried and vigilant 
+we wrote a whole article about the dangers of Databot and why we thought you shouldn't abandon your expertise, and essentially, why you needed to be vigilant.
+
+we said you needed all the data skills you had to...
+
+All of that is still true. I stand by it. It's inspirational! I would love to avoid being misled by confident but incorrect claims.
+
+But notice that this puts the responsibility for correctness on the user: be there, remain vigilant, and apply your expertise.
 :::
 
-# but how?
+# ok, but how?
 
 ::: notes
-- Now Databot did a bunch of things and did them well. Our framing, however, put most of the responsibility for correctness on the user, to be aware of the risks, to be skeptical of the output without really giving them any strategies.
+But how, exactly, was the user supposed to apply that expertise?
 
-Underneath it was really one implicit strategy: read the code.
-- We pretty quickly realized that people were not going to read the code closely enough for that to be a correctness strategy.
-- We didn't really articulate a strategy for helping the user be correct. The strategy was just sort of "make sure you, the human, are there"
+our implicit strategy, not said outright but what we were all kind of thinking, was: read the code.
 
-I started my career as an educator, and the idea that reading generated code was our strategy for trust raised some red flags. We cannot hand people written material and assume they will read it closely. More importantly, passive reading is not a good way to build the mental model you need to catch mistakes.
+I don't think anyone did that in the way we had in mind, and I also don't think it is a good correctness strategy!
+
+it relies too much on the hard work of the user, in an interface not conducive to reading (as code is streaming past them or being put into files faster than they could have imagined), but also because reading in that way is not a great way to form a mental model of a complex topic.
+
+
+(I started my career as an educator, and the idea that reading generated code was our strategy for trust raised some red flags. We cannot hand people written material and assume they will read it closely. More importantly, passive reading is not a good way to build the mental model you need to catch mistakes.)
+
 :::
 
-# {background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
+# 
 
-::: {style="position: absolute; top: 43%; left: 2%; width: 45%; margin: 0; padding: 0.75rem 1rem; background: #fff; box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%); font-size: 0.72em; font-weight: 300; text-align: left;"}
-"Databot, and LLMs in general, aren’t at a point where you can abdicate responsibility or suspend skepticism when working with data. ...
-Using it well requires the same fundamentals that any good analysis does...These skills help you **catch errors, interpret results in context, and avoid being misled by confident but incorrect claims."**
-:::
-
-:::footer
-<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
-:::
+<div style="display: flex; height: 100%; flex-direction: column; justify-content: center; gap: 3rem; font-size: 1.2em; font-weight: 600; line-height: 1.15;">
+<div>Telling people to be vigilant is not a correctness strategy.</div>
+<div class="fragment">The presence of a human is not enough.</div>
+</div>
 
 ::: notes
-this is all still true! I stand by this. you shouldn't abandon your expertise. but I wouldn't write that post in the same way today.
+telling people to be vigilant is not a correctness strategy
+the presence of a human is not enough
 
-because while it's true that you shouldn't abandon your expertise, it doesn't mean we don't need to think about _how_ it is going to be applied and how it is going to interact with the agent
+Just adding a human and telling them to remain vigilant is not a correctness strategy.
+
+The agent, the interface, the timing and amount of information, cognitive load, and the cues the system provides all affect how someone makes a decision. A human is not a fixed safety component. The interaction determines whether and how their expertise becomes part of the work.
+
+I would not write the Databot post in the same way today. I would still say not to abandon your expertise, but I would also ask how the tool itself helps you apply that expertise and recover when something goes wrong.
+
+that does not mean human expertise is unnecessary. It's just that simply assigning the role of correctness monitor to the human does not make the system correct.
+
 :::
-
-
-# the presence of a human is not enough 
-
-<!-- possibly add an example before handing off --> 
-
-::: notes
-because just adding a human, and telling them to be there, is not a correctness strategy. 
-
-For the rest of the talk, we're going to show you the concrete ways we've built correctness and trust into the tools themselves: first with Posit Assistant, Databot's successor, and then with a new package called commons.
-:::
-
-<!-- notes for reframing or adding one more slide
-- from hitl paper: "automation isn't a costless substitute for human decision making: it alters human roles and functions"
-- The Databot post may have been too alarmist because it encouraged people to distrust the output, but not alarmist enough because we had not built trustworthiness into the interaction itself.
-- A human is not a fixed safety component. The agent, interface, cognitive load, and trust cues all affect how the person decides.
-- The question is not "who checks the output?" but "how do we design the interaction so the entire system can produce trustworthy work?"
-- Two goals follow: help the model not be wrong, and make it less bad when it is wrong.
--->
 
 # 
 
@@ -495,7 +428,16 @@ For the rest of the talk, we're going to show you the concrete ways we've built 
 * Consider how interaction works with the user and can support their expertise
 :::
 
+::: notes
+
+Instead: encode correctness into the agent itself and design the interaction to support human expertise when the model will inevitably make mistakes. 
+:::
+
 # 
 
 * Build trust and correctness into the system itself: **Help the agent be correct**
 * Consider how interaction works with the user and can support their expertise: **Make it less bad when it's wrong**
+
+::: notes
+In other words: help the agent be correct, and make it less bad when it's wrong.
+:::
