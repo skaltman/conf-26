@@ -610,7 +610,7 @@ the system I'm proposing looks something like this
 
 ![](figures/commons-hex.png){width=80% style="display: block; margin: 0 auto;"}
 
-# Trust diagram
+# Trust flow diagram
 
 # Trusted code and context
 
