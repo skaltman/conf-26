@@ -15,109 +15,163 @@ knitr:
 
 ##
 
-::: notes
-Simon starts off with the fake story about the first time he listened to this test set episode.
-:::
+## {.agent-story-slide}
 
-##
-
-![](figures/rogue-analysis-in-cursor.png){.rounded}
-
-::: notes
-Becoming normal to spin up a coding agent, ask a question, and go with whatever the answer is.
-
-> Nell Thomas has spent two decades in data — from equity research to the DNC to Facebook to leading a 400-person data org at Shopify.
-:::
-
-##
-
-:::notes
-The prime directive is very important at Posit. (Screenshot of the many slack or confluence listings with this phrase? But they don't show a total count in the UI.) Maybe a reference to Star Trek (and a joke about how I didn't actually know that was a thing.) 
-:::
-
-# The Prime Directive
-
-:::notes
-Now, I've actually never seen Star Trek, and only in preparing for this talk did I learn it was a Star Trek reference when I typed just those two words into Google and couldn't find what I was looking for.
-
-I was looking for what _I_ knew as the Prime Directive, which is...
-:::
-
-## The Prime Directive {.quote-slide}
-
-<video class="fragment fade-in-then-out attention-fragment attention-fragment-center" preload="auto" loop muted playsinline height="560">
-  <source src="figures/subway-surfers.mov">
-</video>
-
-> ::: {.fragment}
-> _...those who receive the results of modern data analysis have limited opportunity to verify the results by direct observation._
-> ::: 
->
-> ::: {.fragment}
-> _Users of the analysis have no option but to trust the analysis, and by extension the software that produced it._
-> ::: 
-> 
-> ::: {.fragment}
-> _Both the data analyst and the software provider therefore have a strong responsibility to produce a result that is trustworthy, and, if possible, one that can be_ shown _to be trustworthy._
-> ::: 
->
-> ::: {.fragment}
-> _...This obligation I label the_ Prime Directive.
-> ::: 
-
-<video class="fragment attention-fragment attention-fragment-bottom-right" preload="auto" loop muted playsinline height="400">
-  <source src="figures/subway-surfers.mov">
-</video>
-
-:::notes
-Now, it's 2026 and I've said I'll read a textbook entry...
-
-re: the second-to-last point, this is "You don't have to trust me, here's how to reproduce it yourself."
-
-https://books.google.com.mt/books?id=UXneuOIvhEAC&lpg=PP1&pg=PA1#v=onepage&q&f=false
-:::
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
-:::
-
-##
-
-. . .
-
-<br><br>
-![](figures/prime-directive-search-result.png){.rounded}
+```{=html}
+<div class="agent-window">
+  <div class="agent-thread">
+        <div class="chat-turn chat-turn-user">
+          <div class="chat-message chat-message-user">
+            how is traffic trending for our site?
+          </div>
+        </div>
+        <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="0">
+          <div class="chat-message chat-message-agent">
+            <div class="agent-thinking"><span></span> Analyzing site traffic</div>
+            <div class="tool-card" style="--tool-delay: 0s">
+              <span class="tool-card-icon">⌕</span>
+              <span><strong>Searching workspace</strong><small>web analytics</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+            <div class="tool-card" style="--tool-delay: 1.05s">
+              <span class="tool-card-icon">◫</span>
+              <span><strong>Querying warehouse</strong><small>analytics.pageviews</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+            <div class="tool-card" style="--tool-delay: 2.1s">
+              <span class="tool-card-icon">∿</span>
+              <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+          </div>
+        </div>
+        <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="0">
+          <div class="chat-message chat-message-agent">
+            <p>Daily visits are down <strong>64%</strong> over the last 90 days.</p>
+            <div class="dau-chart">
+              <div class="dau-chart-title"><span>Daily site visits</span><strong>−64%</strong></div>
+              <svg viewBox="0 0 620 225" role="img" aria-label="Daily site visits rise unevenly, then fall sharply after a changepoint.">
+                <defs>
+                  <linearGradient id="dau-area" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ee6331" stop-opacity="0.28"/>
+                    <stop offset="100%" stop-color="#ee6331" stop-opacity="0.02"/>
+                  </linearGradient>
+                </defs>
+                <g class="chart-grid">
+                  <line x1="56" y1="34" x2="598" y2="34"/><line x1="56" y1="86" x2="598" y2="86"/>
+                  <line x1="56" y1="138" x2="598" y2="138"/><line x1="56" y1="190" x2="598" y2="190"/>
+                </g>
+                <g class="chart-labels">
+                  <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+                  <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+                </g>
+                <path class="chart-area" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145 L598,190 L56,190 Z"/>
+                <path class="chart-line" pathLength="1" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145"/>
+                <circle class="chart-end" cx="598" cy="145" r="6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+```
 
 :::notes
-This comes up internally a _lot_. Admittedly, many of those mentions are from our CEO.
+Your VP pulled up a coding agent this morning and asked a question. 
+
+Now, as data scientists, we might have asked ourselves "What changes in the upstream data environment might have changed the way that the table column is populated?" "How are daily visits being measured?" "What other possible explanations could account for this change in trend?" If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table, which is not the typical table used to measure site traffic anyway.
+
+Your VP brings this chart to leadership. They decide to restructure the organization and spend millions to reverse the trend.
 :::
 
-:::footer
-:::
+## {.agent-story-slide}
 
-##
-
-![](figures/tareef-2019-prime-directive.png){.rounded}
-
-:::footer
-:::
+```{=html}
+<div class="agent-window month-later-window">
+  <div class="agent-thread">
+    <div class="chat-turn chat-turn-user">
+      <div class="chat-message chat-message-user">
+        could you find the site traffic chart we made a month ago?
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent tool-run history-tool-run fragment fade-up" data-fragment-index="0">
+      <div class="chat-message chat-message-agent">
+        <div class="agent-thinking"><span></span> Looking for prior analysis</div>
+        <div class="tool-card" style="--tool-delay: 0s">
+          <span class="tool-card-icon">⌕</span>
+          <span><strong>Searching conversations</strong><small>site traffic chart</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 1.05s">
+          <span class="tool-card-icon">◫</span>
+          <span><strong>Checking generated files</strong><small>temporary workspace</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent history-missing fragment fade-up" data-fragment-index="0">
+      <div class="chat-message chat-message-agent">
+        I couldn’t find that conversation or any saved analysis files. Do you want me to recreate that chart for the last 90 days?
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-user fragment fade-up" data-fragment-index="1">
+      <div class="chat-message chat-message-user">
+        yeah
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="2">
+      <div class="chat-message chat-message-agent">
+        <div class="agent-thinking"><span></span> Analyzing site traffic</div>
+        <div class="tool-card" style="--tool-delay: 0s">
+          <span class="tool-card-icon">⌕</span>
+          <span><strong>Searching workspace</strong><small>web analytics</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 1.05s">
+          <span class="tool-card-icon">◫</span>
+          <span><strong>Querying warehouse</strong><small>analytics.sessions</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 2.1s">
+          <span class="tool-card-icon">∿</span>
+          <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="2">
+      <div class="chat-message chat-message-agent">
+        <p>Daily visits increased <strong>22%</strong> over the last 90 days.</p>
+        <div class="dau-chart">
+          <div class="dau-chart-title"><span>Daily site visits</span><strong>+22%</strong></div>
+          <svg viewBox="0 0 620 225" role="img" aria-label="Daily site visits trend unevenly upward over the last 90 days.">
+            <defs>
+              <linearGradient id="traffic-area-up" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#23875b" stop-opacity="0.26"/>
+                <stop offset="100%" stop-color="#23875b" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            <g class="chart-grid">
+              <line x1="56" y1="34" x2="598" y2="34"/><line x1="56" y1="86" x2="598" y2="86"/>
+              <line x1="56" y1="138" x2="598" y2="138"/><line x1="56" y1="190" x2="598" y2="190"/>
+            </g>
+            <g class="chart-labels">
+              <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+              <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+            </g>
+            <path class="chart-area" d="M56,69 L69,74 L82,66 L95,71 L108,63 L121,68 L134,70 L147,61 L160,65 L173,57 L186,64 L199,60 L212,54 L225,58 L238,62 L251,52 L264,56 L277,48 L290,55 L303,51 L316,44 L329,50 L342,47 L355,39 L368,46 L381,43 L394,49 L407,40 L420,44 L433,36 L446,43 L459,38 L472,34 L485,42 L498,37 L511,31 L524,39 L537,35 L550,29 L563,36 L576,33 L589,38 L598,41 L598,190 L56,190 Z"/>
+            <path class="chart-line" pathLength="1" d="M56,69 L69,74 L82,66 L95,71 L108,63 L121,68 L134,70 L147,61 L160,65 L173,57 L186,64 L199,60 L212,54 L225,58 L238,62 L251,52 L264,56 L277,48 L290,55 L303,51 L316,44 L329,50 L342,47 L355,39 L368,46 L381,43 L394,49 L407,40 L420,44 L433,36 L446,43 L459,38 L472,34 L485,42 L498,37 L511,31 L524,39 L537,35 L550,29 L563,36 L576,33 L589,38 L598,41"/>
+            <circle class="chart-end" cx="598" cy="41" r="6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 :::notes
-...he's been harping on the PD for a while
-:::
-
-##
-
-![](figures/rogue-analysis-in-cursor.png){.rounded}
-
-::: notes
-Let's revisit this with the prime directive in mind...
-
-"Both the data analyst and the software provider therefore have a strong responsibility to produce a result that is trustworthy, and, if possible, one that can be _shown_ to be trustworthy."
-
-First we have to acknowledge that the models are writing code, so that's a good start. Kudos to them.
-
-The code that models write often lives in a temp-file, and unless the user asks for it, is often not backed by an explicit registry of package versions. The chat transcripts from which they could be recovered are, by default, deleted after 30 or 60 days. And even with a reproducible analysis, the model might hallucinate findings, generalize findings beyond what the evidence actually shows, etc.
+A month later, leadership asks to see the chart again. The VP opens up the same agent, but can't find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone. When the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
 :::
 
 ##
@@ -128,23 +182,14 @@ The code that models write often lives in a temp-file, and unless the user asks 
 _<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
 :::
 
-
 ::: {.attribution}
 \- Joe Cheng
 :::
 
-:::notes
-This is one possible way to summarize  this effect
-:::
+::: notes
+AI has largely been a threat to correctness. People with less expertise can now convincingly do data analysis.
 
-##
-
-:::notes
-...This has always been the case.
-
-Things were not perfect before. Why would Tareef have been speaking about the PD in 2019? Why would John Chambers have written about it in 2008?
-
-Because the prime directive has always been under threat, and reproducibility has never been the norm.
+It just so happened that Joe said this a month ago, but he could have said it a decade ago and it would still have been true.
 :::
 
 ##
@@ -155,55 +200,44 @@ Because the prime directive has always been under threat, and reproducibility ha
 <span style="color:#ee6331;">https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business</span>
 :::
 
-:::notes
-Tareef might have had Conviviality in mind, which had been mistakely reporting healthy financials for years due to a "spreadsheet arithmetic error."
+::: notes
+In 2019, Conviviality (a beverage company) discovered they had been mistakenly reporting healthy financials for years due to a “spreadsheet arithmetic error.”
 
-> '£5.2m of that £14m came thanks to “a material error in the financial forecasts”. The error, it later admitted, was “a spreadsheet arithmetic error”.'
+> £5.2m of that £14m came thanks to “a material error in the financial forecasts”. The error, it later admitted, was “a spreadsheet arithmetic error”.
 :::
 
-##
-
-![](figures/fannie-mae-spreadsheeting-error.png){.rounded}
-
-:::notes
-And, in 2008, John Chambers might have had Fannie Mae in mind, which discovered a $1.136 billion error in total shareholder equity:
-> 'There were honest mistakes made in a spreadsheet used in the implementation of a new accounting standard.'
-
-https://www.louisepryor.com/2004/01/10/fanniemae/
-:::
-
-:::footer
-<span style="color:#ee6331;">https://web.archive.org/web/20120917174753/https://www.pcworld.com/article/127189/article.html</span>
-:::
-
-##
+## 
 
 . . .
 
-<br><br><br>
-
-::: {.quote}
-_<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
-:::
-
-::: {.attribution}
-\- Joe Cheng
-:::
+![](figures/rstudio-blog.png){style="display: block; margin: 0 auto;"}
 
 :::notes
-So, the Prime Directive has always been under threat. That said, I don't know that it's necessarily fair to say that convenience and correctness are at battle with each other. They can't be at battle, in the same way that you cannot be in a battle with your VP lol.
-
-The solution then, as it is now, it to make software that is both correct and also very convenient to use, both for the analyst and the end user of the analysis. This is the rationale behind our investment in Shiny, for example. To publish a Shiny app, you click one button that says publish in your IDE and then reproducible R or Python code is hosted on Connect and available for your collaborators.
+There have always been threats to correctness in data analysis. This is why Posit was founded; correctness has always been our bag. But our stance was not "you need to forgo convenience in favor of correctess."
 :::
 
 ##
 
-:::notes
-AI, as a new technology, means that the Prime Directive is under threat in a new way. 
+<br><br>
 
-In the same way that we couldn't tell our collaborators not to use software that was convenient for them before AI, we can't do it now.
+::: {.quote}
+_<span class="opening-quote">“</span>Our goal is to develop a powerful tool that supports trustworthy, high quality analysis._
 
-How can we make software that is both correct _and_ convenient? Can we satisfy Chambers' Prime Directive while also making use of the leverage that these new tools provide? This is something that we've been focused on at Posit for the last year and change.
+_At the same time, we want RStudio to be as straightforward and intuitive as possible.”_
+:::
+
+::: {.attribution}
+\- JJ Allaire, 2011
+:::
+
+:::footer
+https://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/
+:::
+
+:::
+It was "it can be correct _and_ convenient."
+
+Thus, with AI, our stance needs to be the same. How do we build data analysis agents that are both correct and convenient to use?
 :::
 
 # 
