@@ -174,16 +174,6 @@ A month later, leadership asks to see the chart again. The VP opens up the same 
 
 ##
 
-![](figures/rogue-analysis-in-cursor.png){.rounded}
-
-::: notes
-Becoming normal to spin up a coding agent, ask a question, and go with whatever the answer is.
-
-> Nell Thomas has spent two decades in data — from equity research to the DNC to Facebook to leading a 400-person data org at Shopify.
-:::
-
-##
-
 <br><br><br>
 
 ::: {.quote}
