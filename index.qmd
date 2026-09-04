@@ -481,3 +481,39 @@ and design the interaction to support human expertise when the model will inevit
 ::: notes
 In other words: help the agent be correct, and make it less bad when it's wrong.
 :::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/posit-assistant-demo-p1.mov">
+</video>
+
+:::notes
+Sara described her first moments of really wrapping her head around data science tools as like seeing below the surface. I think many of us might have had a moment like this at some point, when we began to understand how powerful data science and statistics are for answering questions about the world.
+
+The first time I felt this way, I had been asked to use R to understand what affects flight delays. I had to load in some data and then write dplyr and ggplot to see if I could make any decisions that would give me better chances of my flight leaving on time. 
+
+In demoing Posit Assistant, I thought I might revisit that moment with you. 
+
+Posit Assistant is a coding and data science agent. It's available in RStudio, Positron, and the terminal. When it's running inside of your IDE, it works inside of your active R and Python session. You can use whatever model from whatever provider you want with it.
+
+When playing the video:
+
+* It can do normal coding agent stuff -- here, it uses web fetch to find information on the internet
+* It uses the same functions you do to read documentation
+* It prefers to keep data in the project
+:::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/posit-assistant-demo-p2.mov">
+</video>
+
+:::notes
+* Cleaning mode makes good use of your attention
+* It pays attention to missing data, outliers, etc
+* Cleaning script is persisted
+* You can see plots
+* The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot
+:::

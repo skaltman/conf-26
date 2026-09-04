@@ -14,6 +14,17 @@
   box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%);
 }
 
+.reveal video.rounded {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%);
+}
+
+.reveal video.click-to-toggle {
+  cursor: pointer;
+}
+
 .reveal .quote-slide blockquote {
   font-size: 0.85em;
   font-weight: 300;
