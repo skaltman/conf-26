@@ -15,7 +15,7 @@ knitr:
 
 ##
 
-## {.agent-story-slide}
+## {.agent-story-slide .slow-tool-calls}
 
 ```{=html}
 <div class="agent-window">
@@ -33,12 +33,12 @@ knitr:
               <span><strong>Searching workspace</strong><small>web analytics</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
             </div>
-            <div class="tool-card" style="--tool-delay: 1.05s">
+            <div class="tool-card" style="--tool-delay: 2.25s">
               <span class="tool-card-icon">◫</span>
               <span><strong>Querying warehouse</strong><small>analytics.pageviews</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
             </div>
-            <div class="tool-card" style="--tool-delay: 2.1s">
+            <div class="tool-card" style="--tool-delay: 3.5s">
               <span class="tool-card-icon">∿</span>
               <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
@@ -77,14 +77,14 @@ knitr:
 ```
 
 :::notes
-Your VP pulled up a coding agent this morning and asked a question. 
+This morning, your VP pulled up a coding agent and asked a question. 
 
-Now, as data scientists, we might have asked ourselves "What changes in the upstream data environment might have changed the way that the table column is populated?" "How are daily visits being measured?" "What other possible explanations could account for this change in trend?" If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table, which is not the typical table used to measure site traffic anyway.
+Now, as data scientists, we might have asked ourselves "How are daily visits being measured?" "What event triggers an entry in this column?" "What other possible explanations could account for this change in trend?" If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table, which is not the typical table used to measure site traffic anyway.
 
-Your VP brings this chart to leadership. They decide to restructure the organization and spend millions to reverse the trend.
+Nevertheless, you're not there. Your VP brings this chart to leadership. They decide to restructure the organization and spend millions to reverse the trend.
 :::
 
-## {.agent-story-slide}
+## {.agent-story-slide .slow-tool-calls}
 
 ```{=html}
 <div class="agent-window month-later-window">
@@ -102,7 +102,7 @@ Your VP brings this chart to leadership. They decide to restructure the organiza
           <span><strong>Searching conversations</strong><small>site traffic chart</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 1.05s">
+        <div class="tool-card" style="--tool-delay: 1.25s">
           <span class="tool-card-icon">◫</span>
           <span><strong>Checking generated files</strong><small>temporary workspace</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
@@ -127,12 +127,12 @@ Your VP brings this chart to leadership. They decide to restructure the organiza
           <span><strong>Searching workspace</strong><small>web analytics</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 1.05s">
+        <div class="tool-card" style="--tool-delay: 1.25s">
           <span class="tool-card-icon">◫</span>
           <span><strong>Querying warehouse</strong><small>analytics.sessions</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 2.1s">
+        <div class="tool-card" style="--tool-delay: 2.5s">
           <span class="tool-card-icon">∿</span>
           <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
@@ -171,7 +171,9 @@ Your VP brings this chart to leadership. They decide to restructure the organiza
 ```
 
 :::notes
-A month later, leadership asks to see the chart again. The VP opens up the same agent, but can't find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone. When the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
+A month later, leadership asks to see the chart again. The VP opens up the same agent, but can't find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone. 
+
+The agent offers to make it again. This time, when the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
 :::
 
 ##
@@ -187,7 +189,7 @@ _<span class="opening-quote">“</span>In the battle between convenience and cor
 :::
 
 ::: notes
-AI has largely been a threat to correctness. People with less expertise can now convincingly do data analysis.
+AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.
 
 It just so happened that Joe said this a month ago, but he could have said it a decade ago and it would still have been true.
 :::
@@ -213,7 +215,7 @@ In 2019, Conviviality (a beverage company) discovered they had been mistakenly r
 ![](figures/rstudio-blog.png){style="display: block; margin: 0 auto;"}
 
 :::notes
-There have always been threats to correctness in data analysis. This is why Posit was founded; correctness has always been our bag. But our stance was not "you need to forgo convenience in favor of correctess."
+There have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance was not "you need to forgo convenience in favor of correctess."
 :::
 
 ##
@@ -235,9 +237,9 @@ https://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/
 :::
 
 :::notes
-It was "it can be correct _and_ convenient."
+He's saying "it can be correct _and_ convenient."
 
-Thus, with AI, our stance needs to be the same. How do we build data analysis agents that are both correct and convenient to use?
+With AI, our stance needs to be the same. How do we build data analysis agents that are both correct and convenient to use?
 :::
 
 # 

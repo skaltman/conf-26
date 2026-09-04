@@ -144,17 +144,17 @@
 }
 
 .reveal .month-later-window .history-tool-run.visible {
-  animation: history-tool-run-out 0.25s ease-out 2.25s forwards;
+  animation: history-tool-run-out 0.25s ease-out 2.45s forwards;
 }
 
 .reveal .month-later-window .tool-run.history-tool-run.visible .agent-thinking {
-  animation: agent-thinking-out 0.2s ease-out 2.08s forwards;
+  animation: agent-thinking-out 0.2s ease-out 2.28s forwards;
 }
 
 .reveal .slides section .month-later-window .history-missing.fragment.visible {
   opacity: 0;
   transform: translateY(8px);
-  animation: result-turn-in 0.3s ease-out 2.38s forwards;
+  animation: result-turn-in 0.3s ease-out 2.58s forwards;
 }
 
 .reveal .month-later-window .agent-thinking {
@@ -207,6 +207,10 @@
 
 .reveal .tool-run.visible .agent-thinking {
   animation: agent-thinking-out 0.2s ease-out 3.12s forwards;
+}
+
+.reveal .slides section.slow-tool-calls .tool-run:not(.history-tool-run).visible .agent-thinking {
+  animation-delay: 3.55s;
 }
 
 .reveal .agent-thinking span {
@@ -326,6 +330,10 @@
   animation: result-turn-in 0.35s ease-out 3.3s forwards;
 }
 
+.reveal .slides section.slow-tool-calls .result-turn.fragment.visible {
+  animation-delay: 3.7s;
+}
+
 .reveal .result-turn p strong {
   color: #cf4d20;
 }
@@ -417,6 +425,18 @@
 
 .reveal .result-turn.visible .chart-end {
   animation: chart-point-in 0.28s ease-out 4.6s forwards;
+}
+
+.reveal .slow-tool-calls .result-turn.visible .chart-area {
+  animation-delay: 3.95s;
+}
+
+.reveal .slow-tool-calls .result-turn.visible .chart-line {
+  animation-delay: 3.8s;
+}
+
+.reveal .slow-tool-calls .result-turn.visible .chart-end {
+  animation-delay: 5s;
 }
 
 @keyframes agent-pulse {
