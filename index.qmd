@@ -208,18 +208,18 @@ How can we make software that is both correct _and_ convenient? Can we satisfy C
 
 # 
 
-![](figures/2025.excalidraw.svg)
+![](figures/databot-flotation.png){.rounded}
+
+:::footer
+<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
+:::
 
 ::: notes
 and this question of correctness and convenience was maybe especially on our minds last year, in 2025
-:::
 
-# 
+we were so concerned about correctness that we essentially released a product with a warning label
 
-![](figures/2025-warning.excalidraw.svg)
-
-::: notes
-and not just on our minds at posit, but I think for a lot of us, 2025 was the year AI for data science got seriously convenient, and so sparked a lot of concerns about correctness
+- this is the image from a blog post joe and i wrote, and this was actually one of the first things I worked on the AI team
 :::
 
 # 
@@ -231,25 +231,10 @@ and not just on our minds at posit, but I think for a lot of us, 2025 was the ye
 :::
 
 ::: notes
-for simon and i and the rest of the ai team at posit, it was on our minds especially because of a new agent we released right before posit conf called databot
+that product was databot, a new agent we released right before posit conf
 databot was an exploratory data analysis agent that lived in positron
-it was great
-:::
 
-# 
-
-::: {.fragment}
-![](figures/databot-flotation.png){.rounded}
-:::
-
-:::footer
-<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
-:::
-
-::: notes
-but it felt so powerful and so new that we essentially released it under a warning label
-- this is the image from a blog post joe and i wrote about Databot, and This was actually one of the first things I worked on the AI team. 
-- and we were all so excited about databot, but also so worried about people trusting its answers when it was wrong
+and we were all so excited about databot, but also so worried about people trusting its answers when it was wrong
 :::
 
 # 
