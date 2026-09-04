@@ -519,3 +519,11 @@ When playing the video:
 * You can see plots
 * The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot
 :::
+
+##
+
+![](figures/posit-assistant-homepage.png){.rounded}
+
+:::notes
+We've designed Posit Assistant to be more correct, and we've designed it to make better use of your expertise than other coding agents, so that you're more likely to know when it's wrong.
+:::
