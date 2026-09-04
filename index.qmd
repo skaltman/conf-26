@@ -359,6 +359,8 @@ and there's lot of evidence that this won't work! but to convince you for now I 
 
 when your coding agent (or past coding agents) show you a command and ask you to approve it, how often do you carefully read that command, and how often do you just hit accept?
 
+And that example sits within a much larger body of research: automation bias, approval fatigue, passive versus active learning, how trust is mediated, and how human decision-making is shaped by environmental and social factors.
+
 [when Anthropic measured this, they found...]
 :::
 
@@ -402,36 +404,12 @@ it relies too much on the hard work of the user, in an interface not conducive t
 furthermore, the presence of the agent changes how people will make decisions
 :::
 
-# The system has to engage your expertise
-
-::: notes
-The problem is not that people lack expertise. The problem is that expertise does not apply itself merely because an expert is present.
-
-There is a lot of research on this: automation bias, approval fatigue, passive versus active learning, how trust is mediated, and how human decision-making is shaped by environmental and social factors.
-
-The agent, the interface, the timing and amount of information, cognitive load, and the cues the system provides all affect how someone makes a decision.
-
-A human is not a fixed safety component. The interaction determines whether and how their expertise becomes part of the work.
-:::
-
 # 
 
-::: {.incremental}
-
-we need a new strategy
-* ~~Who checks the output?~~
-<br>is expertise or correctness encoded into the agent itslef
-<br>
-* **How does the interaction support trustworthy work?**
-:::
-
-::: notes
-So the important question is not simply who checks the output. It is how we design the interaction so that the human and the agent together can produce trustworthy work.
-
-That does not make human expertise less important. It takes that expertise seriously enough to design for how it will actually be used.
-:::
-
-# the presence of a human is not enough 
+<div style="display: flex; height: 100%; flex-direction: column; justify-content: center; gap: 3rem; font-size: 1.2em; font-weight: 600; line-height: 1.15;">
+<div>Telling people to be vigilant is not a correctness strategy.</div>
+<div class="fragment">The presence of a human is not enough.</div>
+</div>
 
 ::: notes
 telling people to be vigilant is not a correctness strategy
@@ -439,7 +417,12 @@ the presence of a human is not enough
 
 Just adding a human and telling them to remain vigilant is not a correctness strategy.
 
+The agent, the interface, the timing and amount of information, cognitive load, and the cues the system provides all affect how someone makes a decision. A human is not a fixed safety component. The interaction determines whether and how their expertise becomes part of the work.
+
 I would not write the Databot post in the same way today. I would still say not to abandon your expertise, but I would also ask how the tool itself helps you apply that expertise and recover when something goes wrong.
+
+That does not mean human expertise is unnecessary. It just that simply assigning the role of correctness monitor to the human does not make the system correct.
+
 :::
 
 # 
@@ -452,7 +435,8 @@ I would not write the Databot post in the same way today. I would still say not 
 :::
 
 ::: notes
-That gives us two responsibilities. We need to improve what the agent does, and we need to design the interaction around what happens when it still makes mistakes.
+
+Instead: encode correctness into the agent itself and design the interaction to support human expertise when the model will inevitably make mistakes. 
 :::
 
 # 
