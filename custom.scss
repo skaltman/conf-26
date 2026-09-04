@@ -19,6 +19,22 @@
   font-weight: 300;
 }
 
+.reveal .quote-slide .attention-fragment {
+  position: absolute;
+  z-index: 1;
+}
+
+.reveal .quote-slide .attention-fragment-center {
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reveal .quote-slide .attention-fragment-bottom-right {
+  right: 1rem;
+  bottom: 2.5rem;
+}
+
 .reveal .quote {
   font-size: 1.4em;
   text-align: left;
@@ -93,6 +109,77 @@
 .reveal .chat-message-agent {
   width: 100%;
   padding-top: 2px;
+}
+
+.reveal .month-later-window .agent-thread {
+  padding-block: 6px;
+}
+
+.reveal .month-later-window .chat-turn {
+  margin-bottom: 8px;
+}
+
+.reveal .month-later-window .chat-message-user {
+  padding: 11px 16px;
+}
+
+.reveal .month-later-window .history-missing {
+  color: #596973;
+}
+
+.reveal .month-later-window .history-tool-run {
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.reveal .month-later-window .history-tool-run.visible {
+  animation: history-tool-run-out 0.25s ease-out 2.25s forwards;
+}
+
+.reveal .month-later-window .tool-run.history-tool-run.visible .agent-thinking {
+  animation: agent-thinking-out 0.2s ease-out 2.08s forwards;
+}
+
+.reveal .slides section .month-later-window .history-missing.fragment.visible {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: result-turn-in 0.3s ease-out 2.38s forwards;
+}
+
+.reveal .month-later-window .agent-thinking {
+  margin-bottom: 5px;
+}
+
+.reveal .month-later-window .tool-card {
+  height: 46px;
+  margin-bottom: 5px;
+}
+
+.reveal .month-later-window .result-turn p {
+  font-size: 18px;
+}
+
+.reveal .month-later-window .result-turn p strong,
+.reveal .month-later-window .dau-chart-title strong {
+  color: #23875b;
+}
+
+.reveal .month-later-window .dau-chart {
+  width: 720px;
+  padding: 9px 16px 4px;
+}
+
+.reveal .month-later-window .dau-chart svg {
+  height: 150px;
+}
+
+.reveal .month-later-window .chart-area {
+  fill: url(#traffic-area-up);
+}
+
+.reveal .month-later-window .chart-line,
+.reveal .month-later-window .chart-end {
+  stroke: #23875b;
 }
 
 .reveal .agent-thinking {
@@ -327,6 +414,15 @@
 }
 
 @keyframes agent-thinking-out {
+  to {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes history-tool-run-out {
   to {
     max-height: 0;
     margin-bottom: 0;

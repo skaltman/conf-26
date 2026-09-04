@@ -13,6 +13,8 @@ knitr:
     comment: "#>"
 ---
 
+##
+
 ## {.agent-story-slide}
 
 ```{=html}
@@ -20,35 +22,35 @@ knitr:
   <div class="agent-thread">
         <div class="chat-turn chat-turn-user">
           <div class="chat-message chat-message-user">
-            How are daily active users trending for Beacon?
+            how is traffic trending for our site?
           </div>
         </div>
         <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="0">
           <div class="chat-message chat-message-agent">
-            <div class="agent-thinking"><span></span> Analyzing product usage</div>
+            <div class="agent-thinking"><span></span> Analyzing site traffic</div>
             <div class="tool-card" style="--tool-delay: 0s">
               <span class="tool-card-icon">⌕</span>
-              <span><strong>Searching workspace</strong><small>product analytics</small></span>
+              <span><strong>Searching workspace</strong><small>web analytics</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
             </div>
             <div class="tool-card" style="--tool-delay: 1.05s">
               <span class="tool-card-icon">◫</span>
-              <span><strong>Querying warehouse</strong><small>prod.events</small></span>
+              <span><strong>Querying warehouse</strong><small>analytics.pageviews</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
             </div>
             <div class="tool-card" style="--tool-delay: 2.1s">
               <span class="tool-card-icon">∿</span>
-              <span><strong>Calculating daily active users</strong><small>last 90 days</small></span>
+              <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
             </div>
           </div>
         </div>
         <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="0">
           <div class="chat-message chat-message-agent">
-            <p>Beacon’s daily active users are down <strong>64%</strong> over the last 90 days.</p>
+            <p>Daily visits are down <strong>64%</strong> over the last 90 days.</p>
             <div class="dau-chart">
-              <div class="dau-chart-title"><span>Daily active users</span><strong>−64%</strong></div>
-              <svg viewBox="0 0 620 225" role="img" aria-label="Daily active users rise unevenly, then fall sharply after a changepoint.">
+              <div class="dau-chart-title"><span>Daily site visits</span><strong>−64%</strong></div>
+              <svg viewBox="0 0 620 225" role="img" aria-label="Daily site visits rise unevenly, then fall sharply after a changepoint.">
                 <defs>
                   <linearGradient id="dau-area" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stop-color="#ee6331" stop-opacity="0.28"/>
@@ -63,8 +65,8 @@ knitr:
                   <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
                   <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
                 </g>
-                <path class="chart-area" d="M56,61 L69,59 L82,60 L95,56 L108,58 L121,54 L134,55 L147,51 L160,53 L173,50 L186,48 L199,49 L212,45 L225,47 L238,43 L251,44 L264,41 L277,43 L290,39 L303,37 L313,39 L319,42 L329,55 L340,61 L351,70 L362,75 L373,86 L384,89 L395,99 L406,103 L417,102 L428,112 L439,109 L450,119 L461,121 L472,127 L483,125 L494,132 L505,135 L516,133 L527,140 L538,138 L549,143 L560,141 L571,146 L582,143 L598,145 L598,190 L56,190 Z"/>
-                <path class="chart-line" pathLength="1" d="M56,61 L69,59 L82,60 L95,56 L108,58 L121,54 L134,55 L147,51 L160,53 L173,50 L186,48 L199,49 L212,45 L225,47 L238,43 L251,44 L264,41 L277,43 L290,39 L303,37 L313,39 L319,42 L329,55 L340,61 L351,70 L362,75 L373,86 L384,89 L395,99 L406,103 L417,102 L428,112 L439,109 L450,119 L461,121 L472,127 L483,125 L494,132 L505,135 L516,133 L527,140 L538,138 L549,143 L560,141 L571,146 L582,143 L598,145"/>
+                <path class="chart-area" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145 L598,190 L56,190 Z"/>
+                <path class="chart-line" pathLength="1" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145"/>
                 <circle class="chart-end" cx="598" cy="145" r="6"/>
               </svg>
             </div>
@@ -73,6 +75,102 @@ knitr:
   </div>
 </div>
 ```
+
+:::notes
+Now, as data scientists, we might have asked ourselves "What changes in the upstream data environment might have changed the way that the table column is populated?" "How are daily visits being measured?" "What other possible explanations could account for this change in trend?" If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table, which is not the typical table used to measure site traffic anyway.
+
+Your VP brings this chart to leadership. They decide to restructure the organization and spend millions to reverse the trend.
+:::
+
+## {.agent-story-slide}
+
+```{=html}
+<div class="agent-window month-later-window">
+  <div class="agent-thread">
+    <div class="chat-turn chat-turn-user">
+      <div class="chat-message chat-message-user">
+        could you find the site traffic chart we made a month ago?
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent tool-run history-tool-run fragment fade-up" data-fragment-index="0">
+      <div class="chat-message chat-message-agent">
+        <div class="agent-thinking"><span></span> Looking for prior analysis</div>
+        <div class="tool-card" style="--tool-delay: 0s">
+          <span class="tool-card-icon">⌕</span>
+          <span><strong>Searching conversations</strong><small>site traffic chart</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 1.05s">
+          <span class="tool-card-icon">◫</span>
+          <span><strong>Checking generated files</strong><small>temporary workspace</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent history-missing fragment fade-up" data-fragment-index="0">
+      <div class="chat-message chat-message-agent">
+        I couldn’t find that conversation or any saved analysis files. Do you want me to recreate that chart for the last 90 days?
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-user fragment fade-up" data-fragment-index="1">
+      <div class="chat-message chat-message-user">
+        yeah
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="2">
+      <div class="chat-message chat-message-agent">
+        <div class="agent-thinking"><span></span> Analyzing site traffic</div>
+        <div class="tool-card" style="--tool-delay: 0s">
+          <span class="tool-card-icon">⌕</span>
+          <span><strong>Searching workspace</strong><small>web analytics</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 1.05s">
+          <span class="tool-card-icon">◫</span>
+          <span><strong>Querying warehouse</strong><small>analytics.sessions</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 2.1s">
+          <span class="tool-card-icon">∿</span>
+          <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="2">
+      <div class="chat-message chat-message-agent">
+        <p>Daily visits increased <strong>22%</strong> over the last 90 days.</p>
+        <div class="dau-chart">
+          <div class="dau-chart-title"><span>Daily site visits</span><strong>+22%</strong></div>
+          <svg viewBox="0 0 620 225" role="img" aria-label="Daily site visits trend unevenly upward over the last 90 days.">
+            <defs>
+              <linearGradient id="traffic-area-up" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#23875b" stop-opacity="0.26"/>
+                <stop offset="100%" stop-color="#23875b" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            <g class="chart-grid">
+              <line x1="56" y1="34" x2="598" y2="34"/><line x1="56" y1="86" x2="598" y2="86"/>
+              <line x1="56" y1="138" x2="598" y2="138"/><line x1="56" y1="190" x2="598" y2="190"/>
+            </g>
+            <g class="chart-labels">
+              <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+              <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+            </g>
+            <path class="chart-area" d="M56,69 L69,74 L82,66 L95,71 L108,63 L121,68 L134,70 L147,61 L160,65 L173,57 L186,64 L199,60 L212,54 L225,58 L238,62 L251,52 L264,56 L277,48 L290,55 L303,51 L316,44 L329,50 L342,47 L355,39 L368,46 L381,43 L394,49 L407,40 L420,44 L433,36 L446,43 L459,38 L472,34 L485,42 L498,37 L511,31 L524,39 L537,35 L550,29 L563,36 L576,33 L589,38 L598,41 L598,190 L56,190 Z"/>
+            <path class="chart-line" pathLength="1" d="M56,69 L69,74 L82,66 L95,71 L108,63 L121,68 L134,70 L147,61 L160,65 L173,57 L186,64 L199,60 L212,54 L225,58 L238,62 L251,52 L264,56 L277,48 L290,55 L303,51 L316,44 L329,50 L342,47 L355,39 L368,46 L381,43 L394,49 L407,40 L420,44 L433,36 L446,43 L459,38 L472,34 L485,42 L498,37 L511,31 L524,39 L537,35 L550,29 L563,36 L576,33 L589,38 L598,41"/>
+            <circle class="chart-end" cx="598" cy="41" r="6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+:::notes
+A month later, leadership asks to see the chart again. The VP opens up the same agent, but can't find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone. When the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
+:::
 
 ##
 
@@ -83,6 +181,58 @@ Becoming normal to spin up a coding agent, ask a question, and go with whatever 
 
 > Nell Thomas has spent two decades in data — from equity research to the DNC to Facebook to leading a 400-person data org at Shopify.
 :::
+
+##
+
+<br><br><br>
+
+::: {.quote}
+_<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
+:::
+
+::: {.attribution}
+\- Joe Cheng
+:::
+
+::: notes
+AI has largely been a threat to correctness. People with less expertise can now convincingly do data analysis.
+
+It just so happened that Joe said this a month ago, but he could have said it a decade ago and it would still have been true.
+:::
+
+##
+
+![](figures/conviviality-spreadsheeting-error.png){.rounded}
+
+:::footer
+<span style="color:#ee6331;">https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business</span>
+:::
+
+::: notes
+In 2019, Conviviality (a beverage company) discovered they had been mistakenly reporting healthy financials for years due to a “spreadsheet arithmetic error.”
+
+> £5.2m of that £14m came thanks to “a material error in the financial forecasts”. The error, it later admitted, was “a spreadsheet arithmetic error”.
+:::
+
+## 
+
+:::notes
+There have always been threats to correctness in data analysis. This is why Posit was founded; correctness has always been our bag.
+
+Our stance was not "you need to forgo correctness in favor of convenience." It was "it can be correct _and_ convenient." For example: Shiny
+
+Thus, with AI, our stance needs to be the same. How do we build data analysis agents that are both correct and convenient to use?
+:::
+
+<!--
+## Slide with Tareef?
+
+:::notes
+Maybe introduce the prime directive -- correctness has always been our bag
+
+He calls the PD "The way of RStudio" in that talk
+:::
+-->
 
 #
 
