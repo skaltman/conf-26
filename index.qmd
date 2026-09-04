@@ -297,47 +297,26 @@ the right tools let us see below the surface
 The tools enable the curiosity. 
 :::
 
-## {.quote-slide}
-
-> ::: {.fragment}
-> _Exploration is our mission; we and those who use our software want to find **new paths to understand the data and the underlying processes.**_
-> :::
-
-::: {.fragment}
-AI is part of that exploration.
-:::
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
-:::
+# AI is a continuation of this work
 
 ::: notes
-for us who make statistical software and use it, the mission is not to explore the universe but....
+Much has been said about LLMs as a paradigm shift in technology and in our lives. and maybe that's true.
 
-This is what Posit does when we make tools like the tidyverse, RStudio, Positron, ... 
-
-and we as individuals are motivated by many things, and I know many of us care deeply about making useful tools 
-but I think on a day to day basis, what's often motivating us is curiosity and a sense of discovery, about the tools themselves and about what worlds they can unlock. 
+But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis. 
 :::
 
-## {.quote-slide}
+## 
 
-> _Exploration is our mission; we and **those who use our software** want to find new paths to understand the data and the underlying processes._
-
-AI is part of that exploration.
-
-:::footer
-<span style="color:#ee6331;">Software for Data Analysis: Programming with R, John Chambers (2008)</span>
-:::
+![](figures/rogue-analysis-in-cursor.png){.rounded}
 
 ::: notes
-and our users feel this too. we all want to understand our data in new ways!
+Let's return to the VP who was vibe-analyzing earlier.
 
-You could say that a VP vibe-analyzing is lazy, or that it is slop. But often people have questions they are curious about, and they want answers. They are going to reach for the tool that gives them answers.
+It would be easy to call what she was doing lazy or dismiss it as slop. But there is another way to look at it: she had a meaningful questions that she wanted answered, and she reached for the tool that she thought would give her those answers.
 
-We should meet them where they are with tools that make their work more correct and trustworthy, not less.
+That does not mean her answer was correct or that her process was trustworthy. But the curiosity was real.
 
-AI is part of our mission to explore. so how do we do that? 
+The problem was not that she wanted to explore. The problem was that getting an answer had become much easier than knowing whether that answer deserved her trust. We should meet them where they are with tools that make their work more correct and trustworthy, not less.
 :::
 
 # 
@@ -378,9 +357,15 @@ Human in the loop can mean many different things. Here I mean possibly the simpl
 ::: notes
 there's one problem...this is not how people work 
 
-but think about this simple example: when your coding agent presents a command and asks you to approve it, how often do you carefully read it? and how often do you just hit accept?
+and there's a lot of research on this! from automation bias, to approval fatigue, to passive vs active learning, to how trust is mediated, to the fact that human decision-making is not a fixed process by one shaped constantly by shifting environmental and social factors
 
-[possible active learning anecdote]
+but instead of all that, I think I can convince you of my point with a simple example: when your coding agent presents a command and asks you to approve it, how often do you carefully read it? and how often do you just hit accept?
+
+[when anthropic did this, they found...the presence of a human is not enough. need to design for the interaction]
+
+the presence of a human -- no matter how skilled -- is not enough
+
+telling someone to be there and stay vigilant is not a correctness strategy
 :::
 
 # {background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
