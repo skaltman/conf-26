@@ -18,6 +18,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   Reveal.on("fragmentshown", syncAttentionVideo);
   Reveal.on("fragmenthidden", syncAttentionVideo);
-  Reveal.on("slidechanged", syncAttentionVideo);
+  Reveal.on("slidechanged", () => {
+    syncAttentionVideo();
+
+    document.querySelectorAll("video.click-to-toggle").forEach((video) => {
+      if (!video.closest("section").classList.contains("present")) {
+        video.pause();
+        video.blur();
+      }
+    });
+  });
+
+  const toggleVideo = (video) => {
+    if (video.paused) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  };
+
+  document.querySelectorAll("video.click-to-toggle").forEach((video) => {
+    video.addEventListener("click", (event) => {
+      event.stopPropagation();
+      toggleVideo(video);
+    });
+
+    video.addEventListener("keydown", (event) => {
+      if (!video.closest("section").classList.contains("present")) return;
+
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleVideo(video);
+      }
+    });
+  });
 });
 </script>
