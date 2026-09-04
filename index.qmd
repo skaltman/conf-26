@@ -303,13 +303,7 @@ The tools enable the curiosity.
 Much has been said about LLMs as a paradigm shift in technology and in our lives. and maybe that's true.
 
 But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis. 
-:::
 
-## 
-
-![](figures/rogue-analysis-in-cursor.png){.rounded}
-
-::: notes
 Let's return to the VP who was vibe-analyzing earlier.
 
 It would be easy to call what she was doing lazy or dismiss it as slop. But there is another way to look at it: she had meaningful questions that she wanted answered, and she reached for the tool that she thought would give her those answers.
@@ -318,6 +312,7 @@ That does not mean her answer was correct or that her process was trustworthy. B
 
 The problem was not that she wanted to explore. The problem was that getting an answer had become much easier than knowing whether that answer deserved her trust. We should meet them where they are with tools that make their work more correct and trustworthy, not less.
 :::
+
 
 # 
 
