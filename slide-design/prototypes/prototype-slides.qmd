@@ -1,0 +1,147 @@
+---
+title: ""
+format:
+  revealjs:
+    theme: [default, prototype-theme.scss]
+    width: 1280
+    height: 720
+    margin: 0
+    controls: true
+    controls-layout: edges
+    controls-back-arrows: faded
+    progress: false
+    slide-number: false
+    transition: fade
+    background-transition: fade
+    center: false
+    auto-stretch: false
+editor: source
+---
+
+## {.theme-slide .theme-title .paper-cool .blue-family}
+
+<p class="palette-label">Blue pair / cool paper</p>
+
+::: {.title-copy}
+<h2>Correctness can<br>be <span>convenient.</span></h2>
+<p>Trustworthy data science in an age of agents</p>
+:::
+
+<div class="accent-circle"></div>
+
+## {.theme-slide .theme-title .paper-cool .accent-mint-gold}
+
+<p class="palette-label">Accent test / mint + gold</p>
+
+::: {.title-copy}
+<h2>Correctness can<br>be <span>convenient.</span></h2>
+<p>Trustworthy data science in an age of agents</p>
+:::
+
+<div class="accent-circle"></div>
+
+## {.theme-slide .theme-transition .green-dark .foreground-warm .accent-periwinkle-coral}
+
+<p class="palette-label">Accent test / periwinkle + coral</p>
+
+::: {.transition-copy}
+<h2>Agents for correct,<br>transparent, and<br>reproducible analysis</h2>
+<p class="talk-meta"><span>Sara Altman and Simon Couch</span><span>posit::conf(2026)</span></p>
+:::
+
+<div class="accent-circle"></div>
+
+## {.theme-slide .theme-transition .blue-dark .foreground-cool}
+
+<p class="palette-label">Blue pair / cool foreground</p>
+
+::: {.transition-copy}
+<h2>Agents for correct,<br>transparent, and<br>reproducible analysis</h2>
+<p class="talk-meta"><span>Sara Altman and Simon Couch</span><span>posit::conf(2026)</span></p>
+:::
+
+<div class="accent-circle"></div>
+
+## {.theme-slide .theme-transition .blue-dark .foreground-warm}
+
+<p class="palette-label">Blue pair / warm foreground</p>
+
+::: {.transition-copy}
+<h2>Agents for correct,<br>transparent, and<br>reproducible analysis</h2>
+<p class="talk-meta"><span>Sara Altman and Simon Couch</span><span>posit::conf(2026)</span></p>
+:::
+
+<div class="accent-circle"></div>
+
+## {.theme-slide .theme-title .paper-cool .green-family}
+
+<p class="palette-label">Green pair / cool paper</p>
+
+::: {.title-copy}
+<h2>Correctness can<br>be <span>convenient.</span></h2>
+<p>Trustworthy data science in an age of agents</p>
+:::
+
+<div class="accent-circle"></div>
+
+## {.theme-slide .theme-transition .green-dark .foreground-cool}
+
+<p class="palette-label">Green pair / cool foreground</p>
+
+::: {.transition-copy}
+<h2>Agents for correct,<br>transparent, and<br>reproducible analysis</h2>
+<p class="talk-meta"><span>Sara Altman and Simon Couch</span><span>posit::conf(2026)</span></p>
+:::
+
+<div class="accent-circle"></div>
+
+## {.theme-slide .theme-transition .green-dark .foreground-warm}
+
+<p class="palette-label">Green pair / warm foreground</p>
+
+::: {.transition-copy}
+<h2>Agents for correct,<br>transparent, and<br>reproducible analysis</h2>
+<p class="talk-meta"><span>Sara Altman and Simon Couch</span><span>posit::conf(2026)</span></p>
+:::
+
+<div class="accent-circle"></div>
+
+## {.theme-slide .theme-section .green-dark .foreground-warm .accent-periwinkle-coral}
+
+<p class="palette-label">Section / periwinkle + coral</p>
+
+<p class="section-heading">1&#46; "Your VP is doing rogue analysis in cursor"</p>
+
+![](assets/cowboy-hat.svg){.section-art}
+
+## {.theme-slide .theme-section .blue-dark .foreground-cool}
+
+<p class="palette-label">Section / blue + cool foreground</p>
+
+<p class="section-heading">1&#46; The VP</p>
+
+![](assets/cowboy-hat.svg){.section-art}
+
+## {.theme-slide .theme-section .blue-dark .foreground-warm}
+
+<p class="palette-label">Section / blue + warm foreground</p>
+
+<p class="section-heading">1&#46; The VP</p>
+
+![](assets/cowboy-hat.svg){.section-art}
+
+## {.theme-slide .theme-section .green-dark .foreground-cool}
+
+<p class="palette-label">Section / green + cool foreground</p>
+
+<p class="section-heading">1&#46; The VP</p>
+
+![](assets/cowboy-hat.svg){.section-art}
+
+## {.theme-slide .theme-section .green-dark .foreground-warm}
+
+<p class="palette-label">Section / green + warm foreground</p>
+
+<p class="section-heading">1&#46; The VP</p>
+
+![](assets/cowboy-hat.svg){.section-art}

@@ -1,0 +1,249 @@
+/*-- scss:defaults --*/
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+$paper-cool: #f5f2ec;
+$ink: #15243a;
+$pink: #dd5d7b;
+
+$body-bg: $paper-cool;
+$body-color: $ink;
+$font-family-sans-serif: "DM Sans", sans-serif;
+$presentation-heading-font: "DM Sans", sans-serif;
+$presentation-heading-color: $ink;
+$presentation-font-size-root: 36px;
+$presentation-h2-font-size: 2.35em;
+$link-color: $pink;
+
+/*-- scss:rules --*/
+
+:root {
+  --paper-cool: #f5f2ec;
+  --paper-warm: #fff1c9;
+  --ink: #15243a;
+  --blue: #3f73d8;
+  --blue-dark: #17447f;
+  --green: #43845a;
+  --green-dark: #2f673f;
+  --pink: #dd5d7b;
+  --pink-soft: #ffc7d5;
+  --orange: #ef8b3e;
+  --gold: #ffd07a;
+  --mint: #59b899;
+  --mint-deep: #267d68;
+  --mint-soft: #8ad7bd;
+  --amber: #b57400;
+  --periwinkle: #8092d2;
+  --coral: #e27168;
+  --coral-soft: #ffaaa5;
+}
+
+.reveal {
+  letter-spacing: 0;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section.theme-slide {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 72px 92px !important;
+  font-family: "DM Sans", sans-serif;
+  text-align: left;
+}
+
+.reveal .slides section.theme-slide h2,
+.reveal .slides section.theme-slide p {
+  margin: 0;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.palette-label {
+  position: absolute;
+  top: 72px;
+  left: 92px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.accent-circle {
+  position: absolute;
+  top: 50%;
+  right: 116px;
+  width: 238px;
+  height: 238px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* Light paper slides */
+
+.reveal .slides section.paper-cool {
+  background: var(--paper-cool);
+  color: var(--ink);
+}
+
+.paper-cool h2 {
+  color: var(--ink);
+}
+
+.theme-title .title-copy {
+  position: absolute;
+  top: 50%;
+  left: 92px;
+  transform: translateY(-50%);
+}
+
+.theme-title .title-copy h2 {
+  font-size: 82px;
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.theme-title .title-copy h2 span {
+  color: var(--pink);
+}
+
+.theme-title .title-copy p {
+  margin-top: 27px !important;
+  color: rgb(21 36 58 / 70%);
+  font-size: 24px;
+}
+
+.blue-family .palette-label {
+  color: var(--blue-dark);
+}
+
+.blue-family .accent-circle {
+  background: var(--blue);
+}
+
+.green-family .palette-label {
+  color: var(--green-dark);
+}
+
+.green-family .accent-circle {
+  background: var(--green);
+}
+
+/* Dark slides */
+
+.reveal .slides section.blue-dark {
+  background: var(--blue-dark);
+}
+
+.reveal .slides section.green-dark {
+  background: var(--green-dark);
+}
+
+.foreground-cool {
+  color: var(--paper-cool);
+}
+
+.foreground-warm {
+  color: var(--paper-warm);
+}
+
+.foreground-cool h2 {
+  color: var(--paper-cool);
+}
+
+.foreground-warm h2 {
+  color: var(--paper-warm);
+}
+
+.blue-dark .palette-label,
+.green-dark .palette-label {
+  color: var(--pink-soft);
+}
+
+.blue-dark .accent-circle,
+.green-dark .accent-circle {
+  background: var(--orange);
+}
+
+.theme-transition .transition-copy {
+  position: absolute;
+  top: 50%;
+  left: 92px;
+  transform: translateY(-50%);
+}
+
+.theme-transition .transition-copy .talk-meta {
+  margin: 28px 0 0 !important;
+  color: var(--gold);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.theme-transition .talk-meta span {
+  display: block;
+}
+
+.theme-transition .talk-meta span + span {
+  margin-top: 3px;
+  opacity: 0.75;
+}
+
+.theme-transition .transition-copy h2 {
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 1.04;
+}
+
+.theme-section .section-heading {
+  position: absolute;
+  top: 50%;
+  left: 92px;
+  margin: 0;
+  font-size: 104px;
+  font-weight: 600;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.theme-section .section-art {
+  position: absolute;
+  top: 50%;
+  right: 105px;
+  width: 260px;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  transform: translateY(-50%);
+}
+
+/* Accent color experiments */
+
+.accent-mint-gold .palette-label {
+  color: var(--mint-deep);
+}
+
+.accent-mint-gold .title-copy h2 span {
+  color: var(--amber);
+}
+
+.accent-mint-gold .accent-circle {
+  background: var(--mint);
+}
+
+.accent-periwinkle-coral .palette-label {
+  color: var(--coral-soft);
+}
+
+.accent-periwinkle-coral .transition-copy .talk-meta {
+  color: var(--gold);
+}
+
+.accent-periwinkle-coral .accent-circle {
+  background: var(--periwinkle);
+}
+
+.reveal .controls {
+  color: currentColor;
+  opacity: 0.55;
+}
