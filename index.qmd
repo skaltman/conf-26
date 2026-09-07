@@ -539,130 +539,230 @@ We've designed Posit Assistant to be more correct, and we've designed it to make
 
 # but what if the user is not a data scientist?
 
-:::  notes
-in post assistant, the user is typically a data or code minded person
-this interface makes sense for them
-::: 
+::: notes
+In Posit Assistant, the user is typically a data or code minded person. The interface assumes they can inspect the work.
+:::
 
-# 
-
-## {.agent-story-slide}
+# The VP's analysis was wrong
 
 ```{=html}
-<div class="agent-window">
+<div class="agent-window vp-reminder-window">
   <div class="agent-thread">
-        <div class="chat-turn chat-turn-user">
-          <div class="chat-message chat-message-user">
-            how is traffic trending for our site?
-          </div>
+    <div class="chat-turn chat-turn-user">
+      <div class="chat-message chat-message-user">
+        how is traffic trending for our site?
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent result-turn">
+      <div class="chat-message chat-message-agent">
+        <p>Daily visits are down <strong>64%</strong> over the last 90 days.</p>
+        <div class="dau-chart">
+          <div class="dau-chart-title"><span>Daily site visits</span><strong>−64%</strong></div>
+          <svg viewBox="0 0 620 225" role="img" aria-label="Daily site visits rise unevenly, then fall sharply after a changepoint.">
+            <defs>
+              <linearGradient id="dau-area-reminder" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ee6331" stop-opacity="0.28"/>
+                <stop offset="100%" stop-color="#ee6331" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            <g class="chart-grid">
+              <line x1="56" y1="34" x2="598" y2="34"/><line x1="56" y1="86" x2="598" y2="86"/>
+              <line x1="56" y1="138" x2="598" y2="138"/><line x1="56" y1="190" x2="598" y2="190"/>
+            </g>
+            <g class="chart-labels">
+              <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+              <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+            </g>
+            <path class="chart-area" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145 L598,190 L56,190 Z"/>
+            <path class="chart-line" pathLength="1" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145"/>
+            <circle class="chart-end" cx="598" cy="145" r="6"/>
+          </svg>
         </div>
-        <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="0">
-          <div class="chat-message chat-message-agent">
-            <div class="agent-thinking"><span></span> Analyzing site traffic</div>
-            <div class="tool-card" style="--tool-delay: 0s">
-              <span class="tool-card-icon">⌕</span>
-              <span><strong>Searching workspace</strong><small>web analytics</small></span>
-              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
-            </div>
-            <div class="tool-card" style="--tool-delay: 1.05s">
-              <span class="tool-card-icon">◫</span>
-              <span><strong>Querying warehouse</strong><small>analytics.pageviews</small></span>
-              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
-            </div>
-            <div class="tool-card" style="--tool-delay: 2.1s">
-              <span class="tool-card-icon">∿</span>
-              <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
-              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
-            </div>
-          </div>
-        </div>
-        <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="0">
-          <div class="chat-message chat-message-agent">
-            <p>Daily visits are down <strong>64%</strong> over the last 90 days.</p>
-            <div class="dau-chart">
-              <div class="dau-chart-title"><span>Daily site visits</span><strong>−64%</strong></div>
-              <svg viewBox="0 0 620 225" role="img" aria-label="Daily site visits rise unevenly, then fall sharply after a changepoint.">
-                <defs>
-                  <linearGradient id="dau-area" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#ee6331" stop-opacity="0.28"/>
-                    <stop offset="100%" stop-color="#ee6331" stop-opacity="0.02"/>
-                  </linearGradient>
-                </defs>
-                <g class="chart-grid">
-                  <line x1="56" y1="34" x2="598" y2="34"/><line x1="56" y1="86" x2="598" y2="86"/>
-                  <line x1="56" y1="138" x2="598" y2="138"/><line x1="56" y1="190" x2="598" y2="190"/>
-                </g>
-                <g class="chart-labels">
-                  <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
-                  <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
-                </g>
-                <path class="chart-area" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145 L598,190 L56,190 Z"/>
-                <path class="chart-line" pathLength="1" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145"/>
-                <circle class="chart-end" cx="598" cy="145" r="6"/>
-              </svg>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
   </div>
 </div>
 ```
 
 ::: notes
+The VP had good intentions. She wanted an answer to her question, and reached for a tool convenient to her. 
 
-[show vp vibe analyzing again]
-the vp is just a stand in
-someone who has questions to ask of data, but isn't the data scientist, statician, analyst.
+unfortunately, the answer she got was wrong.
 
-the lab PI, the medical director, a product manager, or even someone who is very technically capable but is working in an area not of their expertise
+the next day, a data scientist checked her analysis, noticed the mistake. not only do they notice the problem, they already have a couple functions in an internal package that would have carried out the analysis correctly for the vp.
 :::
 
 # [_Trusted_ code]{style="color: #ee6331; font-size: 1.4em;"}
 
 ::: notes
-in the story we told in the beginning
-the data scientist knew something was wrong
-they likely have code that they use to answer these kinds of questions, and that code might even live in quarto reports, packages, shiny apps, scripts
+this is _trusted_ code
+it's been vetted and maintained by the data team
 
-trusted code
-leverage this instead of the model writing custom code each time
+they also might have trusted code in
+* Shiny apps
+* R and Python packages
+* Quarto documents
+
+We can leverage this code instead of having the model recreate the analysis every time.
+
+this is one of the core ideas behind the new open source package commons
 :::
 
-# 
+# Introducing commons
 
-* Help the model not be wrong **by adding trusted code**
-* Make it less bad when it is wrong 
+# commons 
 
-# 
+::: {.incremental}
+* Open source in R and Python
 
-* Help the model not be wrong **by adding trusted code**
-* Make it less bad when it is wrong **by signaling trust and setting up feedback loops**
+* Built on `ellmer` / `chatlas` and `shinychat`
+
+* For data scientists to build for everyone else
+:::
 
 ::: notes
-a second idea: signal how much to trust that code in a deterministic way and set up feedback loops to continually improve the correctness of the system
+commons helps data scientists build trustworthy data agents.
+:::
+
+# Start with trusted calculations
+
+```{=html}
+<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons trusted calculation demo. Click to play or pause.">
+  <source src="figures/vp-agent-trusted.mp4" type="video/mp4">
+</video>
+```
+
+::: notes
+let's see how the VP's analysis would work with a commons agent
+
+The agent searches for a trusted calculation before writing custom code. Here it
+finds and runs the data scientist's site traffic calculation
+
+the answer is marked as verified to signify that it used vetted code
+:::
+
+# Allow custom code when needed
+
+```{=html}
+<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons custom query demo. Click to play or pause.">
+  <source src="figures/vp-agent-custom-query.mp4" type="video/mp4">
+</video>
+```
+
+::: notes
+However, its unlikely that this trusted code will cover all questions a user might have.
+for these situations, the agent can write custom r, python, or sql 
+
+here, there is no trusted calculation for this question, so the model writes some custom code
+
+Commons preserves that convenience, but marks
+the answer as untrusted.
+:::
+
+# Context supports the custom path
+
+```{=html}
+<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons context-supported answer demo. Click to play or pause.">
+  <source src="figures/vp-agent-context.mp4" type="video/mp4">
+</video>
+```
+
+::: notes
+but this custom code isn't entirely untrustworthy
+to make it as trustworthy as possible, the data team first encodes additional useful context for the agent, in the form of data dictionaries and markdown files. 
+
+this information is available for the agent to search through, helping it write correct custom code 
+
+Here it explains the instrumentation artifact and cites the
+trusted context that supports that explanation.
+
+correctness and convenience
+:::
+
+# Deterministically tag trust
+
+![](figures/commons-trust-flow.png){width=85%}
+
+::: notes
+Commons records which tools produced the answer. Trust is based on that
+execution path, not on the model's confidence in its own answer. trust is deterministic
+
+The citation itself is checked against trusted context. A custom answer is not
+promoted merely because the model says it used a trusted source.
+:::
+
+#
+
+* Help the model not be wrong **with trusted calculations and context**
+* Make it less bad when it is wrong **with provenance and feedback loops**
+
+# Review logs for continual improvement
+
+```{=html}
+<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons trajectory review demo. Click to play or pause.">
+  <source src="figures/vp-agent-trajectory-review.mp4" type="video/mp4">
+</video>
+```
+
+::: notes
+review for correctness, add trusted code for commonly asked questions
+improve context
+
+Recurring
+questions can become trusted calculations. problems with table choice, joins,
+definitions, or caveats can become better context.
 :::
 
 # 
 
 ![](figures/hitl.excalidraw.svg){width=80%}
 
-::: notes
-earlier I showed you this diagram
-:::
-
-# 
+# Three loops
 
 ![](figures/commons-diagram.excalidraw.svg){width=80%}
 
 ::: notes
-the system I'm proposing looks something like this
+
+1. build: encode trusted calculations and context
+2. use: answer through the trusted or custom path
+3. improve: review behavior and update the layers
+
+The build loop gives the agent trusted calculations and context. The use loop is
+the conversation between the user and agent. The improve loop turns reviewed
+behavior into changes to the trusted calculations and context.
 :::
 
-# 
+## commons works with tools you already use
 
-![](figures/commons-hex.png){width=80% style="display: block; margin: 0 auto;"}
+::: {.incremental}
 
-# Trust flow diagram
+* Apps deploy to Connect like any Shiny app 
+* Trajectory logging with OTel on Connect
+* Hydrates from semantic layers in Snowflake and Databricks
+:::
 
-# Trusted code and context
+# Clinical trials agent
 
-# Feedback loops
+:::: {.columns}
+
+::: {.column width="70%"}
+* Validated measures from Insight Engineering's TLG Catalog
+* Simulated data
+:::
+
+::: {.column width="30%"}
+![](figures/clinical-trials-agent-logo.png){width=80%}
+:::
+
+::::
+
+::: notes
+The VP is a stand-in for anyone who has questions to ask of data but is not the
+data scientist: a lab PI, medical director, product manager, or domain expert.
+:::
+
+# Canvas
+
+# AI newsletter
+
+# Thank you!
