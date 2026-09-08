@@ -589,7 +589,7 @@ Can use your IDE in the normal way
 </video>
 
 :::notes
-The whole conversation was 10 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Posit Assistant is token efficient, and we've worked hard to serve incredibly cheap and capable open-weights models. Per token, this model, GLM 5.3 Flash, is less than a thirtiest of the price of Claude Opus 5.
+The whole conversation was 10 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we've worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees. Per token, this model, GLM 5.3 Flash, is less than a thirtiest of the price of Claude Opus 5, and is served under Zero Data Retention.
 :::
 
 ##
