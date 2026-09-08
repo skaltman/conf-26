@@ -511,22 +511,85 @@ In demoing Posit Assistant, I thought I might revisit that moment with you.
 ##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/posit-assistant-demo.mov">
+  <source src="figures/01-pa-demo-webfetch.mp4">
 </video>
 
 :::notes
-When playing the video:
+It can do normal coding agent stuff
+:::
 
-* It can do normal coding agent stuff -- here, it uses web fetch to find information on the internet
-* It uses the same functions you do to read documentation
-* It prefers to keep data in the project
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/02-pa-demo-docs.mp4">
+</video>
+
+:::notes
+It can read documentation (in the same way that you would, too)
+
+Also, note that it preferred to keep data in the file system
+:::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/03-pa-demo-clean-data.mp4">
+</video>
+
+:::notes
 * Cleaning mode: we felt that most coding agents had a superficial relationship with data quality
 * It pays attention to missing data, outliers, etc
 * Cleaning script is persisted
-* You can see plots
-* The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot
-* Can write Quarto reports
-* The whole conversation was 8 cents
+:::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/04-pa-demo-plots.mp4">
+</video>
+
+:::notes
+You can see plots
+:::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/05-pa-demo-carriers.mp4">
+</video>
+
+:::notes
+The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot
+:::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/06-pa-demo-report.mp4">
+</video>
+
+:::notes
+Slash commands (has a bunch of specialized skills) + can write quarto reports
+:::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/07-pa-demo-preview.mp4">
+</video>
+
+:::notes
+Can use your IDE in the normal way
+:::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/08-pa-demo-model-cost.mp4">
+</video>
+
+:::notes
+The whole conversation was 10 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we've worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees. Per token, this model, GLM 5.3 Flash, is less than a thirtiest of the price of Claude Opus 5, and is served under Zero Data Retention.
 :::
 
 ##
