@@ -3,6 +3,8 @@ title: ""
 format:
   revealjs:
     theme: [default, custom.scss]
+    width: 1280
+    height: 720
     footer: '<span style="color:#ee6331;">github.com/skaltman/conf-26</span>'
     include-after-body: fragment-video.html
 editor: source
