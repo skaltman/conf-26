@@ -9,3 +9,11 @@
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Quarto render output
+**/*_files/
+**/*_cache/
+/slide-design/**/*.html
+
+# Local slide design exports
+/slide-design/**/*.key
