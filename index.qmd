@@ -663,7 +663,7 @@ the answer as untrusted.
 
 ```{=html}
 <video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons context-supported answer demo. Click to play or pause.">
-  <source src="figures/vp-agent-context.mp4" type="video/mp4">
+  <source src="figures/vp-agent-context.mov" type="video/mov">
 </video>
 ```
 
