@@ -505,7 +505,7 @@ assistant.posit.co
 ##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/posit-assistant-demo-p1.mov">
+  <source src="figures/posit-assistant-demo.mov">
 </video>
 
 :::notes
@@ -514,16 +514,7 @@ When playing the video:
 * It can do normal coding agent stuff -- here, it uses web fetch to find information on the internet
 * It uses the same functions you do to read documentation
 * It prefers to keep data in the project
-:::
-
-##
-
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/posit-assistant-demo-p2.mov">
-</video>
-
-:::notes
-* Cleaning mode makes good use of your attention
+* Cleaning mode: we felt that most coding agents had a superficial relationship with data quality
 * It pays attention to missing data, outliers, etc
 * Cleaning script is persisted
 * You can see plots
