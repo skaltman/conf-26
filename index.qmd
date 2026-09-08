@@ -3,6 +3,8 @@ title: ""
 format:
   revealjs:
     theme: [default, custom.scss]
+    width: 1280
+    height: 720
     footer: '<span style="color:#ee6331;">github.com/skaltman/conf-26</span>'
     include-after-body: fragment-video.html
 editor: source
@@ -212,7 +214,7 @@ In 2019, Conviviality (a beverage company) discovered they had been mistakenly r
 
 . . .
 
-![](figures/rstudio-blog.png){style="display: block; margin: 0 auto;"}
+![](figures/rstudio-blog.png){height="860" style="display: block; margin: -90px auto 0;"}
 
 :::notes
 There have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance was not "you need to forgo convenience in favor of correctess."
