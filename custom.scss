@@ -120,7 +120,7 @@ $link-color: color("pink");
 
 /* Title */
 
-.reveal .slide.title-slide {
+.reveal .slides .slide.title-slide {
   padding: 68px 72px !important;
 
   .columns {
@@ -472,6 +472,16 @@ $link-color: color("pink");
 
 /* 50/50 image slide using native Quarto columns */
 
+/* Split factor shared by the slide and its background element (reveal.js
+   copies slide classes onto .slide-background) */
+.reveal .split-image-slide {
+  --split: 50%;
+}
+
+.reveal .split-20.split-image-slide {
+  --split: 20%;
+}
+
 .reveal .slide.split-image-slide {
   padding: 0 !important;
   height: 100%;
@@ -496,6 +506,7 @@ $link-color: color("pink");
     display: flex;
     align-items: center;
     padding: 72px;
+    width: var(--split);
   }
 
   .column:last-child,
@@ -505,6 +516,7 @@ $link-color: color("pink");
   }
 
   .column:last-child {
+    width: calc(100% - var(--split));
     overflow: hidden;
   }
 
@@ -529,12 +541,20 @@ $link-color: color("pink");
 
 .reveal .slide-background.split-image-slide .slide-background-content {
   position: absolute;
-  inset: 0 0 0 50%;
-  width: 50%;
+  inset: 0 0 0 var(--split);
+  width: calc(100% - var(--split));
   height: 100%;
   background-position: 38% center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.reveal .slide.split-20 .column:first-child {
+  padding: 40px 32px;
+}
+
+.reveal .slide.split-20 .split-title {
+  font-size: 40px;
 }
 
 .reveal .slide.split-image-slide .image-credit {
