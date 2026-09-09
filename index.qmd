@@ -8,7 +8,9 @@ format:
     margin: 0
     progress: false
     menu: false
-    include-after-body: fragment-video.html
+    include-after-body:
+      - fragment-video.html
+      - includes/diagram-definitions.html
 editor: source
 knitr:
   opts_chunk:
@@ -281,7 +283,7 @@ for us and for many of you I imagine 2025 was the year AI got very very convenie
 and we were so worried 
 :::
 
-## {.split-image-slide .split-40 background-image="figures/databot-flotation-blog.png"}
+## {.split-image-slide .split-40 .split-image-top background-image="figures/databot-flotation-blog-cropped.png"}
 
 ::: {.columns}
 
@@ -448,9 +450,9 @@ AI: [untrustworthy,]{.accent} but useful?
   - To make it trustworthy, we need people to verify the output from or supervise agents.
 :::
 
-# {.paper-slide}
+# {.paper-slide .diagram-slide}
 
-![](figures/hitl.excalidraw.svg){width=80%}
+{{< include includes/hitl-diagram.html >}}
 
 ::: notes
 Human in the loop can mean many different things. for now we're just talking about a really simple version: a human is there to verify that what the agent does is correct and provide appropriate redirection if not.
@@ -867,13 +869,13 @@ questions can become trusted calculations. problems with table choice, joins,
 definitions, or caveats can become better context.
 :::
 
-# 
+# {.paper-slide .diagram-slide}
 
-![](figures/hitl.excalidraw.svg){width=80%}
+{{< include includes/hitl-diagram.html >}}
 
-# Three loops
+# {.paper-slide .diagram-slide}
 
-![](figures/commons-diagram.excalidraw.svg){width=80%}
+{{< include includes/commons-loops-diagram.html >}}
 
 ::: notes
 
