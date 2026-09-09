@@ -478,6 +478,25 @@ $link-color: color("pink");
   line-height: 1.35;
 }
 
+.reveal .vp-reminder-window {
+  top: 145px;
+  width: 900px;
+  height: 440px;
+}
+
+.reveal .vp-reminder-window .chart-area {
+  fill: url(#dau-area-reminder);
+  opacity: 1;
+}
+
+.reveal .vp-reminder-window .chart-line {
+  stroke-dashoffset: 0;
+}
+
+.reveal .vp-reminder-window .chart-end {
+  opacity: 1;
+}
+
 .reveal .agent-thread {
   height: 100%;
   box-sizing: border-box;
