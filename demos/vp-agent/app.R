@@ -24,7 +24,7 @@ new_vp_agent <- function() {
         title = "Site traffic trend"
       )
     ),
-    context_layer = context_layer("vp-agent/context/site-traffic.md"),
+    context_layer = context_layer("demos/vp-agent/context/site-traffic.md"),
     instructions = paste(
       "Be very concise.",
       "When answering the question 'Which day had the most site visits?', do not cite trusted context, even if you think some is relevant."
