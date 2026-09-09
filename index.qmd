@@ -5,7 +5,9 @@ format:
     theme: [default, custom.scss]
     width: 1280
     height: 720
-    footer: '<span style="color:#ee6331;">github.com/skaltman/conf-26</span>'
+    margin: 0
+    progress: false
+    menu: false
     include-after-body: fragment-video.html
 editor: source
 knitr:
@@ -178,17 +180,11 @@ A month later, leadership asks to see the chart again. The VP opens up the same 
 The agent offers to make it again. This time, when the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
 :::
 
-##
+## {.quote-slide .paper-slide}
 
-<br><br><br>
-
-::: {.quote}
-_<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
-:::
-
-::: {.attribution}
-\- Joe Cheng
-:::
+> In the battle between convenience and correctness, _convenience is winning._
+>
+> <footer>Joe Cheng, Posit CTO</footer>
 
 ::: notes
 AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.
@@ -201,7 +197,7 @@ It just so happened that Joe said this a month ago, but he could have said it a 
 ![](figures/conviviality-spreadsheeting-error.png){.rounded}
 
 :::footer
-<span style="color:#ee6331;">https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business</span>
+https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business
 :::
 
 ::: notes
@@ -220,19 +216,13 @@ In 2019, Conviviality (a beverage company) discovered they had been mistakenly r
 There have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance was not "you need to forgo convenience in favor of correctess."
 :::
 
-##
+## {.quote-slide .compact-quote .paper-slide}
 
-<br><br>
-
-::: {.quote}
-_<span class="opening-quote">“</span>Our goal is to develop a powerful tool that supports trustworthy, high quality analysis._
-
-_At the same time, we want RStudio to be as straightforward and intuitive as possible.”_
-:::
-
-::: {.attribution}
-\- JJ Allaire, 2011
-:::
+> Our goal is to develop a powerful tool that supports trustworthy, high quality analysis.
+>
+> At the same time, we want RStudio to be as straightforward and intuitive as possible.
+>
+> <footer>JJ Allaire, 2011</footer>
 
 :::footer
 https://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/
@@ -244,7 +234,7 @@ He's saying "it can be correct _and_ convenient."
 With AI, our stance needs to be the same. How do we build data analysis agents that are both correct and convenient to use?
 :::
 
-# 
+# {.paper-slide}
 
 ::: notes
 this pull between correctness and convenience has weighed on all of our minds in this new age of llms
@@ -255,7 +245,7 @@ for us and for many of you I imagine 2025 was the year AI got very very convenie
 and we were so worried 
 :::
 
-# 
+# {.paper-slide}
 
 ![](figures/databot-flotation.png){.rounded height=500 style="top: 43%;"}
 
@@ -264,7 +254,7 @@ and we were so worried
 :::
 
 :::footer
-<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
+posit.co/blog/databot-is-not-a-flotation-device
 :::
 
 ::: notes
@@ -275,13 +265,9 @@ this is an image from a blog post joe and I wrote to accompany the release of da
 and this post was actually one of the first things I worked when I joined the AI team, and it gave me the opportunity to do one of the things that I think I do best: be a pessimist 
 :::
 
-# 
+# {.paper-slide}
 
 ![](figures/databot.png){style="display: block; margin: 0 auto;"}
-
-:::footer
-&lpar;2025&rpar;
-:::
 
 ::: notes
 because we were all so excited about databot, but also so worried about people trusting its answers when it was wrong
@@ -289,31 +275,34 @@ because we were all so excited about databot, but also so worried about people t
 that we wrote an entire blog post explaining the ways in which it might fail
 :::
 
-# 
+# {.quote-slide .compact-quote .paper-slide}
 
-<br><br><br>
-
-::: {.quote}
-_<span class="opening-quote">“</span>In my 30-year career writing software professionally, Databot is both the most exciting software I’ve worked on, and also the most dangerous.”_
-:::
-
-::: {.attribution}
-\- Joe Cheng
-:::
+> In my 30-year career writing software professionally, Databot is both the [most exciting software]{.accent} I've worked on, and also the\
+> [most dangerous]{.accent}.
+>
+> <footer>Joe Cheng, Posit CTO</footer>
 
 ::: notes
 and if you were here at conf last year, you might remember Joe's keynote where said somethign a bit like this
 :::
 
 
-#
+# {.paper-slide}
 
 ::: notes
 and given that I think at this point there might be a question on your mind, which
 I think is fair to ask and I think we all have asked ourselves in the past few years
 :::
 
-# Why are we doing this?!
+# {.header-slide .blue-slide}
+
+::: {.columns}
+
+::: {.column .header-text width="100%"}
+Why are we doing this?!
+:::
+
+:::
 
 ::: notes
 if AI is this agent of chaos that we are so worried, why involve ourselves at all
@@ -322,9 +311,9 @@ and there are many answers, one of which is that things really have changed sinc
 but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration
 :::
 
-## 
+##
 
-![](figures/mission-ocean.jpg){.rounded}
+## {background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
 
 ::: notes
 and I imagine for many of you, exploration and curiosity are what got you into this room in the first place
@@ -338,16 +327,31 @@ But without the right tools, data can be impenetrable. As an undergraduate with 
 learning the tidyverse, and data science...these tools gave me a way to investigate any topic and learn about the world.
 :::
 
-## 
+## {.split-image-slide background-image="figures/oceanimagebank-rays.jpg"}
 
-![](figures/erick-morales-oyola-sSfE0Z_TuSw-unsplash.jpg){.rounded}
+::: {.columns}
+
+::: {.column width="50%"}
+### The right tools let us see below the surface. {.split-title}
+:::
+
+::: {.column width="50%" role="img" aria-label="A school of rays swimming below the ocean surface"}
+:::
+
+:::
+
+<div class="image-credit">Photo: Lars von Ritter Zahony / Ocean Image Bank</div>
 
 ::: notes
 the right tools let us see below the surface
 The tools enable the curiosity. 
 :::
 
-# AI is a continuation of this work
+# {.statement-slide .paper-slide}
+
+::: {.statement}
+AI is a [continuation of this work.]{.accent}
+:::
 
 ::: notes
 Much has been said about LLMs as a paradigm shift in technology and in our lives. and maybe that's true.
@@ -364,9 +368,25 @@ I think we can meet she is with tools that make her work more correct and trustw
 :::
 
 
-# 
+# {.header-slide .blue-slide}
 
-# AI: untrustworthy, but useful?
+::: {.columns}
+
+::: {.column .header-text width="64%"}
+How do we make AI trustworthy?
+:::
+
+::: {.column width="36%"}
+![](figures/orange-shield.png){.header-image fig-alt="Orange shield"}
+:::
+
+:::
+
+# {.statement-slide .paper-slide}
+
+::: {.statement}
+AI: [untrustworthy,]{.accent} but useful?
+:::
 
 ::: notes
 - Here’s a common thought about AI
@@ -375,7 +395,7 @@ I think we can meet she is with tools that make her work more correct and trustw
   - To make it trustworthy, we need people to verify the output from or supervise agents.
 :::
 
-# 
+# {.paper-slide}
 
 ![](figures/hitl.excalidraw.svg){width=80%}
 
@@ -385,7 +405,7 @@ Human in the loop can mean many different things. for now we're just talking abo
 it is an intuitively appealing division of labor. the agent does what it's good at, the human provides the judgment to keep it from going off the rails.
 :::
 
-## 
+## {.paper-slide}
 
 ::: {style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;"}
 ![](figures/flextape.png){style="width: auto; max-height: 540px; margin: 0; border-radius: 0.75rem;"}
@@ -415,7 +435,7 @@ These skills help you **catch errors, interpret results in context, and avoid be
 :::
 
 :::footer
-<span style="color:#ee6331;">posit.co/blog/databot-is-not-a-flotation-device</span>
+posit.co/blog/databot-is-not-a-flotation-device
 :::
 
 ::: notes
@@ -431,7 +451,11 @@ but i would not write this in this way today
 notice that this puts the responsibility for correctness on the user: be there, remain vigilant, and apply your expertise.
 :::
 
-# ok, but how?
+# {.statement-slide .paper-slide}
+
+::: {.statement}
+OK, but [how?]{.accent}
+:::
 
 ::: notes
 But how, exactly, was the user supposed to apply that expertise?
@@ -446,12 +470,13 @@ telling the user to be worried about the code produced relies too much on the ha
 
 :::
 
-# 
+# {.statement-slide .paper-slide}
 
-<div style="display: flex; height: 100%; flex-direction: column; justify-content: center; gap: 3rem; font-size: 1.2em; font-weight: 600; line-height: 1.15;">
-<div>Telling people to be vigilant is not a correctness strategy.</div>
-<div class="fragment">The presence of a human is not enough.</div>
-</div>
+::: {.statement}
+Telling people to be vigilant is [not a correctness strategy.]{.accent}
+
+[The presence of a human is not enough.]{.fragment}
+:::
 
 ::: notes
 Just adding a human and telling them to remain vigilant and to be there is not a correctness strategy.
@@ -461,7 +486,7 @@ it relies too much on hard work on the part of the user, but also people are not
 and so I would not write the Databot post in the same way today. that does not mean human expertise is unnecessary. It's just that simply assigning the role of correctness monitor to the user does not make the system correct.
 :::
 
-# 
+# {.paper-slide}
 
 ::: {.incremental}
 * Build trust and correctness into the system itself
@@ -477,16 +502,18 @@ and specifically, encode correctness into the agent itself
 and design the interaction to support human expertise when the model will inevitably make mistakes. 
 :::
 
-# 
+# {.statement-slide .paper-slide}
 
-* Build trust and correctness into the system itself: **Help the agent be correct**
-* Consider how interaction works with the user and can support their expertise: **Make it less bad when it's wrong**
+::: {.statement}
+Help the agent be [correct.]{.accent}  
+Make it less bad when it's wrong.
+:::
 
 ::: notes
 In other words: help the agent be correct, and make it less bad when it's wrong.
 :::
 
-##
+## {.paper-slide}
 
 ![](figures/posit-assistant-homepage.png){.rounded}
 
