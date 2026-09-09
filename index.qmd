@@ -224,6 +224,18 @@ In 2019, Conviviality (a beverage company) discovered they had been mistakenly r
 > £5.2m of that £14m came thanks to “a material error in the financial forecasts”. The error, it later admitted, was “a spreadsheet arithmetic error”.
 :::
 
+##
+
+![](figures/scientists-software-error.png){.rounded .nostretch width="80%"}
+
+:::footer
+https://www.science.org/doi/10.1126/science.314.5807.1856
+:::
+
+:::notes
+A lab studying protein structures used an in-house, closed source program analyze data. It contained a bug that flipped the sign of a computation. From 2001 to 2006, Geoffrey Chang published a series of heavy-hitting papers that reshaped his field, while other labs struggled to reproduce their findings. The bug came to light when another lab solved a similar protein structure that produced a mirror image of Chang's. At this point, the Chang lab checked their code, found the bug, and retracted 5 papers.
+:::
+
 ## 
 
 . . .
