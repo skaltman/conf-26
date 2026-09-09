@@ -368,6 +368,108 @@ but for me and I think many of us at posit, much of the answer has to do with a 
 
 ##
 
+## The models got better
+
+## {.paper-slide}
+
+::: {style="display: flex; flex-direction: column; gap: 0; padding: 20px; max-width: 100%; margin: 20px auto 0 auto;"}
+
+::: {.fragment style="align-self: flex-end; background-color: #d6eaf8; padding: 12px 18px; border-radius: 18px 18px 4px 18px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"}
+Please plot total_bill vs tip in tips
+:::
+
+::: {.fragment style="align-self: flex-start; background-color: white; padding: 12px 18px; border-radius: 18px 18px 18px 4px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #e0e0e0; margin-top: 10px;"}
+_Calls tool: Run Python code_
+:::
+
+::: {.fragment style="align-self: flex-end; background-color: #d6eaf8; padding: 6px; border-radius: 18px 18px 4px 18px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"}
+![](figures/bluffbench-tips-thumb.png){fig-alt="A small scatterplot thumbnail with total_bill on the x-axis and tip on the y-axis. The points drift downward from upper left to lower right, suggesting a negative association." width="160px" style="border-radius: 12px; display: block;"}
+:::
+
+::: {.fragment style="align-self: flex-start; background-color: white; padding: 12px 18px; border-radius: 18px 18px 18px 4px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #e0e0e0;"}
+There is a **strong, positive association.**
+:::
+
+:::
+
+:::footer
+posit-dev.github.io/bluffbench
+:::
+
+::: notes
+Bluffbench tests whether a model reports what is actually plotted or falls back
+on what it expects from a well-known dataset.
+
+The model receives the rendered plot. Here, the relationship is negative, but
+the model describes the familiar positive relationship from the original data.
+:::
+
+## {.paper-slide}
+
+![](figures/bluffbench-tips-plot.png){fig-alt="A full-size scatterplot of total bill against tip. The points form a clear negative association, with tips generally falling as total bill rises." width="92%"}
+
+## {.paper-slide}
+
+![](figures/original-bluffbench-results.png){fig-alt="A horizontal stacked bar chart titled 'Models often report what they expect to see, not what's plotted.' GPT-5, Gemini Pro 2.5, and Claude Sonnet 4.5 are almost entirely incorrect." height="560"}
+
+:::footer
+posit-dev.github.io/bluffbench
+:::
+
+::: notes
+We tried a range of interventions to improve these scores, but none moved them
+much. Even when a model noticed during its reasoning that the association did
+not look as expected, it often still reported the expected relationship.
+:::
+
+## The models got better {.paper-slide}
+
+![](figures/latest-bluffbench-results.png){fig-alt="A faceted horizontal stacked bar chart of percent correct across recent models, split into thinking and no-thinking groups. Thinking models perform better, while most models still give many incorrect answers." height="560"}
+
+:::footer
+posit-dev.github.io/bluffbench
+:::
+
+## 
+
+* The models got better
+* But they still make mistakes
+
+## bluffbench2 {.paper-slide}
+
+![](figures/bluffbench2-bmi-cholesterol.png){fig-alt="A scatterplot of BMI against cholesterol with a positive trend. A subset of points falls exactly along a straight line, suggesting a data-quality artifact." width="92%"}
+
+:::footer
+github.com/posit-dev/bluffbench2
+:::
+
+::: notes
+Bluffbench2 tests whether models notice subtle data quality issues in
+visualizations.
+
+In this example, most points follow a noisy positive relationship, but a subset
+falls exactly on a straight line. This pattern can indicate deterministic
+imputation that should be investigated before continuing the analysis.
+:::
+
+## bluffbench2 {.paper-slide}
+
+![](figures/bluffbench2-results.png){fig-alt="A horizontal bar chart of BluffBench2 scores by model. Every model scores below 20 percent, showing that frontier models still struggle to notice subtle data-quality issues." width="92%"}
+
+:::footer
+github.com/posit-dev/bluffbench2
+:::
+
+::: notes
+Across models, performance remains low. These are visual data-quality issues
+that a data scientist would want an analysis agent to notice before interpreting
+the apparent relationship.
+:::
+
+## 
+
+Posit makes software to help you understand data.
+
 ## {background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
 
 ::: notes
@@ -560,7 +662,8 @@ and design the interaction to support human expertise when the model will inevit
 # {.statement-slide .paper-slide}
 
 ::: {.statement}
-Help the agent be [correct.]{.accent}  
+Help the agent be correct. 
+
 Make it less bad when it's wrong.
 :::
 
