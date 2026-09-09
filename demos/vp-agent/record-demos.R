@@ -48,11 +48,15 @@ record_demo <- function(
   question,
   marker,
   tool_call = NULL,
+  close_tool_call = TRUE,
+  expand_result = FALSE,
+  hover_marker = TRUE,
   url,
   output_dir,
+  output_prefix = "vp-agent",
   call = rlang::caller_env()
 ) {
-  frame_dir <- tempfile(paste0("vp-agent-", slug, "-"))
+  frame_dir <- tempfile(paste0(output_prefix, "-", slug, "-"))
   dir.create(frame_dir)
   on.exit(unlink(frame_dir, recursive = TRUE), add = TRUE)
 
@@ -89,13 +93,28 @@ record_demo <- function(
 
   if (!is.null(tool_call)) {
     click_tool_call(browser, tool_call, call = call)
+    pump_browser(1.5)
+    capture_final_frame(browser, state, hold = 2)
+    pump_browser(0.5)
+    if (close_tool_call) {
+      click_tool_call(browser, tool_call, call = call)
+      pump_browser(0.5)
+    }
+  }
+
+  if (expand_result) {
+    toggle_full_screen_result(browser, call = call)
     pump_browser(2)
-    click_tool_call(browser, tool_call, call = call)
+    capture_final_frame(browser, state, hold = 2)
+    pump_browser(0.5)
+    toggle_full_screen_result(browser, expanded = TRUE, call = call)
     pump_browser(0.5)
   }
 
-  hover_element(browser, marker, call = call)
-  pump_browser(2.5)
+  if (hover_marker) {
+    hover_element(browser, marker, call = call)
+    pump_browser(2.5)
+  }
   capture_final_frame(browser, state)
   invisible(browser$Page$stopScreencast())
   pump_browser(0.2)
@@ -107,7 +126,10 @@ record_demo <- function(
     )
   }
 
-  output <- file.path(output_dir, paste0("vp-agent-", slug, ".mp4"))
+  output <- file.path(
+    output_dir,
+    paste0(output_prefix, "-", slug, ".mp4")
+  )
   encode_recording(state$files, state$times, output, call = call)
   normalizePath(output)
 }
@@ -127,7 +149,7 @@ save_frame <- function(data, timestamp, state) {
   invisible()
 }
 
-capture_final_frame <- function(browser, state) {
+capture_final_frame <- function(browser, state, hold = NULL) {
   screenshot <- browser$Page$captureScreenshot(
     format = "jpeg",
     quality = 90
@@ -138,6 +160,9 @@ capture_final_frame <- function(browser, state) {
     as.numeric(Sys.time())
   }
   save_frame(screenshot$data, timestamp, state)
+  if (!is.null(hold)) {
+    save_frame(screenshot$data, timestamp + hold, state)
+  }
 }
 
 wait_for_chat_input <- function(
@@ -190,10 +215,37 @@ click_tool_call <- function(
   label,
   call = rlang::caller_env()
 ) {
-  center <- element_center(
+  click_element(
     browser,
     ".shiny-chat-tool-group__row",
     text = label,
+    call = call
+  )
+}
+
+toggle_full_screen_result <- function(
+  browser,
+  expanded = FALSE,
+  call = rlang::caller_env()
+) {
+  label <- if (expanded) "Exit fullscreen" else "Expand card"
+  click_element(
+    browser,
+    sprintf('button[aria-label="%s"]', label),
+    call = call
+  )
+}
+
+click_element <- function(
+  browser,
+  selector,
+  text = NULL,
+  call = rlang::caller_env()
+) {
+  center <- element_center(
+    browser,
+    selector,
+    text = text,
     call = call
   )
   move_mouse(browser, center)
