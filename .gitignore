@@ -9,3 +9,9 @@
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Quarto render output
+**/*_files/
+**/*_cache/
+/*.html
+!/fragment-video.html
