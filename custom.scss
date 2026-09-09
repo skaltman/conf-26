@@ -274,6 +274,118 @@ $link-color: color("pink");
   }
 }
 
+/* Deterministic trust flow */
+
+.reveal .slide.trust-flow-slide {
+  > h2 {
+    color: color("reference-navy");
+    font-size: 58px;
+  }
+
+  .trust-flow {
+    width: 1000px;
+    margin: 36px auto 0;
+  }
+
+  .trust-tool {
+    box-sizing: border-box;
+    width: max-content;
+    padding: 13px 22px;
+    border: 2px solid rgba(color("ink"), 0.15);
+    border-radius: 12px;
+    background: rgba(white, 0.72);
+    color: color("ink");
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  .trust-search {
+    margin: 0 auto;
+  }
+
+  .trust-route-labels,
+  .trust-citation-routes {
+    display: grid;
+    color: rgba(color("ink"), 0.68);
+    font-size: 24px;
+    font-weight: 500;
+
+    > span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .trust-route-labels {
+    grid-template-columns: 1fr 1.25fr;
+    gap: 80px;
+    margin: 10px 0 7px;
+
+    span {
+      text-align: center;
+    }
+  }
+
+  .trust-branches {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 80px;
+  }
+
+  .trust-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trust-down-arrow {
+    display: grid;
+    min-height: 35px;
+    place-items: center;
+    color: rgba(color("ink"), 0.55);
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .trust-decision-arrow {
+    color: rgba(color("ink"), 0.55);
+    font-size: 32px;
+    line-height: 0.9;
+  }
+
+  .trust-citation-routes {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    margin: 7px 0 3px;
+
+    span {
+      text-align: center;
+    }
+  }
+
+  .trust-lower-outcomes {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 54px;
+      height: 54px;
+      margin: 0;
+      max-width: none;
+      max-height: none;
+    }
+  }
+}
+
 .reveal .slide.quote-slide {
   height: 100%;
 

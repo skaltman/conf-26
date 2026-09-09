@@ -804,9 +804,45 @@ trusted context that supports that explanation.
 correctness and convenience
 :::
 
-# Deterministically tag trust
+## Deterministically tag trust {.trust-flow-slide .paper-slide}
 
-![](figures/commons-trust-flow.png){width=85%}
+<br>
+
+```{=html}
+<div class="trust-flow" role="img" aria-label="Commons searches trusted calculations, then marks answers based on whether they use a trusted calculation or a lower-trust custom path.">
+  <div class="trust-tool trust-search">Search trusted calculations</div>
+  <div class="trust-route-labels" aria-hidden="true">
+    <span><span>Find one</span><span class="trust-decision-arrow">↓</span></span>
+    <span><span>Don’t find one</span><span class="trust-decision-arrow">↓</span></span>
+  </div>
+  <div class="trust-branches">
+    <div class="trust-branch trust-branch-high">
+      <div class="trust-tool">Run trusted calculation</div>
+      <span class="trust-down-arrow" aria-hidden="true">↓</span>
+      <div class="trust-marker">
+        <img src="figures/trusted-icon.svg" alt="">
+      </div>
+    </div>
+    <div class="trust-branch trust-branch-lower">
+      <div class="trust-tool">Search context</div>
+      <span class="trust-down-arrow" aria-hidden="true">↓</span>
+      <div class="trust-tool">Write SQL/R</div>
+      <div class="trust-citation-routes" aria-hidden="true">
+        <span><span>Cite</span><span class="trust-decision-arrow">↓</span></span>
+        <span><span>Don’t cite</span><span class="trust-decision-arrow">↓</span></span>
+      </div>
+      <div class="trust-lower-outcomes">
+        <div class="trust-marker">
+          <img src="figures/citation-mark.svg" alt="">
+        </div>
+        <div class="trust-marker">
+          <img src="figures/warning-icon.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 ::: notes
 Commons records which tools produced the answer. Trust is based on that
