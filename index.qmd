@@ -674,13 +674,13 @@ assistant.posit.co
 * Build trust and correctness into the system itself: **Help the agent be correct**
 * Consider how interaction works with the user and can support their expertise: **Make it less bad when it's wrong**
 
-# but what if the user is not a data scientist?
+# But what if the user is not a data scientist?
 
 ::: notes
 In Posit Assistant, the user is typically a data or code minded person. The interface assumes they can inspect the work.
 :::
 
-# The VP's analysis was wrong
+## The VP's analysis was wrong
 
 ```{=html}
 <div class="agent-window vp-reminder-window">
@@ -722,11 +722,11 @@ In Posit Assistant, the user is typically a data or code minded person. The inte
 ```
 
 ::: notes
-The VP had good intentions. She wanted an answer to her question, and reached for a tool convenient to her. 
+The VP had good intentions. They wanted an answer to their question, and reached for a tool convenient to them. 
 
-unfortunately, the answer she got was wrong.
+unfortunately, the answer they got was wrong.
 
-the next day, a data scientist checked her analysis, noticed the mistake. not only do they notice the problem, they already have a couple functions in an internal package that would have carried out the analysis correctly for the vp.
+the next day, a data scientist checked their analysis, noticed the mistake. not only do they notice the problem, they already have a couple functions in an internal package that would have carried out the analysis correctly for the vp.
 :::
 
 # [_Trusted_ code]{style="color: #ee6331; font-size: 1.4em;"}
@@ -745,23 +745,17 @@ We can leverage this code instead of having the model recreate the analysis ever
 this is one of the core ideas behind the new open source package commons
 :::
 
-# Introducing commons
+# {.commons-intro-slide}
 
-# commons 
-
-::: {.incremental}
-* Open source in R and Python
-
-* Built on `ellmer` / `chatlas` and `shinychat`
-
-* For data scientists to build for everyone else
-:::
+![](figures/commons-hex.png){.commons-intro-logo .nostretch fig-alt="Commons logo"}
 
 ::: notes
-commons helps data scientists build trustworthy data agents.
+commons helps data scientists build trustworthy data agents
+
+It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`.
 :::
 
-# Start with trusted calculations
+## Start with trusted calculations
 
 ```{=html}
 <video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons trusted calculation demo. Click to play or pause.">
@@ -778,7 +772,7 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
-# Allow custom code when needed
+## Allow custom code when needed
 
 ```{=html}
 <video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons custom query demo. Click to play or pause.">
@@ -796,7 +790,7 @@ Commons preserves that convenience, but marks
 the answer as untrusted.
 :::
 
-# Context supports the custom path
+## Context supports the custom path
 
 ```{=html}
 <video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons context-supported answer demo. Click to play or pause.">

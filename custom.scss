@@ -52,6 +52,11 @@ $link-color: color("pink");
   text-align: left;
 }
 
+.reveal .slides section > :is(h1, h2, h3, ul, ol),
+.reveal .slides section > p:not(:has(img, video)) {
+  margin-inline: 72px;
+}
+
 .reveal .slide {
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
@@ -189,6 +194,21 @@ $link-color: color("pink");
 
 .reveal .slide.thank-you-slide > h1:empty {
   display: none;
+}
+
+.reveal .slide.commons-intro-slide {
+  height: 100%;
+  padding: 0 !important;
+}
+
+.reveal .commons-intro-logo {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: 420px;
+  max-height: none;
+  margin: 0;
+  transform: translate(-50%, -50%);
 }
 
 /* Statement and quote */
