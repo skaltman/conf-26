@@ -205,7 +205,7 @@ $link-color: color("pink");
   padding: 0 !important;
   background: color("palette-pink");
 
-  > h1:empty {
+  > :is(h1, h2):empty {
     display: none;
   }
 
@@ -237,6 +237,18 @@ $link-color: color("pink");
     font-weight: 400;
     dominant-baseline: middle;
   }
+}
+
+.quadrant-point {
+  fill: color("pink");
+}
+
+.quadrant-point-label {
+  fill: color("reference-navy");
+  font-family: "DM Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  dominant-baseline: middle;
 }
 
 .reveal .slide.commons-intro-slide {
