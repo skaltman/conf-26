@@ -718,9 +718,20 @@ Can use your IDE in the normal way
 The whole conversation was 10 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we've worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees. Per token, this model, GLM 5.3 Flash, is less than a thirtiest of the price of Claude Opus 5, and is served under Zero Data Retention.
 :::
 
-##
+## {.paper-slide .quadrant-slide background-color="#f7c9d5"}
 
-![](figures/posit-assistant-homepage.png){.rounded .nostretch height="650"}
+<svg class="convenience-correctness rounded" viewBox="0 0 1200 680" role="img" aria-labelledby="posit-assistant-quadrants-title">
+  <title id="posit-assistant-quadrants-title">Convenience and correctness axes with Posit Assistant as correct as R in RStudio and more convenient</title>
+  <use href="#convenience-correctness-base" />
+  <circle class="quadrant-point" cx="400" cy="145" r="11" />
+  <text class="quadrant-point-label" x="376" y="145" text-anchor="end">R in RStudio</text>
+  <circle class="quadrant-point" cx="800" cy="500" r="11" />
+  <text class="quadrant-point-label" x="824" y="500">No-code / closed-source</text>
+  <circle class="quadrant-point" cx="600" cy="285" r="11" />
+  <text class="quadrant-point-label" x="624" y="285">Databot</text>
+  <circle class="quadrant-point" cx="650" cy="145" r="11" />
+  <text class="quadrant-point-label" x="674" y="145">Posit Assistant</text>
+</svg>
 
 :::notes
 We've designed Posit Assistant to be more correct, and we've designed it to make better use of your expertise than other coding agents, so that you're more likely to know when it's wrong.
