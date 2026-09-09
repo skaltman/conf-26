@@ -89,7 +89,7 @@ Telling people to be vigilant is [not a correctness strategy.]{.accent}
 
 :::
 
-## {.image-caption-slide background-image="figures/erick-morales-oyola-sSfE0Z_TuSw-unsplash.jpg" background-size="cover" background-position="center"}
+## {.image-caption-slide background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
 
 ::: {.image-caption}
 ### Curiosity is what got us into this room. {.image-caption-title}
