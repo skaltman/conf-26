@@ -89,6 +89,30 @@ $link-color: color("pink");
   }
 }
 
+/* Footer */
+
+.reveal .footer {
+  bottom: 14px !important;
+  color: color("periwinkle") !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+
+  > * {
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    color: inherit !important;
+  }
+}
+
+.reveal .footer.has-dark-background {
+  color: color("paper-warm") !important;
+}
+
 /* Title */
 
 .reveal .slide.title-slide {
@@ -154,7 +178,7 @@ $link-color: color("pink");
     top: 50%;
     right: 72px;
     left: 72px;
-    font-size: 42px;
+    font-size: 58px;
     font-weight: 600;
     line-height: 1.08;
     text-align: left;
@@ -167,6 +191,16 @@ $link-color: color("pink");
 }
 
 .reveal .slide.quote-slide {
+  height: 100%;
+
+  &.compact-quote blockquote p {
+    font-size: 65px;
+  }
+
+  .accent {
+    color: color("pink");
+  }
+
   blockquote {
     position: absolute;
     top: 50%;
@@ -198,7 +232,7 @@ $link-color: color("pink");
       font-weight: 600;
 
       &::before {
-        content: "\2013\00a0";
+        content: "-\00a0";
       }
     }
   }
@@ -244,6 +278,7 @@ $link-color: color("pink");
 
 .reveal .slide.split-image-slide {
   padding: 0 !important;
+  height: 100%;
 
   .columns {
     position: absolute;
@@ -293,28 +328,52 @@ $link-color: color("pink");
     margin: 0;
     object-fit: cover;
   }
+
+}
+
+.reveal .slide-background.split-image-slide .slide-background-content {
+  position: absolute;
+  inset: 0 0 0 50%;
+  width: 50%;
+  height: 100%;
+  background-position: 38% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reveal .slide.split-image-slide .image-credit {
+  position: absolute;
+  right: 24px;
+  bottom: 14px;
+  color: color("paper-warm");
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: right;
 }
 
 /* Full-bleed background image set with Quarto's background-image attribute */
 
 .reveal .slide.image-caption-slide {
   padding: 0 !important;
+  /* Sections have auto height; fill the slide so the caption's
+     bottom: 0 is the slide's bottom edge. */
+  height: 100%;
 
   .image-caption {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 46%;
+    width: 52%;
     box-sizing: border-box;
-    padding: 28px 46px;
+    padding: 36px 48px;
     background: color("paper-cool");
     color: color("reference-navy");
 
     .image-caption-title {
       margin: 0;
       color: color("reference-navy");
-      font-size: 34px;
-      line-height: 1.08;
+      font-size: 44px;
+      line-height: 1.1;
     }
   }
 }
@@ -395,6 +454,14 @@ $link-color: color("pink");
 .reveal .controls {
   color: currentColor;
   opacity: 0.5;
+}
+
+/* Footer: right-aligned and close to the bottom edge */
+.reveal > .footer {
+  bottom: 8px;
+  box-sizing: border-box;
+  padding-right: 24px;
+  text-align: right;
 }
 
 /* Existing slide-specific layouts and agent diagrams */
