@@ -191,6 +191,49 @@ $link-color: color("pink");
   display: none;
 }
 
+.reveal .slide.quadrant-slide {
+  top: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 !important;
+  background: color("palette-pink");
+
+  > h1:empty {
+    display: none;
+  }
+
+  .convenience-correctness {
+    display: block;
+    width: min(1200px, calc(100% - 40px));
+    height: auto;
+    margin: 0;
+    background: color("paper-cool");
+
+    &.rounded {
+      border-radius: 0.75rem;
+      box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%);
+    }
+
+  }
+}
+
+.convenience-correctness-base {
+  .axis {
+    stroke: color("reference-navy");
+    stroke-width: 4;
+  }
+
+  .axis-label {
+    fill: #6b7280;
+    font-family: "DM Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    dominant-baseline: middle;
+  }
+}
+
 /* Statement and quote */
 
 .reveal .slide.statement-slide {
