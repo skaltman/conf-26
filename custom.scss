@@ -196,13 +196,13 @@ $link-color: color("pink");
   display: none;
 }
 
-.reveal .slide.quadrant-slide {
+.reveal .slides .slide.quadrant-slide {
   top: 0 !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 0 !important;
+  padding: 68px 72px !important;
   background: color("palette-pink");
 
   > :is(h1, h2):empty {
