@@ -891,7 +891,7 @@ behavior into changes to the trusted calculations and context.
 
 ::: {.statement .regular-weight}
 Help the model not be wrong [**with trusted calculations and context**]{.fragment}<br><br>
-Make it less bad when it is wrong [**by signaling trust**]{.fragment} [**and introducing feedback loops**]{.fragment}
+Make it less bad when it is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
 :::
 
 
