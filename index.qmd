@@ -758,7 +758,7 @@ It's an open source R and Python package built on `ellmer` / `chatlas` and `shin
 ##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/commons-01-traffic-trends.mp4">
+  <source src="figures/commons-01-traffic-trend.mp4">
 </video>
 
 ::: notes
@@ -770,7 +770,7 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
-## Allow custom code when needed
+## 
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-02-page-views.mp4">
@@ -786,7 +786,7 @@ Commons preserves that convenience, but marks
 the answer as untrusted.
 :::
 
-## Context supports the custom path
+##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-03-most-visits.mp4">
