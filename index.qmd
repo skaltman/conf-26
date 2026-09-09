@@ -17,7 +17,25 @@ knitr:
     comment: "#>"
 ---
 
-##
+## {.title-slide .green-slide}
+
+::: {.columns}
+
+::: {.column width="68%"}
+### Agents for correct, transparent, and reproducible analysis {.talk-title}
+
+::: {.talk-meta}
+**Simon Couch and Sara Altman**
+
+posit::conf(2026)
+:::
+:::
+
+::: {.column width="32%"}
+<div class="circle-pair" aria-hidden="true"><span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span></div>
+:::
+
+:::
 
 ## {.agent-story-slide .slow-tool-calls}
 
