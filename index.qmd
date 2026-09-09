@@ -180,11 +180,17 @@ A month later, leadership asks to see the chart again. The VP opens up the same 
 The agent offers to make it again. This time, when the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
 :::
 
-## {.quote-slide .paper-slide}
+##
 
-> In the battle between convenience and correctness, _convenience is winning._
->
-> <footer>Joe Cheng, Posit CTO</footer>
+<br><br><br>
+
+::: {.quote}
+_<span class="opening-quote">“</span>In the battle between convenience and correctness, convenience is winning”_
+:::
+
+::: {.attribution}
+\- Joe Cheng
+:::
 
 ::: notes
 AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.
@@ -197,7 +203,7 @@ It just so happened that Joe said this a month ago, but he could have said it a 
 ![](figures/conviviality-spreadsheeting-error.png){.rounded}
 
 :::footer
-https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business
+<span style="color:#ee6331;">https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business</span>
 :::
 
 ::: notes
@@ -216,13 +222,19 @@ In 2019, Conviviality (a beverage company) discovered they had been mistakenly r
 There have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance was not "you need to forgo convenience in favor of correctess."
 :::
 
-## {.quote-slide .compact-quote .paper-slide}
+##
 
-> Our goal is to develop a powerful tool that supports trustworthy, high quality analysis.
->
-> At the same time, we want RStudio to be as straightforward and intuitive as possible.
->
-> <footer>JJ Allaire, 2011</footer>
+<br><br>
+
+::: {.quote}
+_<span class="opening-quote">“</span>Our goal is to develop a powerful tool that supports trustworthy, high quality analysis._
+
+_At the same time, we want RStudio to be as straightforward and intuitive as possible.”_
+:::
+
+::: {.attribution}
+\- JJ Allaire, 2011
+:::
 
 :::footer
 https://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/
