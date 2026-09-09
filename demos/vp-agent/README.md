@@ -7,7 +7,7 @@ visits.
 From the talk repository root, run:
 
 ```r
-shiny::runApp("vp-agent")
+shiny::runApp("demos/vp-agent")
 ```
 
 The app uses `ANTHROPIC_API_KEY` when available and otherwise falls back to
@@ -19,7 +19,7 @@ With the app running on port 8765, record the three example interactions from
 the talk repository root:
 
 ```sh
-Rscript vp-agent/record-demos.R
+Rscript demos/vp-agent/record-demos.R
 ```
 
 The script writes silent H.264 MP4 files to `figures/`.

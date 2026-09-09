@@ -1,6 +1,6 @@
 record_trajectory_review <- function(
   url = "http://127.0.0.1:8766",
-  output = "../figures/vp-agent-trajectory-review.mp4"
+  output = "../../figures/vp-agent-trajectory-review.mp4"
 ) {
   frame_dir <- tempfile("trajectory-review-")
   dir.create(frame_dir)
