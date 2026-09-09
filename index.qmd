@@ -898,8 +898,41 @@ The VP is a stand-in for anyone who has questions to ask of data but is not the
 data scientist: a lab PI, medical director, product manager, or domain expert.
 :::
 
-# Canvas
+##
 
-# AI newsletter
+![](figures/canvas.png){.rounded}
 
-# Thank you!
+:::notes
+* Right now, Posit Assistant is our flagship coding agent, and commons is our newest, ready-for-production open source AI tool for data scientists.
+* We have been experimenting with something
+* Assumes that you won't look at the code usually
+* Relative to Positron, frees up real estate / degrees of freedom to other agent collaboration interfaces
+* Feels aggressive in the way that Databot felt to us a year ago
+* If you want to learn more, see Joe's talk
+:::
+
+# AI Newsletter
+
+::: {.columns}
+
+::: {.column}
+![](figures/ai-newsletter-qr.png){}
+:::
+
+::: {.column}
+![](figures/ai-newsletter.png){.rounded}
+:::
+
+:::
+
+:::footer
+https://opensource.posit.co/tags/ai-newsletter/
+:::
+
+:::notes
+For the last year and a half, we've written this together every two weeks
+:::
+
+# {.thank-you-slide .green-slide}
+
+<div class="thank-you-row"><h1>Thank you</h1><div class="circle-pair" aria-hidden="true"><span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span></div></div>
