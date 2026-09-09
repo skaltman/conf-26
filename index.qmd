@@ -816,20 +816,13 @@ The citation itself is checked against trusted context. A custom answer is not
 promoted merely because the model says it used a trusted source.
 :::
 
-# {.statement-slide .paper-slide}
-
-::: {.statement .regular-weight}
-Help the model not be wrong [**with trusted calculations and context**]{.fragment}<br><br>
-Make it less bad when it is wrong [**by signaling trust**]{.fragment} [**and feedback loops**]{.fragment}
-:::
-
 ## Three loops {.lifecycle-slide .paper-slide}
 
 ::: {.lifecycle-cards}
 ::: {.lifecycle-card .fragment .fade-up}
 ### Build
 
-A data scientist builds the agent in an IDE, encoding trusted calculations and context.
+A data scientist builds the agent by hooking it up to trusted code.
 :::
 
 ::: {.lifecycle-card .fragment .fade-up}
@@ -841,7 +834,7 @@ Non-technical people use the agent deployed on Connect.
 ::: {.lifecycle-card .fragment .fade-up}
 ### Improve
 
-The data scientist reviews its behavior, moving responses up the trust ladder.
+The data scientist reviews the agent's behavior, adding trusted code to move responses up the trust ladder.
 :::
 :::
 
@@ -858,22 +851,13 @@ the conversation between the user and agent. The improve loop turns reviewed
 behavior into changes to the trusted calculations and context.
 :::
 
-# Review logs for continual improvement
+# {.statement-slide .paper-slide}
 
-```{=html}
-<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons trajectory review demo. Click to play or pause.">
-  <source src="figures/vp-agent-trajectory-review.mp4" type="video/mp4">
-</video>
-```
-
-::: notes
-review for correctness, add trusted code for commonly asked questions
-improve context
-
-Recurring
-questions can become trusted calculations. problems with table choice, joins,
-definitions, or caveats can become better context.
+::: {.statement .regular-weight}
+Help the model not be wrong [**with trusted calculations and context**]{.fragment}<br><br>
+Make it less bad when it is wrong [**by signaling trust**]{.fragment} [**and introducing feedback loops**]{.fragment}
 :::
+
 
 # 
 
