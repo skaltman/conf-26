@@ -1004,9 +1004,9 @@ Make it less bad when it is wrong [**by signaling trust and introducing feedback
   <circle class="quadrant-point" cx="600" cy="285" r="11" />
   <text class="quadrant-point-label" x="624" y="285">Databot</text>
   <circle class="quadrant-point" cx="650" cy="145" r="11" />
-  <text class="quadrant-point-label" x="674" y="145">Posit Assistant</text>
-  <circle class="quadrant-point" cx="920" cy="145" r="11" />
-  <text class="quadrant-point-label" x="944" y="145">commons</text>
+  <text class="quadrant-point-label" x="674" y="185">Posit Assistant</text>
+  <circle class="quadrant-point" cx="840" cy="145" r="11" />
+  <text class="quadrant-point-label" x="864" y="105">commons</text>
 </svg>
 
 
