@@ -281,12 +281,17 @@ for us and for many of you I imagine 2025 was the year AI got very very convenie
 and we were so worried 
 :::
 
-# {.paper-slide}
+## {.split-image-slide .split-20 background-image="figures/databot-flotation.png"}
 
-![](figures/databot-flotation.png){.rounded height=500 style="top: 43%;"}
+::: {.columns}
 
-::: {style="position: absolute; top: 81%; width: 100%; font-size: 1.05em; text-align: center;"}
-**August 2025**
+::: {.column}
+### August 2025 {.split-title}
+:::
+
+::: {.column role="img" aria-label="Illustration of a databot mascot wearing a flotation device"}
+:::
+
 :::
 
 :::footer
@@ -299,6 +304,18 @@ so worried that when we released our new sota coding agent in 2025, we did so un
 this is an image from a blog post joe and I wrote to accompany the release of databot, which was an exploratory data analysis agent that lived in positron
 
 and this post was actually one of the first things I worked when I joined the AI team, and it gave me the opportunity to do one of the things that I think I do best: be a pessimist 
+:::
+
+# {background-image="figures/getty-images-YqJdF4TIxG0-unsplash.jpg" background-size="cover" background-position="center"}
+
+:::footer
+Getty Images
+:::
+
+# {background-image="figures/databot-flotation-no-swimming.png" background-size="cover" background-position="center"}
+
+:::footer
+Thank you Margaret Biffar and Isabella Velásquez!
 :::
 
 # {.paper-slide}
@@ -367,11 +384,11 @@ learning the tidyverse, and data science...these tools gave me a way to investig
 
 ::: {.columns}
 
-::: {.column width="50%"}
+::: {.column}
 ### The right tools let us see below the surface. {.split-title}
 :::
 
-::: {.column width="50%" role="img" aria-label="A school of rays swimming below the ocean surface"}
+::: {.column role="img" aria-label="A school of rays swimming below the ocean surface"}
 :::
 
 :::
@@ -386,7 +403,7 @@ The tools enable the curiosity.
 # {.statement-slide .paper-slide}
 
 ::: {.statement}
-AI is a [continuation of this work.]{.accent}
+AI is a [continuation]{.accent} of our work to find [new ways to explore data]{.accent}.
 :::
 
 ::: notes
@@ -465,13 +482,13 @@ when your coding agent (or past coding agents) shows you a command and asks you 
 
 # {background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
 
-::: {.fragment style="position: absolute; top: 43%; left: 2%; width: 45%; margin: 0; padding: 0.75rem 1rem; background: #fff; box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%); font-size: 0.72em; font-weight: 300; text-align: left;"}
+::: {.fragment style="position: absolute; top: 43%; left: 2%; width: 45%; margin: 0; padding: 0.75rem 1rem; background: #f5f2ec; color: #24437b; box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%); font-size: 0.72em; font-weight: 700; text-align: left;"}
 "Databot, and LLMs in general, aren’t at a point where you can abdicate responsibility or suspend skepticism when working with data. ...
-These skills help you **catch errors, interpret results in context, and avoid being misled by confident but incorrect claims."**
+These skills help you <span style="color:#dd5d7b;">catch errors, interpret results in context, and avoid being misled by confident but incorrect claims."</span>
 :::
 
 :::footer
-posit.co/blog/databot-is-not-a-flotation-device
+<span style="color:#fff1c9;">posit.co/blog/databot-is-not-a-flotation-device</span>
 :::
 
 ::: notes
