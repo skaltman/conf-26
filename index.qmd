@@ -292,6 +292,19 @@ Now, I know I've made myself out to be a serious statistics person, but I'm goin
   <text class="quadrant-point-label" x="824" y="500">No-code / closed-source</text>
 </svg>
 
+## {.paper-slide .quadrant-slide background-color="#f7c9d5"}
+
+<svg class="convenience-correctness rounded" viewBox="0 0 1200 680" role="img" aria-labelledby="tool-quadrants-title">
+  <title id="tool-quadrants-title">Convenience and correctness axes with R in RStudio in the upper-left quadrant and no-code and closed-source tools in the lower-right quadrant</title>
+  <use href="#convenience-correctness-base" />
+  <circle class="quadrant-point" cx="400" cy="145" r="11" />
+  <text class="quadrant-point-label" x="376" y="145" text-anchor="end">R in RStudio</text>
+  <circle class="quadrant-point" cx="800" cy="500" r="11" />
+  <text class="quadrant-point-label" x="824" y="500">No-code / closed-source</text>
+</svg>
+
+##
+
 ::: notes
 this pull between correctness and convenience has weighed on all of our minds in this new age of llms
 
