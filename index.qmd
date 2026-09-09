@@ -755,13 +755,11 @@ commons helps data scientists build trustworthy data agents
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`.
 :::
 
-## Start with trusted calculations
+##
 
-```{=html}
-<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons trusted calculation demo. Click to play or pause.">
-  <source src="figures/vp-agent-trusted.mp4" type="video/mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trends.mp4">
 </video>
-```
 
 ::: notes
 let's see how the VP's analysis would work with a commons agent
@@ -774,11 +772,9 @@ the answer is marked as verified to signify that it used vetted code
 
 ## Allow custom code when needed
 
-```{=html}
-<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons custom query demo. Click to play or pause.">
-  <source src="figures/vp-agent-custom-query.mp4" type="video/mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-02-page-views.mp4">
 </video>
-```
 
 ::: notes
 However, its unlikely that this trusted code will cover all questions a user might have.
@@ -792,11 +788,9 @@ the answer as untrusted.
 
 ## Context supports the custom path
 
-```{=html}
-<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons context-supported answer demo. Click to play or pause.">
-  <source src="figures/vp-agent-context.mov" type="video/mov">
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-03-most-visits.mp4">
 </video>
-```
 
 ::: notes
 but this custom code isn't entirely untrustworthy

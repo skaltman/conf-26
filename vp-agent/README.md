@@ -1,7 +1,7 @@
 # VP site traffic agent
 
 A small Commons app for recording the VP example in the talk. It uses fictional
-traffic data and a trusted calculation that reports a 22% increase in daily site
+traffic data and a trusted calculation that plots the increase in daily site
 visits.
 
 From the talk repository root, run:
