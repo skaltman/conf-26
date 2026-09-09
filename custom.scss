@@ -170,6 +170,27 @@ $link-color: color("pink");
   }
 }
 
+.reveal .slide.thank-you-slide .thank-you-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1,
+  .circle-pair {
+    margin: 0;
+  }
+
+  .circle-pair {
+    flex: none;
+    width: auto;
+    height: auto;
+  }
+}
+
+.reveal .slide.thank-you-slide > h1:empty {
+  display: none;
+}
+
 /* Statement and quote */
 
 .reveal .slide.statement-slide {
@@ -478,6 +499,12 @@ $link-color: color("pink");
   margin: 0;
   border-radius: 0.75rem;
   box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%);
+}
+
+.reveal .column img.rounded {
+  position: static;
+  margin: 0 auto;
+  transform: none;
 }
 
 .reveal video.rounded {
