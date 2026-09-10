@@ -22,6 +22,7 @@ $colors: (
   "mint-soft": #8ad7bd,
   "amber": #b57400,
   "periwinkle": #8092d2,
+  "periwinkle-soft": #d8def0,
   "keynote-periwinkle": #8393cf,
   "coral": #e27168,
   "coral-soft": #ffaaa5
@@ -87,6 +88,11 @@ $link-color: color("pink");
       color: color("paper-warm");
     }
   }
+}
+
+.reveal .slide .plot-slide-content {
+  margin-top: 32px;
+  text-align: center;
 }
 
 /* Footer */
@@ -395,6 +401,90 @@ $link-color: color("pink");
   }
 }
 
+.reveal .slide.beat-slide {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 72px !important;
+  background: color("periwinkle-soft");
+  color: color("reference-navy");
+
+  > h1,
+  > h2,
+  > p,
+  > ul {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0;
+    color: inherit;
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 1.08;
+  }
+
+  > h1:empty,
+  > h2:empty {
+    display: none;
+  }
+
+  > ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  > ul li + li {
+    margin-top: 24px;
+  }
+}
+
+.reveal .slide.hitl-evidence-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 54px 72px !important;
+
+  > h1:empty,
+  > h2:empty {
+    display: none;
+  }
+
+  .hitl-evidence-heading {
+    max-width: 1080px;
+    margin-bottom: 38px;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.08;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .accent {
+    color: color("pink");
+  }
+
+  .hitl-evidence-points {
+    max-width: 1080px;
+    font-size: 27px;
+    line-height: 1.25;
+
+    ul {
+      margin: 0;
+      padding-left: 1.15em;
+    }
+
+    li + li {
+      margin-top: 18px;
+    }
+  }
+}
+
 .reveal .slide.quote-slide {
   height: 100%;
 
@@ -592,23 +682,6 @@ $link-color: color("pink");
   font-size: 14px;
   line-height: 1.2;
   text-align: right;
-}
-
-/* Orange DRAFT marker for slides that are not finalized */
-.reveal .slide.draft-slide::after {
-  content: "DRAFT";
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  z-index: 10;
-  padding: 4px 12px;
-  border: 2px solid #ee6331;
-  border-radius: 6px;
-  color: #ee6331;
-  font-family: "DM Mono", monospace;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
 }
 
 /* Full-bleed background image set with Quarto's background-image attribute */
