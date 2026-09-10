@@ -8,7 +8,9 @@ format:
     margin: 0
     progress: false
     menu: false
-    include-after-body: fragment-video.html
+    include-after-body:
+      - fragment-video.html
+      - includes/diagram-definitions.html
 editor: source
 knitr:
   opts_chunk:
@@ -101,9 +103,11 @@ posit::conf(2026)
 :::notes
 This morning, your VP pulled up a coding agent and asked a question. 
 
-Now, as data scientists, we might have asked ourselves "How are daily visits being measured?" "What event triggers an entry in this column?" "What other possible explanations could account for this change in trend?" If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table, which is not the typical table used to measure site traffic anyway.
+[yada yada this is what happen]
 
-Nevertheless, you're not there. Your VP brings this chart to leadership. They decide to restructure the organization and spend millions to reverse the trend.
+Now, as data people, we might have asked ourselves "How are daily visits being measured?" "What event triggers an entry in this column?" "What other possible explanations could account for this change in trend other than a genuine reversal in the traffic going to this site?" If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table. Regardless, this isn't even the typical table that the data science team uses to measure site traffic anyway.
+
+Nevertheless, you're not there. Your VP brings this chart to leadership. They decide to spend millions to reverse the trend.
 :::
 
 ## {.agent-story-slide .slow-tool-calls}
@@ -193,7 +197,7 @@ Nevertheless, you're not there. Your VP brings this chart to leadership. They de
 ```
 
 :::notes
-A month later, leadership asks to see the chart again. The VP opens up the same agent, but can't find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone. 
+A month later, leadership will ass to see the chart again. The VP will open up the same agent, but it can't find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone. 
 
 The agent offers to make it again. This time, when the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
 :::
@@ -202,12 +206,14 @@ The agent offers to make it again. This time, when the VP asks for the same plot
 
 > In the battle between convenience and correctness, convenience is winning.
 >
-> <footer>Joe Cheng</footer>
+> <footer>Joe Cheng, CTO @ Posit</footer>
 
 ::: notes
-AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.
+We've seen situations like this internally and with the organizations we work with. Posit's CTO recently summarized it like so:
 
-It just so happened that Joe said this a month ago, but he could have said it a decade ago and it would still have been true.
+It is true that AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.
+
+It just so happened that Joe said this a month ago, but he could have said it 6/7 years ago (ayyy) and it would still have been true.
 :::
 
 ##
@@ -233,7 +239,9 @@ https://www.science.org/doi/10.1126/science.314.5807.1856
 :::
 
 :::notes
-A lab studying protein structures used an in-house, closed source program analyze data. It contained a bug that flipped the sign of a computation. From 2001 to 2006, Geoffrey Chang published a series of heavy-hitting papers that reshaped his field, while other labs struggled to reproduce their findings. The bug came to light when another lab solved a similar protein structure that produced a mirror image of Chang's. At this point, the Chang lab checked their code, found the bug, and retracted 5 papers.
+Or Joe could have said it 20 years ago, when it came to light that a whole subfield of protein modeling had been distracted by a bug in in-house, closed-source software.
+
+From 2001 to 2006, Geoffrey Chang published a series of heavy-hitting papers that reshaped his field, while other labs struggled to reproduce their findings. The software that the Chang lab used to carry out the analysis contained a bug that flipped the sign of a computation. The bug came to light when another lab solved a similar protein structure and saw that it produced a near-mirror image of Chang's. At this point, the Chang lab checked their code, found the bug, and retracted 5 papers.
 :::
 
 ## 
@@ -243,7 +251,9 @@ A lab studying protein structures used an in-house, closed source program analyz
 ![](figures/rstudio-blog.png){height="650" style="display: block; margin: 0 auto;"}
 
 :::notes
-There have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance was not "you need to forgo convenience in favor of correctess."
+I bring these examples up to say that there have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance is not "you need to forgo convenience in favor of correctess."
+
+I was doing some research for this talk when I came across this old weblog...
 :::
 
 :::footer
@@ -267,7 +277,7 @@ https://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/
 :::notes
 He's saying "it can be correct _and_ convenient."
 
-With AI, our stance needs to be the same. How do we build data analysis agents that are both correct and convenient to use?
+What if our stance was the same with AI? In other words, can we build data analysis agents that are both correct and convenient to use?
 :::
 
 # {.paper-slide}
@@ -281,7 +291,7 @@ for us and for many of you I imagine 2025 was the year AI got very very convenie
 and we were so worried 
 :::
 
-## {.split-image-slide .split-40 background-image="figures/databot-flotation-blog.png"}
+## {.split-image-slide .split-40 .split-image-top background-image="figures/databot-flotation-blog-cropped.png"}
 
 ::: {.columns}
 
@@ -347,20 +357,373 @@ and given that I think at this point there might be a question on your mind, whi
 I think is fair to ask and I think we all have asked ourselves in the past few years
 :::
 
+# {.statement-slide .paper-slide}
+
+::: {.statement}
+Why are we doing this?!
+:::
+
+::: notes
+if AI is this agent of chaos that we are so worried, why involve ourselves at all
+
+and there are many answers, one of which is that things change quickly. something you might have worried abotu yesterday is no longer true today
+
+and so in light of that its worth briefly checking in on how we see llms for data analysis right now in september 2026
+:::
+
 # {.header-slide .blue-slide}
 
 ::: {.columns}
 
 ::: {.column .header-text width="100%"}
-Why are we doing this?!
+The state of AI for data science in 2026
 :::
 
 :::
 
 ::: notes
-if AI is this agent of chaos that we are so worried, why involve ourselves at all
-and there are many answers, one of which is that things really have changed since 2025. the model landscape shifts and things you might have worried about yesterday are no longr true today
+or maybe "sara and simon's opinionated take on"
+:::
 
+## 1. The models got better {.beat-slide}
+
+```{r}
+#| include: false
+library(ggplot2)
+library(dplyr)
+library(forcats)
+library(ggforce)
+
+original_results_env <- new.env()
+load("data/bluffbench-original-results.rda", envir = original_results_env)
+bluffbench_original_results <- original_results_env$bluff_results
+
+latest_results_env <- new.env()
+load("data/bluffbench-latest-results.rda", envir = latest_results_env)
+bluffbench_latest_results <- latest_results_env$bluff_results
+
+bluffbench_results_theme <-
+  theme_minimal(base_size = 22) +
+  theme(
+    plot.background = element_rect(fill = "#f5f2ec", color = NA),
+    panel.background = element_rect(fill = "#f5f2ec", color = NA),
+    legend.background = element_rect(fill = "#f5f2ec", color = NA),
+    legend.key = element_rect(fill = "#f5f2ec", color = NA),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "#dedbd5"),
+    text = element_text(color = "#24437b"),
+    axis.text = element_text(color = "#24437b"),
+    strip.background = element_blank(),
+    strip.text = element_text(color = "#24437b", face = "bold"),
+    plot.title.position = "plot"
+  )
+
+bluffbench_mtcars <- mtcars
+bluffbench_mtcars$hp <- max(bluffbench_mtcars$hp) - bluffbench_mtcars$hp
+
+bluffbench_mtcars_plot <-
+  ggplot(bluffbench_mtcars, aes(x = hp, y = mpg))
+
+ggsave(
+  "figures/bluffbench-mtcars-hp-mpg-thumb.png",
+  bluffbench_mtcars_plot + geom_point(size = 2),
+  width = 3,
+  height = 2.5
+)
+
+set.seed(617)
+
+n <- 150
+n_imp <- 35
+sleep_hours <- round(runif(n, 4, 10), 1)
+stress_score <- round(
+  pmin(pmax(95 - 7.5 * sleep_hours + rnorm(n, 0, 8), 5), 95),
+  1
+)
+
+imp_sleep <- round(runif(n_imp, 4.5, 9.5), 1)
+imp_stress <- round(95 - 7.5 * imp_sleep, 1)
+
+wellbeing_data <- data.frame(
+  sleep_hours = c(sleep_hours, imp_sleep),
+  stress_score = c(stress_score, imp_stress)
+)
+
+library(bluffbench2)
+library(scales)
+
+bluff2_summary <-
+  bluff2_results |>
+  summarize(
+    score = (sum(score == "C") + (sum(score == "P") * .5)) / n(),
+    .by = model
+  ) |>
+  mutate(model = gsub(" (medium)", "", model, fixed = TRUE))
+```
+
+## {.paper-slide}
+
+::: {style="display: flex; flex-direction: column; gap: 0; padding: 20px; max-width: 100%; margin: 20px auto 0 auto;"}
+
+::: {.fragment style="align-self: flex-end; background-color: #d6eaf8; padding: 12px 18px; border-radius: 18px 18px 4px 18px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"}
+Please plot hp vs mpg in mtcars
+:::
+
+::: {.fragment style="align-self: flex-start; background-color: white; padding: 10px; border-radius: 18px 18px 18px 4px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #e0e0e0; margin-top: 10px;"}
+
+::: {style="background-color: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 8px 12px;"}
+```{.r style="margin: 0; font-size: 0.8em; background: none; border: none; box-shadow: none; padding: 0;"}
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point()
+```
+:::
+
+![](figures/bluffbench-mtcars-hp-mpg-thumb.png){fig-alt="A small scatterplot thumbnail with horsepower on the x-axis and miles per gallon on the y-axis. The points form a strong positive association." width="260px" style="border-radius: 12px; display: block; margin: 10px auto 0 auto;"}
+
+:::
+
+::: {.fragment style="align-self: flex-start; background-color: white; padding: 12px 18px; border-radius: 18px 18px 18px 4px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #e0e0e0; margin-top: 10px;"}
+There is a **strong, negative association.**
+:::
+
+:::
+
+:::footer
+posit-dev.github.io/bluffbench
+:::
+
+::: notes
+bluffbench tests whether a model reports what is actually plotted or falls back
+on what it expects from a well-known dataset.
+
+The model receives the rendered plot. Here, the relationship is positive, but
+the model describes the familiar negative relationship from the original data.
+:::
+
+## {.paper-slide}
+
+::: {.plot-slide-content}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: "A scatterplot of horsepower against miles per gallon. The points form a clear positive association, with miles per gallon generally rising as horsepower rises."
+#| fig-width: 12
+#| fig-height: 6
+#| fig-bg: "#f5f2ec"
+#| out-width: "92%"
+bluffbench_mtcars_plot +
+  geom_point(size = 3) +
+  theme(
+    plot.background = element_rect(fill = "#f5f2ec", color = NA),
+    axis.title = element_text(size = 30, color = "#24437b"),
+    axis.text = element_text(size = 22, color = "#24437b")
+  )
+```
+
+:::
+
+## November 2025 {.paper-slide}
+
+::: {.plot-slide-content}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: "A horizontal stacked bar chart titled 'Models often report what they expect to see, not what's plotted.' GPT-5, Gemini Pro 2.5, and Claude Sonnet 4.5 are mostly incorrect."
+#| fig-width: 12
+#| fig-height: 7.5
+#| fig-bg: "#f5f2ec"
+#| out-width: "70%"
+bluffbench_original_results |>
+  filter(type == "mocked") |>
+  mutate(score = fct_recode(score, "Correct" = "C", "Incorrect" = "I")) |>
+  ggplot(aes(y = model, fill = score)) +
+  geom_bar(position = "fill") +
+  scale_fill_manual(
+    name = NULL,
+    breaks = c("Correct", "Incorrect"),
+    values = c("Correct" = "#67a9cf", "Incorrect" = "#ef8a62")
+  ) +
+  scale_x_continuous(labels = scales::percent) +
+  labs(
+    title = "Models often report what they expect to see, not what's plotted",
+    subtitle = "With well-known datasets",
+    x = NULL,
+    y = NULL
+  ) +
+  bluffbench_results_theme +
+  theme(
+    plot.title = element_text(size = 26, face = "bold"),
+    plot.subtitle = element_text(size = 18),
+    axis.text.x = element_text(size = 18),
+    axis.text.y = element_text(size = 20),
+    legend.position = "top",
+    legend.justification = "left",
+    legend.text = element_text(size = 18)
+  )
+```
+
+:::
+
+:::footer
+posit-dev.github.io/bluffbench
+:::
+
+::: notes
+We tried a range of interventions to improve these scores, but none moved them
+much. Even when a model noticed during its reasoning that the association did
+not look as expected, it often still reported the expected relationship.
+:::
+
+## July 2026 {.paper-slide}
+
+::: {.plot-slide-content}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: "A faceted horizontal stacked bar chart of percent correct across recent models, split into thinking and no-thinking groups. Thinking models perform better, while most models still give many incorrect answers."
+#| fig-width: 12
+#| fig-height: 7.5
+#| fig-bg: "#f5f2ec"
+#| out-width: "70%"
+bluffbench_latest_results |>
+  filter(type == "mocked", !grepl("Gemma", model)) |>
+  mutate(
+    score = fct_recode(score, "Correct" = "C", "Incorrect" = "I"),
+    pct_correct = ave(score == "Correct", model, FUN = mean),
+    model = reorder(model, pct_correct),
+    thinking = factor(
+      ifelse(thinking, "Thinking", "No thinking"),
+      levels = c("Thinking", "No thinking")
+    )
+  ) |>
+  ggplot(aes(y = model, fill = score)) +
+  geom_bar(position = "fill") +
+  facet_col(vars(thinking), scales = "free_y", space = "free") +
+  scale_fill_manual(
+    name = NULL,
+    values = c("Correct" = "#67a9cf", "Incorrect" = "#ef8a62")
+  ) +
+  scale_x_continuous(labels = scales::percent) +
+  labs(title = "The models got better", x = "Percent correct", y = NULL) +
+  bluffbench_results_theme +
+  theme(
+    plot.title = element_text(size = 26, face = "bold"),
+    axis.text.x = element_text(size = 18),
+    axis.text.y = element_text(size = 14, angle = 45, hjust = 1),
+    axis.title.x = element_text(size = 22),
+    strip.text = element_text(size = 22, hjust = 0),
+    legend.position = "none",
+    plot.margin = margin(5.5, 5.5, 15, 5.5)
+  )
+```
+
+:::
+
+:::footer
+posit-dev.github.io/bluffbench
+:::
+
+## 2. Trustworthy analysis still takes more than a frontier model. {.beat-slide}
+
+## {.paper-slide}
+
+::: {.plot-slide-content}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: "A scatterplot of sleep hours against stress score with a negative trend. A subset of points falls exactly along a straight line, suggesting a data-quality artifact."
+#| fig-width: 12
+#| fig-height: 6
+#| fig-bg: "#f5f2ec"
+#| out-width: "92%"
+ggplot(wellbeing_data, aes(x = sleep_hours, y = stress_score)) +
+  geom_point(alpha = 0.8, size = 3) +
+  labs(x = "sleep (hours)", y = "stress score") +
+  bluffbench_results_theme +
+  theme(
+    axis.title = element_text(size = 30),
+    axis.text = element_text(size = 22)
+  )
+```
+
+:::
+
+:::footer
+github.com/posit-dev/bluffbench2
+:::
+
+::: notes
+bluffbench2 tests whether models notice subtle data quality issues in
+visualizations.
+
+In this example, most points follow a noisy negative relationship, but a subset
+falls exactly on a straight line. Those values were imputed with a regression
+model, so they are not real measurements and should be investigated before
+continuing the analysis. a careful data analyst would probably spot it and investigate.
+:::
+
+## {.paper-slide}
+
+::: {.plot-slide-content}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: "A horizontal bar chart of bluffbench2 scores by model. Every model scores below 50 percent, showing that frontier models still struggle to notice subtle data-quality issues."
+#| fig-width: 12
+#| fig-height: 7
+#| fig-bg: "#f5f2ec"
+#| out-width: "78%"
+bluff2_summary |>
+  mutate(model = fct_reorder(model, score)) |>
+  ggplot() +
+  aes(x = score, y = model) +
+  geom_col(fill = "#2c84e1") +
+  scale_x_continuous(labels = label_percent(), limits = c(0, 1)) +
+  labs(
+    x = "Score",
+    y = NULL,
+    title = "Frontier models still struggle to notice subtle data quality issues"
+  ) +
+  bluffbench_results_theme +
+  theme(
+    plot.title = element_text(size = 26, face = "bold"),
+    axis.text.y = element_text(size = 22),
+    axis.text.x = element_text(size = 20)
+  )
+```
+
+:::
+
+:::footer
+github.com/posit-dev/bluffbench2
+:::
+
+::: notes
+even frontier models don't do very well
+:::
+
+# {.statement-slide .paper-slide}
+
+::: {.statement}
+Data analysis depends on [context]{.accent} that is not in the data.
+:::
+
+::: notes
+but there is a second problem: data analysis depends on context that is not in the data
+
+documentation, etc all shape whether an analysis is correct
+
+a human expert often holds that context
+:::
+
+## 3. Our mission is to find new ways to understand data. LLMs are part of that exploration. {.beat-slide}
+
+::: notes
 but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration
 :::
 
@@ -369,13 +732,11 @@ but for me and I think many of us at posit, much of the answer has to do with a 
 ## {background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
 
 ::: notes
-and I imagine for many of you, exploration and curiosity are what got you into this room in the first place
+for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place. 
 
-Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.
+Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics. 
 
-For me, it was a little of all of those things. I have always been interested in many things at once. Data is great for that because there is data on everything -- US voting patterns, co2 levels on mauna kea, squirrels in central park 
-
-But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it. You have to know how to access it.
+But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it. 
 
 learning the tidyverse, and data science...these tools gave me a way to investigate any topic and learn about the world.
 :::
@@ -407,19 +768,20 @@ AI is a [continuation]{.accent} of our work to find [new ways to explore data]{.
 :::
 
 ::: notes
-Much has been said about LLMs as a paradigm shift in technology and in our lives. and maybe that's true.
-
 But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis. 
-
-Let's return to the VP who was vibe-analyzing earlier.
-
-It would be easy to call what she was doing lazy or dismiss it as slop. But there is another way to look at it: she had meaningful questions that she wanted answered, and she reached for the tool that she thought would give her those answers.
-
-That does not mean her answer was correct or that her process was trustworthy. But the curiosity was real.
-
-I think we can meet she is with tools that make her work more correct and trustworthy, without shutting that curiosity down
 :::
 
+# {.beat-slide}
+
+::: {.incremental}
+* The models got better
+* But that doesn't solve everything!
+* We want to continue making new software to explore data
+:::
+
+::: notes
+all three point in the same direction: we are going to keep going down the LLM path. so then the question becomes... 
+:::
 
 # {.header-slide .blue-slide}
 
@@ -435,25 +797,14 @@ How do we make AI trustworthy?
 
 :::
 
-# {.statement-slide .paper-slide}
+# {.paper-slide .diagram-slide}
 
-::: {.statement}
-AI: [untrustworthy,]{.accent} but useful?
-:::
+{{< include includes/hitl-diagram.html >}}
 
 ::: notes
 - Here’s a common thought about AI
   - It’s untrustworthy, but useful.
-  <!-- Possible place to add bluffbench/bluffbench2 results. If we do that, also need a counter example of usefulness.-->
   - To make it trustworthy, we need people to verify the output from or supervise agents.
-:::
-
-# {.paper-slide}
-
-![](figures/hitl.excalidraw.svg){width=80%}
-
-::: notes
-Human in the loop can mean many different things. for now we're just talking about a really simple version: a human is there to verify that what the agent does is correct and provide appropriate redirection if not.
 
 it is an intuitively appealing division of labor. the agent does what it's good at, the human provides the judgment to keep it from going off the rails.
 :::
@@ -467,17 +818,13 @@ it is an intuitively appealing division of labor. the agent does what it's good 
 :::
 
 ::: notes
-and this sounds great, but it is not enough
+this sounds so nice! the human is there to prevent mistakes and all will be good. so we should just apply this anywhere we see a problem.
 
-but you can't stop there and assume that just because a human is present and technically "in the loop," you've solved the issue of correctness by asking them to verify something.
+I like to call this simplistic division of labor the "slap a human on it" approach.
 
-because this is not how people work--it's not how expertise works, and it's not how human decision-making works. you can't assume a human expert will automatically transfer expertise to an agent system just by being "in the loop."
+there's only one problem: this simple view is not how these systems work.
 
-and so I like to call this simplistic division of labor the "slap a human on it" approach.
-
-and there's a lot of evidence that this won't work! but to convince you for now, I just want you to think about this:
-
-when your coding agent (or past coding agents) shows you a command and asks you to approve it, how often do you carefully read that command, and how often do you just hit accept?
+you can't assume that just because a human is present and technically "in the loop," you've solved the issue of correctness by asking them to verify something.
 :::
 
 # {background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
@@ -492,77 +839,91 @@ These skills help you <span style="color:#dd5d7b;">catch errors, interpret resul
 :::
 
 ::: notes
-but this simple model is honestly pretty close to how we framed risk mitigation in Databot.
-
-we wrote a whole article about the dangers of Databot and why we thought you shouldn't abandon your expertise, and essentially, why you needed to be vigilant.
-
-we said you needed all the data skills you had to...
+we wrote a whole article about the dangers of Databot and why users needed to remain skeptical and apply their expertise
 
 All of that is still true. I stand by it. It's inspirational! I would love to avoid being misled by confident but incorrect claims.
 
-but i would not write this in this way today
-notice that this puts the responsibility for correctness on the user: be there, remain vigilant, and apply your expertise.
+but notice that this puts the responsibility for correctness on the user: be there, remain vigilant, and apply your expertise
+
+underneath it was one implicit strategy: stay vigilant and read the code
+:::
+
+# {.paper-slide .hitl-evidence-slide}
+
+::: {.hitl-evidence-heading}
+Adding a human [does not guarantee]{.accent} a better result.
+:::
+
+::: {.hitl-evidence-points .incremental}
+- Human-AI combination often underperforms one or the other. 
+- People are often biased to follow automated recommendations.
+- People get tired of approving requests.
+- Trust, timing, cognitive load, social cues, and information design all shape decisions.
+:::
+
+:::footer
+Vaccaro et al. (2024); Parasuraman and Manzey (2010); Anthropic (2026)
+:::
+
+::: notes
+a 2024 meta-analysis looked at 106 experimental studies that compared humans alone, AI alone, and human-AI teams
+
+on average, the combination performed worse than the better of the human or AI alone. decision tasks showed particular losses
+
+this does not mean every human-AI team is worse. it means that adding a human does not automatically produce a better system
+
+human judgment does not stay fixed when we put someone into an agent system
+
+automation bias is one example: in soem situations, people can follow an automated recommendation even when it is wrong
+
+approval fatigue can be a big issue
+think about your own coding agent. when it asks you to approve a command, how often do you carefully read it, and how often do you just hit accept?
+
+trust, timing, cognitive load, social cues, the interface, and the amount of information all affect how someone decides whether code or an action is correct or safe
 :::
 
 # {.statement-slide .paper-slide}
 
 ::: {.statement}
-OK, but [how?]{.accent}
+People are [not fixed safety components.]{.accent}
 :::
 
 ::: notes
-But how, exactly, was the user supposed to apply that expertise?
-
-our implicit strategy, not said outright but what we were all kind of thinking, was: we'll you've got to read the code.
-
-but none of us did this, or at least we didn't do so in a way that would match the really alarming tone of that databot blog post (like i said i am a pessimist)
-
-but even if we did I don't think thatthis setup is a good correctness strategy!
-
-telling the user to be worried about the code produced relies too much on the hard work of the user, in an interface not conducive to reading (as code is streaming past them or being put into files faster than they could have imagined), but also because reading in that way is not a great way to form a mental model of a complex topic.
-
+because people are not fixed safety components 
+we can't just slot them in whenever we are worried an agent system might be wrong
 :::
 
-# {.statement-slide .paper-slide}
+# {.beat-slide}
 
-::: {.statement}
-Telling people to be vigilant is [not a correctness strategy.]{.accent}
-
-[The presence of a human is not enough.]{.fragment}
-:::
+[How do we design the entire system to produce trustworthy work?]{.fragment}
 
 ::: notes
-Just adding a human and telling them to remain vigilant and to be there is not a correctness strategy.
-
-it relies too much on hard work on the part of the user, but also people are not a fixed safety component we can just slot into the loop. The agent, the interface, the timing and amount of information, cognitive load, and the cues the system provides all affect how someone makes a decision on whether a bit of code or an action is correct or safe. this is a complex system and the specifics of interaction determines whether and how your expertise is really being used.
-
-and so I would not write the Databot post in the same way today. that does not mean human expertise is unnecessary. It's just that simply assigning the role of correctness monitor to the user does not make the system correct.
+the question is how we design the interaction and the entire system so that human expertise can actually support correctness
 :::
 
 # {.paper-slide}
 
-::: {.incremental}
-* Build trust and correctness into the system itself
-<br>
-<br>
-* Consider how interaction works with the user and can support their expertise
-:::
+<ul>
+  <li class="fragment" data-fragment-index="0">
+    Build trust and correctness into the system itself
+    <ul>
+      <li class="fragment" data-fragment-index="2"><strong>Help the agent be correct.</strong></li>
+    </ul>
+  </li>
+  <li class="fragment" data-fragment-index="1">
+    Consider how interaction works with the user and can support their expertise
+    <ul>
+      <li class="fragment" data-fragment-index="3"><strong>Make it less bad when it's wrong.</strong></li>
+    </ul>
+  </li>
+</ul>
 
 ::: notes
 instead, today we are going talk about the new concrete approaches built into the systems themselves that push them towards correctness. first in posit assistant, databot's successor, and then in a new open source library
 
 and specifically, encode correctness into the agent itself 
 and design the interaction to support human expertise when the model will inevitably make mistakes. 
-:::
 
-# {.statement-slide .paper-slide}
-
-::: {.statement}
-Help the agent be [correct.]{.accent}  
-Make it less bad when it's wrong.
-:::
-
-::: notes
 In other words: help the agent be correct, and make it less bad when it's wrong.
 :::
 
@@ -581,7 +942,7 @@ assistant.posit.co
 ##
 
 :::notes
-Sara described her first moments of really wrapping her head around data science tools as like seeing below the surface. I think many of us might have had a moment like this at some point, when we began to understand how powerful data science and statistics are for answering questions about the world.
+Sara described her first moments of really getting the hang of data science tools as like seeing below the surface. I think many of us might have had a moment like this at some point, when we began to understand how powerful data science and statistics are for answering questions about the world.
 
 The first time I felt this way, I had been asked to use R to understand what affects flight delays. I had to load in some data and then write dplyr and ggplot to see if I could make any decisions that would give me better chances of my flight leaving on time. 
 
@@ -595,6 +956,10 @@ In demoing Posit Assistant, I thought I might revisit that moment with you.
 </video>
 
 :::notes
+I'm in Positron, with Posit Assistant pulled up on the left hand side and a live R session. I'll start off by asking the agent about R packages that could help me grab data on flights.
+
+...
+
 It can do normal coding agent stuff
 :::
 
@@ -695,10 +1060,20 @@ Help the model not be wrong [**by encouraging sound statistics and reproducibili
 Make it less bad when it is wrong [**by making good use of your expertise and sharing an R/Python environment**]{.fragment}
 :::
 
+:::notes
+Let's revisit those lessons learned on agent-building from Sara. She said we ought to help the model not be wrong, and make it less bad when it is wrong.
+
+Much of helping the model not be wrong is by asking nicely :) We tell it to approach data analysis with an openness to uncertainty, we tell it work in persistent files, we tell it to take data cleanliness seriously.
+
+Various elements of Posit Assistant help you and the agent have a richer collaboration. Data cleaning mode loops you in on important decisions that affect interpretation. We show you plots because our bluffbench evaluations show we can't trust the models to interpret models well. We place you and the agent in the same computational environment so that, when things go wrong, you can quickly get on the same page and see eye-to-eye.
+
+That said, what about people that don't have data expertise and don't know how to write R or Python code?
+:::
+
 # But what if the user is not a data scientist?
 
 ::: notes
-The VP does not have data science expertise and does not know how to use R and Python
+The VP does not have data science expertise and does not know how to use R and Python. Posit Assistant does not serve them. What can we do for the non data scientist users?
 :::
 
 ##
@@ -743,18 +1118,20 @@ The VP does not have data science expertise and does not know how to use R and P
 ```
 
 ::: notes
-The VP had good intentions. They wanted an answer to their question, and reached for a tool convenient to them. 
+I want to take a step back and revisit this conversation with the VP.
+
+The VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them. 
 
 Unfortunately, the answer they got was wrong.
 
-But, we mentioned earlier that this isn't the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.
+I mentioned earlier that this isn't the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.
 :::
 
 # [_Trusted_ code]{style="color: #ee6331; font-size: 1.4em;"}
 
 ::: notes
-We'll call this _trusted_ code
-It's been vetted and maintained by the data team
+This semantic view is an example of what we'll call _trusted_ code
+It's code that has been vetted and maintained by the data team
 
 They also might have trusted code in
 
@@ -762,7 +1139,7 @@ They also might have trusted code in
 * R and Python packages
 * Quarto documents
 
-Instead of the model writing code afresh every time it's answering a question, what if it could discover and use this code?
+Instead of the model writing code afresh every time it's answering a question, what if it could discover and use this trusted code?
 
 This is one of the core ideas behind a new open source package that we're excited to share with you all today. It's called commons.
 :::
@@ -777,7 +1154,7 @@ commons helps data scientists build trustworthy data agents for their collaborat
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
 :::
 
-##
+## {.draft-slide}
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-01-traffic-trend.mp4">
@@ -792,7 +1169,7 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
-## 
+## {.draft-slide}
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-02-page-views.mp4">
@@ -800,30 +1177,26 @@ the answer is marked as verified to signify that it used vetted code
 
 ::: notes
 However, its unlikely that this trusted code will cover all questions a user might have.
-for these situations, the agent can write custom r, python, or sql 
+For these situations, the agent can write custom r, python, or sql.
 
-here, there is no trusted calculation for this question, so the model writes some custom code
+First, the agent will look through additional context in the form of data dictionaries, markdown files, and, if you have them, existing context layers from Databricks and Snowflake.
 
-Commons preserves that convenience, but marks
-the answer as untrusted.
+Then, it will write whatever code it needs to to find an answer.
+
+Finally, when it presents an answer, it can provides a citation to that context. That citation will be deterministically checked against trusted context that has appeared so far in the conversation—if it matches, this citation tag will be shown.
+
 :::
 
-##
+## {.draft-slide}
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-03-most-visits.mp4">
 </video>
 
 ::: notes
-but this custom code isn't entirely untrustworthy
-to make it as trustworthy as possible, the data team first encodes additional useful context for the agent, in the form of data dictionaries and markdown files. 
+There's one more possible path, which is that the model cannot find trusted context to justify its approach. In this case, we mark the answer with this little yellow tag, which lets the user know that this answer should be considered less trusted.
 
-this information is available for the agent to search through, helping it write correct custom code 
-
-Here it explains the instrumentation artifact and cites the
-trusted context that supports that explanation.
-
-correctness and convenience
+This is how we've chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer.
 :::
 
 ## Deterministically tag trust {.trust-flow-slide .paper-slide}
@@ -880,33 +1253,42 @@ promoted merely because the model says it used a trusted source.
 ::: {.lifecycle-card .fragment .fade-up}
 ### Build
 
-A data scientist builds the agent by hooking it up to trusted code.
+You construct the agent by hooking it up to trusted code.
 :::
 
 ::: {.lifecycle-card .fragment .fade-up}
-### Use
+### Deploy
 
-Non-technical people use the agent deployed on Connect.
+Your colleagues use the agent deployed on Connect.
 :::
 
 ::: {.lifecycle-card .fragment .fade-up}
 ### Improve
 
-The data scientist reviews the agent's behavior, adding trusted code to move responses up the trust ladder.
+You review the agent's behavior, adding trusted code to move responses up the trust ladder.
 :::
 :::
+
+# {.paper-slide .diagram-slide}
+
+{{< include includes/hitl-diagram.html >}}
+
+# {.paper-slide .diagram-slide}
+
+{{< include includes/commons-loops-diagram.html >}}
 
 ::: notes
-1. build: encode trusted calculations and context
-  Hydrates from semantic layers in Snowflake and Databricks
-2. use: answer through the trusted or custom path
-  Apps deploy to Connect like any Shiny app 
-3. improve: review behavior and update the layers
-  Trajectory logging with OTel on Connect
+So far, we've only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let's take a step and see what it looks like from yall's perspective.
 
-The build loop gives the agent trusted calculations and context. The use loop is
-the conversation between the user and agent. The improve loop turns reviewed
-behavior into changes to the trusted calculations and context.
+1. build: encode trusted calculations and context
+  After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks
+  Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.
+2. deploy: agent answers through the trusted or custom path
+  Apps deploy to Connect like any Shiny app 
+  The agent runs R and Python code in a sandbox so that it can be safely deployed
+3. improve: review behavior and update the layers
+  With the newest Connect release, once you and your admin opt-in, conversation histories will be stored with a native OpenTelemetry integration. 
+  After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent.
 :::
 
 # {.statement-slide .paper-slide}
@@ -916,6 +1298,9 @@ Help the model not be wrong [**with trusted calculations and context**]{.fragmen
 Make it less bad when it is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
 :::
 
+:::notes
+Let's revisit those guidelines one more time.
+:::
 
 # 
 
