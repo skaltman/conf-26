@@ -101,9 +101,11 @@ posit::conf(2026)
 :::notes
 This morning, your VP pulled up a coding agent and asked a question. 
 
-Now, as data scientists, we might have asked ourselves "How are daily visits being measured?" "What event triggers an entry in this column?" "What other possible explanations could account for this change in trend?" If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table, which is not the typical table used to measure site traffic anyway.
+[yada yada this is what happen]
 
-Nevertheless, you're not there. Your VP brings this chart to leadership. They decide to restructure the organization and spend millions to reverse the trend.
+Now, as data people, we might have asked ourselves "How are daily visits being measured?" "What event triggers an entry in this column?" "What other possible explanations could account for this change in trend other than a genuine reversal in the traffic going to this site?" If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table. Regardless, this isn't even the typical table that the data science team uses to measure site traffic anyway.
+
+Nevertheless, you're not there. Your VP brings this chart to leadership. They decide to spend millions to reverse the trend.
 :::
 
 ## {.agent-story-slide .slow-tool-calls}
@@ -193,7 +195,7 @@ Nevertheless, you're not there. Your VP brings this chart to leadership. They de
 ```
 
 :::notes
-A month later, leadership asks to see the chart again. The VP opens up the same agent, but can't find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone. 
+A month later, leadership will ass to see the chart again. The VP will open up the same agent, but it can't find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone. 
 
 The agent offers to make it again. This time, when the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
 :::
@@ -202,12 +204,14 @@ The agent offers to make it again. This time, when the VP asks for the same plot
 
 > In the battle between convenience and correctness, convenience is winning.
 >
-> <footer>Joe Cheng</footer>
+> <footer>Joe Cheng, CTO @ Posit</footer>
 
 ::: notes
-AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.
+We've seen situations like this internally and with the organizations we work with. Posit's CTO recently summarized it like so:
 
-It just so happened that Joe said this a month ago, but he could have said it a decade ago and it would still have been true.
+It is true that AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.
+
+It just so happened that Joe said this a month ago, but he could have said it 6/7 years ago (ayyy) and it would still have been true.
 :::
 
 ##
@@ -233,7 +237,9 @@ https://www.science.org/doi/10.1126/science.314.5807.1856
 :::
 
 :::notes
-A lab studying protein structures used an in-house, closed source program analyze data. It contained a bug that flipped the sign of a computation. From 2001 to 2006, Geoffrey Chang published a series of heavy-hitting papers that reshaped his field, while other labs struggled to reproduce their findings. The bug came to light when another lab solved a similar protein structure that produced a mirror image of Chang's. At this point, the Chang lab checked their code, found the bug, and retracted 5 papers.
+Or Joe could have said it 20 years ago, when it came to light that a whole subfield of protein modeling had been distracted by a bug in in-house, closed-source software.
+
+From 2001 to 2006, Geoffrey Chang published a series of heavy-hitting papers that reshaped his field, while other labs struggled to reproduce their findings. The software that the Chang lab used to carry out the analysis contained a bug that flipped the sign of a computation. The bug came to light when another lab solved a similar protein structure and saw that it produced a near-mirror image of Chang's. At this point, the Chang lab checked their code, found the bug, and retracted 5 papers.
 :::
 
 ## 
@@ -243,7 +249,9 @@ A lab studying protein structures used an in-house, closed source program analyz
 ![](figures/rstudio-blog.png){height="650" style="display: block; margin: 0 auto;"}
 
 :::notes
-There have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance was not "you need to forgo convenience in favor of correctess."
+I bring these examples up to say that there have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance is not "you need to forgo convenience in favor of correctess."
+
+I was doing some research for this talk when I came across this old weblog...
 :::
 
 :::footer
@@ -267,7 +275,7 @@ https://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/
 :::notes
 He's saying "it can be correct _and_ convenient."
 
-With AI, our stance needs to be the same. How do we build data analysis agents that are both correct and convenient to use?
+What if our stance was the same with AI? In other words, can we build data analysis agents that are both correct and convenient to use?
 :::
 
 # {.paper-slide}
@@ -581,7 +589,7 @@ assistant.posit.co
 ##
 
 :::notes
-Sara described her first moments of really wrapping her head around data science tools as like seeing below the surface. I think many of us might have had a moment like this at some point, when we began to understand how powerful data science and statistics are for answering questions about the world.
+Sara described her first moments of really getting the hang of data science tools as like seeing below the surface. I think many of us might have had a moment like this at some point, when we began to understand how powerful data science and statistics are for answering questions about the world.
 
 The first time I felt this way, I had been asked to use R to understand what affects flight delays. I had to load in some data and then write dplyr and ggplot to see if I could make any decisions that would give me better chances of my flight leaving on time. 
 
@@ -595,6 +603,10 @@ In demoing Posit Assistant, I thought I might revisit that moment with you.
 </video>
 
 :::notes
+I'm in Positron, with Posit Assistant pulled up on the left hand side and a live R session. I'll start off by asking the agent about R packages that could help me grab data on flights.
+
+...
+
 It can do normal coding agent stuff
 :::
 
@@ -695,10 +707,20 @@ Help the model not be wrong [**by encouraging sound statistics and reproducibili
 Make it less bad when it is wrong [**by making good use of your expertise and sharing an R/Python environment**]{.fragment}
 :::
 
+:::notes
+Let's revisit those lessons learned on agent-building from Sara. She said we ought to help the model not be wrong, and make it less bad when it is wrong.
+
+Much of helping the model not be wrong is by asking nicely :) We tell it to approach data analysis with an openness to uncertainty, we tell it work in persistent files, we tell it to take data cleanliness seriously.
+
+Various elements of Posit Assistant help you and the agent have a richer collaboration. Data cleaning mode loops you in on important decisions that affect interpretation. We show you plots because our bluffbench evaluations show we can't trust the models to interpret models well. We place you and the agent in the same computational environment so that, when things go wrong, you can quickly get on the same page and see eye-to-eye.
+
+That said, what about people that don't have data expertise and don't know how to write R or Python code?
+:::
+
 # But what if the user is not a data scientist?
 
 ::: notes
-The VP does not have data science expertise and does not know how to use R and Python
+The VP does not have data science expertise and does not know how to use R and Python. Posit Assistant does not serve them. What can we do for the non data scientist users?
 :::
 
 ##
@@ -743,18 +765,20 @@ The VP does not have data science expertise and does not know how to use R and P
 ```
 
 ::: notes
-The VP had good intentions. They wanted an answer to their question, and reached for a tool convenient to them. 
+I want to take a step back and revisit this conversation with the VP.
+
+The VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them. 
 
 Unfortunately, the answer they got was wrong.
 
-But, we mentioned earlier that this isn't the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.
+I mentioned earlier that this isn't the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.
 :::
 
 # [_Trusted_ code]{style="color: #ee6331; font-size: 1.4em;"}
 
 ::: notes
-We'll call this _trusted_ code
-It's been vetted and maintained by the data team
+This semantic view is an example of what we'll call _trusted_ code
+It's code that has been vetted and maintained by the data team
 
 They also might have trusted code in
 
@@ -762,7 +786,7 @@ They also might have trusted code in
 * R and Python packages
 * Quarto documents
 
-Instead of the model writing code afresh every time it's answering a question, what if it could discover and use this code?
+Instead of the model writing code afresh every time it's answering a question, what if it could discover and use this trusted code?
 
 This is one of the core ideas behind a new open source package that we're excited to share with you all today. It's called commons.
 :::
@@ -777,7 +801,7 @@ commons helps data scientists build trustworthy data agents for their collaborat
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
 :::
 
-##
+## {.draft-slide}
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-01-traffic-trend.mp4">
@@ -792,7 +816,7 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
-## 
+## {.draft-slide}
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-02-page-views.mp4">
@@ -800,30 +824,26 @@ the answer is marked as verified to signify that it used vetted code
 
 ::: notes
 However, its unlikely that this trusted code will cover all questions a user might have.
-for these situations, the agent can write custom r, python, or sql 
+For these situations, the agent can write custom r, python, or sql.
 
-here, there is no trusted calculation for this question, so the model writes some custom code
+First, the agent will look through additional context in the form of data dictionaries, markdown files, and, if you have them, existing context layers from Databricks and Snowflake.
 
-Commons preserves that convenience, but marks
-the answer as untrusted.
+Then, it will write whatever code it needs to to find an answer.
+
+Finally, when it presents an answer, it can provides a citation to that context. That citation will be deterministically checked against trusted context that has appeared so far in the conversation—if it matches, this citation tag will be shown.
+
 :::
 
-##
+## {.draft-slide}
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-03-most-visits.mp4">
 </video>
 
 ::: notes
-but this custom code isn't entirely untrustworthy
-to make it as trustworthy as possible, the data team first encodes additional useful context for the agent, in the form of data dictionaries and markdown files. 
+There's one more possible path, which is that the model cannot find trusted context to justify its approach. In this case, we mark the answer with this little yellow tag, which lets the user know that this answer should be considered less trusted.
 
-this information is available for the agent to search through, helping it write correct custom code 
-
-Here it explains the instrumentation artifact and cites the
-trusted context that supports that explanation.
-
-correctness and convenience
+This is how we've chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer.
 :::
 
 ## Deterministically tag trust {.trust-flow-slide .paper-slide}
@@ -880,33 +900,34 @@ promoted merely because the model says it used a trusted source.
 ::: {.lifecycle-card .fragment .fade-up}
 ### Build
 
-A data scientist builds the agent by hooking it up to trusted code.
+You construct the agent by hooking it up to trusted code.
 :::
 
 ::: {.lifecycle-card .fragment .fade-up}
-### Use
+### Deploy
 
-Non-technical people use the agent deployed on Connect.
+Your colleagues use the agent deployed on Connect.
 :::
 
 ::: {.lifecycle-card .fragment .fade-up}
 ### Improve
 
-The data scientist reviews the agent's behavior, adding trusted code to move responses up the trust ladder.
+You review the agent's behavior, adding trusted code to move responses up the trust ladder.
 :::
 :::
 
 ::: notes
-1. build: encode trusted calculations and context
-  Hydrates from semantic layers in Snowflake and Databricks
-2. use: answer through the trusted or custom path
-  Apps deploy to Connect like any Shiny app 
-3. improve: review behavior and update the layers
-  Trajectory logging with OTel on Connect
+So far, we've only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let's take a step and see what it looks like from yall's perspective.
 
-The build loop gives the agent trusted calculations and context. The use loop is
-the conversation between the user and agent. The improve loop turns reviewed
-behavior into changes to the trusted calculations and context.
+1. build: encode trusted calculations and context
+  After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks
+  Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.
+2. deploy: agent answers through the trusted or custom path
+  Apps deploy to Connect like any Shiny app 
+  The agent runs R and Python code in a sandbox so that it can be safely deployed
+3. improve: review behavior and update the layers
+  With the newest Connect release, once you and your admin opt-in, conversation histories will be stored with a native OpenTelemetry integration. 
+  After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent.
 :::
 
 # {.statement-slide .paper-slide}
@@ -916,6 +937,9 @@ Help the model not be wrong [**with trusted calculations and context**]{.fragmen
 Make it less bad when it is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
 :::
 
+:::notes
+Let's revisit those guidelines one more time.
+:::
 
 # 
 
