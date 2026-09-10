@@ -848,7 +848,7 @@ correctness and convenience
     <div class="trust-branch trust-branch-lower">
       <div class="trust-tool">Search context</div>
       <span class="trust-down-arrow" aria-hidden="true">↓</span>
-      <div class="trust-tool">Write SQL/R</div>
+      <div class="trust-tool">Write SQL/R/Python</div>
       <div class="trust-citation-routes" aria-hidden="true">
         <span><span>Cite</span><span class="trust-decision-arrow">↓</span></span>
         <span><span>Don’t cite</span><span class="trust-decision-arrow">↓</span></span>
