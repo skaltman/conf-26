@@ -1045,18 +1045,22 @@ assistant.posit.co
 
 <!-- commons lead in --> 
 
-# 
+# {.statement-slide .paper-slide}
 
-* Build trust and correctness into the system itself: **Help the agent be correct**
-* Consider how interaction works with the user and can support their expertise: **Make it less bad when it's wrong**
+<br><br>
 
-# but what if the user is not a data scientist?
-
-::: notes
-In Posit Assistant, the user is typically a data or code minded person. The interface assumes they can inspect the work.
+::: {.statement .regular-weight}
+Help the model not be wrong [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br>
+Make it less bad when it is wrong [**by making good use of your expertise and sharing an R/Python environment**]{.fragment}
 :::
 
-# The VP's analysis was wrong
+# But what if the user is not a data scientist?
+
+::: notes
+The VP does not have data science expertise and does not know how to use R and Python
+:::
+
+##
 
 ```{=html}
 <div class="agent-window vp-reminder-window">
@@ -1098,52 +1102,45 @@ In Posit Assistant, the user is typically a data or code minded person. The inte
 ```
 
 ::: notes
-The VP had good intentions. She wanted an answer to her question, and reached for a tool convenient to her. 
+The VP had good intentions. They wanted an answer to their question, and reached for a tool convenient to them. 
 
-unfortunately, the answer she got was wrong.
+Unfortunately, the answer they got was wrong.
 
-the next day, a data scientist checked her analysis, noticed the mistake. not only do they notice the problem, they already have a couple functions in an internal package that would have carried out the analysis correctly for the vp.
+But, we mentioned earlier that this isn't the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.
 :::
 
 # [_Trusted_ code]{style="color: #ee6331; font-size: 1.4em;"}
 
 ::: notes
-this is _trusted_ code
-it's been vetted and maintained by the data team
+We'll call this _trusted_ code
+It's been vetted and maintained by the data team
 
-they also might have trusted code in
+They also might have trusted code in
+
 * Shiny apps
 * R and Python packages
 * Quarto documents
 
-We can leverage this code instead of having the model recreate the analysis every time.
+Instead of the model writing code afresh every time it's answering a question, what if it could discover and use this code?
 
-this is one of the core ideas behind the new open source package commons
+This is one of the core ideas behind a new open source package that we're excited to share with you all today. It's called commons.
 :::
 
-# Introducing commons
+# {.commons-intro-slide}
 
-# commons 
-
-::: {.incremental}
-* Open source in R and Python
-
-* Built on `ellmer` / `chatlas` and `shinychat`
-
-* For data scientists to build for everyone else
-:::
+![](figures/commons-hex.png){.commons-intro-logo .nostretch fig-alt="Commons logo"}
 
 ::: notes
-commons helps data scientists build trustworthy data agents.
+commons helps data scientists build trustworthy data agents for their collaborators.
+
+It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
 :::
 
-# Start with trusted calculations
+##
 
-```{=html}
-<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons trusted calculation demo. Click to play or pause.">
-  <source src="figures/vp-agent-trusted.mp4" type="video/mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend.mp4">
 </video>
-```
 
 ::: notes
 let's see how the VP's analysis would work with a commons agent
@@ -1154,13 +1151,11 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
-# Allow custom code when needed
+## 
 
-```{=html}
-<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons custom query demo. Click to play or pause.">
-  <source src="figures/vp-agent-custom-query.mp4" type="video/mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-02-page-views.mp4">
 </video>
-```
 
 ::: notes
 However, its unlikely that this trusted code will cover all questions a user might have.
@@ -1172,13 +1167,11 @@ Commons preserves that convenience, but marks
 the answer as untrusted.
 :::
 
-# Context supports the custom path
+##
 
-```{=html}
-<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons context-supported answer demo. Click to play or pause.">
-  <source src="figures/vp-agent-context.mov" type="video/mov">
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-03-most-visits.mp4">
 </video>
-```
 
 ::: notes
 but this custom code isn't entirely untrustworthy
@@ -1192,9 +1185,45 @@ trusted context that supports that explanation.
 correctness and convenience
 :::
 
-# Deterministically tag trust
+## Deterministically tag trust {.trust-flow-slide .paper-slide}
 
-![](figures/commons-trust-flow.png){width=85%}
+<br>
+
+```{=html}
+<div class="trust-flow" role="img" aria-label="Commons searches trusted calculations, then marks answers based on whether they use a trusted calculation or a lower-trust custom path.">
+  <div class="trust-tool trust-search">Search trusted calculations</div>
+  <div class="trust-route-labels" aria-hidden="true">
+    <span><span>Find one</span><span class="trust-decision-arrow">↓</span></span>
+    <span><span>Don’t find one</span><span class="trust-decision-arrow">↓</span></span>
+  </div>
+  <div class="trust-branches">
+    <div class="trust-branch trust-branch-high">
+      <div class="trust-tool">Run trusted calculation</div>
+      <span class="trust-down-arrow" aria-hidden="true">↓</span>
+      <div class="trust-marker">
+        <img src="figures/trusted-icon.svg" alt="">
+      </div>
+    </div>
+    <div class="trust-branch trust-branch-lower">
+      <div class="trust-tool">Search context</div>
+      <span class="trust-down-arrow" aria-hidden="true">↓</span>
+      <div class="trust-tool">Write SQL/R</div>
+      <div class="trust-citation-routes" aria-hidden="true">
+        <span><span>Cite</span><span class="trust-decision-arrow">↓</span></span>
+        <span><span>Don’t cite</span><span class="trust-decision-arrow">↓</span></span>
+      </div>
+      <div class="trust-lower-outcomes">
+        <div class="trust-marker">
+          <img src="figures/citation-mark.svg" alt="">
+        </div>
+        <div class="trust-marker">
+          <img src="figures/warning-icon.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 ::: notes
 Commons records which tools produced the answer. Trust is based on that
@@ -1204,26 +1233,26 @@ The citation itself is checked against trusted context. A custom answer is not
 promoted merely because the model says it used a trusted source.
 :::
 
-#
+## Three loops {.lifecycle-slide .paper-slide}
 
-* Help the model not be wrong **with trusted calculations and context**
-* Make it less bad when it is wrong **with provenance and feedback loops**
+::: {.lifecycle-cards}
+::: {.lifecycle-card .fragment .fade-up}
+### Build
 
-# Review logs for continual improvement
+A data scientist builds the agent by hooking it up to trusted code.
+:::
 
-```{=html}
-<video class="rounded click-to-toggle" width="66%" preload="auto" tabindex="0" aria-label="Commons trajectory review demo. Click to play or pause.">
-  <source src="figures/vp-agent-trajectory-review.mp4" type="video/mp4">
-</video>
-```
+::: {.lifecycle-card .fragment .fade-up}
+### Use
 
-::: notes
-review for correctness, add trusted code for commonly asked questions
-improve context
+Non-technical people use the agent deployed on Connect.
+:::
 
-Recurring
-questions can become trusted calculations. problems with table choice, joins,
-definitions, or caveats can become better context.
+::: {.lifecycle-card .fragment .fade-up}
+### Improve
+
+The data scientist reviews the agent's behavior, adding trusted code to move responses up the trust ladder.
+:::
 :::
 
 # {.paper-slide .diagram-slide}
@@ -1235,24 +1264,29 @@ definitions, or caveats can become better context.
 {{< include includes/commons-loops-diagram.html >}}
 
 ::: notes
-
 1. build: encode trusted calculations and context
+  Hydrates from semantic layers in Snowflake and Databricks
 2. use: answer through the trusted or custom path
+  Apps deploy to Connect like any Shiny app 
 3. improve: review behavior and update the layers
+  Trajectory logging with OTel on Connect
 
 The build loop gives the agent trusted calculations and context. The use loop is
 the conversation between the user and agent. The improve loop turns reviewed
 behavior into changes to the trusted calculations and context.
 :::
 
-## commons works with tools you already use
+# {.statement-slide .paper-slide}
 
-::: {.incremental}
-
-* Apps deploy to Connect like any Shiny app 
-* Trajectory logging with OTel on Connect
-* Hydrates from semantic layers in Snowflake and Databricks
+::: {.statement .regular-weight}
+Help the model not be wrong [**with trusted calculations and context**]{.fragment}<br><br>
+Make it less bad when it is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
 :::
+
+
+# 
+
+![](figures/hitl.excalidraw.svg){width=80%}
 
 # Clinical trials agent
 
