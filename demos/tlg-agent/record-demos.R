@@ -18,10 +18,11 @@ record_tlg_demos <- function(
     list(
       slug = "plot",
       question = paste(
-        "Plot the percentage of patients with adverse events by system organ",
-        "class and treatment arm."
+        "Plot time to first serious adverse event by treatment arm for the",
+        "safety population."
       ),
-      marker = 'button[aria-label="Verified answer"]'
+      marker = 'button[aria-label="Verified answer"]',
+      scroll_result = TRUE
     ),
     list(
       slug = "custom-code",
@@ -32,6 +33,7 @@ record_tlg_demos <- function(
       marker = "button.shiny-aside-pill",
       tool_call = "Retrieved data",
       close_tool_call = FALSE,
+      scroll_result = TRUE,
       hover_marker = FALSE
     )
   )
@@ -51,6 +53,7 @@ record_tlg_demos <- function(
         demo$close_tool_call
       },
       expand_result = isTRUE(demo$expand_result),
+      scroll_result = isTRUE(demo$scroll_result),
       hover_marker = if (is.null(demo$hover_marker)) {
         TRUE
       } else {

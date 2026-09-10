@@ -439,7 +439,8 @@ $link-color: color("pink");
   > h1,
   > h2,
   > p,
-  > ul {
+  > ul,
+  > ol {
     width: 100%;
     max-width: 1080px;
     margin: 0;
@@ -459,7 +460,13 @@ $link-color: color("pink");
     list-style: none;
   }
 
-  > ul li + li {
+  > ol {
+    padding-left: 1.1em;
+    list-style: decimal;
+  }
+
+  > ul li + li,
+  > ol li + li {
     margin-top: 24px;
   }
 }
@@ -545,6 +552,63 @@ $link-color: color("pink");
       font-weight: 400;
       line-height: 1.35;
     }
+  }
+}
+
+/* Cross-domain agent examples */
+
+.reveal .slide.agent-examples-slide {
+  > h2 {
+    color: color("reference-navy");
+    font-size: 54px;
+  }
+
+  .agent-examples-table {
+    margin: 48px 72px 0;
+  }
+
+  table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    color: color("ink");
+    font-size: 23px;
+    line-height: 1.25;
+  }
+
+  th,
+  td {
+    padding: 18px 20px;
+    border: 0;
+    border-bottom: 1px solid rgba(color("reference-navy"), 0.18);
+    vertical-align: middle;
+  }
+
+  th {
+    color: color("reference-navy");
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  td:first-child,
+  td:nth-child(2) {
+    font-weight: 600;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 29%;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 30%;
+  }
+
+  th:last-child,
+  td:last-child {
+    width: 41%;
   }
 }
 
