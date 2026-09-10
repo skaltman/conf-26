@@ -667,6 +667,22 @@ $link-color: color("pink");
   }
 }
 
+.reveal .slide.draft-slide::after {
+  content: "DRAFT";
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  z-index: 10;
+  padding: 4px 12px;
+  border: 2px solid #ee6331;
+  border-radius: 6px;
+  color: #ee6331;
+  font-family: "DM Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
 .reveal .controls {
   color: currentColor;
   opacity: 0.5;
