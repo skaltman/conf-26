@@ -439,7 +439,8 @@ $link-color: color("pink");
   > h1,
   > h2,
   > p,
-  > ul {
+  > ul,
+  > ol {
     width: 100%;
     max-width: 1080px;
     margin: 0;
@@ -459,7 +460,13 @@ $link-color: color("pink");
     list-style: none;
   }
 
-  > ul li + li {
+  > ol {
+    padding-left: 1.1em;
+    list-style: decimal;
+  }
+
+  > ul li + li,
+  > ol li + li {
     margin-top: 24px;
   }
 }

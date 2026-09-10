@@ -319,13 +319,7 @@ and this post was actually one of the first things I worked when I joined the AI
 # {background-image="figures/getty-images-YqJdF4TIxG0-unsplash.jpg" background-size="cover" background-position="center"}
 
 :::footer
-Getty Images
-:::
-
-# {background-image="figures/databot-flotation-no-swimming.png" background-size="cover" background-position="center"}
-
-:::footer
-Thank you Margaret Biffar and Isabella Velásquez!
+Getty Images. Thank you Margaret Biffar and Isabella Velásquez!
 :::
 
 # {.paper-slide}
@@ -418,15 +412,16 @@ bluffbench_results_theme <-
     plot.title.position = "plot"
   )
 
-bluffbench_mtcars <- mtcars
-bluffbench_mtcars$hp <- max(bluffbench_mtcars$hp) - bluffbench_mtcars$hp
+bluffbench_diamonds <- ggplot2::diamonds
+bluffbench_diamonds$carat <-
+  max(bluffbench_diamonds$carat) - bluffbench_diamonds$carat
 
-bluffbench_mtcars_plot <-
-  ggplot(bluffbench_mtcars, aes(x = hp, y = mpg))
+bluffbench_diamonds_plot <-
+  ggplot(bluffbench_diamonds, aes(x = carat, y = price))
 
 ggsave(
-  "figures/bluffbench-mtcars-hp-mpg-thumb.png",
-  bluffbench_mtcars_plot + geom_point(size = 2),
+  "figures/bluffbench-diamonds-carat-price-thumb.png",
+  bluffbench_diamonds_plot + geom_point(size = 2, alpha = 0.3),
   width = 3,
   height = 2.5
 )
@@ -461,29 +456,31 @@ bluff2_summary <-
   mutate(model = gsub(" (medium)", "", model, fixed = TRUE))
 ```
 
+<!--
+
 ## {.paper-slide}
 
 ::: {style="display: flex; flex-direction: column; gap: 0; padding: 20px; max-width: 100%; margin: 20px auto 0 auto;"}
 
 ::: {.fragment style="align-self: flex-end; background-color: #d6eaf8; padding: 12px 18px; border-radius: 18px 18px 4px 18px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"}
-Please plot hp vs mpg in mtcars
+Please plot price vs carat in diamonds
 :::
 
 ::: {.fragment style="align-self: flex-start; background-color: white; padding: 10px; border-radius: 18px 18px 18px 4px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #e0e0e0; margin-top: 10px;"}
 
 ::: {style="background-color: #f6f8fa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 8px 12px;"}
 ```{.r style="margin: 0; font-size: 0.8em; background: none; border: none; box-shadow: none; padding: 0;"}
-ggplot(mtcars, aes(x = hp, y = mpg)) +
+ggplot(diamonds, aes(x = carat, y = price)) +
   geom_point()
 ```
 :::
 
-![](figures/bluffbench-mtcars-hp-mpg-thumb.png){fig-alt="A small scatterplot thumbnail with horsepower on the x-axis and miles per gallon on the y-axis. The points form a strong positive association." width="260px" style="border-radius: 12px; display: block; margin: 10px auto 0 auto;"}
+![](figures/bluffbench-diamonds-carat-price-thumb.png){fig-alt="A small scatterplot thumbnail with carat on the x-axis and price on the y-axis. The points form a strong negative association." width="260px" style="border-radius: 12px; display: block; margin: 10px auto 0 auto;"}
 
 :::
 
 ::: {.fragment style="align-self: flex-start; background-color: white; padding: 12px 18px; border-radius: 18px 18px 18px 4px; max-width: 70%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #e0e0e0; margin-top: 10px;"}
-There is a **strong, negative association.**
+There is a **strong, positive association.**
 :::
 
 :::
@@ -496,24 +493,26 @@ posit-dev.github.io/bluffbench
 bluffbench tests whether a model reports what is actually plotted or falls back
 on what it expects from a well-known dataset.
 
-The model receives the rendered plot. Here, the relationship is positive, but
-the model describes the familiar negative relationship from the original data.
+The model receives the rendered plot. Here, the relationship is negative, but
+the model describes the familiar positive relationship from the original data.
 :::
+
+--> 
 
 ## {.paper-slide}
 
-::: {.plot-slide-content}
+::: {.plot-slide-content .fragment}
 
 ```{r}
 #| echo: false
 #| fig-align: center
-#| fig-alt: "A scatterplot of horsepower against miles per gallon. The points form a clear positive association, with miles per gallon generally rising as horsepower rises."
+#| fig-alt: "A scatterplot of price against carat. The points form a clear negative association, with price generally falling as carat rises."
 #| fig-width: 12
 #| fig-height: 6
 #| fig-bg: "#f5f2ec"
 #| out-width: "92%"
-bluffbench_mtcars_plot +
-  geom_point(size = 3) +
+bluffbench_diamonds_plot +
+  geom_point(size = 3, alpha = 0.6) +
   theme(
     plot.background = element_rect(fill = "#f5f2ec", color = NA),
     axis.title = element_text(size = 30, color = "#24437b"),
@@ -521,6 +520,21 @@ bluffbench_mtcars_plot +
   )
 ```
 
+:::
+
+::: {.plot-slide-content .fragment}
+
+<div style="margin: 18px 0 0; font-size: 44px; font-weight: 700; color: #3f73d8;">Can models interpret plots that contradict their expectations?</div>
+
+:::
+
+::: notes
+around a year ago we did an experiment
+we wanted to know how well models interpret plots
+we showed them plots like this one of well known datasets
+if youre thinking uh thats not right. you are correct. 
+
+this is what we wanted to know: would models correctly interpret plots that contradicted their expectations?
 :::
 
 ## November 2025 {.paper-slide}
@@ -774,9 +788,9 @@ But AI is also a continuation of work that Posit and this community have always 
 # {.beat-slide}
 
 ::: {.incremental}
-* The models got better
-* But that doesn't solve everything!
-* We want to continue making new software to explore data
+1. The models got better
+2. But that doesn't solve everything!
+3. We want to continue making new software to explore data
 :::
 
 ::: notes
@@ -1302,29 +1316,76 @@ Make it less bad when it is wrong [**by signaling trust and introducing feedback
 Let's revisit those guidelines one more time.
 :::
 
-# 
+## {.agent-examples-slide .paper-slide}
 
-![](figures/hitl.excalidraw.svg){width=80%}
-
-# Clinical trials agent
-
-:::: {.columns}
-
-::: {.column width="70%"}
-* Validated measures from Insight Engineering's TLG Catalog
-* Simulated data
+::: {.agent-examples-table}
+<table>
+  <thead>
+    <tr>
+      <th>commons creator</th>
+      <th>commons user</th>
+      <th>Example question</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="fragment fade-in">
+      <td>Biostatistician</td>
+      <td>Biologist / MD / clinical researcher</td>
+      <td>&ldquo;Compare treatment groups using the approved method.&rdquo;</td>
+    </tr>
+    <tr class="fragment fade-in">
+      <td>UX researcher</td>
+      <td>Product manager</td>
+      <td>&ldquo;Summarize experiment results and explain which segments changed.&rdquo;</td>
+    </tr>
+    <tr class="fragment fade-in">
+      <td>Economist / policy analyst</td>
+      <td>Policy maker / program lead</td>
+      <td>&ldquo;Simulate the budget impact of this policy change.&rdquo;</td>
+    </tr>
+  </tbody>
+</table>
 :::
 
-::: {.column width="30%"}
-![](figures/clinical-trials-agent-logo.png){width=80%}
+:::  notes
+we showed you commons in the example of the vp
+but commons is not just for bi
+
+its for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data
+this could be ...
+including where correctness really matters
 :::
 
-::::
+# {.header-slide .blue-slide}
 
-::: notes
-The VP is a stand-in for anyone who has questions to ask of data but is not the
-data scientist: a lab PI, medical director, product manager, or domain expert.
+::: {.columns}
+
+::: {.column .header-text width="64%"}
+Clinical trials agent
 :::
+
+::: {.column width="36%"}
+![](figures/clinical-trials-agent-logo-orange.png){.header-image fig-alt="Clinical trials agent logo"}
+:::
+
+:::
+
+##
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Click to play or pause.">
+  <source src="clinical-trials-agent-full-demo.mp4" type="video/mp4">
+</video>
+
+## {.header-slide .blue-slide}
+
+::: {.columns}
+
+::: {.column .header-text width="100%"}
+Looking forward
+:::
+
+:::
+
 
 ##
 
