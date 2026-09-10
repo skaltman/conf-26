@@ -50,6 +50,7 @@ record_demo <- function(
   tool_call = NULL,
   close_tool_call = TRUE,
   expand_result = FALSE,
+  scroll_result = FALSE,
   hover_marker = TRUE,
   url,
   output_dir,
@@ -114,6 +115,10 @@ record_demo <- function(
   if (hover_marker) {
     hover_element(browser, marker, call = call)
     pump_browser(2.5)
+  }
+  if (scroll_result) {
+    scroll_tool_card_result(browser, call = call)
+    pump_browser(2)
   }
   capture_final_frame(browser, state)
   invisible(browser$Page$stopScreencast())
@@ -234,6 +239,38 @@ toggle_full_screen_result <- function(
     sprintf('button[aria-label="%s"]', label),
     call = call
   )
+}
+
+scroll_tool_card_result <- function(
+  browser,
+  call = rlang::caller_env()
+) {
+  scrolled <- browser$Runtime$evaluate(
+    paste0(
+      "(() => {",
+      "const card = document.querySelector('.shiny-tool-card');",
+      "const body = card?.querySelector(':scope > .card-body');",
+      "if (!card || !body) return false;",
+      "if (body.scrollHeight <= body.clientHeight) {",
+      "body.style.maxHeight = '380px';",
+      "body.style.overflow = 'auto';",
+      "}",
+      "body.scrollTo({top: body.scrollHeight});",
+      "card.scrollIntoView({block: 'center'});",
+      "return true;",
+      "})()"
+    ),
+    returnByValue = TRUE
+  )$result$value
+
+  if (!isTRUE(scrolled)) {
+    cli::cli_abort(
+      "Could not scroll the requested demo result into view.",
+      call = call
+    )
+  }
+
+  invisible()
 }
 
 click_element <- function(
@@ -413,16 +450,25 @@ encode_recording <- function(
     "ffmpeg",
     c(
       "-y",
-      "-loglevel", "error",
-      "-f", "concat",
-      "-safe", "0",
-      "-i", shQuote(manifest),
-      "-vf", "fps=30,format=yuv420p",
+      "-loglevel",
+      "error",
+      "-f",
+      "concat",
+      "-safe",
+      "0",
+      "-i",
+      shQuote(manifest),
+      "-vf",
+      "fps=30,format=yuv420p",
       "-an",
-      "-c:v", "libx264",
-      "-preset", "medium",
-      "-crf", "20",
-      "-movflags", "+faststart",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "medium",
+      "-crf",
+      "20",
+      "-movflags",
+      "+faststart",
       shQuote(output)
     )
   )
