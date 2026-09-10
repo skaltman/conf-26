@@ -22,6 +22,7 @@ $colors: (
   "mint-soft": #8ad7bd,
   "amber": #b57400,
   "periwinkle": #8092d2,
+  "periwinkle-soft": #d8def0,
   "keynote-periwinkle": #8393cf,
   "coral": #e27168,
   "coral-soft": #ffaaa5
@@ -92,6 +93,11 @@ $link-color: color("pink");
       color: color("paper-warm");
     }
   }
+}
+
+.reveal .slide .plot-slide-content {
+  margin-top: 32px;
+  text-align: center;
 }
 
 /* Footer */
@@ -196,6 +202,190 @@ $link-color: color("pink");
   display: none;
 }
 
+/* Framed diagrams */
+
+.reveal .slide.diagram-slide {
+  top: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 !important;
+  background: color("palette-pink");
+
+  > h1:empty,
+  > h2:empty {
+    display: none;
+  }
+}
+
+.diagram-frame {
+  position: relative;
+  width: 1200px;
+  height: 680px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: color("paper-cool");
+  box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%);
+  color: color("reference-navy");
+  font-family: "DM Sans", sans-serif;
+}
+
+.diagram-connectors {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+
+  path {
+    fill: none;
+    stroke: color("reference-navy");
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 4;
+  }
+
+  marker path {
+    fill: color("reference-navy");
+    stroke: none;
+  }
+}
+
+.diagram-definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.diagram-arrowhead {
+  fill: color("reference-navy");
+  stroke: none;
+}
+
+.hitl-node {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .node-title {
+    position: relative;
+    z-index: 1;
+    display: block;
+    color: #6b7280;
+    letter-spacing: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.hitl-agent {
+  top: 285px;
+  left: 95px;
+  width: 230px;
+  height: 110px;
+  border: 8px solid color("green");
+  border-radius: 4px;
+  background: color("paper-cool");
+}
+
+.hitl-human {
+  top: 285px;
+  left: 895px;
+  width: 230px;
+  height: 110px;
+  border: 8px solid color("orange");
+  border-radius: 4px;
+  background: color("paper-cool");
+}
+
+.hitl-arrow-label {
+  position: absolute;
+  z-index: 1;
+  color: color("blue");
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  transform: translateX(-50%);
+}
+
+.hitl-do-label {
+  top: 68px;
+  left: 50%;
+}
+
+.hitl-verify-label {
+  top: 565px;
+  left: 50%;
+}
+
+.commons-node {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: 170px;
+  height: 100px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: color("paper-cool");
+
+  .node-title {
+    color: #6b7280;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+}
+
+.commons-agent {
+  top: 285px;
+  left: 395px;
+  border: 8px solid color("green");
+}
+
+.commons-user {
+  top: 285px;
+  left: 635px;
+  border: 8px solid color("orange");
+}
+
+.commons-loop-label {
+  position: absolute;
+  z-index: 2;
+  color: color("blue");
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.commons-build-label {
+  top: 335px;
+  left: 180px;
+  width: 230px;
+}
+
+.commons-improve-label {
+  top: 335px;
+  left: 1020px;
+  width: 230px;
+}
+
 .reveal .slide.commons-intro-slide {
   height: 100%;
   padding: 0 !important;
@@ -232,6 +422,90 @@ $link-color: color("pink");
 
   .accent {
     color: color("pink");
+  }
+}
+
+.reveal .slide.beat-slide {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 72px !important;
+  background: color("periwinkle-soft");
+  color: color("reference-navy");
+
+  > h1,
+  > h2,
+  > p,
+  > ul {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0;
+    color: inherit;
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 1.08;
+  }
+
+  > h1:empty,
+  > h2:empty {
+    display: none;
+  }
+
+  > ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  > ul li + li {
+    margin-top: 24px;
+  }
+}
+
+.reveal .slide.hitl-evidence-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 54px 72px !important;
+
+  > h1:empty,
+  > h2:empty {
+    display: none;
+  }
+
+  .hitl-evidence-heading {
+    max-width: 1080px;
+    margin-bottom: 38px;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.08;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .accent {
+    color: color("pink");
+  }
+
+  .hitl-evidence-points {
+    max-width: 1080px;
+    font-size: 27px;
+    line-height: 1.25;
+
+    ul {
+      margin: 0;
+      padding-left: 1.15em;
+    }
+
+    li + li {
+      margin-top: 18px;
+    }
   }
 }
 
@@ -482,6 +756,10 @@ $link-color: color("pink");
   --split: 20%;
 }
 
+.reveal .split-40.split-image-slide {
+  --split: 40%;
+}
+
 .reveal .slide.split-image-slide {
   padding: 0 !important;
   height: 100%;
@@ -555,6 +833,20 @@ $link-color: color("pink");
 
 .reveal .slide.split-20 .split-title {
   font-size: 40px;
+}
+
+.reveal .slide.split-40 .column:first-child {
+  padding: 40px 32px;
+}
+
+.reveal .slide.split-40 .split-title {
+  font-size: 40px;
+}
+
+/* Anchor the split background to the top so headings at the top of a tall
+   screenshot stay visible (bottom gets cropped instead) */
+.reveal .slide-background.split-image-slide.split-image-top .slide-background-content {
+  background-position: 38% top;
 }
 
 .reveal .slide.split-image-slide .image-credit {
