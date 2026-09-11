@@ -289,9 +289,6 @@ What if our stance was the same with AI? In other words, can we build data analy
   <div class="cc-text">Correct and convenient</div>
 </div>
 
-::: notes
-What if our stance was the same with AI? In other words, can we build data analysis agents that are both correct and convenient to use?
-:::
 
 # {.paper-slide}
 
