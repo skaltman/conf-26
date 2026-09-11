@@ -263,7 +263,7 @@
     "href": "index.html#section-51",
     "title": "",
     "section": "",
-    "text": "we showed you commons in the example of the vp but commons is not just for bi"
+    "text": "Build\nYou construct the agent by hooking it up to trusted code.\n\n\nDeploy\nYour colleagues use the agent deployed on Connect.\n\n\nImprove\nYou review the agent’s behavior, adding trusted code to move responses up the trust ladder.\n\n\n\nSo far, we’ve only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let’s take a step and see what it looks like from yall’s perspective.\nRemember when Sara showed you the simple loop? Working with commons is more like three loops.\n\nbuild: encode trusted calculations and context After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.\ndeploy: agent answers through the trusted or custom path Apps deploy to Connect like any Shiny app The agent runs R and Python code in a sandbox so that it can be safely deployed\nimprove: review behavior and update the layers With the newest Connect release, once you and your admin opt-in, conversation histories will be stored with a native OpenTelemetry integration. After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent."
   },
   {
     "objectID": "index.html#section-52",
@@ -284,7 +284,7 @@
     "href": "index.html#section-54",
     "title": "",
     "section": "",
-    "text": "Looking forward\n\n\ndatabot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else"
+    "text": "commons creator\n\n\ncommons user\n\n\nExample question\n\n\n\n\n\n\nBiostatistician\n\n\nBiologist / MD / clinical researcher\n\n\n“Compare treatment groups using the approved method.”\n\n\n\n\nUX researcher\n\n\nProduct manager\n\n\n“Summarize experiment results and explain which segments changed.”\n\n\n\n\nEconomist / policy analyst\n\n\nPolicy maker / program lead\n\n\n“Simulate the budget impact of this policy change.”\n\n\n\n\n\n\nits for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters"
   },
   {
     "objectID": "index.html#canvas",
@@ -292,5 +292,33 @@
     "title": "",
     "section": "Canvas",
     "text": "Canvas\n\n\n\nWe have been experimenting with something canvas\nCanvas is a next generation agent experience\nAssumes that you won’t look at the code usually\nfrees up real estate / degrees of freedom to other expansive and new agent collaboration interfaces\nFeels aggressive in the way that Databot felt to us a year ago\nIf you want to learn more, see Joe’s talk"
+  },
+  {
+    "objectID": "index.html#correct-analysis-still-takes-more-than-a-frontier-model.",
+    "href": "index.html#correct-analysis-still-takes-more-than-a-frontier-model.",
+    "title": "",
+    "section": "Correct analysis still takes more than a frontier model.",
+    "text": "Correct analysis still takes more than a frontier model."
+  },
+  {
+    "objectID": "index.html#section-50",
+    "href": "index.html#section-50",
+    "title": "",
+    "section": "",
+    "text": "Search trusted calculations\n  \n    Find one↓\n    Don’t find one↓\n  \n  \n    \n      Run trusted calculation\n      ↓\n      \n        \n      \n    \n    \n      Search context\n      ↓\n      Write SQL/R/Python\n      \n        Cite↓\n        Don’t cite↓\n      \n      \n        \n          \n        \n        \n          \n        \n      \n    \n  \n\n\nCommons records which tools produced the answer. Trust is based on that execution path, not on the model’s confidence in its own answer. trust is deterministic\nThe citation itself is checked against trusted context. A custom answer is not promoted merely because the model says it used a trusted source."
+  },
+  {
+    "objectID": "index.html#section-53",
+    "href": "index.html#section-53",
+    "title": "",
+    "section": "",
+    "text": "we showed you commons in the example of the vp but commons is not just for bi"
+  },
+  {
+    "objectID": "index.html#section-56",
+    "href": "index.html#section-56",
+    "title": "",
+    "section": "",
+    "text": "Looking forward\n\n\ndatabot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else"
   }
 ]
