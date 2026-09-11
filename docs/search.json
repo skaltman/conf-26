@@ -1,0 +1,296 @@
+[
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "",
+    "section": "",
+    "text": "Agents for correct, transparent, and reproducible analysis\n\nSimon Couch and Sara Altman\nposit::conf(2026)"
+  },
+  {
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
+    "title": "",
+    "section": "",
+    "text": "how is traffic trending for our site?\n          \n        \n        \n          \n             Analyzing site traffic\n            \n              ⌕\n              Searching workspaceweb analytics\n              ✓\n            \n            \n              ◫\n              Querying warehouseanalytics.pageviews\n              ✓\n            \n            \n              ∿\n              Calculating daily visitslast 90 days\n              ✓\n            \n          \n        \n        \n          \n            Daily visits are down 64% over the last 90 days.\n            \n              Daily site visits−64%\n              \n                \n                  \n                    \n                    \n                  \n                \n                \n                  \n                  \n                \n                \n                  60k40k20k\n                  90 days ago45 days agoToday\n                \n                \n                \n                \n              \n            \n          \n        \n  \n\n\nThis morning, your VP pulled up a coding agent and asked a question.\n[yada yada this is what happen]\nNow, as data people, we might have asked ourselves “How are daily visits being measured?” “What event triggers an entry in this column?” “What other possible explanations could account for this change in trend other than a genuine reversal in the traffic going to this site?” If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table. Regardless, this isn’t even the typical table that the data science team uses to measure site traffic anyway.\nNevertheless, you’re not there. Your VP brings this chart to leadership. They decide to spend millions to reverse the trend."
+  },
+  {
+    "objectID": "index.html#section-2",
+    "href": "index.html#section-2",
+    "title": "",
+    "section": "",
+    "text": "could you find the site traffic chart we made a month ago?\n      \n    \n    \n      \n         Looking for prior analysis\n        \n          ⌕\n          Searching conversationssite traffic chart\n          ✓\n        \n        \n          ◫\n          Checking generated filestemporary workspace\n          ✓\n        \n      \n    \n    \n      \n        I couldn’t find that conversation or any saved analysis files. Do you want me to recreate that chart for the last 90 days?\n      \n    \n    \n      \n        yeah\n      \n    \n    \n      \n         Analyzing site traffic\n        \n          ⌕\n          Searching workspaceweb analytics\n          ✓\n        \n        \n          ◫\n          Querying warehouseanalytics.sessions\n          ✓\n        \n        \n          ∿\n          Calculating daily visitslast 90 days\n          ✓\n        \n      \n    \n    \n      \n        Daily visits increased 22% over the last 90 days.\n        \n          Daily site visits+22%\n          \n            \n              \n                \n                \n              \n            \n            \n              \n              \n            \n            \n              60k40k20k\n              90 days ago45 days agoToday\n            \n            \n            \n            \n          \n        \n      \n    \n  \n\n\nA month later, leadership will ass to see the chart again. The VP will open up the same agent, but it can’t find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone.\nThe agent offers to make it again. This time, when the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time."
+  },
+  {
+    "objectID": "index.html#section-3",
+    "href": "index.html#section-3",
+    "title": "",
+    "section": "",
+    "text": "In the battle between convenience and correctness, convenience is winning.\n\nJoe Cheng, CTO @ Posit\n\n\n\nWe’ve seen situations like this internally and with the organizations we work with. Posit’s CTO recently summarized it like so:\nIt is true that AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.\nIt just so happened that Joe said this a month ago, but he could have said it 6/7 years ago (ayyy) and it would still have been true."
+  },
+  {
+    "objectID": "index.html#section-4",
+    "href": "index.html#section-4",
+    "title": "",
+    "section": "",
+    "text": "https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business\n\n\nIn 2019, Conviviality (a beverage company) discovered they had been mistakenly reporting healthy financials for years due to a “spreadsheet arithmetic error.”\n\n£5.2m of that £14m came thanks to “a material error in the financial forecasts”. The error, it later admitted, was “a spreadsheet arithmetic error”."
+  },
+  {
+    "objectID": "index.html#section-5",
+    "href": "index.html#section-5",
+    "title": "",
+    "section": "",
+    "text": "https://www.science.org/doi/10.1126/science.314.5807.1856\n\n\nOr Joe could have said it 20 years ago, when it came to light that a whole subfield of protein modeling had been distracted by a bug in in-house, closed-source software.\nFrom 2001 to 2006, Geoffrey Chang published a series of heavy-hitting papers that reshaped his field, while other labs struggled to reproduce their findings. The software that the Chang lab used to carry out the analysis contained a bug that flipped the sign of a computation. The bug came to light when another lab solved a similar protein structure and saw that it produced a near-mirror image of Chang’s. At this point, the Chang lab checked their code, found the bug, and retracted 5 papers."
+  },
+  {
+    "objectID": "index.html#section-6",
+    "href": "index.html#section-6",
+    "title": "",
+    "section": "",
+    "text": "I bring these examples up to say that there have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance is not “you need to forgo convenience in favor of correctess.”\nI was doing some research for this talk when I came across this old weblog…\n\n\nrstudioblog.wordpress.com/2011/02/27/about-the-rstudio-project/"
+  },
+  {
+    "objectID": "index.html#section-7",
+    "href": "index.html#section-7",
+    "title": "",
+    "section": "",
+    "text": "Our goal is to develop a powerful tool that supports trustworthy, high quality analysis.\n\nAt the same time, we want RStudio to be as straightforward and intuitive as possible.\n\nJJ Allaire, 2011\n\n\n\nhttps://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/\n\n\nHe’s saying “it can be correct and convenient.”\nWhat if our stance was the same with AI? In other words, can we build data analysis agents that are both correct and convenient to use?"
+  },
+  {
+    "objectID": "index.html#section-10",
+    "href": "index.html#section-10",
+    "title": "",
+    "section": "",
+    "text": "August 2025\n\n\n\n\nposit.co/blog/databot-is-not-a-flotation-device\n\n\nso worried that when we released our new sota coding agent in 2025, we did so under what was essentially a warning label\nthis is an image from a blog post joe and I wrote to accompany the release of databot, which was an exploratory data analysis agent that lived in positron\nand this post was actually one of the first things I worked when I joined the AI team, and it gave me the opportunity to do one of the things that I think I do best: be a pessimist"
+  },
+  {
+    "objectID": "index.html#the-models-got-better",
+    "href": "index.html#the-models-got-better",
+    "title": "",
+    "section": "The models got better",
+    "text": "The models got better"
+  },
+  {
+    "objectID": "index.html#section-16",
+    "href": "index.html#section-16",
+    "title": "",
+    "section": "",
+    "text": "Can models interpret plots that contradict their expectations?\n\n\n\naround a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one of well known datasets if youre thinking uh thats not right. you are correct.\nthis is what we wanted to know: would models correctly interpret plots that contradicted their expectations?"
+  },
+  {
+    "objectID": "index.html#november-2025",
+    "href": "index.html#november-2025",
+    "title": "",
+    "section": "November 2025",
+    "text": "November 2025\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench\n\n\nWe tried a range of interventions to improve these scores, but none moved them much. Even when a model noticed during its reasoning that the association did not look as expected, it often still reported the expected relationship."
+  },
+  {
+    "objectID": "index.html#september-2026",
+    "href": "index.html#september-2026",
+    "title": "",
+    "section": "September 2026",
+    "text": "September 2026\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench"
+  },
+  {
+    "objectID": "index.html#trustworthy-analysis-still-takes-more-than-a-frontier-model.",
+    "href": "index.html#trustworthy-analysis-still-takes-more-than-a-frontier-model.",
+    "title": "",
+    "section": "Trustworthy analysis still takes more than a frontier model.",
+    "text": "Trustworthy analysis still takes more than a frontier model."
+  },
+  {
+    "objectID": "index.html#section-17",
+    "href": "index.html#section-17",
+    "title": "",
+    "section": "",
+    "text": "github.com/posit-dev/bluffbench2\n\n\nbluffbench2 tests whether models notice subtle data quality issues in visualizations.\ntake a look at this plot. what do you notice?\none thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.\nwe wanted to see if models would be able to pick up on this kind of subtle visual artifact"
+  },
+  {
+    "objectID": "index.html#section-18",
+    "href": "index.html#section-18",
+    "title": "",
+    "section": "",
+    "text": "github.com/posit-dev/bluffbench2\n\n\neven frontier models don’t do very well"
+  },
+  {
+    "objectID": "index.html#our-mission-is-to-find-new-ways-to-understand-data.-llms-are-part-of-that-exploration.",
+    "href": "index.html#our-mission-is-to-find-new-ways-to-understand-data.-llms-are-part-of-that-exploration.",
+    "title": "",
+    "section": "Our mission is to find new ways to understand data. LLMs are part of that exploration.",
+    "text": "Our mission is to find new ways to understand data. LLMs are part of that exploration.\n\nbut for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration"
+  },
+  {
+    "objectID": "index.html#section-21",
+    "href": "index.html#section-21",
+    "title": "",
+    "section": "",
+    "text": "for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place.\nMaybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.\nBut without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it.\nlearning the tidyverse, and data science…these tools gave me a way to investigate any topic and learn about the world."
+  },
+  {
+    "objectID": "index.html#section-22",
+    "href": "index.html#section-22",
+    "title": "",
+    "section": "",
+    "text": "The right tools let us see below the surface.\n\n\n\n\nPhoto: Lars von Ritter Zahony / Ocean Image Bank\n\n\nthe right tools let us see below the surface The tools enable the curiosity."
+  },
+  {
+    "objectID": "index.html#section-27",
+    "href": "index.html#section-27",
+    "title": "",
+    "section": "",
+    "text": "*the slap a human on it approach\n\n\n\nthis sounds so nice! the human is there to prevent mistakes and all will be good. so we should just apply this anywhere we see a problem.\nI like to call this simplistic division of labor the “slap a human on it” approach.\nthere’s only one problem: this simple view is not how these systems work.\nyou can’t assume that just because a human is present and technically “in the loop,” you’ve solved the issue of correctness by asking them to verify something."
+  },
+  {
+    "objectID": "index.html#section-33",
+    "href": "index.html#section-33",
+    "title": "",
+    "section": "",
+    "text": "Our flagship agent is Posit Assistant. Posit Assistant is a coding and data science agent. It’s available in RStudio, Positron, and the terminal. When it’s running inside of your IDE, it works inside of your active R and Python session. You can use whatever model from whatever provider you want with it.\n\n\nassistant.posit.co"
+  },
+  {
+    "objectID": "index.html#section-34",
+    "href": "index.html#section-34",
+    "title": "",
+    "section": "",
+    "text": "In thinking through how to demo out Posit Assistant, I thought about how Sara described her first moments of really getting the hang of data science tools as like seeing below the surface. I think many of us might have had a moment like this at some point, when we began to understand how powerful data science and statistics are for answering questions about the world.\nThe first time I felt this way, I had been asked to use R to understand what affects flight delays. I had to load in some data and then write dplyr and ggplot to see if I could make any decisions that would give me better chances of my flight leaving on time.\nIn demoing Posit Assistant, I thought I might revisit that moment with you."
+  },
+  {
+    "objectID": "index.html#section-35",
+    "href": "index.html#section-35",
+    "title": "",
+    "section": "",
+    "text": "I’m in Positron, with Posit Assistant pulled up on the left hand side and a live R session. I’ll start off by asking the agent about R packages that could help me grab data on flights.\n…\nIt can do normal coding agent stuff"
+  },
+  {
+    "objectID": "index.html#section-36",
+    "href": "index.html#section-36",
+    "title": "",
+    "section": "",
+    "text": "It can read documentation (in the same way that you would, too)\nAlso, note that it preferred to keep data in the file system"
+  },
+  {
+    "objectID": "index.html#section-37",
+    "href": "index.html#section-37",
+    "title": "",
+    "section": "",
+    "text": "Cleaning mode: we felt that most coding agents had a superficial relationship with data quality\nIt pays attention to missing data, outliers, etc\nCleaning script is persisted"
+  },
+  {
+    "objectID": "index.html#section-38",
+    "href": "index.html#section-38",
+    "title": "",
+    "section": "",
+    "text": "You can see plots"
+  },
+  {
+    "objectID": "index.html#section-39",
+    "href": "index.html#section-39",
+    "title": "",
+    "section": "",
+    "text": "The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot"
+  },
+  {
+    "objectID": "index.html#section-40",
+    "href": "index.html#section-40",
+    "title": "",
+    "section": "",
+    "text": "Slash commands (has a bunch of specialized skills) + can write quarto reports"
+  },
+  {
+    "objectID": "index.html#section-41",
+    "href": "index.html#section-41",
+    "title": "",
+    "section": "",
+    "text": "Can use your IDE in the normal way"
+  },
+  {
+    "objectID": "index.html#section-42",
+    "href": "index.html#section-42",
+    "title": "",
+    "section": "",
+    "text": "The whole conversation was 10 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we’ve worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees. Per token, this model, GLM 5.3 Flash, is less than a thirtiest of the price of Claude Opus 5, and is served under Zero Data Retention."
+  },
+  {
+    "objectID": "index.html#section-43",
+    "href": "index.html#section-43",
+    "title": "",
+    "section": "",
+    "text": "We’ve designed Posit Assistant to be more correct, and we’ve designed it to make better use of your expertise than other coding agents, so that you’re more likely to know when it’s wrong.\n\n\nassistant.posit.co"
+  },
+  {
+    "objectID": "index.html#section-45",
+    "href": "index.html#section-45",
+    "title": "",
+    "section": "",
+    "text": "how is traffic trending for our site?\n      \n    \n    \n      \n        Daily visits are down 64% over the last 90 days.\n        \n          Daily site visits−64%\n          \n            \n              \n                \n                \n              \n            \n            \n              \n              \n            \n            \n              60k40k20k\n              90 days ago45 days agoToday\n            \n            \n            \n            \n          \n        \n      \n    \n  \n\n\nI want to take a step back and revisit this conversation with the VP.\nIn the same way that convenience and correctness can’t be at battle, you can’t be at battle with your VP.\nThe VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them.\nUnfortunately, the answer they got was wrong.\nI mentioned earlier that this isn’t the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database."
+  },
+  {
+    "objectID": "index.html#section-47",
+    "href": "index.html#section-47",
+    "title": "",
+    "section": "",
+    "text": "let’s see how the VP’s analysis would work with a commons agent\nThe first thing the agent does it search for a trusted calculation. Here it finds and runs the data scientist’s site traffic calculation\nthe answer is marked as verified to signify that it used vetted code"
+  },
+  {
+    "objectID": "index.html#section-48",
+    "href": "index.html#section-48",
+    "title": "",
+    "section": "",
+    "text": "However, its unlikely that this trusted code will cover all questions a user might have. For these situations, the agent can write custom r, python, or sql.\nFirst, the agent will look through additional context in the form of data dictionaries, markdown files, and, if you have them, existing context layers from Databricks and Snowflake.\nThen, it will write whatever code it needs to to find an answer.\nFinally, when it presents an answer, it can provides a citation to that context. That citation will be deterministically checked against trusted context that has appeared so far in the conversation—if it matches, this citation tag will be shown."
+  },
+  {
+    "objectID": "index.html#section-49",
+    "href": "index.html#section-49",
+    "title": "",
+    "section": "",
+    "text": "There’s one more possible path, which is that the model cannot find trusted context to justify its approach. In this case, we mark the answer with this little yellow tag, which lets the user know that this answer should be considered less trusted.\nThis is how we’ve chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer."
+  },
+  {
+    "objectID": "index.html#deterministically-tag-trust",
+    "href": "index.html#deterministically-tag-trust",
+    "title": "",
+    "section": "Deterministically tag trust",
+    "text": "Deterministically tag trust\n\n\n  Search trusted calculations\n  \n    Find one↓\n    Don’t find one↓\n  \n  \n    \n      Run trusted calculation\n      ↓\n      \n        \n      \n    \n    \n      Search context\n      ↓\n      Write SQL/R/Python\n      \n        Cite↓\n        Don’t cite↓\n      \n      \n        \n          \n        \n        \n          \n        \n      \n    \n  \n\n\nCommons records which tools produced the answer. Trust is based on that execution path, not on the model’s confidence in its own answer. trust is deterministic\nThe citation itself is checked against trusted context. A custom answer is not promoted merely because the model says it used a trusted source."
+  },
+  {
+    "objectID": "index.html#three-loops",
+    "href": "index.html#three-loops",
+    "title": "",
+    "section": "Three loops",
+    "text": "Three loops\n\n\nBuild\nYou construct the agent by hooking it up to trusted code.\n\n\nDeploy\nYour colleagues use the agent deployed on Connect.\n\n\nImprove\nYou review the agent’s behavior, adding trusted code to move responses up the trust ladder.\n\n\n\nSo far, we’ve only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let’s take a step and see what it looks like from yall’s perspective.\n\nbuild: encode trusted calculations and context After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.\ndeploy: agent answers through the trusted or custom path Apps deploy to Connect like any Shiny app The agent runs R and Python code in a sandbox so that it can be safely deployed\nimprove: review behavior and update the layers With the newest Connect release, once you and your admin opt-in, conversation histories will be stored with a native OpenTelemetry integration. After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent."
+  },
+  {
+    "objectID": "index.html#section-51",
+    "href": "index.html#section-51",
+    "title": "",
+    "section": "",
+    "text": "we showed you commons in the example of the vp but commons is not just for bi"
+  },
+  {
+    "objectID": "index.html#section-52",
+    "href": "index.html#section-52",
+    "title": "",
+    "section": "",
+    "text": "commons creator\n\n\ncommons user\n\n\nExample question\n\n\n\n\n\n\nBiostatistician\n\n\nBiologist / MD / clinical researcher\n\n\n“Compare treatment groups using the approved method.”\n\n\n\n\nUX researcher\n\n\nProduct manager\n\n\n“Summarize experiment results and explain which segments changed.”\n\n\n\n\nEconomist / policy analyst\n\n\nPolicy maker / program lead\n\n\n“Simulate the budget impact of this policy change.”\n\n\n\n\n\n\nits for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters"
+  },
+  {
+    "objectID": "index.html#draft",
+    "href": "index.html#draft",
+    "title": "",
+    "section": "(Draft)",
+    "text": "(Draft)"
+  },
+  {
+    "objectID": "index.html#section-54",
+    "href": "index.html#section-54",
+    "title": "",
+    "section": "",
+    "text": "Looking forward\n\n\ndatabot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else"
+  },
+  {
+    "objectID": "index.html#canvas",
+    "href": "index.html#canvas",
+    "title": "",
+    "section": "Canvas",
+    "text": "Canvas\n\n\n\nWe have been experimenting with something canvas\nCanvas is a next generation agent experience\nAssumes that you won’t look at the code usually\nfrees up real estate / degrees of freedom to other expansive and new agent collaboration interfaces\nFeels aggressive in the way that Databot felt to us a year ago\nIf you want to learn more, see Joe’s talk"
+  }
+]

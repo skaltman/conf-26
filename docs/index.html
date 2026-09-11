@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <title>index</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-f87543e3aa9f6797401a05392aeced1e.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level2 title-slide green-slide center">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:68%;">
+<h3 class="talk-title" id="agents-for-correct-transparent-and-reproducible-analysis">Agents for correct, transparent, and reproducible analysis</h3>
+<div class="talk-meta">
+<p><strong>Simon Couch and Sara Altman</strong></p>
+<p>posit::conf(2026)</p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="circle-pair" aria-hidden="true">
+<span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span>
+</div>
+</div></div>
+</section>
+<section id="section-1" class="slide level2 agent-story-slide slow-tool-calls">
+<h2></h2>
+<div class="agent-window">
+  <div class="agent-thread">
+        <div class="chat-turn chat-turn-user">
+          <div class="chat-message chat-message-user">
+            how is traffic trending for our site?
+          </div>
+        </div>
+        <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="0">
+          <div class="chat-message chat-message-agent">
+            <div class="agent-thinking"><span></span> Analyzing site traffic</div>
+            <div class="tool-card" style="--tool-delay: 0s">
+              <span class="tool-card-icon">⌕</span>
+              <span><strong>Searching workspace</strong><small>web analytics</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+            <div class="tool-card" style="--tool-delay: 2.25s">
+              <span class="tool-card-icon">◫</span>
+              <span><strong>Querying warehouse</strong><small>analytics.pageviews</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+            <div class="tool-card" style="--tool-delay: 3.5s">
+              <span class="tool-card-icon">∿</span>
+              <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
+              <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+            </div>
+          </div>
+        </div>
+        <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="0">
+          <div class="chat-message chat-message-agent">
+            <p>Daily visits are down <strong>64%</strong> over the last 90 days.</p>
+            <div class="dau-chart">
+              <div class="dau-chart-title"><span>Daily site visits</span><strong>−64%</strong></div>
+              <svg viewbox="0 0 620 225" role="img" aria-label="Daily site visits rise unevenly, then fall sharply after a changepoint.">
+                <defs>
+                  <lineargradient id="dau-area" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ee6331" stop-opacity="0.28"></stop>
+                    <stop offset="100%" stop-color="#ee6331" stop-opacity="0.02"></stop>
+                  </lineargradient>
+                </defs>
+                <g class="chart-grid">
+                  <line x1="56" y1="34" x2="598" y2="34"></line><line x1="56" y1="86" x2="598" y2="86"></line>
+                  <line x1="56" y1="138" x2="598" y2="138"></line><line x1="56" y1="190" x2="598" y2="190"></line>
+                </g>
+                <g class="chart-labels">
+                  <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+                  <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+                </g>
+                <path class="chart-area" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145 L598,190 L56,190 Z"></path>
+                <path class="chart-line" pathlength="1" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145"></path>
+                <circle class="chart-end" cx="598" cy="145" r="6"></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+<aside class="notes">
+<p>This morning, your VP pulled up a coding agent and asked a question.</p>
+<p>[yada yada this is what happen]</p>
+<p>Now, as data people, we might have asked ourselves “How are daily visits being measured?” “What event triggers an entry in this column?” “What other possible explanations could account for this change in trend other than a genuine reversal in the traffic going to this site?” If you had dug further, you would have learned that this kind of pageview event no longer triggers on newer versions of Chrome. As users gradually update Chrome, their page visits are no longer registered in this table. Regardless, this isn’t even the typical table that the data science team uses to measure site traffic anyway.</p>
+<p>Nevertheless, you’re not there. Your VP brings this chart to leadership. They decide to spend millions to reverse the trend.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2 agent-story-slide slow-tool-calls">
+<h2></h2>
+<div class="agent-window month-later-window">
+  <div class="agent-thread">
+    <div class="chat-turn chat-turn-user">
+      <div class="chat-message chat-message-user">
+        could you find the site traffic chart we made a month ago?
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent tool-run history-tool-run fragment fade-up" data-fragment-index="0">
+      <div class="chat-message chat-message-agent">
+        <div class="agent-thinking"><span></span> Looking for prior analysis</div>
+        <div class="tool-card" style="--tool-delay: 0s">
+          <span class="tool-card-icon">⌕</span>
+          <span><strong>Searching conversations</strong><small>site traffic chart</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 1.25s">
+          <span class="tool-card-icon">◫</span>
+          <span><strong>Checking generated files</strong><small>temporary workspace</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent history-missing fragment fade-up" data-fragment-index="0">
+      <div class="chat-message chat-message-agent">
+        I couldn’t find that conversation or any saved analysis files. Do you want me to recreate that chart for the last 90 days?
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-user fragment fade-up" data-fragment-index="1">
+      <div class="chat-message chat-message-user">
+        yeah
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent tool-run fragment fade-up" data-fragment-index="2">
+      <div class="chat-message chat-message-agent">
+        <div class="agent-thinking"><span></span> Analyzing site traffic</div>
+        <div class="tool-card" style="--tool-delay: 0s">
+          <span class="tool-card-icon">⌕</span>
+          <span><strong>Searching workspace</strong><small>web analytics</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 1.25s">
+          <span class="tool-card-icon">◫</span>
+          <span><strong>Querying warehouse</strong><small>analytics.sessions</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+        <div class="tool-card" style="--tool-delay: 2.5s">
+          <span class="tool-card-icon">∿</span>
+          <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
+          <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
+        </div>
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent result-turn fragment fade-up" data-fragment-index="2">
+      <div class="chat-message chat-message-agent">
+        <p>Daily visits increased <strong>22%</strong> over the last 90 days.</p>
+        <div class="dau-chart">
+          <div class="dau-chart-title"><span>Daily site visits</span><strong>+22%</strong></div>
+          <svg viewbox="0 0 620 225" role="img" aria-label="Daily site visits trend unevenly upward over the last 90 days.">
+            <defs>
+              <lineargradient id="traffic-area-up" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#23875b" stop-opacity="0.26"></stop>
+                <stop offset="100%" stop-color="#23875b" stop-opacity="0.02"></stop>
+              </lineargradient>
+            </defs>
+            <g class="chart-grid">
+              <line x1="56" y1="34" x2="598" y2="34"></line><line x1="56" y1="86" x2="598" y2="86"></line>
+              <line x1="56" y1="138" x2="598" y2="138"></line><line x1="56" y1="190" x2="598" y2="190"></line>
+            </g>
+            <g class="chart-labels">
+              <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+              <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+            </g>
+            <path class="chart-area" d="M56,69 L69,74 L82,66 L95,71 L108,63 L121,68 L134,70 L147,61 L160,65 L173,57 L186,64 L199,60 L212,54 L225,58 L238,62 L251,52 L264,56 L277,48 L290,55 L303,51 L316,44 L329,50 L342,47 L355,39 L368,46 L381,43 L394,49 L407,40 L420,44 L433,36 L446,43 L459,38 L472,34 L485,42 L498,37 L511,31 L524,39 L537,35 L550,29 L563,36 L576,33 L589,38 L598,41 L598,190 L56,190 Z"></path>
+            <path class="chart-line" pathlength="1" d="M56,69 L69,74 L82,66 L95,71 L108,63 L121,68 L134,70 L147,61 L160,65 L173,57 L186,64 L199,60 L212,54 L225,58 L238,62 L251,52 L264,56 L277,48 L290,55 L303,51 L316,44 L329,50 L342,47 L355,39 L368,46 L381,43 L394,49 L407,40 L420,44 L433,36 L446,43 L459,38 L472,34 L485,42 L498,37 L511,31 L524,39 L537,35 L550,29 L563,36 L576,33 L589,38 L598,41"></path>
+            <circle class="chart-end" cx="598" cy="41" r="6"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+<p>A month later, leadership will ass to see the chart again. The VP will open up the same agent, but it can’t find the conversation. (It was deleted after 30 days.) All of the analysis had happened in a tempfile that is long gone.</p>
+<p>The agent offers to make it again. This time, when the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2 quote-slide paper-slide">
+<h2></h2>
+<blockquote>
+<p>In the battle between convenience and correctness, convenience is winning.</p>
+<footer>
+Joe Cheng, CTO @ Posit
+</footer>
+</blockquote>
+<aside class="notes">
+<p>We’ve seen situations like this internally and with the organizations we work with. Posit’s CTO recently summarized it like so:</p>
+<p>It is true that AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.</p>
+<p>It just so happened that Joe said this a month ago, but he could have said it 6/7 years ago (ayyy) and it would still have been true.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p><img data-src="figures/conviviality-spreadsheeting-error.png" class="rounded" style="width:90.0%"></p>
+<div class="footer">
+<p><span style="color:#ee6331;">https://www.accountingweb.co.uk/business/management-accounting/convivialitys-spreadsheet-hell-sinks-the-business</span></p>
+</div>
+<aside class="notes">
+<p>In 2019, Conviviality (a beverage company) discovered they had been mistakenly reporting healthy financials for years due to a “spreadsheet arithmetic error.”</p>
+<blockquote>
+<p>£5.2m of that £14m came thanks to “a material error in the financial forecasts”. The error, it later admitted, was “a spreadsheet arithmetic error”.</p>
+</blockquote>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<p><img data-src="figures/scientists-software-error.png" class="rounded" style="width:80.0%"></p>
+<div class="footer">
+<p>https://www.science.org/doi/10.1126/science.314.5807.1856</p>
+</div>
+<aside class="notes">
+<p>Or Joe could have said it 20 years ago, when it came to light that a whole subfield of protein modeling had been distracted by a bug in in-house, closed-source software.</p>
+<p>From 2001 to 2006, Geoffrey Chang published a series of heavy-hitting papers that reshaped his field, while other labs struggled to reproduce their findings. The software that the Chang lab used to carry out the analysis contained a bug that flipped the sign of a computation. The bug came to light when another lab solved a similar protein structure and saw that it produced a near-mirror image of Chang’s. At this point, the Chang lab checked their code, found the bug, and retracted 5 papers.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<div class="fragment">
+<p><img data-src="figures/rstudio-blog.png" style="display: block; margin: 0 auto;" height="650"></p>
+<aside class="notes">
+<p>I bring these examples up to say that there have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance is not “you need to forgo convenience in favor of correctess.”</p>
+<p>I was doing some research for this talk when I came across this old weblog…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="footer">
+<p>rstudioblog.wordpress.com/2011/02/27/about-the-rstudio-project/</p>
+</div>
+</div>
+</section>
+<section id="section-7" class="slide level2 quote-slide compact-quote paper-slide">
+<h2></h2>
+<blockquote>
+<p>Our goal is to develop a powerful tool that supports <span class="accent">trustworthy, high quality analysis</span>.</p>
+<p><br></p>
+<p>At the same time, we want RStudio to be as <span class="accent">straightforward and intuitive</span> as possible.</p>
+<footer>
+JJ Allaire, 2011
+</footer>
+</blockquote>
+<div class="footer">
+<p>https://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/</p>
+</div>
+<aside class="notes">
+<p>He’s saying “it can be correct <em>and</em> convenient.”</p>
+<p>What if our stance was the same with AI? In other words, can we build data analysis agents that are both correct and convenient to use?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-8" class="title-slide slide level1 correct-convenient-slide paper-slide center">
+<h1></h1>
+<div class="cc-wrap">
+<div class="circle-pair" aria-hidden="true">
+<span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span>
+</div>
+<div class="cc-text">
+Correct and convenient
+</div>
+</div>
+</section>
+
+<section>
+<section id="section-9" class="title-slide slide level1 paper-slide center">
+<h1></h1>
+<aside class="notes">
+<p>this pull between correctness and convenience has weighed on all of our minds in this new age of llms</p>
+<p>and it became especially relevant last year in 2025 for us and for many of you I imagine 2025 was the year AI got very very convenient and we needed to think seriously about correctness</p>
+<p>and we were so worried</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-10" class="slide level2 split-image-slide split-40 split-image-top" data-background-image="figures/databot-flotation-blog-cropped.png">
+<h2></h2>
+<div class="columns">
+<div class="column">
+<h3 class="split-title" id="august-2025">August 2025</h3>
+</div><div class="column" role="img" aria-label="Illustration of a databot mascot wearing a flotation device">
+
+</div></div>
+<div class="footer footer-left">
+<p>posit.co/blog/databot-is-not-a-flotation-device</p>
+</div>
+<aside class="notes">
+<p>so worried that when we released our new sota coding agent in 2025, we did so under what was essentially a warning label</p>
+<p>this is an image from a blog post joe and I wrote to accompany the release of databot, which was an exploratory data analysis agent that lived in positron</p>
+<p>and this post was actually one of the first things I worked when I joined the AI team, and it gave me the opportunity to do one of the things that I think I do best: be a pessimist</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="section-11" class="title-slide slide level1 center" data-background-image="figures/getty-images-YqJdF4TIxG0-unsplash.jpg" data-background-size="cover" data-background-position="center">
+<h1></h1>
+<div class="footer">
+<p>Getty Images. Thank you Margaret Biffar and Isabella Velásquez!</p>
+</div>
+</section>
+
+<section id="section-12" class="title-slide slide level1 paper-slide center">
+<h1></h1>
+
+<img data-src="figures/databot.png" style="display: block; margin: 0 auto;" class="r-stretch"><aside class="notes">
+<p>because we were all so excited about databot, but also so worried about people trusting its answers when it was wrong</p>
+<p>that we wrote an entire blog post explaining the ways in which it might fail</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-13" class="title-slide slide level1 quote-slide compact-quote paper-slide center">
+<h1></h1>
+<blockquote>
+<p>In my 30-year career writing software professionally, Databot is both the <span class="accent">most exciting software</span> I’ve worked on, and also the<br>
+<span class="accent">most dangerous</span>.</p>
+<footer>
+Joe Cheng, Posit CTO
+</footer>
+</blockquote>
+<aside class="notes">
+<p>and if you were here at conf last year, you might remember Joe’s keynote where said somethign a bit like this</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-14" class="title-slide slide level1 paper-slide center">
+<h1></h1>
+<aside class="notes">
+<p>and given that I think at this point there might be a question on your mind, which I think is fair to ask and I think we all have asked ourselves in the past few years</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="section-15" class="title-slide slide level1 statement-slide paper-slide center">
+<h1></h1>
+<div class="statement">
+<p>Why are we doing this?!</p>
+</div>
+<aside class="notes">
+<p>if AI is this agent of chaos that we are so worried, why involve ourselves at all</p>
+<p>and there are many answers, one of which is that things change quickly. something you might have worried abotu yesterday is no longer true today</p>
+<p>and so in light of that its worth briefly checking in on how we see llms for data analysis right now in september 2026</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-models-got-better" class="slide level2 beat-slide">
+<h2>The models got better</h2>
+</section>
+<section id="section-16" class="slide level2 paper-slide">
+<h2></h2>
+<div class="plot-slide-content fragment">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" style="width:92.0%" alt="A scatterplot of price against carat. The points form a clear negative association, with price generally falling as carat rises."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="plot-slide-content fragment">
+<div style="margin: 18px 0 0; font-size: 44px; font-weight: 700; color: #3f73d8;">
+Can models interpret plots that contradict their expectations?
+</div>
+</div>
+<aside class="notes">
+<p>around a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one of well known datasets if youre thinking uh thats not right. you are correct.</p>
+<p>this is what we wanted to know: would models correctly interpret plots that contradicted their expectations?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="november-2025" class="slide level2 paper-slide">
+<h2>November 2025</h2>
+<div class="plot-slide-content">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%" alt="A horizontal stacked bar chart titled 'Models often report what they expect to see, not what's plotted.' GPT-5, Gemini Pro 2.5, and Claude Sonnet 4.5 are mostly incorrect."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>posit-dev.github.io/bluffbench</p>
+</div>
+<aside class="notes">
+<p>We tried a range of interventions to improve these scores, but none moved them much. Even when a model noticed during its reasoning that the association did not look as expected, it often still reported the expected relationship.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="september-2026" class="slide level2 paper-slide">
+<h2>September 2026</h2>
+<div class="plot-slide-content">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%" alt="A faceted horizontal stacked bar chart of percent correct across recent models, split into thinking and no-thinking groups. Thinking models perform better, while most models still give many incorrect answers."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>posit-dev.github.io/bluffbench</p>
+</div>
+</section>
+<section id="trustworthy-analysis-still-takes-more-than-a-frontier-model." class="slide level2 beat-slide">
+<h2>Trustworthy analysis still takes more than a frontier model.</h2>
+</section>
+<section id="section-17" class="slide level2 paper-slide">
+<h2></h2>
+<div class="plot-slide-content">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" style="width:92.0%" alt="A scatterplot of sleep hours against stress score with a negative trend. A subset of points falls exactly along a straight line, suggesting a data-quality artifact."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>github.com/posit-dev/bluffbench2</p>
+</div>
+<aside class="notes">
+<p>bluffbench2 tests whether models notice subtle data quality issues in visualizations.</p>
+<p>take a look at this plot. what do you notice?</p>
+<p>one thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.</p>
+<p>we wanted to see if models would be able to pick up on this kind of subtle visual artifact</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-18" class="slide level2 paper-slide">
+<h2></h2>
+<div class="plot-slide-content">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" style="width:78.0%" alt="A horizontal bar chart of bluffbench2 scores by model. Every model scores below 50 percent, showing that frontier models still struggle to notice subtle data-quality issues."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>github.com/posit-dev/bluffbench2</p>
+</div>
+<aside class="notes">
+<p>even frontier models don’t do very well</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="section-19" class="title-slide slide level1 statement-slide paper-slide center">
+<h1></h1>
+<div class="statement">
+<p>Data analysis depends on <span class="accent">context</span> that is not in the data.</p>
+</div>
+<aside class="notes">
+<p>but there is a second problem: data analysis depends on context that is not in the data</p>
+<p>documentation, etc all shape whether an analysis is correct</p>
+<p>a human expert often holds that context</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="our-mission-is-to-find-new-ways-to-understand-data.-llms-are-part-of-that-exploration." class="slide level2 beat-slide">
+<h2>Our mission is to find new ways to understand data. LLMs are part of that exploration.</h2>
+<aside class="notes">
+<p>but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-20" class="slide level2">
+<h2></h2>
+</section>
+<section id="section-21" class="slide level2" data-background-image="figures/mission-ocean.jpg" data-background-size="cover" data-background-position="center">
+<h2></h2>
+<aside class="notes">
+<p>for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place.</p>
+<p>Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.</p>
+<p>But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it.</p>
+<p>learning the tidyverse, and data science…these tools gave me a way to investigate any topic and learn about the world.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-22" class="slide level2 split-image-slide" data-background-image="figures/oceanimagebank-rays.jpg">
+<h2></h2>
+<div class="columns">
+<div class="column">
+<h3 class="split-title" id="the-right-tools-let-us-see-below-the-surface.">The right tools let us see below the surface.</h3>
+</div><div class="column" role="img" aria-label="A school of rays swimming below the ocean surface">
+
+</div></div>
+<div class="image-credit">
+Photo: Lars von Ritter Zahony / Ocean Image Bank
+</div>
+<aside class="notes">
+<p>the right tools let us see below the surface The tools enable the curiosity.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="section-23" class="title-slide slide level1 statement-slide paper-slide center">
+<h1></h1>
+<div class="statement">
+<p>AI is a <span class="accent">continuation</span> of our work to find <span class="accent">new ways to explore data</span>.</p>
+</div>
+<aside class="notes">
+<p>But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis.</p>
+<p>all three point in the same direction: we are going to keep going down the LLM path. so then the question becomes…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="section-24" class="title-slide slide level1 header-slide blue-slide center">
+<h1></h1>
+<div class="columns">
+<div class="column header-text" style="width:64%;">
+<p>How do we make AI trustworthy?</p>
+</div><div class="column" style="width:36%;">
+<p><img data-src="figures/orange-shield.png" class="header-image" alt="Orange shield"></p>
+</div></div>
+</section>
+<section id="section-25" class="slide level2">
+<h2></h2>
+</section></section>
+<section>
+<section id="section-26" class="title-slide slide level1 paper-slide diagram-slide center">
+<h1></h1>
+<div class="diagram-frame hitl-diagram" role="img" aria-label="Human-in-the-loop cycle: the agent does work, a human verifies it, and the agent tries again.">
+  <svg class="diagram-connectors" viewbox="0 0 1200 680" aria-hidden="true">
+    <path d="M210 285 C210 85 1010 85 1010 285" marker-end="url(#hitl-arrow)"></path>
+    <path d="M1010 395 C1010 595 210 595 210 395" marker-end="url(#hitl-arrow)"></path>
+  </svg>
+
+  <div class="hitl-node hitl-agent">
+    <span class="node-title">Agent</span>
+  </div>
+
+  <div class="hitl-node hitl-human">
+    <span class="node-title">Human</span>
+  </div>
+
+  <div class="hitl-arrow-label hitl-do-label">does stuff</div>
+  <div class="hitl-arrow-label hitl-verify-label">verifies, approves, etc.</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Here’s a common thought about AI
+<ul>
+<li>It’s untrustworthy, but useful.</li>
+<li>To make it trustworthy, we need people to verify the output from or supervise agents.</li>
+</ul></li>
+</ul>
+<p>it is an intuitively appealing division of labor. the agent does what it’s good at, the human provides the judgment to keep it from going off the rails.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-27" class="slide level2 paper-slide">
+<h2></h2>
+<div style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+<p><img data-src="figures/flextape.png" style="width: auto; max-height: 540px; margin: 0; border-radius: 0.75rem;"></p>
+<div class="fragment" style="min-height: 1.15em; margin: 0; font-size: 1.2em; line-height: 1.15;">
+*the <strong>slap a human on it</strong> approach
+</div>
+</div>
+<aside class="notes">
+<p>this sounds so nice! the human is there to prevent mistakes and all will be good. so we should just apply this anywhere we see a problem.</p>
+<p>I like to call this simplistic division of labor the “slap a human on it” approach.</p>
+<p>there’s only one problem: this simple view is not how these systems work.</p>
+<p>you can’t assume that just because a human is present and technically “in the loop,” you’ve solved the issue of correctness by asking them to verify something.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="section-28" class="title-slide slide level1 center" data-background-image="figures/databot-flotation-beach.png" data-background-size="cover" data-background-position="center">
+<h1></h1>
+<div class="fragment" style="position: absolute; top: 43%; left: 2%; width: 45%; margin: 0; padding: 0.75rem 1rem; background: #f5f2ec; color: #24437b; box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%); font-size: 0.72em; font-weight: 700; text-align: left;">
+<p>“Databot, and LLMs in general, aren’t at a point where you can abdicate responsibility or suspend skepticism when working with data. … These skills help you <span style="color:#dd5d7b;">catch errors, interpret results in context, and avoid being misled by confident but incorrect claims.”</span></p>
+</div>
+<div class="footer">
+<p><span style="color:#fff1c9;">posit.co/blog/databot-is-not-a-flotation-device</span></p>
+</div>
+<aside class="notes">
+<p>we wrote a whole article about the dangers of Databot and why users needed to remain skeptical and apply their expertise</p>
+<p>All of that is still true. I stand by it. It’s inspirational! I would love to avoid being misled by confident but incorrect claims.</p>
+<p>but notice that this puts the responsibility for correctness on the user: be there, remain vigilant, and apply your expertise</p>
+<p>underneath it was one implicit strategy: stay vigilant and read the code</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-29" class="title-slide slide level1 paper-slide hitl-evidence-slide center">
+<h1></h1>
+<div class="hitl-evidence-heading">
+<p>Adding a human <span class="accent">does not guarantee</span> a better result.</p>
+</div>
+<div class="hitl-evidence-points">
+<ul>
+<li class="fragment">Human-AI combination often underperforms one or the other.</li>
+<li class="fragment">Automation bias.</li>
+<li class="fragment">Approval fatigue.</li>
+<li class="fragment">Trust, timing, cognitive load, social cues, and information design all shape decisions.</li>
+</ul>
+</div>
+<div class="footer hitl-footer">
+<p>Vaccaro et al.&nbsp;(2024); Parasuraman and Manzey (2010); Anthropic (2026)</p>
+</div>
+<aside class="notes">
+<p>a 2024 meta-analysis looked at 106 experimental studies that compared humans alone, AI alone, and human-AI teams</p>
+<p>on average, the combination performed worse than the better of the human or AI alone. decision tasks showed particular losses</p>
+<p>this does not mean every human-AI team is worse. it means that adding a human does not automatically produce a better system</p>
+<p>human judgment does not stay fixed when we put someone into an agent system</p>
+<p>automation bias is one example: in soem situations, people can follow an automated recommendation even when it is wrong</p>
+<p>approval fatigue can be a big issue think about your own coding agent. when it asks you to approve a command, how often do you carefully read it, and how often do you just hit accept?</p>
+<p>trust, timing, cognitive load, social cues, the interface, and the amount of information all affect how someone decides whether code or an action is correct or safe</p>
+<p>full citations, in case anyone asks: - Vaccaro, M., Almaatouq, M., &amp; Malone, T. W. (2024). “When combinations of humans and AI are useful: A systematic review and meta-analysis.” Nature Human Behaviour, 8, 2296–2309. - Parasuraman, R., &amp; Manzey, D. H. (2010). “Complacency and bias in human use of automation: An attentional integration.” Human Factors, 52(3), 381–410. - Hughes, J. &amp; Anthropic (2026). “How we built Claude Code auto mode: a safer way to skip permissions.” anthropic.com/engineering/claude-code-auto-mode</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-30" class="title-slide slide level1 statement-slide paper-slide center">
+<h1></h1>
+<div class="statement">
+<p>People are <span class="accent">not fixed safety components.</span></p>
+</div>
+<aside class="notes">
+<p>because people are not fixed safety components we can’t just slot them in whenever we are worried an agent system might be wrong</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-31" class="title-slide slide level1 beat-slide center">
+<h1></h1>
+<p><span class="fragment">How do we design the entire system to produce trustworthy work?</span></p>
+<aside class="notes">
+<p>the question is how we design the interaction and the entire system so that human expertise can actually support correctness</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="section-32" class="title-slide slide level1 statement-slide paper-slide center">
+<h1></h1>
+<div class="bullet-replace">
+<div class="statement regular-weight replace-parents fragment fade-out" data-fragment-index="0">
+<p>Build trust and correctness into the system itself<br><br> Consider how interaction works with the user and can support their expertise</p>
+</div>
+<div class="statement regular-weight replace-subs fragment" data-fragment-index="0">
+<p>Help the agent be correct<br><br> Make it less bad when it is wrong</p>
+</div>
+</div>
+<aside class="notes">
+<p>In other words: help the agent be correct, and make it less bad when it’s wrong.</p>
+<p>so for the rest of our time today instead as we go through what we’ve been working on we are going to focus on these two goals</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-33" class="slide level2 paper-slide">
+<h2></h2>
+<p><img data-src="figures/posit-assistant-homepage.png" class="rounded" height="650"></p>
+<aside class="notes">
+<p>Our flagship agent is Posit Assistant. Posit Assistant is a coding and data science agent. It’s available in RStudio, Positron, and the terminal. When it’s running inside of your IDE, it works inside of your active R and Python session. You can use whatever model from whatever provider you want with it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="footer">
+<p>assistant.posit.co</p>
+</div>
+</section>
+<section id="section-34" class="slide level2">
+<h2></h2>
+<aside class="notes">
+<p>In thinking through how to demo out Posit Assistant, I thought about how Sara described her first moments of really getting the hang of data science tools as like seeing below the surface. I think many of us might have had a moment like this at some point, when we began to understand how powerful data science and statistics are for answering questions about the world.</p>
+<p>The first time I felt this way, I had been asked to use R to understand what affects flight delays. I had to load in some data and then write dplyr and ggplot to see if I could make any decisions that would give me better chances of my flight leaving on time.</p>
+<p>In demoing Posit Assistant, I thought I might revisit that moment with you.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-35" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/01-pa-demo-webfetch.mp4">
+</video>
+<aside class="notes">
+<p>I’m in Positron, with Posit Assistant pulled up on the left hand side and a live R session. I’ll start off by asking the agent about R packages that could help me grab data on flights.</p>
+<p>…</p>
+<p>It can do normal coding agent stuff</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-36" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/02-pa-demo-docs.mp4">
+</video>
+<aside class="notes">
+<p>It can read documentation (in the same way that you would, too)</p>
+<p>Also, note that it preferred to keep data in the file system</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-37" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/03-pa-demo-clean-data.mp4">
+</video>
+<aside class="notes">
+<ul>
+<li>Cleaning mode: we felt that most coding agents had a superficial relationship with data quality</li>
+<li>It pays attention to missing data, outliers, etc</li>
+<li>Cleaning script is persisted</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-38" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/04-pa-demo-plots.mp4">
+</video>
+<aside class="notes">
+<p>You can see plots</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-39" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/05-pa-demo-carriers.mp4">
+</video>
+<aside class="notes">
+<p>The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-40" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/06-pa-demo-report.mp4">
+</video>
+<aside class="notes">
+<p>Slash commands (has a bunch of specialized skills) + can write quarto reports</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-41" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/07-pa-demo-preview.mp4">
+</video>
+<aside class="notes">
+<p>Can use your IDE in the normal way</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-42" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/08-pa-demo-model-cost.mp4">
+</video>
+<aside class="notes">
+<p>The whole conversation was 10 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we’ve worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees. Per token, this model, GLM 5.3 Flash, is less than a thirtiest of the price of Claude Opus 5, and is served under Zero Data Retention.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-43" class="slide level2">
+<h2></h2>
+<p><img data-src="figures/posit-assistant-homepage.png" class="rounded" height="650"></p>
+<aside class="notes">
+<p>We’ve designed Posit Assistant to be more correct, and we’ve designed it to make better use of your expertise than other coding agents, so that you’re more likely to know when it’s wrong.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="footer">
+<p>assistant.posit.co</p>
+</div>
+</section></section>
+<section id="section-44" class="title-slide slide level1 statement-slide paper-slide center">
+<h1></h1>
+<p><br><br></p>
+<div class="statement regular-weight">
+<p>Help the model not be wrong <span class="fragment"><strong>by encouraging sound statistics and reproducibility practices</strong></span><br><br> Make it less bad when it is wrong <span class="fragment"><strong>by making good use of your expertise and sharing an R/Python environment</strong></span></p>
+</div>
+<aside class="notes">
+<p>Let’s revisit those lessons learned on agent-building from Sara. She said we ought to help the model not be wrong, and make it less bad when it is wrong.</p>
+<p>Much of helping the model not be wrong is by asking nicely :) We tell it to approach data analysis with an openness to uncertainty, we tell it work in persistent files, we tell it to take data cleanliness seriously.</p>
+<p>Various elements of Posit Assistant help you and the agent have a richer collaboration. Data cleaning mode loops you in on important decisions that affect interpretation. We show you plots because our bluffbench evaluations show we can’t trust the models to interpret models well. We place you and the agent in the same computational environment so that, when things go wrong, you can quickly get on the same page and see eye-to-eye.</p>
+<p>That said, what about people that don’t have data expertise and don’t know how to write R or Python code?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="but-what-if-the-user-is-not-a-data-scientist" class="title-slide slide level1 center">
+<h1>But what if the user is not a data scientist?</h1>
+<aside class="notes">
+<p>The VP does not have data science expertise and does not know how to use R and Python. Posit Assistant does not serve them. What can we do for the non data scientist users?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-45" class="slide level2">
+<h2></h2>
+<div class="agent-window vp-reminder-window">
+  <div class="agent-thread">
+    <div class="chat-turn chat-turn-user">
+      <div class="chat-message chat-message-user">
+        how is traffic trending for our site?
+      </div>
+    </div>
+    <div class="chat-turn chat-turn-agent result-turn">
+      <div class="chat-message chat-message-agent">
+        <p>Daily visits are down <strong>64%</strong> over the last 90 days.</p>
+        <div class="dau-chart">
+          <div class="dau-chart-title"><span>Daily site visits</span><strong>−64%</strong></div>
+          <svg viewbox="0 0 620 225" role="img" aria-label="Daily site visits rise unevenly, then fall sharply after a changepoint.">
+            <defs>
+              <lineargradient id="dau-area-reminder" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ee6331" stop-opacity="0.28"></stop>
+                <stop offset="100%" stop-color="#ee6331" stop-opacity="0.02"></stop>
+              </lineargradient>
+            </defs>
+            <g class="chart-grid">
+              <line x1="56" y1="34" x2="598" y2="34"></line><line x1="56" y1="86" x2="598" y2="86"></line>
+              <line x1="56" y1="138" x2="598" y2="138"></line><line x1="56" y1="190" x2="598" y2="190"></line>
+            </g>
+            <g class="chart-labels">
+              <text x="46" y="39">60k</text><text x="46" y="91">40k</text><text x="46" y="143">20k</text>
+              <text x="56" y="215">90 days ago</text><text x="324" y="215">45 days ago</text><text x="598" y="215">Today</text>
+            </g>
+            <path class="chart-area" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145 L598,190 L56,190 Z"></path>
+            <path class="chart-line" pathlength="1" d="M56,61 L69,67 L82,58 L95,60 L108,54 L121,59 L134,51 L147,55 L160,57 L173,48 L186,52 L199,45 L212,50 L225,42 L238,46 L251,39 L264,44 L277,36 L290,41 L303,34 L313,37 L319,35 L329,51 L340,57 L351,53 L362,66 L373,61 L384,72 L395,78 L406,73 L417,86 L428,82 L439,95 L450,99 L461,93 L472,108 L483,103 L494,117 L505,113 L516,126 L527,122 L538,134 L549,130 L560,140 L571,137 L582,146 L598,145"></path>
+            <circle class="chart-end" cx="598" cy="145" r="6"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+<p>I want to take a step back and revisit this conversation with the VP.</p>
+<p>In the same way that convenience and correctness can’t be at battle, you can’t be at battle with your VP.</p>
+<p>The VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them.</p>
+<p>Unfortunately, the answer they got was wrong.</p>
+<p>I mentioned earlier that this isn’t the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="trusted-code" class="title-slide slide level1 center">
+<h1><span style="color: #ee6331; font-size: 1.4em;"><em>Trusted</em> code</span></h1>
+<aside class="notes">
+<p>This semantic view is an example of what we’ll call <em>trusted</em> code It’s code that has been vetted and maintained by the data team</p>
+<p>They also might have trusted code in</p>
+<ul>
+<li>Shiny apps</li>
+<li>R and Python packages</li>
+<li>Quarto documents</li>
+</ul>
+<p>Instead of the model writing code afresh every time it’s answering a question, what if it could discover and use this trusted code?</p>
+<p>This is one of the core ideas behind a new open source package that we’re excited to share with you all today. It’s called commons.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="section-46" class="title-slide slide level1 commons-intro-slide center">
+<h1></h1>
+<p><img data-src="figures/commons-hex.png" class="commons-intro-logo" alt="Commons logo"></p>
+<aside class="notes">
+<p>commons helps data scientists build trustworthy data agents for their collaborators.</p>
+<p>It’s an open source R and Python package built on <code>ellmer</code> / <code>chatlas</code> and <code>shinychat</code>. You can use it with whatever model from whatever provider you want.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-47" class="slide level2 draft-slide">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-01-traffic-trend.mp4">
+</video>
+<aside class="notes">
+<p>let’s see how the VP’s analysis would work with a commons agent</p>
+<p>The first thing the agent does it search for a trusted calculation. Here it finds and runs the data scientist’s site traffic calculation</p>
+<p>the answer is marked as verified to signify that it used vetted code</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-48" class="slide level2 draft-slide">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-02-page-views.mp4">
+</video>
+<aside class="notes">
+<p>However, its unlikely that this trusted code will cover all questions a user might have. For these situations, the agent can write custom r, python, or sql.</p>
+<p>First, the agent will look through additional context in the form of data dictionaries, markdown files, and, if you have them, existing context layers from Databricks and Snowflake.</p>
+<p>Then, it will write whatever code it needs to to find an answer.</p>
+<p>Finally, when it presents an answer, it can provides a citation to that context. That citation will be deterministically checked against trusted context that has appeared so far in the conversation—if it matches, this citation tag will be shown.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-49" class="slide level2 draft-slide">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-03-most-visits.mp4">
+</video>
+<aside class="notes">
+<p>There’s one more possible path, which is that the model cannot find trusted context to justify its approach. In this case, we mark the answer with this little yellow tag, which lets the user know that this answer should be considered less trusted.</p>
+<p>This is how we’ve chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="deterministically-tag-trust" class="slide level2 trust-flow-slide paper-slide">
+<h2>Deterministically tag trust</h2>
+<p><br></p>
+<div class="trust-flow" role="img" aria-label="Commons searches trusted calculations, then marks answers based on whether they use a trusted calculation or a lower-trust custom path.">
+  <div class="trust-tool trust-search">Search trusted calculations</div>
+  <div class="trust-route-labels" aria-hidden="true">
+    <span><span>Find one</span><span class="trust-decision-arrow">↓</span></span>
+    <span><span>Don’t find one</span><span class="trust-decision-arrow">↓</span></span>
+  </div>
+  <div class="trust-branches">
+    <div class="trust-branch trust-branch-high">
+      <div class="trust-tool">Run trusted calculation</div>
+      <span class="trust-down-arrow" aria-hidden="true">↓</span>
+      <div class="trust-marker">
+        <img src="figures/trusted-icon.svg" alt="">
+      </div>
+    </div>
+    <div class="trust-branch trust-branch-lower">
+      <div class="trust-tool">Search context</div>
+      <span class="trust-down-arrow" aria-hidden="true">↓</span>
+      <div class="trust-tool">Write SQL/R/Python</div>
+      <div class="trust-citation-routes" aria-hidden="true">
+        <span><span>Cite</span><span class="trust-decision-arrow">↓</span></span>
+        <span><span>Don’t cite</span><span class="trust-decision-arrow">↓</span></span>
+      </div>
+      <div class="trust-lower-outcomes">
+        <div class="trust-marker">
+          <img src="figures/citation-mark.svg" alt="">
+        </div>
+        <div class="trust-marker">
+          <img src="figures/warning-icon.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+<p>Commons records which tools produced the answer. Trust is based on that execution path, not on the model’s confidence in its own answer. trust is deterministic</p>
+<p>The citation itself is checked against trusted context. A custom answer is not promoted merely because the model says it used a trusted source.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="three-loops" class="slide level2 lifecycle-slide paper-slide">
+<h2>Three loops</h2>
+<div class="lifecycle-cards">
+<div class="lifecycle-card fragment fade-up">
+<h3 id="build">Build</h3>
+<p>You construct the agent by hooking it up to trusted code.</p>
+</div>
+<div class="lifecycle-card fragment fade-up">
+<h3 id="deploy">Deploy</h3>
+<p>Your colleagues use the agent deployed on Connect.</p>
+</div>
+<div class="lifecycle-card fragment fade-up">
+<h3 id="improve">Improve</h3>
+<p>You review the agent’s behavior, adding trusted code to move responses up the trust ladder.</p>
+</div>
+</div>
+<aside class="notes">
+<p>So far, we’ve only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let’s take a step and see what it looks like from yall’s perspective.</p>
+<ol type="1">
+<li>build: encode trusted calculations and context After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.</li>
+<li>deploy: agent answers through the trusted or custom path Apps deploy to Connect like any Shiny app The agent runs R and Python code in a sandbox so that it can be safely deployed</li>
+<li>improve: review behavior and update the layers With the newest Connect release, once you and your admin opt-in, conversation histories will be stored with a native OpenTelemetry integration. After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent.</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="section-50" class="title-slide slide level1 statement-slide paper-slide center">
+<h1></h1>
+<div class="statement regular-weight">
+<p>Help the model not be wrong <span class="fragment"><strong>with trusted calculations and context</strong></span><br><br> Make it less bad when it is wrong <span class="fragment"><strong>by signaling trust and introducing feedback loops</strong></span></p>
+</div>
+<aside class="notes">
+<p>Let’s revisit those guidelines one more time.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-51" class="slide level2">
+<h2></h2>
+<aside class="notes">
+<p>we showed you commons in the example of the vp but commons is not just for bi</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-52" class="slide level2 agent-examples-slide paper-slide">
+<h2></h2>
+<div class="agent-examples-table">
+<table>
+<thead>
+<tr>
+<th>
+commons creator
+</th>
+<th>
+commons user
+</th>
+<th>
+Example question
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="fragment fade-in">
+<td>
+Biostatistician
+</td>
+<td>
+Biologist / MD / clinical researcher
+</td>
+<td>
+“Compare treatment groups using the approved method.”
+</td>
+</tr>
+<tr class="fragment fade-in">
+<td>
+UX researcher
+</td>
+<td>
+Product manager
+</td>
+<td>
+“Summarize experiment results and explain which segments changed.”
+</td>
+</tr>
+<tr class="fragment fade-in">
+<td>
+Economist / policy analyst
+</td>
+<td>
+Policy maker / program lead
+</td>
+<td>
+“Simulate the budget impact of this policy change.”
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<aside class="notes">
+<p>its for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="section-53" class="title-slide slide level1 header-slide blue-slide center">
+<h1></h1>
+<div class="columns">
+<div class="column header-text" style="width:64%;">
+<p>Clinical trials agent</p>
+</div><div class="column" style="width:36%;">
+<p><img data-src="figures/clinical-trials-agent-logo-orange.png" class="header-image" alt="Clinical trials agent logo"></p>
+</div></div>
+</section>
+<section id="draft" class="slide level2">
+<h2>(Draft)</h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Click to play or pause.">
+<source src="figures/clinical-trials-agent-full-demo.mp4" type="video/mp4">
+</video>
+</section>
+<section id="section-54" class="slide level2 header-slide blue-slide">
+<h2></h2>
+<div class="columns">
+<div class="column header-text" style="width:100%;">
+<p>Looking forward</p>
+</div></div>
+<aside class="notes">
+<p>databot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="canvas" class="slide level2">
+<h2>Canvas</h2>
+
+<img data-src="figures/canvas.png" style="display: block; margin: 0 auto;" class="r-stretch"><aside class="notes">
+<ul>
+<li>We have been experimenting with something canvas</li>
+<li>Canvas is a next generation agent experience</li>
+<li>Assumes that you won’t look at the code usually</li>
+<li>frees up real estate / degrees of freedom to other expansive and new agent collaboration interfaces</li>
+<li>Feels aggressive in the way that Databot felt to us a year ago</li>
+<li>If you want to learn more, see Joe’s talk</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="ai-newsletter" class="title-slide slide level1 center">
+<h1>AI Newsletter</h1>
+<div class="columns">
+<div class="column">
+<p><img data-src="figures/ai-newsletter-qr.png"></p>
+</div><div class="column">
+<p><img data-src="figures/ai-newsletter.png" class="rounded"></p>
+</div></div>
+<div class="footer">
+<p>https://opensource.posit.co/tags/ai-newsletter/</p>
+</div>
+<aside class="notes">
+<p>For the last year and a half, we’ve written this together every two weeks</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-55" class="title-slide slide level1 thank-you-slide green-slide center">
+<h1></h1>
+<div class="thank-you-row">
+<h1>
+Thank you
+</h1>
+<div class="circle-pair" aria-hidden="true">
+<span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span>
+</div>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Reveal's autoplay fires when the slide opens, before this fragment appears.
+      const syncAttentionVideo = () => {
+        document.querySelectorAll("video.attention-fragment").forEach((video) => {
+          const isCurrent = video.classList.contains("current-fragment");
+          const isOnCurrentSlide = video.closest("section").classList.contains("present");
+
+          if (isCurrent && isOnCurrentSlide) {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+      };
+
+      Reveal.on("fragmentshown", syncAttentionVideo);
+      Reveal.on("fragmenthidden", syncAttentionVideo);
+      Reveal.on("slidechanged", () => {
+        syncAttentionVideo();
+
+        document.querySelectorAll("video.click-to-toggle").forEach((video) => {
+          if (!video.closest("section").classList.contains("present")) {
+            video.pause();
+            video.blur();
+          }
+        });
+      });
+
+      const toggleVideo = (video) => {
+        if (video.paused) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      };
+
+      document.querySelectorAll("video.click-to-toggle").forEach((video) => {
+        video.addEventListener("click", (event) => {
+          event.stopPropagation();
+          toggleVideo(video);
+        });
+
+        video.addEventListener("keydown", (event) => {
+          if (!video.closest("section").classList.contains("present")) return;
+
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            event.stopPropagation();
+            toggleVideo(video);
+          }
+        });
+      });
+    });
+    </script>
+    <svg class="diagram-definitions" width="0" height="0" aria-hidden="true">
+      <defs>
+        <marker id="hitl-arrow" markerwidth="18" markerheight="18" refx="16" refy="9" orient="auto" markerunits="userSpaceOnUse">
+          <path class="diagram-arrowhead" d="M1,1 L17,9 L1,17 Z"></path>
+        </marker>
+        <marker id="commons-cycle-arrow" markerwidth="14" markerheight="14" refx="12" refy="7" orient="auto" markerunits="userSpaceOnUse">
+          <path class="diagram-arrowhead" d="M1,1 L13,7 L1,13 Z"></path>
+        </marker>
+        <marker id="commons-flow-arrow" markerwidth="18" markerheight="18" refx="16" refy="9" orient="auto" markerunits="userSpaceOnUse">
+          <path class="diagram-arrowhead" d="M1,1 L17,9 L1,17 Z"></path>
+        </marker>
+      </defs>
+    </svg>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
