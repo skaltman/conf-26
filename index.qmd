@@ -1117,7 +1117,7 @@ commons helps data scientists build trustworthy data agents for their collaborat
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
 :::
 
-## {.draft-slide}
+##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-01-traffic-trend.mp4">
@@ -1132,7 +1132,7 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
-## {.draft-slide}
+##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-02-page-views.mp4">
@@ -1150,7 +1150,7 @@ Finally, when it presents an answer, it can provides a citation to that context.
 
 :::
 
-## {.draft-slide}
+##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-03-most-visits.mp4">
