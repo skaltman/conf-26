@@ -889,7 +889,7 @@ In other words: help the agent be correct, and make it less bad when it's wrong.
 so for the rest of our time today instead as we go through what we've been working on we are going to focus on these two goals
 :::
 
-## {.paper-slide}
+## {.blue-slide .posit-assistant-blue-slide}
 
 ![](figures/posit-assistant-homepage.png){.rounded .nostretch height="650"}
 
@@ -1017,12 +1017,12 @@ assistant.posit.co
 <br><br>
 
 ::: {.statement .regular-weight}
-Help the model not be wrong [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br>
+Help the agent be correct [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br>
 Make it less bad when it is wrong [**by making good use of your expertise and sharing an R/Python environment**]{.fragment}
 :::
 
 :::notes
-Let's revisit those lessons learned on agent-building from Sara. She said we ought to help the model not be wrong, and make it less bad when it is wrong.
+Let's revisit those lessons learned on agent-building from Sara. She said we ought to Help the agent be correct, and make it less bad when it is wrong.
 
 Much of helping the model not be wrong is by asking nicely :) We tell it to approach data analysis with an openness to uncertainty, we tell it work in persistent files, we tell it to take data cleanliness seriously.
 
@@ -1031,7 +1031,7 @@ Various elements of Posit Assistant help you and the agent have a richer collabo
 That said, what about people that don't have data expertise and don't know how to write R or Python code?
 :::
 
-# But what if the user is not a data scientist?
+# But what if the user is not a data scientist? {.blue-slide}
 
 ::: notes
 The VP does not have data science expertise and does not know how to use R and Python. Posit Assistant does not serve them. What can we do for the non data scientist users?
@@ -1117,7 +1117,7 @@ commons helps data scientists build trustworthy data agents for their collaborat
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
 :::
 
-## {.draft-slide}
+##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-01-traffic-trend.mp4">
@@ -1132,7 +1132,7 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
-## {.draft-slide}
+##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-02-page-views.mp4">
@@ -1150,7 +1150,7 @@ Finally, when it presents an answer, it can provides a citation to that context.
 
 :::
 
-## {.draft-slide}
+##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/commons-03-most-visits.mp4">
@@ -1162,7 +1162,7 @@ There's one more possible path, which is that the model cannot find trusted cont
 This is how we've chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer.
 :::
 
-## Deterministically tag trust {.trust-flow-slide .paper-slide}
+## {.trust-flow-slide .paper-slide}
 
 <br>
 
@@ -1210,7 +1210,7 @@ The citation itself is checked against trusted context. A custom answer is not
 promoted merely because the model says it used a trusted source.
 :::
 
-## Three loops {.lifecycle-slide .paper-slide}
+## {.lifecycle-slide .paper-slide}
 
 ::: {.lifecycle-cards}
 ::: {.lifecycle-card .fragment .fade-up}
@@ -1235,6 +1235,8 @@ You review the agent's behavior, adding trusted code to move responses up the tr
 ::: notes
 So far, we've only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let's take a step and see what it looks like from yall's perspective.
 
+Remember when Sara showed you the simple loop? Working with commons is more like three loops.
+
 1. build: encode trusted calculations and context
   After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks
   Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.
@@ -1249,7 +1251,7 @@ So far, we've only focused on the experience of the VP. I talked about how this 
 # {.statement-slide .paper-slide}
 
 ::: {.statement .regular-weight}
-Help the model not be wrong [**with trusted calculations and context**]{.fragment}<br><br>
+Help the agent be correct [**with trusted calculations and context**]{.fragment}<br><br>
 Make it less bad when it is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
 :::
 
