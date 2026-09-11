@@ -952,20 +952,12 @@ Also, note that it preferred to keep data in the file system
 ##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/04-pa-demo-plots.mp4">
-</video>
-
-:::notes
-You can see plots
-:::
-
-##
-
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/05-pa-demo-carriers.mp4">
 </video>
 
 :::notes
+You can see plots
+
 The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot
 :::
 
@@ -982,21 +974,13 @@ Slash commands (has a bunch of specialized skills) + can write quarto reports
 ##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/07-pa-demo-preview.mp4">
-</video>
-
-:::notes
-Can use your IDE in the normal way
-:::
-
-##
-
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/08-pa-demo-model-cost.mp4">
 </video>
 
 :::notes
-The whole conversation was 10 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we've worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees. Per token, this model, GLM 5.3 Flash, is less than a thirtiest of the price of Claude Opus 5, and is served under Zero Data Retention.
+Now, this is the end of my demo of Posit Assistant. I do have one more thing I want to call out, though.
+
+The whole conversation was 5 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we've worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees for people that use our Posit AI Pass subscription. Per token, this model, GLM 5.3 Flash, is less than a thirtieth of the price of Claude Opus 5, and is served under Zero Data Retention.
 :::
 
 ##
