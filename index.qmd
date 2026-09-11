@@ -1162,7 +1162,7 @@ There's one more possible path, which is that the model cannot find trusted cont
 This is how we've chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer.
 :::
 
-## Deterministically tag trust {.trust-flow-slide .paper-slide}
+## {.trust-flow-slide .paper-slide}
 
 <br>
 
