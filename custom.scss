@@ -198,6 +198,30 @@ $link-color: color("pink");
   }
 }
 
+.reveal .slide.correct-convenient-slide .cc-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+
+  .circle-pair {
+    height: auto;
+
+    .circle {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .cc-text {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #24437b;
+  }
+}
+
 .reveal .slide.thank-you-slide > h1:empty {
   display: none;
 }
@@ -425,6 +449,11 @@ $link-color: color("pink");
   }
 }
 
+/* Overlay the setup and refrain while preserving statement-slide positioning. */
+.reveal .slide .bullet-replace {
+  height: 100%;
+}
+
 .reveal .slide.beat-slide {
   display: flex !important;
   flex-direction: column;
@@ -514,6 +543,12 @@ $link-color: color("pink");
       margin-top: 18px;
     }
   }
+}
+
+/* Footers are cloned to the reveal root at runtime, so target the
+   footer's own class (see .footer.footer-left above). */
+.reveal .footer.hitl-footer {
+  font-size: 11px !important;
 }
 
 /* Commons agent lifecycle */
@@ -921,6 +956,17 @@ $link-color: color("pink");
   font-size: 14px;
   line-height: 1.2;
   text-align: right;
+}
+
+/* Keep the footer off the image on the databot blog slide.
+   Slide footers are cloned to the reveal root by the quarto-support
+   plugin, so style the clone via its own class, not the slide. */
+.reveal .footer.footer-left {
+  left: 32px;
+  right: auto;
+  width: auto;
+  padding-right: 0;
+  text-align: left;
 }
 
 /* Full-bleed background image set with Quarto's background-image attribute */
