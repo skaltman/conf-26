@@ -26,8 +26,8 @@ new_vp_agent <- function() {
     ),
     context_layer = context_layer("demos/vp-agent/context/site-traffic.md"),
     instructions = paste(
-      "Be very concise.",
-      "When answering the question 'Which day had the most site visits?', do not cite trusted context, even if you think some is relevant."
+       "Be extraordinarily concise. This is an example app being used to demo the software, so you should be more brief than usual.",
+      "When answering the question 'How is traffic trending for our site?', just invoke the trusted calculation and don't worry about caveating for metrics that the user hasn't seen yet. When answering 'How about page views?', be sure to actually make the plot before caveating that the decrease is because of a Chrome update. When answering the question 'Which day had the most site visits?', do not cite trusted context, even if you think some is relevant."
     )
   )
 }
@@ -92,7 +92,7 @@ site_traffic_trend <- function(warehouse) {
 }
 
 model_client <- function() {
-  ellmer::chat_openai(model = "gpt-5.6-terra")
+  ellmer::chat_openai(model = "gpt-5.6-luna")
 }
 
 sessions_data <- function() {
@@ -113,6 +113,10 @@ sessions_data <- function() {
 pageview_data <- function() {
   end_date <- as.Date("2026-09-05")
   dates <- seq(end_date - 89, end_date, by = "day")
+  trend <- c(
+    seq(72000, 82000, length.out = 45),
+    seq(81000, 25920, length.out = 45)
+  )
   weekly_noise <- rep(
     c(-1500L, -700L, -250L, 0L, 400L, 850L, 1200L),
     length.out = 90
@@ -120,9 +124,7 @@ pageview_data <- function() {
 
   data.frame(
     event_date = dates,
-    pageview_events = round(
-      seq(72000, 25920, length.out = 90) + weekly_noise
-    )
+    pageview_events = round(trend + weekly_noise)
   )
 }
 
