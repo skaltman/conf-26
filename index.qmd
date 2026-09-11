@@ -952,20 +952,12 @@ Also, note that it preferred to keep data in the file system
 ##
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/04-pa-demo-plots.mp4">
-</video>
-
-:::notes
-You can see plots
-:::
-
-##
-
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
   <source src="figures/05-pa-demo-carriers.mp4">
 </video>
 
 :::notes
+You can see plots
+
 The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot
 :::
 
@@ -977,16 +969,6 @@ The agent shows restraint in interpretation; is concerned about sample sizes bef
 
 :::notes
 Slash commands (has a bunch of specialized skills) + can write quarto reports
-:::
-
-##
-
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/07-pa-demo-preview.mp4">
-</video>
-
-:::notes
-Can use your IDE in the normal way
 :::
 
 ##

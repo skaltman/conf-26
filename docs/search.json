@@ -91,11 +91,11 @@
     "text": "September 2026\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench"
   },
   {
-    "objectID": "index.html#trustworthy-analysis-still-takes-more-than-a-frontier-model.",
-    "href": "index.html#trustworthy-analysis-still-takes-more-than-a-frontier-model.",
+    "objectID": "index.html#correct-analysis-still-takes-more-than-a-frontier-model.",
+    "href": "index.html#correct-analysis-still-takes-more-than-a-frontier-model.",
     "title": "",
-    "section": "Trustworthy analysis still takes more than a frontier model.",
-    "text": "Trustworthy analysis still takes more than a frontier model."
+    "section": "Correct analysis still takes more than a frontier model.",
+    "text": "Correct analysis still takes more than a frontier model."
   },
   {
     "objectID": "index.html#section-17",
@@ -179,91 +179,77 @@
     "href": "index.html#section-38",
     "title": "",
     "section": "",
-    "text": "You can see plots"
+    "text": "You can see plots\nThe agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot"
   },
   {
     "objectID": "index.html#section-39",
     "href": "index.html#section-39",
     "title": "",
     "section": "",
-    "text": "The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot"
+    "text": "Slash commands (has a bunch of specialized skills) + can write quarto reports"
   },
   {
     "objectID": "index.html#section-40",
     "href": "index.html#section-40",
     "title": "",
     "section": "",
-    "text": "Slash commands (has a bunch of specialized skills) + can write quarto reports"
+    "text": "Now, this is the end of my demo of Posit Assistant. I do have one more thing I want to call out, though.\nThe whole conversation was 5 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we’ve worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees for people that use our Posit AI Pass subscription. Per token, this model, GLM 5.3 Flash, is less than a thirtieth of the price of Claude Opus 5, and is served under Zero Data Retention."
   },
   {
     "objectID": "index.html#section-41",
     "href": "index.html#section-41",
     "title": "",
     "section": "",
-    "text": "Can use your IDE in the normal way"
-  },
-  {
-    "objectID": "index.html#section-42",
-    "href": "index.html#section-42",
-    "title": "",
-    "section": "",
-    "text": "The whole conversation was 10 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we’ve worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees. Per token, this model, GLM 5.3 Flash, is less than a thirtiest of the price of Claude Opus 5, and is served under Zero Data Retention."
+    "text": "We’ve designed Posit Assistant to be more correct, and we’ve designed it to make better use of your expertise than other coding agents, so that you’re more likely to know when it’s wrong.\n\n\nassistant.posit.co"
   },
   {
     "objectID": "index.html#section-43",
     "href": "index.html#section-43",
     "title": "",
     "section": "",
-    "text": "We’ve designed Posit Assistant to be more correct, and we’ve designed it to make better use of your expertise than other coding agents, so that you’re more likely to know when it’s wrong.\n\n\nassistant.posit.co"
+    "text": "how is traffic trending for our site?\n      \n    \n    \n      \n        Daily visits are down 64% over the last 90 days.\n        \n          Daily site visits−64%\n          \n            \n              \n                \n                \n              \n            \n            \n              \n              \n            \n            \n              60k40k20k\n              90 days ago45 days agoToday\n            \n            \n            \n            \n          \n        \n      \n    \n  \n\n\nI want to take a step back and revisit this conversation with the VP.\nIn the same way that convenience and correctness can’t be at battle, you can’t be at battle with your VP.\nThe VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them.\nUnfortunately, the answer they got was wrong.\nI mentioned earlier that this isn’t the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database."
   },
   {
     "objectID": "index.html#section-45",
     "href": "index.html#section-45",
     "title": "",
     "section": "",
-    "text": "how is traffic trending for our site?\n      \n    \n    \n      \n        Daily visits are down 64% over the last 90 days.\n        \n          Daily site visits−64%\n          \n            \n              \n                \n                \n              \n            \n            \n              \n              \n            \n            \n              60k40k20k\n              90 days ago45 days agoToday\n            \n            \n            \n            \n          \n        \n      \n    \n  \n\n\nI want to take a step back and revisit this conversation with the VP.\nIn the same way that convenience and correctness can’t be at battle, you can’t be at battle with your VP.\nThe VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them.\nUnfortunately, the answer they got was wrong.\nI mentioned earlier that this isn’t the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database."
+    "text": "let’s see how the VP’s analysis would work with a commons agent\nThe first thing the agent does it search for a trusted calculation. Here it finds and runs the data scientist’s site traffic calculation\nthe answer is marked as verified to signify that it used vetted code"
+  },
+  {
+    "objectID": "index.html#section-46",
+    "href": "index.html#section-46",
+    "title": "",
+    "section": "",
+    "text": "However, its unlikely that this trusted code will cover all questions a user might have. For these situations, the agent can write custom r, python, or sql.\nFirst, the agent will look through additional context in the form of data dictionaries, markdown files, and, if you have them, existing context layers from Databricks and Snowflake.\nThen, it will write whatever code it needs to to find an answer.\nFinally, when it presents an answer, it can provides a citation to that context. That citation will be deterministically checked against trusted context that has appeared so far in the conversation—if it matches, this citation tag will be shown."
   },
   {
     "objectID": "index.html#section-47",
     "href": "index.html#section-47",
     "title": "",
     "section": "",
-    "text": "let’s see how the VP’s analysis would work with a commons agent\nThe first thing the agent does it search for a trusted calculation. Here it finds and runs the data scientist’s site traffic calculation\nthe answer is marked as verified to signify that it used vetted code"
+    "text": "There’s one more possible path, which is that the model cannot find trusted context to justify its approach. In this case, we mark the answer with this little yellow tag, which lets the user know that this answer should be considered less trusted.\nThis is how we’ve chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer."
   },
   {
     "objectID": "index.html#section-48",
     "href": "index.html#section-48",
     "title": "",
     "section": "",
-    "text": "However, its unlikely that this trusted code will cover all questions a user might have. For these situations, the agent can write custom r, python, or sql.\nFirst, the agent will look through additional context in the form of data dictionaries, markdown files, and, if you have them, existing context layers from Databricks and Snowflake.\nThen, it will write whatever code it needs to to find an answer.\nFinally, when it presents an answer, it can provides a citation to that context. That citation will be deterministically checked against trusted context that has appeared so far in the conversation—if it matches, this citation tag will be shown."
+    "text": "Search trusted calculations\n  \n    Find one↓\n    Don’t find one↓\n  \n  \n    \n      Run trusted calculation\n      ↓\n      \n        \n      \n    \n    \n      Search context\n      ↓\n      Write SQL/R/Python\n      \n        Cite↓\n        Don’t cite↓\n      \n      \n        \n          \n        \n        \n          \n        \n      \n    \n  \n\n\nCommons records which tools produced the answer. Trust is based on that execution path, not on the model’s confidence in its own answer. trust is deterministic\nThe citation itself is checked against trusted context. A custom answer is not promoted merely because the model says it used a trusted source."
   },
   {
     "objectID": "index.html#section-49",
     "href": "index.html#section-49",
     "title": "",
     "section": "",
-    "text": "There’s one more possible path, which is that the model cannot find trusted context to justify its approach. In this case, we mark the answer with this little yellow tag, which lets the user know that this answer should be considered less trusted.\nThis is how we’ve chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer."
-  },
-  {
-    "objectID": "index.html#deterministically-tag-trust",
-    "href": "index.html#deterministically-tag-trust",
-    "title": "",
-    "section": "Deterministically tag trust",
-    "text": "Deterministically tag trust\n\n\n  Search trusted calculations\n  \n    Find one↓\n    Don’t find one↓\n  \n  \n    \n      Run trusted calculation\n      ↓\n      \n        \n      \n    \n    \n      Search context\n      ↓\n      Write SQL/R/Python\n      \n        Cite↓\n        Don’t cite↓\n      \n      \n        \n          \n        \n        \n          \n        \n      \n    \n  \n\n\nCommons records which tools produced the answer. Trust is based on that execution path, not on the model’s confidence in its own answer. trust is deterministic\nThe citation itself is checked against trusted context. A custom answer is not promoted merely because the model says it used a trusted source."
-  },
-  {
-    "objectID": "index.html#three-loops",
-    "href": "index.html#three-loops",
-    "title": "",
-    "section": "Three loops",
-    "text": "Three loops\n\n\nBuild\nYou construct the agent by hooking it up to trusted code.\n\n\nDeploy\nYour colleagues use the agent deployed on Connect.\n\n\nImprove\nYou review the agent’s behavior, adding trusted code to move responses up the trust ladder.\n\n\n\nSo far, we’ve only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let’s take a step and see what it looks like from yall’s perspective.\n\nbuild: encode trusted calculations and context After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.\ndeploy: agent answers through the trusted or custom path Apps deploy to Connect like any Shiny app The agent runs R and Python code in a sandbox so that it can be safely deployed\nimprove: review behavior and update the layers With the newest Connect release, once you and your admin opt-in, conversation histories will be stored with a native OpenTelemetry integration. After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent."
+    "text": "Build\nYou construct the agent by hooking it up to trusted code.\n\n\nDeploy\nYour colleagues use the agent deployed on Connect.\n\n\nImprove\nYou review the agent’s behavior, adding trusted code to move responses up the trust ladder.\n\n\n\nSo far, we’ve only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let’s take a step and see what it looks like from yall’s perspective.\nRemember when Sara showed you the simple loop? Working with commons is more like three loops.\n\nbuild: encode trusted calculations and context After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.\ndeploy: agent answers through the trusted or custom path Apps deploy to Connect like any Shiny app The agent runs R and Python code in a sandbox so that it can be safely deployed\nimprove: review behavior and update the layers With the newest Connect release, once you and your admin opt-in, conversation histories will be stored with a native OpenTelemetry integration. After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent."
   },
   {
     "objectID": "index.html#section-51",
     "href": "index.html#section-51",
     "title": "",
     "section": "",
-    "text": "Build\nYou construct the agent by hooking it up to trusted code.\n\n\nDeploy\nYour colleagues use the agent deployed on Connect.\n\n\nImprove\nYou review the agent’s behavior, adding trusted code to move responses up the trust ladder.\n\n\n\nSo far, we’ve only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let’s take a step and see what it looks like from yall’s perspective.\nRemember when Sara showed you the simple loop? Working with commons is more like three loops.\n\nbuild: encode trusted calculations and context After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks Notably, you are not defining system prompts or tool definitions. commons ships with its own harness.\ndeploy: agent answers through the trusted or custom path Apps deploy to Connect like any Shiny app The agent runs R and Python code in a sandbox so that it can be safely deployed\nimprove: review behavior and update the layers With the newest Connect release, once you and your admin opt-in, conversation histories will be stored with a native OpenTelemetry integration. After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent."
+    "text": "we showed you commons in the example of the vp but commons is not just for bi"
   },
   {
     "objectID": "index.html#section-52",
@@ -284,7 +270,7 @@
     "href": "index.html#section-54",
     "title": "",
     "section": "",
-    "text": "commons creator\n\n\ncommons user\n\n\nExample question\n\n\n\n\n\n\nBiostatistician\n\n\nBiologist / MD / clinical researcher\n\n\n“Compare treatment groups using the approved method.”\n\n\n\n\nUX researcher\n\n\nProduct manager\n\n\n“Summarize experiment results and explain which segments changed.”\n\n\n\n\nEconomist / policy analyst\n\n\nPolicy maker / program lead\n\n\n“Simulate the budget impact of this policy change.”\n\n\n\n\n\n\nits for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters"
+    "text": "Looking forward\n\n\ndatabot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else"
   },
   {
     "objectID": "index.html#canvas",
@@ -292,33 +278,5 @@
     "title": "",
     "section": "Canvas",
     "text": "Canvas\n\n\n\nWe have been experimenting with something canvas\nCanvas is a next generation agent experience\nAssumes that you won’t look at the code usually\nfrees up real estate / degrees of freedom to other expansive and new agent collaboration interfaces\nFeels aggressive in the way that Databot felt to us a year ago\nIf you want to learn more, see Joe’s talk"
-  },
-  {
-    "objectID": "index.html#correct-analysis-still-takes-more-than-a-frontier-model.",
-    "href": "index.html#correct-analysis-still-takes-more-than-a-frontier-model.",
-    "title": "",
-    "section": "Correct analysis still takes more than a frontier model.",
-    "text": "Correct analysis still takes more than a frontier model."
-  },
-  {
-    "objectID": "index.html#section-50",
-    "href": "index.html#section-50",
-    "title": "",
-    "section": "",
-    "text": "Search trusted calculations\n  \n    Find one↓\n    Don’t find one↓\n  \n  \n    \n      Run trusted calculation\n      ↓\n      \n        \n      \n    \n    \n      Search context\n      ↓\n      Write SQL/R/Python\n      \n        Cite↓\n        Don’t cite↓\n      \n      \n        \n          \n        \n        \n          \n        \n      \n    \n  \n\n\nCommons records which tools produced the answer. Trust is based on that execution path, not on the model’s confidence in its own answer. trust is deterministic\nThe citation itself is checked against trusted context. A custom answer is not promoted merely because the model says it used a trusted source."
-  },
-  {
-    "objectID": "index.html#section-53",
-    "href": "index.html#section-53",
-    "title": "",
-    "section": "",
-    "text": "we showed you commons in the example of the vp but commons is not just for bi"
-  },
-  {
-    "objectID": "index.html#section-56",
-    "href": "index.html#section-56",
-    "title": "",
-    "section": "",
-    "text": "Looking forward\n\n\ndatabot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else"
   }
 ]
