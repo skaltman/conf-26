@@ -1017,12 +1017,12 @@ assistant.posit.co
 <br><br>
 
 ::: {.statement .regular-weight}
-Help the model not be wrong [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br>
+Help the agent be correct [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br>
 Make it less bad when it is wrong [**by making good use of your expertise and sharing an R/Python environment**]{.fragment}
 :::
 
 :::notes
-Let's revisit those lessons learned on agent-building from Sara. She said we ought to help the model not be wrong, and make it less bad when it is wrong.
+Let's revisit those lessons learned on agent-building from Sara. She said we ought to Help the agent be correct, and make it less bad when it is wrong.
 
 Much of helping the model not be wrong is by asking nicely :) We tell it to approach data analysis with an openness to uncertainty, we tell it work in persistent files, we tell it to take data cleanliness seriously.
 
@@ -1249,7 +1249,7 @@ So far, we've only focused on the experience of the VP. I talked about how this 
 # {.statement-slide .paper-slide}
 
 ::: {.statement .regular-weight}
-Help the model not be wrong [**with trusted calculations and context**]{.fragment}<br><br>
+Help the agent be correct [**with trusted calculations and context**]{.fragment}<br><br>
 Make it less bad when it is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
 :::
 
