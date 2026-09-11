@@ -889,7 +889,7 @@ In other words: help the agent be correct, and make it less bad when it's wrong.
 so for the rest of our time today instead as we go through what we've been working on we are going to focus on these two goals
 :::
 
-## {.paper-slide}
+## {.blue-slide}
 
 ![](figures/posit-assistant-homepage.png){.rounded .nostretch height="650"}
 
@@ -1031,7 +1031,7 @@ Various elements of Posit Assistant help you and the agent have a richer collabo
 That said, what about people that don't have data expertise and don't know how to write R or Python code?
 :::
 
-# But what if the user is not a data scientist?
+# But what if the user is not a data scientist? {.blue-slide}
 
 ::: notes
 The VP does not have data science expertise and does not know how to use R and Python. Posit Assistant does not serve them. What can we do for the non data scientist users?
