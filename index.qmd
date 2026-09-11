@@ -575,7 +575,7 @@ bluffbench_latest_results |>
 posit-dev.github.io/bluffbench
 :::
 
-## Trustworthy analysis still takes more than a frontier model. {.beat-slide}
+## Correct analysis still takes more than a frontier model. {.beat-slide}
 
 ## {.paper-slide}
 
@@ -746,7 +746,7 @@ all three point in the same direction: we are going to keep going down the LLM p
 ::: {.columns}
 
 ::: {.column .header-text width="64%"}
-How do we make AI trustworthy?
+How do we make AI-involved analysis correct?
 :::
 
 ::: {.column width="36%"}
@@ -860,7 +860,7 @@ we can't just slot them in whenever we are worried an agent system might be wron
 
 # {.beat-slide}
 
-[How do we design the entire system to produce trustworthy work?]{.fragment}
+[How do we design the entire system to produce correct work?]{.fragment}
 
 ::: notes
 the question is how we design the interaction and the entire system so that human expertise can actually support correctness
