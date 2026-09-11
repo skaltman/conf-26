@@ -889,7 +889,7 @@ In other words: help the agent be correct, and make it less bad when it's wrong.
 so for the rest of our time today instead as we go through what we've been working on we are going to focus on these two goals
 :::
 
-## {.blue-slide}
+## {.blue-slide .posit-assistant-blue-slide}
 
 ![](figures/posit-assistant-homepage.png){.rounded .nostretch height="650"}
 
