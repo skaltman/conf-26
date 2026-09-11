@@ -1210,7 +1210,7 @@ The citation itself is checked against trusted context. A custom answer is not
 promoted merely because the model says it used a trusted source.
 :::
 
-## Three loops {.lifecycle-slide .paper-slide}
+## {.lifecycle-slide .paper-slide}
 
 ::: {.lifecycle-cards}
 ::: {.lifecycle-card .fragment .fade-up}
@@ -1234,6 +1234,8 @@ You review the agent's behavior, adding trusted code to move responses up the tr
 
 ::: notes
 So far, we've only focused on the experience of the VP. I talked about how this was a tool for data scientists, so let's take a step and see what it looks like from yall's perspective.
+
+Remember when Sara showed you the simple loop? Working with commons is more like three loops.
 
 1. build: encode trusted calculations and context
   After installing the package, you point the commons agent at all of your trusted code. Shiny apps, R and Python libraries, Quarto docs, or existing semantic layers in Snowflake and Databricks
