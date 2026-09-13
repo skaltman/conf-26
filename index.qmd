@@ -1376,4 +1376,24 @@ For the last year and a half, we've written this together every two weeks
 
 # {#thank-you .thank-you-slide .green-slide}
 
-<div class="thank-you-row"><h1>Thank you</h1><div class="circle-pair" aria-hidden="true"><span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span></div></div>
+```{=html}
+<div class="thank-you-wrap">
+  <div class="thank-you-row">
+    <h1>Thank you!</h1>
+  </div>
+  <div class="thank-you-resources">
+    <a class="thank-you-resource thank-you-link-card thank-you-slides-card" href="https://pos.it/keynote">
+      <span class="thank-you-resource-label">Slides</span>
+      <span class="thank-you-resource-link">pos.it/keynote</span>
+    </a>
+    <a class="thank-you-resource thank-you-link-card thank-you-commons-card" href="https://pos.it/commons">
+      <span class="thank-you-resource-label">Commons</span>
+      <span class="thank-you-resource-link">pos.it/commons</span>
+    </a>
+    <div class="thank-you-resource thank-you-newsletter-card">
+      <img src="figures/ai-newsletter-qr.png" alt="QR code for the Posit AI Newsletter">
+      <span class="thank-you-resource-label">AI Newsletter</span>
+    </div>
+  </div>
+</div>
+```
