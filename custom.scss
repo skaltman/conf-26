@@ -128,6 +128,11 @@ $link-color: color("pink");
   color: color("paper-warm") !important;
 }
 
+.reveal .footer.title-footer {
+  color: rgba(245, 242, 236, 0.68) !important;
+  font-size: 13px !important;
+}
+
 /* Title */
 
 .reveal .slides .slide.title-slide {
@@ -148,16 +153,21 @@ $link-color: color("pink");
 
   .talk-meta {
     margin-top: 48px;
-    color: color("gold");
-    font-size: 18px;
+    color: color("paper-cool");
+    font-size: 24px;
     line-height: 1.45;
 
     p {
       margin: 0;
     }
 
+    p:last-child {
+      opacity: 0.75;
+    }
+
     strong {
       display: block;
+      opacity: 0.85;
     }
   }
 }
@@ -185,20 +195,87 @@ $link-color: color("pink");
   }
 }
 
-.reveal .slide.thank-you-slide .thank-you-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  h1,
-  .circle-pair {
-    margin: 0;
+.reveal .slide.thank-you-slide {
+  .thank-you-wrap {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .circle-pair {
-    flex: none;
-    width: auto;
-    height: auto;
+  .thank-you-row {
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .thank-you-resources {
+    display: grid;
+    grid-template-columns: 0.9fr 0.9fr 1.25fr;
+    gap: 22px;
+    margin-top: 54px;
+  }
+
+  .thank-you-resource {
+    box-sizing: border-box;
+    min-height: 244px;
+    padding: 30px;
+    border: 2px solid rgba(21, 36, 58, 0.1);
+    border-radius: 18px;
+    color: color("ink");
+  }
+
+  .thank-you-slides-card {
+    background: color("periwinkle");
+  }
+
+  .thank-you-commons-card {
+    background: color("orange");
+  }
+
+  .thank-you-newsletter-card {
+    background: color("pink-soft");
+  }
+
+  .thank-you-link-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover,
+    &:visited {
+      color: color("ink");
+    }
+  }
+
+  .thank-you-resource-label {
+    color: color("ink");
+    font-family: "DM Sans", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .thank-you-resource-link {
+    margin-top: 22px;
+    color: color("ink");
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .thank-you-newsletter-card {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    align-items: center;
+    gap: 22px;
+
+    img {
+      width: 170px;
+      max-width: none;
+      max-height: none;
+      margin: 0;
+    }
   }
 }
 
