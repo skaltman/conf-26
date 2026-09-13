@@ -1272,7 +1272,7 @@ but commons is not just for bi
   <tbody>
     <tr class="fragment fade-in">
       <td>Biostatistician</td>
-      <td>Biologist / MD / clinical researcher</td>
+      <td>MD</td>
       <td>&ldquo;Compare treatment groups using the approved method.&rdquo;</td>
     </tr>
     <tr class="fragment fade-in">
@@ -1281,8 +1281,8 @@ but commons is not just for bi
       <td>&ldquo;Summarize experiment results and explain which segments changed.&rdquo;</td>
     </tr>
     <tr class="fragment fade-in">
-      <td>Economist / policy analyst</td>
-      <td>Policy maker / program lead</td>
+      <td>Policy analyst</td>
+      <td>Program lead</td>
       <td>&ldquo;Simulate the budget impact of this policy change.&rdquo;</td>
     </tr>
   </tbody>
@@ -1314,7 +1314,7 @@ Clinical trials agent
 https://pos.it/clinical-trials-agent
 :::
 
-## (Draft) {#clinical-trials-agent-demo}
+## {#clinical-trials-agent-demo}
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Click to play or pause.">
   <source src="figures/clinical-trials-agent-full-demo.mp4" type="video/mp4">
@@ -1344,7 +1344,7 @@ leaves room for something else
 ![](figures/canvas.png){style="display: block; margin: 0 auto;"}
 
 :::notes
-* We have been experimenting with something canvas
+* We have been experimenting with something called canvas
 * Canvas is a next generation agent experience 
 * Assumes that you won't look at the code usually
 * frees up real estate / degrees of freedom to other expansive and new agent collaboration interfaces
