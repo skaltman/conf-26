@@ -39,6 +39,10 @@ posit::conf(2026)
 
 :::
 
+:::footer
+https://pos.it/keynote
+:::
+
 ## {#site-traffic-analysis .agent-story-slide .slow-tool-calls}
 
 ```{=html}
@@ -1095,6 +1099,10 @@ This is one of the core ideas behind a new open source package that we're excite
 
 ![](figures/commons-hex.png){.commons-intro-logo .nostretch fig-alt="Commons logo"}
 
+:::footer
+https://pos.it/commons
+:::
+
 ::: notes
 commons helps data scientists build trustworthy data agents for their collaborators.
 
@@ -1300,6 +1308,10 @@ Clinical trials agent
 ![](figures/clinical-trials-agent-logo-orange.png){.header-image fig-alt="Clinical trials agent logo"}
 :::
 
+:::
+
+:::footer
+https://pos.it/clinical-trials-agent
 :::
 
 ## (Draft) {#clinical-trials-agent-demo}
