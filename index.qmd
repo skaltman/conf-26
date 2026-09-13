@@ -39,7 +39,7 @@ posit::conf(2026)
 
 :::
 
-:::footer
+::: {.footer .title-footer}
 https://pos.it/keynote
 :::
 
