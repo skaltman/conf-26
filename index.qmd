@@ -34,7 +34,7 @@ posit::conf(2026)
 :::
 
 ::: {.column width="32%"}
-<div class="circle-pair" aria-hidden="true"><span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span></div>
+<div class="circle-pair circle-pair-overlap" aria-hidden="true"><span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span></div>
 :::
 
 :::
@@ -289,8 +289,8 @@ What if our stance was the same with AI? In other words, can we build data analy
 # {#correct-and-convenient .correct-convenient-slide .paper-slide}
 
 <div class="cc-wrap">
-  <div class="circle-pair" aria-hidden="true"><span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span></div>
-  <div class="cc-text">Correct and convenient</div>
+  <div class="circle-pair circle-pair-animated" aria-hidden="true"><span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span><span class="fragment circle-overlap-trigger" data-fragment-index="0"></span></div>
+  <div class="cc-text fragment fade-up" data-fragment-index="1">Correct and convenient</div>
 </div>
 
 
@@ -1317,7 +1317,7 @@ https://pos.it/clinical-trials-agent
 ## {#clinical-trials-agent-demo}
 
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Click to play or pause.">
-  <source src="figures/clinical-trials-agent-full-demo.mp4" type="video/mp4">
+  <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
 
 ## {#looking-forward .header-slide .blue-slide}
