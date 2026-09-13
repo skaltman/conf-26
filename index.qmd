@@ -206,7 +206,7 @@ The agent offers to make it again. This time, when the VP asks for the same plot
 
 > In the battle between convenience and correctness, convenience is winning.
 >
-> <footer>Joe Cheng, CTO @ Posit</footer>
+> <footer>Joe Cheng (CTO @ Posit)</footer>
 
 ::: notes
 We've seen situations like this internally and with the organizations we work with. Posit's CTO recently summarized it like so:
@@ -268,7 +268,7 @@ rstudioblog.wordpress.com/2011/02/27/about-the-rstudio-project/
 >
 > At the same time, we want RStudio to be as [straightforward and intuitive]{.accent} as possible.
 >
-> <footer>JJ Allaire, 2011</footer>
+> <footer>JJ Allaire (Founder @ Posit), 2011</footer>
 
 :::footer
 https://rstudioblog.wordpress.com/2011/02/28/rstudio-new-open-source-ide-for-r/
@@ -1212,7 +1212,7 @@ Your colleagues use the agent deployed on Connect.
 ::: {.lifecycle-card .fragment .fade-up}
 ### Improve
 
-You review the agent's behavior, adding trusted code to move responses up the trust ladder.
+You review the agent's behavior, adding trusted code to cover common use cases.
 :::
 :::
 
