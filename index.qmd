@@ -1313,7 +1313,7 @@ https://pos.it/clinical-trials-agent
 
 ## {#clinical-trials-agent-demo}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Click to play or pause.">
+<video class="rounded click-to-toggle" width="100%" data-autoplay muted preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Plays automatically; click to pause or resume.">
   <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
 
@@ -1340,7 +1340,9 @@ leaves room for something else
 
 ## Canvas {#canvas .canvas-slide}
 
-![](figures/canvas.png){style="display: block; margin: 0 auto; max-height: 550px;"}
+<video class="rounded click-to-toggle" style="max-height: 550px; max-width: 100%; height: auto;" data-autoplay muted preload="auto" tabindex="0" aria-label="Canvas demo. Plays automatically; click to pause or resume.">
+  <source src="figures/canvas-zoomed.mp4" type="video/mp4">
+</video>
 
 ::: {.fragment style="margin-top: 12px; text-align: center; font-size: 24px; font-weight: 600;"}
 Learn more at Joe Cheng's talk: _Lanier Ballroom A&F, Tuesday at 3:20_
