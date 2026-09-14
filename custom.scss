@@ -608,6 +608,25 @@ $link-color: color("pink");
   }
 }
 
+/* Caption overlaid at the top of a full-slide plot */
+
+.reveal .slide .plot-overlay-caption {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  max-width: 80%;
+  padding: 18px 32px;
+  border-radius: 14px;
+  background: #fff;
+  color: #3f73d8;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
 /* Momentous slide: commons hex next to big link */
 
 .reveal .slide .momentous-row {

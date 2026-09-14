@@ -429,7 +429,7 @@ bluff2_summary <-
 
 ## {#bluffbench-counterintuitive-plot .paper-slide}
 
-::: {.plot-slide-content .fragment}
+::: {.plot-slide-content .fragment data-fragment-index="0"}
 
 ```{r}
 #| echo: false
@@ -453,11 +453,7 @@ ggplot(bluffbench_diamonds, aes(x = carat, y = price)) +
 
 :::
 
-::: {.plot-slide-content .fragment}
-
-<div style="margin: 18px 0 0; font-size: 44px; font-weight: 700; color: #3f73d8;">Can models interpret plots that contradict their expectations?</div>
-
-:::
+<div class="fragment plot-overlay-caption" data-fragment-index="1">Can models interpret plots that contradict their expectations?</div>
 
 ::: notes
 around a year ago we did an experiment
@@ -693,7 +689,9 @@ documentation, etc all shape whether an analysis is correct
 a human expert often holds that context
 :::
 
-## Our mission is to find new ways to understand data. LLMs are part of that exploration. {#llms-and-data-exploration .beat-slide}
+## {#transition .paper-slide}
+
+## New ways to understand data. {#llms-and-data-exploration .beat-slide}
 
 ::: notes
 but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration
@@ -1351,28 +1349,6 @@ leaves room for something else
 * frees up real estate / degrees of freedom to other expansive and new agent collaboration interfaces
 * Feels aggressive in the way that Databot felt to us a year ago
 * If you want to learn more, see Joe's talk
-:::
-
-# AI Newsletter {#ai-newsletter}
-
-::: {.columns}
-
-::: {.column}
-![](figures/ai-newsletter-qr.png){}
-:::
-
-::: {.column}
-![](figures/ai-newsletter.png){.rounded}
-:::
-
-:::
-
-:::footer
-https://opensource.posit.co/tags/ai-newsletter/
-:::
-
-:::notes
-For the last year and a half, we've written this together every two weeks
 :::
 
 # {#thank-you .thank-you-slide .green-slide}
