@@ -206,6 +206,16 @@ A month later, leadership will ass to see the chart again. The VP will open up t
 The agent offers to make it again. This time, when the VP asks for the same plot, they see that site visits had been steadily trending upward the whole time.
 :::
 
+## {#test-set}
+
+![](figures/rogue-analysis-in-cursor.png){.rounded}
+
+:::notes
+This is something that we've seen quite a bit internally at Posit, and also with many of the organizations we work with. It's becoming normal to vibe-analyze data.
+
+The idea for this hypothetical came from this hilariously-titled episode of The Test Set podcast.
+:::
+
 ## {#convenience-versus-correctness .quote-slide .paper-slide}
 
 > In the battle between convenience and correctness, convenience is winning.
@@ -213,7 +223,7 @@ The agent offers to make it again. This time, when the VP asks for the same plot
 > <footer>Joe Cheng (CTO @ Posit)</footer>
 
 ::: notes
-We've seen situations like this internally and with the organizations we work with. Posit's CTO recently summarized it like so:
+Posit's CTO recently summarized this trend like so:
 
 It is true that AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.
 
