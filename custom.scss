@@ -109,7 +109,7 @@ $link-color: color("pink");
 .reveal .footer {
   bottom: 14px !important;
   color: color("periwinkle") !important;
-  font-size: 14px !important;
+  font-size: 18px !important;
   line-height: 1.2 !important;
 
   > * {
@@ -126,6 +126,11 @@ $link-color: color("pink");
 
 .reveal .footer.has-dark-background {
   color: color("paper-warm") !important;
+}
+
+.reveal .footer.title-footer {
+  color: rgba(245, 242, 236, 0.68) !important;
+  font-size: 16px !important;
 }
 
 /* Title */
@@ -148,16 +153,21 @@ $link-color: color("pink");
 
   .talk-meta {
     margin-top: 48px;
-    color: color("gold");
-    font-size: 18px;
+    color: color("paper-cool");
+    font-size: 24px;
     line-height: 1.45;
 
     p {
       margin: 0;
     }
 
+    p:last-child {
+      opacity: 0.75;
+    }
+
     strong {
       display: block;
+      opacity: 0.85;
     }
   }
 }
@@ -185,20 +195,104 @@ $link-color: color("pink");
   }
 }
 
-.reveal .slide.thank-you-slide .thank-you-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.circle-pair-overlap {
+  gap: 0;
+  isolation: isolate;
 
-  h1,
-  .circle-pair {
-    margin: 0;
+  .circle {
+    opacity: 0.9;
   }
 
-  .circle-pair {
-    flex: none;
-    width: auto;
-    height: auto;
+  .periwinkle-circle {
+    transform: translateX(19px);
+  }
+
+  .orange-circle {
+    transform: translateX(-19px);
+  }
+}
+
+.reveal .slide.thank-you-slide {
+  .thank-you-wrap {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .thank-you-row {
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .thank-you-resources {
+    display: grid;
+    grid-template-columns: 0.9fr 0.9fr 1.25fr;
+    gap: 22px;
+    margin-top: 54px;
+  }
+
+  .thank-you-resource {
+    box-sizing: border-box;
+    min-height: 244px;
+    padding: 30px;
+    border: 2px solid rgba(21, 36, 58, 0.1);
+    border-radius: 18px;
+    color: color("ink");
+  }
+
+  .thank-you-slides-card {
+    background: color("periwinkle");
+  }
+
+  .thank-you-commons-card {
+    background: color("orange");
+  }
+
+  .thank-you-newsletter-card {
+    background: color("pink-soft");
+  }
+
+  .thank-you-link-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover,
+    &:visited {
+      color: color("ink");
+    }
+  }
+
+  .thank-you-resource-label {
+    color: color("ink");
+    font-family: "DM Sans", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .thank-you-resource-link {
+    margin-top: 22px;
+    color: color("ink");
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .thank-you-newsletter-card {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    align-items: center;
+    gap: 22px;
+
+    img {
+      width: 170px;
+      max-width: none;
+      max-height: none;
+      margin: 0;
+    }
   }
 }
 
@@ -210,12 +304,35 @@ $link-color: color("pink");
   justify-content: center;
   gap: 56px;
 
-  .circle-pair {
+  .circle-pair-animated {
+    position: relative;
+    gap: 0;
     height: auto;
+    isolation: isolate;
 
     .circle {
       width: 120px;
       height: 120px;
+      opacity: 0.9;
+      transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .periwinkle-circle {
+      transform: translateX(-28px);
+    }
+
+    .orange-circle {
+      transform: translateX(28px);
+    }
+
+    &:has(.circle-overlap-trigger.visible) {
+      .periwinkle-circle {
+        transform: translateX(15px);
+      }
+
+      .orange-circle {
+        transform: translateX(-15px);
+      }
     }
   }
 
@@ -224,6 +341,14 @@ $link-color: color("pink");
     font-weight: 700;
     color: #24437b;
   }
+}
+
+.reveal .slides section .circle-overlap-trigger.fragment {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .reveal .slide.thank-you-slide > h1:empty {
@@ -432,16 +557,46 @@ $link-color: color("pink");
 /* Statement and quote */
 
 .reveal .slide.statement-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 72px !important;
+
   .statement {
-    position: absolute;
-    top: 50%;
-    right: 72px;
-    left: 72px;
     font-size: 58px;
     font-weight: 600;
     line-height: 1.08;
     text-align: left;
-    transform: translateY(-50%);
+  }
+
+  // Plain statements flow as flex items so the slide centers them vertically.
+  // (Reveal's .center sections are only as tall as their content, so absolute
+  // top: 50% was centering within the text box, not the slide.)
+  > .statement {
+    position: static;
+    transform: none;
+  }
+
+  // The setup/refrain replacement overlays two statements in the same spot.
+  .bullet-replace {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .statement {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  > h1:empty,
+  > h2:empty {
+    display: none;
   }
 
   .statement.regular-weight {
@@ -450,6 +605,68 @@ $link-color: color("pink");
 
   .accent {
     color: color("pink");
+  }
+}
+
+/* Canvas slide: vertically center title, screenshot, and talk info */
+
+.reveal .slide.canvas-slide {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+
+  > h2 {
+    margin: 0 0 12px;
+    font-size: 40px;
+  }
+}
+
+/* Caption overlaid at the top of a full-slide plot */
+
+.reveal .slide .plot-overlay-caption {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  max-width: 80%;
+  padding: 18px 32px;
+  border-radius: 14px;
+  background: #fff;
+  color: #3f73d8;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+/* Momentous slide: commons hex next to big link */
+
+.reveal .slide .momentous-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+
+  img {
+    height: 320px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.08;
+  }
+
+  a {
+    color: inherit;
+    font-weight: inherit;
   }
 }
 
@@ -552,7 +769,7 @@ $link-color: color("pink");
 /* Footers are cloned to the reveal root at runtime, so target the
    footer's own class (see .footer.footer-left above). */
 .reveal .footer.hitl-footer {
-  font-size: 11px !important;
+  font-size: 14px !important;
 }
 
 /* Commons agent lifecycle */
@@ -952,6 +1169,17 @@ $link-color: color("pink");
   background-position: 38% top;
 }
 
+/* Show the whole (tightly cropped) image centered on a white panel */
+.reveal .slide-background.split-image-slide.split-contain-white .slide-background-content {
+  background-color: #fff;
+  background-position: center center;
+  background-size: contain;
+}
+
+.reveal .slide#below-the-surface .image-credit {
+  bottom: 6px;
+}
+
 .reveal .slide.split-image-slide .image-credit {
   position: absolute;
   right: 24px;
@@ -971,6 +1199,15 @@ $link-color: color("pink");
   width: auto;
   padding-right: 0;
   text-align: left;
+}
+
+/* On the databot flotation slide, keep the footer under the image panel
+   (right of the 40% text split) instead of spanning both sides. */
+.reveal .footer.footer-image-side {
+  left: calc(40% + 24px);
+  right: 24px;
+  width: auto;
+  text-align: center;
 }
 
 /* Full-bleed background image set with Quarto's background-image attribute */

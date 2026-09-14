@@ -277,14 +277,14 @@
     "href": "index.html#canvas",
     "title": "",
     "section": "Canvas",
-    "text": "Canvas\n\n\n\nWe have been experimenting with something canvas\nCanvas is a next generation agent experience\nAssumes that you won’t look at the code usually\nfrees up real estate / degrees of freedom to other expansive and new agent collaboration interfaces\nFeels aggressive in the way that Databot felt to us a year ago\nIf you want to learn more, see Joe’s talk"
+    "text": "Canvas\n\n\nLearn more at Joe Cheng’s talk: Lanier Ballroom A&F, Tuesday at 3:20\n\n\n\nWe have been experimenting with something called canvas\nCanvas is a next generation agent experience\nAssumes that you won’t look at the code usually\nfrees up real estate / degrees of freedom to other expansive and new agent collaboration interfaces\nFeels aggressive in the way that Databot felt to us a year ago\nIf you want to learn more, see Joe’s talk"
   },
   {
     "objectID": "index.html#title",
     "href": "index.html#title",
     "title": "",
     "section": "",
-    "text": "Agents for correct, transparent, and reproducible analysis\n\nSimon Couch and Sara Altman\nposit::conf(2026)"
+    "text": "Agents for correct, transparent, and reproducible analysis\n\nSimon Couch and Sara Altman\nposit::conf(2026)\n\n\n\n\n\n\n\nhttps://pos.it/keynote"
   },
   {
     "objectID": "index.html#site-traffic-analysis",
@@ -354,7 +354,7 @@
     "href": "index.html#bluffbench-counterintuitive-plot",
     "title": "",
     "section": "",
-    "text": "Can models interpret plots that contradict their expectations?\n\n\n\naround a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one of well known datasets if youre thinking uh thats not right. you are correct.\nthis is what we wanted to know: would models correctly interpret plots that contradicted their expectations?"
+    "text": "Can models interpret plots that contradict their expectations?\n\n\naround a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one of well known datasets if youre thinking uh thats not right. you are correct.\nthis is what we wanted to know: would models correctly interpret plots that contradicted their expectations?"
   },
   {
     "objectID": "index.html#bluffbench-november-2025",
@@ -374,8 +374,8 @@
     "objectID": "index.html#frontier-model-not-enough",
     "href": "index.html#frontier-model-not-enough",
     "title": "",
-    "section": "Correct analysis still takes more than a frontier model.",
-    "text": "Correct analysis still takes more than a frontier model."
+    "section": "Correct analysis still takes more than a good model.",
+    "text": "Correct analysis still takes more than a good model."
   },
   {
     "objectID": "index.html#bluffbench2-data-artifact",
@@ -395,8 +395,8 @@
     "objectID": "index.html#llms-and-data-exploration",
     "href": "index.html#llms-and-data-exploration",
     "title": "",
-    "section": "Our mission is to find new ways to understand data. LLMs are part of that exploration.",
-    "text": "Our mission is to find new ways to understand data. LLMs are part of that exploration.\n\nbut for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration"
+    "section": "New ways to understand data.",
+    "text": "New ways to understand data.\n\nbut for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration"
   },
   {
     "objectID": "index.html#mission-ocean",
@@ -528,15 +528,15 @@
     "objectID": "index.html#commons-beyond-bi",
     "href": "index.html#commons-beyond-bi",
     "title": "",
-    "section": "",
-    "text": "we showed you commons in the example of the vp but commons is not just for bi"
+    "section": "Not just BI",
+    "text": "Not just BI\n\nwe showed you commons in the example of the vp but commons is not just for bi"
   },
   {
     "objectID": "index.html#commons-examples",
     "href": "index.html#commons-examples",
     "title": "",
     "section": "",
-    "text": "commons creator\n\n\ncommons user\n\n\nExample question\n\n\n\n\n\n\nBiostatistician\n\n\nBiologist / MD / clinical researcher\n\n\n“Compare treatment groups using the approved method.”\n\n\n\n\nUX researcher\n\n\nProduct manager\n\n\n“Summarize experiment results and explain which segments changed.”\n\n\n\n\nEconomist / policy analyst\n\n\nPolicy maker / program lead\n\n\n“Simulate the budget impact of this policy change.”\n\n\n\n\n\n\nits for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters"
+    "text": "commons creator\n\n\ncommons user\n\n\nExample question\n\n\n\n\n\n\nBiostatistician\n\n\nMD\n\n\n“Compare treatment groups.”\n\n\n\n\nUX researcher\n\n\nProduct manager\n\n\n“Summarize experiment results and explain which segments changed.”\n\n\n\n\nPolicy analyst\n\n\nProgram lead\n\n\n“Simulate the budget impact of this policy change.”\n\n\n\n\n\n\nits for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters"
   },
   {
     "objectID": "index.html#clinical-trials-agent-demo",
