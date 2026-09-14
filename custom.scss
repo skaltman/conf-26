@@ -1166,6 +1166,15 @@ $link-color: color("pink");
   text-align: left;
 }
 
+/* On the databot flotation slide, keep the footer under the image panel
+   (right of the 40% text split) instead of spanning both sides. */
+.reveal .footer.footer-image-side {
+  left: calc(40% + 24px);
+  right: 24px;
+  width: auto;
+  text-align: center;
+}
+
 /* Full-bleed background image set with Quarto's background-image attribute */
 
 .reveal .slide.image-caption-slide {
