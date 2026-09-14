@@ -281,19 +281,6 @@ $link-color: color("pink");
     line-height: 1.15;
   }
 
-  .thank-you-newsletter-card {
-    display: grid;
-    grid-template-columns: 170px 1fr;
-    align-items: center;
-    gap: 22px;
-
-    img {
-      width: 170px;
-      max-width: none;
-      max-height: none;
-      margin: 0;
-    }
-  }
 }
 
 .reveal .slide.correct-convenient-slide .cc-wrap {

@@ -1371,10 +1371,10 @@ Learn more at Joe Cheng's talk: _Lanier Ballroom A&F, Tuesday at 3:20_
       <span class="thank-you-resource-label">Commons</span>
       <span class="thank-you-resource-link">pos.it/commons</span>
     </a>
-    <div class="thank-you-resource thank-you-newsletter-card">
-      <img src="figures/ai-newsletter-qr.png" alt="QR code for the Posit AI Newsletter">
+    <a class="thank-you-resource thank-you-link-card thank-you-newsletter-card" href="https://pos.it/ai-newsletter">
       <span class="thank-you-resource-label">AI Newsletter</span>
-    </div>
+      <span class="thank-you-resource-link">pos.it/ai-newsletter</span>
+    </a>
   </div>
 </div>
 ```
