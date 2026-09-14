@@ -1338,9 +1338,13 @@ leaves room for something else
 
 
 
-## Canvas {#canvas}
+## Canvas {#canvas .canvas-slide}
 
-![](figures/canvas.png){style="display: block; margin: 0 auto;"}
+![](figures/canvas.png){style="display: block; margin: 0 auto; max-height: 550px;"}
+
+::: {.fragment style="margin-top: 12px; text-align: center; font-size: 24px; font-weight: 600;"}
+Learn more at Joe Cheng's talk: _Lanier Ballroom A&F, Tuesday at 3:20_
+:::
 
 :::notes
 * We have been experimenting with something called canvas
