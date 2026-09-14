@@ -252,7 +252,7 @@ From 2001 to 2006, Geoffrey Chang published a series of heavy-hitting papers tha
 
 . . .
 
-![](figures/rstudio-blog.png){height="650" style="display: block; margin: 0 auto;"}
+![](figures/rstudio-blog.png){height="700" style="display: block; margin: 0 auto;"}
 
 :::notes
 I bring these examples up to say that there have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance is not "you need to forgo convenience in favor of correctess."
