@@ -820,7 +820,6 @@ Adding a human [does not guarantee]{.accent} a better result.
 
 ::: {.hitl-evidence-points .incremental}
 - Human-AI combination often underperforms one or the other. 
-- Automation bias.
 - Approval fatigue.
 - Trust, timing, cognitive load, social cues, and information design all shape decisions.
 :::
