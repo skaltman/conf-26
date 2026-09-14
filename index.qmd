@@ -557,7 +557,7 @@ bluffbench_latest_results |>
   ) +
   scale_x_continuous(labels = scales::percent) +
   labs(
-    title = "The models got better at interpreting counterintuitive plots",
+    title = "Models got better at interpreting counterintuitive plots",
     x = "Percent correct",
     y = NULL
   ) +
