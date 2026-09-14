@@ -881,7 +881,7 @@ Consider how interaction works with the user and can support their expertise
 
 ::: {.statement .regular-weight .replace-subs .fragment data-fragment-index="0"}
 Help the agent be correct<br><br>
-Make it less bad when it is wrong
+Make it less bad when the agent is wrong
 :::
 
 :::
@@ -987,18 +987,6 @@ Now, this is the end of my demo of Posit Assistant. I do have one more thing I w
 The whole conversation was 5 cents. Part of our mission is providing the best tools to folks regardless of their economic means, and we remain committed to that. Totally free usage is not possible—AI inference is quite expensive—but Posit Assistant is token efficient, and we've worked hard to serve incredibly cheap and capable open-weights models with strong privacy guarantees for people that use our Posit AI Pass subscription. Per token, this model, GLM 5.3 Flash, is less than a thirtieth of the price of Claude Opus 5, and is served under Zero Data Retention.
 :::
 
-## {#posit-assistant-summary}
-
-![](figures/posit-assistant-homepage.png){.rounded .nostretch height="650"}
-
-:::notes
-We've designed Posit Assistant to be more correct, and we've designed it to make better use of your expertise than other coding agents, so that you're more likely to know when it's wrong.
-:::
-
-:::footer
-assistant.posit.co
-:::
-
 
 # {#posit-assistant-correctness .statement-slide .paper-slide}
 
@@ -1006,11 +994,11 @@ assistant.posit.co
 
 ::: {.statement .regular-weight}
 Help the agent be correct [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br>
-Make it less bad when it is wrong [**by making good use of your expertise and sharing an R/Python environment**]{.fragment}
+Make it less bad when the agent is wrong [**by making good use of your expertise and sharing an R/Python environment**]{.fragment}
 :::
 
 :::notes
-Let's revisit those lessons learned on agent-building from Sara. She said we ought to Help the agent be correct, and make it less bad when it is wrong.
+Let's revisit those lessons learned on agent-building from Sara. She said we ought to Help the agent be correct, and make it less bad when the agent is wrong.
 
 Much of helping the model not be wrong is by asking nicely :) We tell it to approach data analysis with an openness to uncertainty, we tell it work in persistent files, we tell it to take data cleanliness seriously.
 
@@ -1018,6 +1006,8 @@ Various elements of Posit Assistant help you and the agent have a richer collabo
 
 That said, what about people that don't have data expertise and don't know how to write R or Python code?
 :::
+
+# {.paper-slide}
 
 # But what if the user is not a data scientist? {#non-data-scientist .blue-slide}
 
@@ -1240,18 +1230,30 @@ Remember when Sara showed you the simple loop? Working with commons is more like
   After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent.
 :::
 
+# {#commons-momentous .beat-slide}
+
+::: {.momentous-row}
+![](figures/commons-hex.png){.nostretch fig-alt="Commons logo"}
+
+[pos.it/commons](https://pos.it/commons)
+:::
+
+::: notes
+thank you and momentous feelings
+:::
+
 # {#commons-correctness .statement-slide .paper-slide}
 
 ::: {.statement .regular-weight}
 Help the agent be correct [**with trusted calculations and context**]{.fragment}<br><br>
-Make it less bad when it is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
+Make it less bad when the agent is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
 :::
 
 :::notes
 Let's revisit those guidelines one more time.
 :::
 
-## {#commons-beyond-bi}
+## Not just BI {#commons-beyond-bi .beat-slide}
 
 ::: notes
 we showed you commons in the example of the vp
@@ -1273,7 +1275,7 @@ but commons is not just for bi
     <tr class="fragment fade-in">
       <td>Biostatistician</td>
       <td>MD</td>
-      <td>&ldquo;Compare treatment groups using the approved method.&rdquo;</td>
+      <td>&ldquo;Compare treatment groups.&rdquo;</td>
     </tr>
     <tr class="fragment fade-in">
       <td>UX researcher</td>
@@ -1319,6 +1321,8 @@ https://pos.it/clinical-trials-agent
 <video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Click to play or pause.">
   <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
+
+# {#conclusion .paper-slide}
 
 ## {#looking-forward .header-slide .blue-slide}
 
