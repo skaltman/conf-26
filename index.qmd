@@ -336,9 +336,13 @@ and this post was actually one of the first things I worked when I joined the AI
 Getty Images. Thank you Margaret Biffar and Isabella Velásquez!
 :::
 
-# {#databot .paper-slide}
+# {#databot .paper-slide .databot-demo-slide}
 
-![](figures/databot.png){style="display: block; margin: 0 auto;"}
+<video class="rounded click-to-toggle" width="100%" data-autoplay muted loop playsinline preload="auto" tabindex="0" aria-label="Databot demo. Plays automatically without sound; click to pause or resume.">
+  <source src="figures/databot-demo.mp4" type="video/mp4">
+</video>
+
+<div class="databot-demo-title">Databot (2025)</div>
 
 ::: notes
 because we were all so excited about databot, but also so worried about people trusting its answers when it was wrong
