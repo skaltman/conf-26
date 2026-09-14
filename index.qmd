@@ -1225,6 +1225,17 @@ Remember when Sara showed you the simple loop? Working with commons is more like
   After the app has been deployed, you can read in conversation histories and find common use cases where the agent has to improvise an approach. Based on those findings, you can revisit step 1, providing more trusted code to the agent.
 :::
 
+# {#commons-correctness .statement-slide .paper-slide}
+
+::: {.statement .regular-weight}
+Help the agent be correct [**with trusted calculations and context**]{.fragment}<br><br>
+Make it less bad when the agent is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
+:::
+
+:::notes
+Let's revisit those guidelines one more time.
+:::
+
 # {#commons-momentous .beat-slide}
 
 ::: {.momentous-row}
@@ -1235,17 +1246,6 @@ Remember when Sara showed you the simple loop? Working with commons is more like
 
 ::: notes
 thank you and momentous feelings
-:::
-
-# {#commons-correctness .statement-slide .paper-slide}
-
-::: {.statement .regular-weight}
-Help the agent be correct [**with trusted calculations and context**]{.fragment}<br><br>
-Make it less bad when the agent is wrong [**by signaling trust and introducing feedback loops**]{.fragment}
-:::
-
-:::notes
-Let's revisit those guidelines one more time.
 :::
 
 ## Not just BI {#commons-beyond-bi .beat-slide}
