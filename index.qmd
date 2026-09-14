@@ -548,9 +548,9 @@ bluffbench_latest_results |>
       levels = c("Thinking", "No thinking")
     )
   ) |>
+  filter(thinking == "Thinking") |>
   ggplot(aes(y = model, fill = score)) +
   geom_bar(position = "fill") +
-  facet_col(vars(thinking), scales = "free_y", space = "free") +
   scale_fill_manual(
     name = NULL,
     values = c("Correct" = "#67a9cf", "Incorrect" = "#ef8a62")
@@ -579,7 +579,7 @@ bluffbench_latest_results |>
 posit-dev.github.io/bluffbench
 :::
 
-## Correct analysis still takes more than a frontier model. {#frontier-model-not-enough .beat-slide}
+## Correct analysis still takes more than a good model. {#frontier-model-not-enough .beat-slide}
 
 ## {#bluffbench2-data-artifact .paper-slide}
 
@@ -875,8 +875,8 @@ the question is how we design the interaction and the entire system so that huma
 ::: {.bullet-replace}
 
 ::: {.statement .regular-weight .replace-parents .fragment .fade-out data-fragment-index="0"}
-Build trust and correctness into the system itself<br><br>
-Consider how interaction works with the user and can support their expertise
+Build trust and correctness into the agent itself<br><br>
+Consider how the agent will interact with the user and support their expertise
 :::
 
 ::: {.statement .regular-weight .replace-subs .fragment data-fragment-index="0"}
@@ -989,8 +989,6 @@ The whole conversation was 5 cents. Part of our mission is providing the best to
 
 
 # {#posit-assistant-correctness .statement-slide .paper-slide}
-
-<br><br>
 
 ::: {.statement .regular-weight}
 Help the agent be correct [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br> 

@@ -109,7 +109,7 @@ $link-color: color("pink");
 .reveal .footer {
   bottom: 14px !important;
   color: color("periwinkle") !important;
-  font-size: 14px !important;
+  font-size: 18px !important;
   line-height: 1.2 !important;
 
   > * {
@@ -130,7 +130,7 @@ $link-color: color("pink");
 
 .reveal .footer.title-footer {
   color: rgba(245, 242, 236, 0.68) !important;
-  font-size: 13px !important;
+  font-size: 16px !important;
 }
 
 /* Title */
@@ -557,16 +557,46 @@ $link-color: color("pink");
 /* Statement and quote */
 
 .reveal .slide.statement-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 72px !important;
+
   .statement {
-    position: absolute;
-    top: 50%;
-    right: 72px;
-    left: 72px;
     font-size: 58px;
     font-weight: 600;
     line-height: 1.08;
     text-align: left;
-    transform: translateY(-50%);
+  }
+
+  // Plain statements flow as flex items so the slide centers them vertically.
+  // (Reveal's .center sections are only as tall as their content, so absolute
+  // top: 50% was centering within the text box, not the slide.)
+  > .statement {
+    position: static;
+    transform: none;
+  }
+
+  // The setup/refrain replacement overlays two statements in the same spot.
+  .bullet-replace {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .statement {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  > h1:empty,
+  > h2:empty {
+    display: none;
   }
 
   .statement.regular-weight {
@@ -704,7 +734,7 @@ $link-color: color("pink");
 /* Footers are cloned to the reveal root at runtime, so target the
    footer's own class (see .footer.footer-left above). */
 .reveal .footer.hitl-footer {
-  font-size: 11px !important;
+  font-size: 14px !important;
 }
 
 /* Commons agent lifecycle */
@@ -1109,6 +1139,10 @@ $link-color: color("pink");
   background-color: #fff;
   background-position: center center;
   background-size: contain;
+}
+
+.reveal .slide#below-the-surface .image-credit {
+  bottom: 6px;
 }
 
 .reveal .slide.split-image-slide .image-credit {
