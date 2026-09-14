@@ -48,15 +48,30 @@ record_demo <- function(
   question,
   marker,
   tool_call = NULL,
+  tool_call_occurrence = "first",
   close_tool_call = TRUE,
   expand_result = FALSE,
+  expand_measure_details = FALSE,
   scroll_result = FALSE,
   hover_marker = TRUE,
+  hover_source = FALSE,
   url,
   output_dir,
   output_prefix = "vp-agent",
+  viewport_width = 1200,
+  viewport_height = 766,
   call = rlang::caller_env()
 ) {
+  if (
+    length(tool_call_occurrence) != 1L ||
+      !tool_call_occurrence %in% c("first", "last")
+  ) {
+    cli::cli_abort(
+      "{.arg tool_call_occurrence} must be either {.val first} or {.val last}.",
+      call = call
+    )
+  }
+
   frame_dir <- tempfile(paste0(output_prefix, "-", slug, "-"))
   dir.create(frame_dir)
   on.exit(unlink(frame_dir, recursive = TRUE), add = TRUE)
@@ -68,7 +83,7 @@ record_demo <- function(
 
   browser <- chromote::ChromoteSession$new()
   on.exit(browser$close(), add = TRUE)
-  browser$set_viewport_size(1200, 766)
+  browser$set_viewport_size(viewport_width, viewport_height)
   browser$go_to(paste0(url, "?recording=", slug))
   wait_for_chat_input(browser, call = call)
 
@@ -80,8 +95,8 @@ record_demo <- function(
   invisible(browser$Page$startScreencast(
     format = "jpeg",
     quality = 90,
-    maxWidth = 1200,
-    maxHeight = 766,
+    maxWidth = viewport_width,
+    maxHeight = viewport_height,
     everyNthFrame = 1
   ))
 
@@ -93,12 +108,22 @@ record_demo <- function(
   pump_browser(0.75)
 
   if (!is.null(tool_call)) {
-    click_tool_call(browser, tool_call, call = call)
+    click_tool_call(
+      browser,
+      tool_call,
+      occurrence = tool_call_occurrence,
+      call = call
+    )
     pump_browser(1.5)
     capture_final_frame(browser, state, hold = 2)
     pump_browser(0.5)
     if (close_tool_call) {
-      click_tool_call(browser, tool_call, call = call)
+      click_tool_call(
+        browser,
+        tool_call,
+        occurrence = tool_call_occurrence,
+        call = call
+      )
       pump_browser(0.5)
     }
   }
@@ -112,6 +137,16 @@ record_demo <- function(
     pump_browser(0.5)
   }
 
+  if (expand_measure_details) {
+    pump_browser(1.5)
+    click_element(
+      browser,
+      "details.commons-measure-details > summary",
+      call = call
+    )
+    pump_browser(2)
+  }
+
   if (hover_marker) {
     hover_element(browser, marker, call = call)
     pump_browser(2.5)
@@ -119,6 +154,10 @@ record_demo <- function(
   if (scroll_result) {
     scroll_tool_card_result(browser, call = call)
     pump_browser(2)
+  }
+  if (hover_source) {
+    hover_element(browser, "a", text = "View source", call = call)
+    pump_browser(2.5)
   }
   capture_final_frame(browser, state)
   invisible(browser$Page$stopScreencast())
@@ -218,12 +257,14 @@ click_send <- function(browser) {
 click_tool_call <- function(
   browser,
   label,
+  occurrence = "first",
   call = rlang::caller_env()
 ) {
   click_element(
     browser,
     ".shiny-chat-tool-group__row",
     text = label,
+    occurrence = occurrence,
     call = call
   )
 }
@@ -277,12 +318,14 @@ click_element <- function(
   browser,
   selector,
   text = NULL,
+  occurrence = "first",
   call = rlang::caller_env()
 ) {
   center <- element_center(
     browser,
     selector,
     text = text,
+    occurrence = occurrence,
     call = call
   )
   move_mouse(browser, center)
@@ -307,9 +350,10 @@ click_element <- function(
 hover_element <- function(
   browser,
   selector,
+  text = NULL,
   call = rlang::caller_env()
 ) {
-  center <- element_center(browser, selector, call = call)
+  center <- element_center(browser, selector, text = text, call = call)
   move_mouse(browser, center)
   invisible()
 }
@@ -318,15 +362,29 @@ element_center <- function(
   browser,
   selector,
   text = NULL,
+  occurrence = "first",
   call = rlang::caller_env()
 ) {
+  if (
+    length(occurrence) != 1L ||
+      !occurrence %in% c("first", "last")
+  ) {
+    cli::cli_abort(
+      "{.arg occurrence} must be either {.val first} or {.val last}.",
+      call = call
+    )
+  }
+
   script <- sprintf(
     paste0(
       "(() => {",
       "const elements = Array.from(document.querySelectorAll(%s));",
       "const text = %s;",
-      "const element = elements.find((candidate) => ",
+      "const occurrence = %s;",
+      "const matches = elements.filter((candidate) => ",
       "text === null || candidate.textContent.trim() === text);",
+      "const element = occurrence === 'last' ",
+      "? matches[matches.length - 1] : matches[0];",
       "if (!element) return null;",
       "element.scrollIntoView({block: 'center', inline: 'center'});",
       "const rect = element.getBoundingClientRect();",
@@ -335,7 +393,8 @@ element_center <- function(
       "})()"
     ),
     jsonlite::toJSON(selector, auto_unbox = TRUE),
-    jsonlite::toJSON(text, auto_unbox = TRUE, null = "null")
+    jsonlite::toJSON(text, auto_unbox = TRUE, null = "null"),
+    jsonlite::toJSON(occurrence, auto_unbox = TRUE)
   )
   center <- browser$Runtime$evaluate(
     script,

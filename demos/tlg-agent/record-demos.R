@@ -6,7 +6,7 @@ record_tlg_demos <- function(
   output_dir = "figures/raw",
   viewport_width = 2400,
   viewport_height = 1350,
-  slugs = c("table", "plot", "custom-code")
+  slugs = c("table", "plot", "custom-analysis-short")
 ) {
   source("demos/vp-agent/record-demos.R")
   dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
@@ -31,15 +31,15 @@ record_tlg_demos <- function(
       hover_marker = FALSE
     ),
     list(
-      slug = "custom-code",
+      slug = "custom-analysis-short",
       question = paste(
-        "How many patients in each treatment arm experienced more than 5",
-        "adverse events? Please quote the exact counts."
+        "Which 5 adverse events differ most between combination and placebo?",
+        "Show n/N, percentages, and percentage-point differences."
       ),
       marker = "button.shiny-aside-pill",
       tool_call = "Retrieved data",
+      tool_call_occurrence = "last",
       close_tool_call = FALSE,
-      scroll_result = TRUE,
       hover_marker = FALSE
     )
   )
@@ -62,6 +62,11 @@ record_tlg_demos <- function(
       question = demo$question,
       marker = demo$marker,
       tool_call = demo$tool_call,
+      tool_call_occurrence = if (is.null(demo$tool_call_occurrence)) {
+        "first"
+      } else {
+        demo$tool_call_occurrence
+      },
       close_tool_call = if (is.null(demo$close_tool_call)) {
         TRUE
       } else {
