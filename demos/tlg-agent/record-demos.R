@@ -3,7 +3,10 @@ record_tlg_demos <- function(
     "TLG_AGENT_URL",
     unset = "http://127.0.0.1:8766"
   ),
-  output_dir = "figures"
+  output_dir = "figures/raw",
+  viewport_width = 2400,
+  viewport_height = 1350,
+  slugs = c("table", "plot", "custom-code")
 ) {
   source("demos/vp-agent/record-demos.R")
   dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
@@ -13,7 +16,9 @@ record_tlg_demos <- function(
       slug = "table",
       question = "Show an adverse event overview by treatment arm.",
       marker = 'button[aria-label="Verified answer"]',
-      expand_result = TRUE
+      expand_measure_details = TRUE,
+      hover_marker = FALSE,
+      hover_source = TRUE
     ),
     list(
       slug = "plot",
@@ -22,7 +27,8 @@ record_tlg_demos <- function(
         "safety population."
       ),
       marker = 'button[aria-label="Verified answer"]',
-      scroll_result = TRUE
+      scroll_result = TRUE,
+      hover_marker = FALSE
     ),
     list(
       slug = "custom-code",
@@ -37,6 +43,15 @@ record_tlg_demos <- function(
       hover_marker = FALSE
     )
   )
+
+  available_slugs <- vapply(demos, `[[`, character(1), "slug")
+  unknown_slugs <- setdiff(slugs, available_slugs)
+  if (length(unknown_slugs) > 0) {
+    cli::cli_abort(
+      "{.arg slugs} contains unknown demo names: {.or {.val {unknown_slugs}}}."
+    )
+  }
+  demos <- Filter(\(demo) demo$slug %in% slugs, demos)
 
   outputs <- character(length(demos))
   for (i in seq_along(demos)) {
@@ -53,15 +68,19 @@ record_tlg_demos <- function(
         demo$close_tool_call
       },
       expand_result = isTRUE(demo$expand_result),
+      expand_measure_details = isTRUE(demo$expand_measure_details),
       scroll_result = isTRUE(demo$scroll_result),
       hover_marker = if (is.null(demo$hover_marker)) {
         TRUE
       } else {
         demo$hover_marker
       },
+      hover_source = isTRUE(demo$hover_source),
       url = url,
       output_dir = output_dir,
-      output_prefix = "tlg-agent"
+      output_prefix = "tlg-agent",
+      viewport_width = viewport_width,
+      viewport_height = viewport_height
     )
   }
 
