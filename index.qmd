@@ -383,6 +383,60 @@ and there are many answers, one of which is that things change quickly. somethin
 and so in light of that its worth briefly checking in on how we see llms for data analysis right now in september 2026
 :::
 
+## {#transition .paper-slide}
+
+## New ways to understand data. {#llms-and-data-exploration .beat-slide}
+
+::: notes
+but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration
+:::
+
+## {#exploration}
+
+## {#mission-ocean background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
+
+::: notes
+for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place. 
+
+Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics. 
+
+But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it. 
+
+learning the tidyverse, and data science...these tools gave me a way to investigate any topic and learn about the world.
+:::
+
+## {#below-the-surface .split-image-slide background-image="figures/oceanimagebank-rays.jpg"}
+
+::: {.columns}
+
+::: {.column}
+### The right tools let us see below the surface. {.split-title}
+:::
+
+::: {.column role="img" aria-label="A school of rays swimming below the ocean surface"}
+:::
+
+:::
+
+<div class="image-credit">Photo: Lars von Ritter Zahony / Ocean Image Bank</div>
+
+::: notes
+the right tools let us see below the surface
+The tools enable the curiosity. 
+:::
+
+# {#ai-as-continuation .statement-slide .paper-slide}
+
+::: {.statement}
+AI is a [continuation]{.accent} of our work to find [new ways to explore data]{.accent}.
+:::
+
+::: notes
+But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis. 
+
+all three point in the same direction: we are going to keep going down the LLM path. so then the question becomes... 
+:::
+
 ## The models got better {#models-got-better .beat-slide}
 
 ```{r}
@@ -693,60 +747,6 @@ documentation, etc all shape whether an analysis is correct
 a human expert often holds that context
 :::
 
-## {#transition .paper-slide}
-
-## New ways to understand data. {#llms-and-data-exploration .beat-slide}
-
-::: notes
-but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration
-:::
-
-## {#exploration}
-
-## {#mission-ocean background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
-
-::: notes
-for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place. 
-
-Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics. 
-
-But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it. 
-
-learning the tidyverse, and data science...these tools gave me a way to investigate any topic and learn about the world.
-:::
-
-## {#below-the-surface .split-image-slide background-image="figures/oceanimagebank-rays.jpg"}
-
-::: {.columns}
-
-::: {.column}
-### The right tools let us see below the surface. {.split-title}
-:::
-
-::: {.column role="img" aria-label="A school of rays swimming below the ocean surface"}
-:::
-
-:::
-
-<div class="image-credit">Photo: Lars von Ritter Zahony / Ocean Image Bank</div>
-
-::: notes
-the right tools let us see below the surface
-The tools enable the curiosity. 
-:::
-
-# {#ai-as-continuation .statement-slide .paper-slide}
-
-::: {.statement}
-AI is a [continuation]{.accent} of our work to find [new ways to explore data]{.accent}.
-:::
-
-::: notes
-But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis. 
-
-all three point in the same direction: we are going to keep going down the LLM path. so then the question becomes... 
-:::
-
 # {#correct-ai-analysis .header-slide .blue-slide}
 
 ::: {.columns}
@@ -821,7 +821,7 @@ Adding a human [does not guarantee]{.accent} a better result.
 :::
 
 ::: {.hitl-evidence-points .incremental}
-- Human-AI combination often underperforms one or the other. 
+- Human–AI combinations do not reliably outperform the better of the two.
 - Approval fatigue.
 - Trust, timing, cognitive load, social cues, and information design all shape decisions.
 :::
@@ -1303,6 +1303,8 @@ including where correctness really matters
 
 ::: {.column .header-text width="64%"}
 Clinical trials agent
+
+[Built with commons]{style="display: block; margin-top: 20px; font-size: 34px; font-weight: 500; opacity: 0.8;"}
 :::
 
 ::: {.column width="36%"}
@@ -1344,9 +1346,7 @@ leaves room for something else
 
 ## Canvas {#canvas .canvas-slide}
 
-<video class="rounded click-to-toggle" style="max-height: 550px; max-width: 100%; height: auto;" data-autoplay muted preload="auto" tabindex="0" aria-label="Canvas demo. Plays automatically; click to pause or resume.">
-  <source src="figures/canvas-zoomed.mp4" type="video/mp4">
-</video>
+![](figures/canvas.png){style="display: block; margin: 0 auto; max-height: 550px;"}
 
 ::: {.fragment style="margin-top: 12px; text-align: center; font-size: 24px; font-weight: 600;"}
 Learn more at Joe Cheng's talk: _Lanier Ballroom A&F, Tuesday at 3:20_
