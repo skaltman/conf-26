@@ -305,7 +305,7 @@ for us and for many of you I imagine 2025 was the year AI got very very convenie
 and we were so worried 
 :::
 
-## {#databot-flotation-device .split-image-slide .split-40 .split-image-top background-image="figures/databot-flotation-blog-cropped.png"}
+## {#databot-flotation-device .split-image-slide .split-40 .split-contain-white background-image="figures/databot-flotation-blog-cropped.png"}
 
 ::: {.columns}
 
@@ -993,7 +993,7 @@ The whole conversation was 5 cents. Part of our mission is providing the best to
 <br><br>
 
 ::: {.statement .regular-weight}
-Help the agent be correct [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br>
+Help the agent be correct [**by encouraging sound statistics and reproducibility practices**]{.fragment}<br><br> 
 Make it less bad when the agent is wrong [**by making good use of your expertise and sharing an R/Python environment**]{.fragment}
 :::
 

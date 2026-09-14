@@ -1104,6 +1104,13 @@ $link-color: color("pink");
   background-position: 38% top;
 }
 
+/* Show the whole (tightly cropped) image centered on a white panel */
+.reveal .slide-background.split-image-slide.split-contain-white .slide-background-content {
+  background-color: #fff;
+  background-position: center center;
+  background-size: contain;
+}
+
 .reveal .slide.split-image-slide .image-credit {
   position: absolute;
   right: 24px;
