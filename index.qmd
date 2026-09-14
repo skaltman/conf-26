@@ -318,7 +318,7 @@ and we were so worried
 
 :::
 
-::: {.footer .footer-left}
+::: {.footer .footer-image-side}
 posit.co/blog/databot-is-not-a-flotation-device
 :::
 
@@ -614,10 +614,10 @@ wellbeing_data <- data.frame(
 ggplot(wellbeing_data, aes(x = sleep_hours, y = stress_score)) +
   geom_point(alpha = 0.8, size = 3) +
   labs(x = "sleep (hours)", y = "stress score") +
-  bluffbench_results_theme +
   theme(
-    axis.title = element_text(size = 30),
-    axis.text = element_text(size = 22)
+    plot.background = element_rect(fill = "#f5f2ec", color = NA),
+    axis.title = element_text(size = 30, color = "#24437b"),
+    axis.text = element_text(size = 22, color = "#24437b")
   )
 ```
 
@@ -761,24 +761,12 @@ How do we make AI-involved analysis correct?
 
 ## {#human-in-the-loop-intro}
 
-# {#human-in-the-loop .paper-slide .diagram-slide}
-
-{{< include includes/hitl-diagram.html >}}
-
-::: notes
-- Here’s a common thought about AI
-  - It’s untrustworthy, but useful.
-  - To make it trustworthy, we need people to verify the output from or supervise agents.
-
-it is an intuitively appealing division of labor. the agent does what it's good at, the human provides the judgment to keep it from going off the rails.
-:::
-
 ## {#slap-a-human-on-it .paper-slide}
 
 ::: {style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;"}
-![](figures/flextape.png){style="width: auto; max-height: 540px; margin: 0; border-radius: 0.75rem;"}
+![](figures/flextape.png){style="width: auto; max-height: 600px; margin: 0; border-radius: 0.75rem;"}
 
-<div class="fragment" style="min-height: 1.15em; margin: 0; font-size: 1.2em; line-height: 1.15;">*the <strong>slap a human on it</strong> approach</div>
+<div class="fragment" style="min-height: 1.15em; margin: 0; font-size: 1em; line-height: 1.15;">*the <strong>slap a human on it</strong> approach</div>
 :::
 
 ::: notes
@@ -789,6 +777,18 @@ I like to call this simplistic division of labor the "slap a human on it" approa
 there's only one problem: this simple view is not how these systems work.
 
 you can't assume that just because a human is present and technically "in the loop," you've solved the issue of correctness by asking them to verify something.
+:::
+
+# {#human-in-the-loop .paper-slide .diagram-slide}
+
+{{< include includes/hitl-diagram.html >}}
+
+::: notes
+- Here’s a common thought about AI
+  - It’s untrustworthy, but useful.
+  - To make it trustworthy, we need people to verify the output from or supervise agents.
+
+it is an intuitively appealing division of labor. the agent does what it's good at, the human provides the judgment to keep it from going off the rails.
 :::
 
 # {#user-responsibility background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
