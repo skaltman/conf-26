@@ -43,11 +43,11 @@ edit_tlg_demos <- function(
 }
 
 stitch_tlg_demos <- function(
-  inputs = c(
-    "figures/tlg-agent-table-demo.mp4",
-    "figures/tlg-agent-plot-demo.mp4",
-    "figures/tlg-agent-custom-analysis-demo.mp4"
-  ),
+  # The talk shows only the validated Kaplan-Meier beat, so that it reads as a
+  # trusted calculation in a regulated setting rather than as a rerun of the
+  # commons trust ladder. Pass the table and custom-analysis demos explicitly to
+  # rebuild the long cut.
+  inputs = "figures/tlg-agent-plot-demo.mp4",
   output = "figures/clinical-trials-agent-demo.mp4",
   call = rlang::caller_env()
 ) {
@@ -103,6 +103,7 @@ edit_tlg_demo <- function(
   keyframes,
   preset,
   crf,
+  input_range = "full",
   call = rlang::caller_env()
 ) {
   if (!file.exists(input)) {
@@ -111,8 +112,17 @@ edit_tlg_demo <- function(
       call = call
     )
   }
+  if (
+    length(input_range) != 1L ||
+      !input_range %in% c("full", "tv")
+  ) {
+    cli::cli_abort(
+      "{.arg input_range} must be either {.val full} or {.val tv}.",
+      call = call
+    )
+  }
 
-  filter <- tlg_demo_filter(segments, keyframes)
+  filter <- tlg_demo_filter(segments, keyframes, input_range = input_range)
 
   status <- system2(
     "ffmpeg",
@@ -322,13 +332,15 @@ tlg_demo_edit_specs <- function() {
           18.85,
           23.6
         ),
+        # Opens near the zoom the plot demo ends on so the stitched video does
+        # not snap wide at the segment boundary.
         zoom = c(
-          1.02,
-          1.02,
-          2.25,
-          2.25,
           2,
           2,
+          2.5,
+          2.5,
+          2.1,
+          2.1,
           1.58,
           1.58,
           1.58,
@@ -343,8 +355,8 @@ tlg_demo_edit_specs <- function() {
           0.5,
           0.5,
           0.5,
-          0.54,
-          0.54,
+          0.5,
+          0.5,
           0.5,
           0.5,
           0.5,
@@ -354,16 +366,18 @@ tlg_demo_edit_specs <- function() {
           0.5,
           0.5
         ),
+        # The conversation column spans x 0.348-0.652 and grows downward, so y
+        # tracks the content centre to keep the question bubble from clipping.
         y = c(
-          0.5,
-          0.5,
+          0.52,
+          0.52,
           0.55,
           0.55,
           0.18,
           0.18,
-          0.34,
-          0.34,
-          0.42,
+          0.3,
+          0.3,
+          0.37,
           0.67,
           0.67,
           0.67,
@@ -375,7 +389,7 @@ tlg_demo_edit_specs <- function() {
   )
 }
 
-tlg_demo_filter <- function(segments, keyframes) {
+tlg_demo_filter <- function(segments, keyframes, input_range = "full") {
   segment_filters <- vapply(
     seq_len(nrow(segments)),
     function(i) {
@@ -422,7 +436,9 @@ tlg_demo_filter <- function(segments, keyframes) {
     y,
     "':",
     "d=1:s=3340x1874:fps=60,",
-    "scale=iw:ih:in_range=full:out_range=tv,",
+    "scale=iw:ih:in_range=",
+    input_range,
+    ":out_range=tv,",
     "format=yuv420p[v]"
   )
 
@@ -457,6 +473,6 @@ format_number <- function(x) {
 }
 
 if (sys.nframe() == 0L) {
-  outputs <- edit_tlg_demos()
-  stitch_tlg_demos(unname(outputs))
+  edit_tlg_demos()
+  stitch_tlg_demos()
 }
