@@ -341,7 +341,7 @@ Getty Images. Thank you Margaret Biffar and Isabella Velásquez!
 ![](figures/databot.png){style="display: block; margin: 0 auto;"}
 
 ::: notes
-because we were all so excited about databot, but also so worried about people trusting its answers when it was wrong
+because we were all so excited about databot, felt like you were flying through data, but also so worried about people trusting its answers when it was wrong
 
 that we wrote an entire blog post explaining the ways in which it might fail
 :::
@@ -354,7 +354,7 @@ that we wrote an entire blog post explaining the ways in which it might fail
 > <footer>Joe Cheng, Posit CTO</footer>
 
 ::: notes
-and if you were here at conf last year, you might remember Joe's keynote where said somethign a bit like this
+and if you were here at conf last year, you might remember Joe's keynote where said something a bit like this
 :::
 
 
@@ -362,7 +362,7 @@ and if you were here at conf last year, you might remember Joe's keynote where s
 
 ::: notes
 and given that I think at this point there might be a question on your mind, which
-I think is fair to ask and I think we all have asked ourselves in the past few years
+I think is fair to ask and people ask me and I think we all have asked ourselves in the past few years
 :::
 
 # {#why-are-we-doing-this .statement-slide .paper-slide}
@@ -382,13 +382,14 @@ and there are many answers. I'm going to talk about one.
 ## {#mission-ocean background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
 
 ::: notes
-for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place. 
+before this, I worked in data science education. I taught people data science...
+for a lot of people, including myself, curiosity is what gets them into this
 
-Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics. 
+Maybe it was curiosity about a scientific field that led you to data analysis (doing a PhD), or curiosity about the tools themselves, how computers work, or statistics. 
 
 But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it. 
 
-learning the tidyverse, and data science...these tools gave me a way to investigate any topic and learn about the world.
+learning the tidyverse, and data science...these tools actually gave me a way to investigate my data
 :::
 
 ## {#below-the-surface .split-image-slide background-image="figures/oceanimagebank-rays.jpg"}
@@ -418,14 +419,15 @@ AI is a [continuation]{.accent} of our work to find [new ways to explore data]{.
 :::
 
 ::: notes
-we are curious, motivated by curiosity
+what motivates me and my coworkers
+we are curious
 about how LLMs work, about how to build around LLMs to make them useful, and how to turn them into tools that open up new worlds of analysis for all of you
 :::
 
 # {#transition-to-whats-changed .paper-slide}
 
 ::: notes
-I also want to talk about what's changed since a year ago
+I also want to spend a few minutes talking about what's changed since a year ago
 :::
 
 
@@ -503,13 +505,16 @@ ggplot(bluffbench_diamonds, aes(x = carat, y = price)) +
 
 :::
 
-<div class="fragment plot-overlay-caption" data-fragment-index="1">Can models interpret plots that contradict their expectations?</div>
+<div class="fragment fade-in-then-out plot-model-quote" data-fragment-index="1"><strong>Model:</strong> &ldquo;There&rsquo;s a strong positive relationship between carat and price!&rdquo;</div>
+
+<div class="fragment plot-overlay-caption" data-fragment-index="2">Can models interpret plots that contradict their expectations?</div>
 
 ::: notes
 around a year ago we did an experiment
 we wanted to know how well models interpret plots
-we showed them plots like this one of well known datasets
-if youre thinking uh thats not right. you are correct. 
+we showed them plots like this one, which plots diamonds and asked them to interpret them
+and they said stuff like this: 
+and that sounds good until you release: that is not ...
 
 this is what we wanted to know: would models correctly interpret plots that contradicted their expectations?
 :::
@@ -563,8 +568,7 @@ posit-dev.github.io/bluffbench
 
 ::: notes
 We tried a range of interventions to improve these scores, but none moved them
-much. Even when a model noticed during its reasoning that the association did
-not look as expected, it often still reported the expected relationship.
+much. 
 :::
 
 ## September 2026 {#bluffbench-september-2026 .paper-slide}
@@ -625,7 +629,20 @@ bluffbench_latest_results |>
 posit-dev.github.io/bluffbench
 :::
 
+::: notes
+until we waited 6 months
+
+these are results from now
+:::
+
 ## Correct analysis still takes more than a good model. {#frontier-model-not-enough .beat-slide}
+
+::: notes
+but this doesn't mean that data science is solved
+good analysis requires more than just a good model and a dataset
+
+after we did that experiment, we wanted to know something else: can models spot data quality issues in visualizations?
+:::
 
 ## {#bluffbench2-data-artifact .paper-slide}
 
@@ -674,9 +691,7 @@ github.com/posit-dev/bluffbench2
 :::
 
 ::: notes
-bluffbench2 tests whether models notice subtle data quality issues in
-visualizations.
-
+we showed them plots that look like this
 take a look at this plot. what do you notice?
 
 one thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.
@@ -723,6 +738,10 @@ github.com/posit-dev/bluffbench2
 
 ::: notes
 even frontier models don't do very well
+so they've gotten better, but it's not like they've solved data science and don't make mistakes
+they still fail at this task and others that are likely to come up in data science workflows
+
+but there's another problem
 :::
 
 # {#context-outside-the-data .statement-slide .paper-slide}
@@ -734,9 +753,14 @@ Data analysis depends on [context]{.accent} that is not in the data.
 ::: notes
 but there is a second problem: data analysis depends on context that is not in the data
 
-documentation, etc all shape whether an analysis is correct
+all data is constructed, and it is often meaningless without its context
 
-a human expert often holds that context
+that context might live in documentation files, in data dictionaries, in semantic views, or in the mind of your coworker who's been at the organization for 20 years and knows absolutely everything but has never written anything down
+
+it's not that this information is impenetrable to an llm...but...
+
+so the models got better, but they still aren't perfect they are going to make mistakes
+so if we are going to use AI for data analysis, the question becomes...
 :::
 
 # {#correct-ai-analysis .header-slide .blue-slide}
@@ -776,13 +800,13 @@ it is an intuitively appealing division of labor. the agent does what it's good 
 :::
 
 ::: notes
-this sounds so nice! the human is there to prevent mistakes and all will be good. so we should just apply this anywhere we see a problem.
+this sounds so nice! it's really tempting to just do this everything and call it a day
 
-I like to call this simplistic division of labor the "slap a human on it" approach.
+the human is there to prevent mistakes and all will be good. 
 
-there's only one problem: this simple view is not how these systems work.
+I like to call this simplistic division of labor the "slap a human on it" approach. we're not really thinking about what the human will do or how exactly, but we are glad they are there and just hope for the best
 
-you can't assume that just because a human is present and technically "in the loop," you've solved the issue of correctness by asking them to verify something.
+and I'm being a bit facetious but ...
 :::
 
 # {#user-responsibility background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
@@ -797,13 +821,15 @@ These skills help you <span style="color:#dd5d7b;">catch errors, interpret resul
 :::
 
 ::: notes
+this isn't too far from what we wrote about databot a year ago
+
 we wrote a whole article about the dangers of Databot and why users needed to remain skeptical and apply their expertise
 
 All of that is still true. I stand by it. It's inspirational! I would love to avoid being misled by confident but incorrect claims.
 
 but notice that this puts the responsibility for correctness on the user: be there, remain vigilant, and apply your expertise
 
-underneath it was one implicit strategy: stay vigilant and read the code
+but we didn't say HOW
 :::
 
 # {#human-ai-evidence .paper-slide .hitl-evidence-slide}
@@ -823,15 +849,10 @@ Adding a human [does not guarantee]{.accent} a better result.
 :::
 
 ::: notes
-a 2024 meta-analysis looked at 106 experimental studies that compared humans alone, AI alone, and human-AI teams
-
-on average, the combination performed worse than the better of the human or AI alone. decision tasks showed particular losses
 
 this does not mean every human-AI team is worse. it means that adding a human does not automatically produce a better system
 
-human judgment does not stay fixed when we put someone into an agent system
-
-automation bias is one example: in soem situations, people can follow an automated recommendation even when it is wrong
+people get tired of approving things
 
 approval fatigue can be a big issue
 think about your own coding agent. when it asks you to approve a command, how often do you carefully read it, and how often do you just hit accept?
@@ -854,6 +875,8 @@ People are [not fixed safety components.]{.accent}
 ::: notes
 because people are not fixed safety components 
 we can't just slot them in whenever we are worried an agent system might be wrong
+
+that doesn't mean they shouldn't be there! but we need to go further 
 :::
 
 # {#design-the-entire-system .beat-slide}
@@ -869,7 +892,7 @@ the question is how we design the interaction and the entire system so that huma
 ::: {.bullet-replace}
 
 ::: {.statement .regular-weight .replace-parents .fragment .fade-out data-fragment-index="0"}
-Build trust and correctness into the agent itself<br><br>
+Build trust and correctness into the agents themselves<br><br>
 Consider how the agent will interact with the user and support their expertise
 :::
 
@@ -881,10 +904,12 @@ Make it less bad when the agent is wrong
 :::
 
 ::: notes 
+these end up mapping onto two principles that we're going to get coming back to
+help the agent...
 
-In other words: help the agent be correct, and make it less bad when it's wrong.
+but we know it's going to make mistakes, so
 
-so for the rest of our time today instead as we go through what we've been working on we are going to focus on these two goals
+make it less bad...
 :::
 
 ## {#posit-assistant .blue-slide .posit-assistant-blue-slide}
@@ -1001,10 +1026,16 @@ That said, what about people that don't have data expertise and don't know how t
 
 # {.paper-slide}
 
+::: notes
+posit assistant assumes you are a data scientist
+who wants to work in an ide
+:::
+
 # But what if the user is not a data scientist? {#non-data-scientist .blue-slide}
 
 ::: notes
-The VP does not have data science expertise and does not know how to use R and Python. Posit Assistant does not serve them. What can we do for the non data scientist users?
+but what if the user is not a data scientist?
+how do we help them get correct answers too?
 :::
 
 ## {#vp-site-traffic-reminder}
@@ -1049,22 +1080,20 @@ The VP does not have data science expertise and does not know how to use R and P
 ```
 
 ::: notes
-I want to take a step back and revisit this conversation with the VP.
-
-In the same way that convenience and correctness can't be at battle, you can't be at battle with your VP.
-
-The VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them. 
+let's go back to that vibe-analyzing VP
+easy to say...
+but they are curious too! they had a question and reached for the tool that was accessible to them. 
 
 Unfortunately, the answer they got was wrong.
 
-I mentioned earlier that this isn't the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.
+This isn't the table that the data scientists usually use to measure site traffic...they have code they often use to analyze site traffic that gives them the correct results, and they vet and maintain this
 :::
 
 # [_Trusted_ code]{#trusted-code style="color: #ee6331; font-size: 1.4em;"}
 
 ::: notes
-This semantic view is an example of what we'll call _trusted_ code
-It's code that has been vetted and maintained by the data team
+This vetted code used by the data scientists is what we'll called _trusted_ code
+they rely on it and trust it to give them the right answers
 
 They also might have trusted code in
 
@@ -1089,6 +1118,8 @@ https://pos.it/commons
 commons helps data scientists build trustworthy data agents for their collaborators.
 
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
+
+and it's a bird because...
 :::
 
 ## {#commons-trusted-calculation}
@@ -1250,6 +1281,7 @@ Let's revisit those guidelines one more time.
 ::: notes
 we showed you commons in the example of the vp
 but commons is not just for bi
+it's for anyone
 :::
 
 ## {#commons-examples .agent-examples-slide .paper-slide}
@@ -1288,6 +1320,7 @@ but commons is not just for bi
 its for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data
 this could be ...
 including where correctness really matters
+and also cases where you might run really complex code
 :::
 
 # {#clinical-trials-agent .header-slide .blue-slide}
@@ -1304,8 +1337,8 @@ Clinical trials agent
 
 :::
 
-::: {.footer .clinical-trials-footer}
-[Try it: pos.it/clinical-trials-agent](https://pos.it/clinical-trials-agent)
+::: {.footer .clinical-trials-header-footer}
+[pos.it/clinical-trials-agent](https://pos.it/clinical-trials-agent)
 :::
 
 ## {#clinical-trials-agent-demo}
@@ -1314,8 +1347,8 @@ Clinical trials agent
   <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
 
-:::footer
-https://pos.it/clinical-trials-agent
+::: {.footer .clinical-trials-footer}
+[pos.it/clinical-trials-agent](https://pos.it/clinical-trials-agent)
 :::
 
 # {#conclusion .beat-slide .conclusion-thesis-slide}
@@ -1323,6 +1356,7 @@ https://pos.it/clinical-trials-agent
 It's (still) very bad to be wrong
 
 ::: notes
+this was actually a prototype title for like three versions of this talk ago ago...
 it's now incredibly easy to ask an agent a question about your data and get a wrong answer that looks completely plausible
 
 the problem is not only that the answer is wrong. we may also be unable to tell how it was calculated or reproduce it
@@ -1330,6 +1364,8 @@ the problem is not only that the answer is wrong. we may also be unable to tell 
 and if these answers are fast and convenient enough, we may start to tolerate that loss of correctness and trust as the price of using AI
 
 but Posit has always built tools to support correct analysis. we do not think that standard should change just because the interface has changed
+
+and it really still is bad to be wrong! correct answers, and correct answers whose methodology we can see and reproduce, are still important
 :::
 
 # {#conclusion-infrastructure .beat-slide .conclusion-thesis-slide}
@@ -1367,8 +1403,6 @@ Looking forward
 ::: notes
 databot 2025
 we were pushing the frontier
-as models get better, easy access code becomes less important
-leaves room for something else
 :::
 
 
