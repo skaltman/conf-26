@@ -1296,8 +1296,6 @@ including where correctness really matters
 
 ::: {.column .header-text width="64%"}
 Clinical trials agent
-
-[Built with commons]{style="display: block; margin-top: 20px; font-size: 34px; font-weight: 500; opacity: 0.8;"}
 :::
 
 ::: {.column width="36%"}
@@ -1306,8 +1304,8 @@ Clinical trials agent
 
 :::
 
-:::footer
-https://pos.it/clinical-trials-agent
+::: {.footer .clinical-trials-footer}
+[Try it: pos.it/clinical-trials-agent](https://pos.it/clinical-trials-agent)
 :::
 
 ## {#clinical-trials-agent-demo}
@@ -1325,10 +1323,13 @@ https://pos.it/clinical-trials-agent
 It's (still) very bad to be wrong
 
 ::: notes
-with vibe analysis, it's not just that the answers might be wrong, or that you can't tell how they were arrived at
-it's also that we might just kind of tolerate this shift in correctness
-this was always a problem and we've always made tools that push you towards correctness
-but it's now incredibly easy to get a wrong-looking answer that has the feel and ephemera of a right one
+it's now incredibly easy to ask an agent a question about your data and get a wrong answer that looks completely plausible
+
+the problem is not only that the answer is wrong. we may also be unable to tell how it was calculated or reproduce it
+
+and if these answers are fast and convenient enough, we may start to tolerate that loss of correctness and trust as the price of using AI
+
+but Posit has always built tools to support correct analysis. we do not think that standard should change just because the interface has changed
 :::
 
 # {#conclusion-infrastructure .beat-slide .conclusion-thesis-slide}
@@ -1340,15 +1341,17 @@ That changes the infrastructure we need for correct, transparent, and reproducib
 :::
 
 ::: notes
-and I think we find this really motivating
-AI has expanded who can get answers from data
-and that changes the infrastructure we need for correct, transparent, and reproducible analysis
-we care about correctness, know that you still need to be able to trace how an answer was arrived at and reproduce it
-and so we make tools for that
-with commons specifically, we want data teams to be able to hand someone who otherwise would have done a vibe analysis a commons agent and have them not feel a loss in convenience and get a boost in correctness.
+and this is the part we find really motivating
 
-we need all of you data people to build that infrastructure
-commons is the package that can help you do that
+AI has expanded who can ask questions about data and get answers directly. that changes the infrastructure we need around those answers
+
+with Commons, a data team establishes which code and calculations it trusts and provides the organizational context the agent needs
+
+the team can then give that agent to someone who might otherwise do a vibe analysis. that person keeps the convenience of asking questions in natural language, but the answers are grounded in the data team's trusted work and can be traced and reproduced
+
+and that is where all of you data people come in. this infrastructure has to be built by people who understand the data, the calculations, and the organization
+
+Commons is the package that helps you build it and make it available to others
 :::
 
 ## {#looking-forward .header-slide .blue-slide}

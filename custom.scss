@@ -155,6 +155,20 @@ $link-color: color("pink");
   font-size: 16px !important;
 }
 
+.reveal .footer.clinical-trials-footer {
+  bottom: 20px !important;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: color("paper-warm");
+  color: color("blue-dark") !important;
+  font-size: 23px !important;
+  font-weight: 600;
+}
+
+.reveal .footer.clinical-trials-footer a {
+  text-decoration: none;
+}
+
 /* Title */
 
 .reveal .slides .slide.title-slide {
