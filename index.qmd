@@ -1150,10 +1150,14 @@ commons helps data scientists build trustworthy data agents for their collaborat
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
 :::
 
+## {#commons-trusted-calculation-start}
+
+![](figures/commons-01-traffic-trend-first-frame.png){.rounded .nostretch width="100%"}
+
 ## {#commons-trusted-calculation}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/commons-01-traffic-trend.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend-a.mp4">
 </video>
 
 ::: notes
@@ -1165,10 +1169,28 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
+## {#commons-trusted-calculation-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend-b.mp4">
+</video>
+
+## {#commons-trusted-calculation-c}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend-c.mp4">
+</video>
+
+## {#commons-trusted-calculation-d}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend-d.mp4">
+</video>
+
 ## {#commons-context-citations}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/commons-02-page-views.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-02-page-views-a.mp4">
 </video>
 
 ::: notes
@@ -1183,10 +1205,16 @@ Finally, when it presents an answer, it can provides a citation to that context.
 
 :::
 
+## {#commons-context-citations-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-02-page-views-b.mp4">
+</video>
+
 ## {#commons-lower-trust-answer}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/commons-03-most-visits.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-03-most-visits-a.mp4">
 </video>
 
 ::: notes
@@ -1194,6 +1222,12 @@ There's one more possible path, which is that the model cannot find trusted cont
 
 This is how we've chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer.
 :::
+
+## {#commons-lower-trust-answer-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-03-most-visits-b.mp4">
+</video>
 
 ## {#commons-trust-flow .trust-flow-slide .paper-slide}
 
