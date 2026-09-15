@@ -66,7 +66,7 @@ https://pos.it/keynote
               <span><strong>Querying warehouse</strong><small>analytics.pageviews</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
             </div>
-            <div class="tool-card" style="--tool-delay: 3.5s">
+            <div class="tool-card" style="--tool-delay: 4.5s">
               <span class="tool-card-icon">∿</span>
               <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
@@ -132,7 +132,7 @@ Nevertheless, you're not there. Your VP brings this chart to leadership. They de
           <span><strong>Searching conversations</strong><small>site traffic chart</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 1.25s">
+        <div class="tool-card history-file-check" style="--tool-delay: 1.25s">
           <span class="tool-card-icon">◫</span>
           <span><strong>Checking generated files</strong><small>temporary workspace</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
@@ -157,12 +157,12 @@ Nevertheless, you're not there. Your VP brings this chart to leadership. They de
           <span><strong>Searching workspace</strong><small>web analytics</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 1.25s">
+        <div class="tool-card" style="--tool-delay: 1.75s">
           <span class="tool-card-icon">◫</span>
           <span><strong>Querying warehouse</strong><small>analytics.sessions</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 2.5s">
+        <div class="tool-card" style="--tool-delay: 3.5s">
           <span class="tool-card-icon">∿</span>
           <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
