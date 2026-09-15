@@ -60,6 +60,12 @@ record_demo <- function(
   output_prefix = "vp-agent",
   viewport_width = 1200,
   viewport_height = 766,
+  device_scale_factor = 1,
+  capture_method = "screencast",
+  capture_format = "jpeg",
+  capture_quality = 90,
+  encoding_crf = 20,
+  encoding_pixel_format = "yuv420p",
   call = rlang::caller_env()
 ) {
   if (
@@ -68,6 +74,15 @@ record_demo <- function(
   ) {
     cli::cli_abort(
       "{.arg tool_call_occurrence} must be either {.val first} or {.val last}.",
+      call = call
+    )
+  }
+  if (
+    length(capture_method) != 1L ||
+      !capture_method %in% c("screencast", "screenshot")
+  ) {
+    cli::cli_abort(
+      "{.arg capture_method} must be either {.val screencast} or {.val screenshot}.",
       call = call
     )
   }
@@ -80,25 +95,41 @@ record_demo <- function(
   state$files <- character()
   state$times <- numeric()
   state$frame_dir <- frame_dir
+  state$capture_format <- capture_format
+  state$capture_quality <- capture_quality
+  state$capturing <- FALSE
 
   browser <- chromote::ChromoteSession$new()
   on.exit(browser$close(), add = TRUE)
-  browser$set_viewport_size(viewport_width, viewport_height)
+  browser$Emulation$setDeviceMetricsOverride(
+    width = viewport_width,
+    height = viewport_height,
+    deviceScaleFactor = device_scale_factor,
+    mobile = FALSE
+  )
   browser$go_to(paste0(url, "?recording=", slug))
   wait_for_chat_input(browser, call = call)
 
-  browser$Page$screencastFrame(
-    callback_ = function(message) {
-      capture_screencast_frame(message, state, browser)
+  if (identical(capture_method, "screencast")) {
+    browser$Page$screencastFrame(
+      callback_ = function(message) {
+        capture_screencast_frame(message, state, browser)
+      }
+    )
+    screencast_args <- list(
+      format = capture_format,
+      maxWidth = viewport_width * device_scale_factor,
+      maxHeight = viewport_height * device_scale_factor,
+      everyNthFrame = 1
+    )
+    if (!identical(capture_format, "png")) {
+      screencast_args$quality <- capture_quality
     }
-  )
-  invisible(browser$Page$startScreencast(
-    format = "jpeg",
-    quality = 90,
-    maxWidth = viewport_width,
-    maxHeight = viewport_height,
-    everyNthFrame = 1
-  ))
+    invisible(do.call(browser$Page$startScreencast, screencast_args))
+  } else {
+    state$capturing <- TRUE
+    capture_screenshot_loop(browser, state)
+  }
 
   pump_browser(1.25)
   type_question(browser, question)
@@ -160,7 +191,11 @@ record_demo <- function(
     pump_browser(2.5)
   }
   capture_final_frame(browser, state)
-  invisible(browser$Page$stopScreencast())
+  if (identical(capture_method, "screencast")) {
+    invisible(browser$Page$stopScreencast())
+  } else {
+    state$capturing <- FALSE
+  }
   pump_browser(0.2)
 
   if (length(state$files) < 10L) {
@@ -174,7 +209,14 @@ record_demo <- function(
     output_dir,
     paste0(output_prefix, "-", slug, ".mp4")
   )
-  encode_recording(state$files, state$times, output, call = call)
+  encode_recording(
+    state$files,
+    state$times,
+    output,
+    crf = encoding_crf,
+    pixel_format = encoding_pixel_format,
+    call = call
+  )
   normalizePath(output)
 }
 
@@ -184,9 +226,27 @@ capture_screencast_frame <- function(message, state, browser) {
   invisible()
 }
 
+capture_screenshot_loop <- function(browser, state, interval = 1 / 30) {
+  if (!isTRUE(state$capturing)) {
+    return(invisible())
+  }
+
+  screenshot <- capture_browser_screenshot(browser, state)
+  save_frame(screenshot$data, as.numeric(Sys.time()), state)
+  later::later(
+    \() capture_screenshot_loop(browser, state, interval),
+    delay = interval
+  )
+  invisible()
+}
+
 save_frame <- function(data, timestamp, state) {
   index <- length(state$files) + 1L
-  path <- file.path(state$frame_dir, sprintf("frame-%05d.jpg", index))
+  extension <- if (identical(state$capture_format, "png")) "png" else "jpg"
+  path <- file.path(
+    state$frame_dir,
+    sprintf("frame-%05d.%s", index, extension)
+  )
   writeBin(base64enc::base64decode(data), path)
   state$files <- c(state$files, path)
   state$times <- c(state$times, timestamp)
@@ -194,10 +254,7 @@ save_frame <- function(data, timestamp, state) {
 }
 
 capture_final_frame <- function(browser, state, hold = NULL) {
-  screenshot <- browser$Page$captureScreenshot(
-    format = "jpeg",
-    quality = 90
-  )
+  screenshot <- capture_browser_screenshot(browser, state)
   timestamp <- if (length(state$times)) {
     tail(state$times, 1) + 1 / 30
   } else {
@@ -207,6 +264,14 @@ capture_final_frame <- function(browser, state, hold = NULL) {
   if (!is.null(hold)) {
     save_frame(screenshot$data, timestamp + hold, state)
   }
+}
+
+capture_browser_screenshot <- function(browser, state) {
+  screenshot_args <- list(format = state$capture_format)
+  if (!identical(state$capture_format, "png")) {
+    screenshot_args$quality <- state$capture_quality
+  }
+  do.call(browser$Page$captureScreenshot, screenshot_args)
 }
 
 wait_for_chat_input <- function(
@@ -475,6 +540,8 @@ encode_recording <- function(
   timestamps,
   output,
   final_hold = 2,
+  crf = 20,
+  pixel_format = "yuv420p",
   call = rlang::caller_env()
 ) {
   keep <- !duplicated(timestamps)
@@ -518,14 +585,14 @@ encode_recording <- function(
       "-i",
       shQuote(manifest),
       "-vf",
-      "fps=30,format=yuv420p",
+      paste0("fps=30,format=", pixel_format),
       "-an",
       "-c:v",
       "libx264",
       "-preset",
       "medium",
       "-crf",
-      "20",
+      as.character(crf),
       "-movflags",
       "+faststart",
       shQuote(output)

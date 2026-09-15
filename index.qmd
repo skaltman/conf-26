@@ -351,7 +351,7 @@ Getty Images. Thank you Margaret Biffar and Isabella Velásquez!
 ![](figures/databot.png){style="display: block; margin: 0 auto;"}
 
 ::: notes
-because we were all so excited about databot, but also so worried about people trusting its answers when it was wrong
+because we were all so excited about databot, felt like you were flying through data, but also so worried about people trusting its answers when it was wrong
 
 that we wrote an entire blog post explaining the ways in which it might fail
 :::
@@ -364,7 +364,7 @@ that we wrote an entire blog post explaining the ways in which it might fail
 > <footer>Joe Cheng, Posit CTO</footer>
 
 ::: notes
-and if you were here at conf last year, you might remember Joe's keynote where said somethign a bit like this
+and if you were here at conf last year, you might remember Joe's keynote where said something a bit like this
 :::
 
 
@@ -372,7 +372,7 @@ and if you were here at conf last year, you might remember Joe's keynote where s
 
 ::: notes
 and given that I think at this point there might be a question on your mind, which
-I think is fair to ask and I think we all have asked ourselves in the past few years
+I think is fair to ask and people ask me and I think we all have asked ourselves in the past few years
 :::
 
 # {#why-are-we-doing-this .statement-slide .paper-slide}
@@ -384,10 +384,62 @@ Why are we doing this?!
 ::: notes
 if AI is this agent of chaos that we are so worried, why involve ourselves at all
 
-and there are many answers, one of which is that things change quickly. something you might have worried abotu yesterday is no longer true today
-
-and so in light of that its worth briefly checking in on how we see llms for data analysis right now in september 2026
+and there are many answers. I'm going to talk about one.
 :::
+
+## {#exploration}
+
+## {#mission-ocean background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
+
+::: notes
+before this, I worked in data science education. I taught people data science...
+for a lot of people, including myself, curiosity is what gets them into this
+
+Maybe it was curiosity about a scientific field that led you to data analysis (doing a PhD), or curiosity about the tools themselves, how computers work, or statistics. 
+
+But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it. 
+
+learning the tidyverse, and data science...these tools actually gave me a way to investigate my data
+:::
+
+## {#below-the-surface .split-image-slide background-image="figures/oceanimagebank-rays.jpg"}
+
+::: {.columns}
+
+::: {.column}
+### The right tools let us see below the surface. {.split-title}
+:::
+
+::: {.column role="img" aria-label="A school of rays swimming below the ocean surface"}
+:::
+
+:::
+
+<div class="image-credit">Photo: Lars von Ritter Zahony / Ocean Image Bank</div>
+
+::: notes
+the right tools let us see below the surface
+The tools enable the curiosity. 
+:::
+
+# {#ai-as-continuation .statement-slide .paper-slide}
+
+::: {.statement}
+AI is a [continuation]{.accent} of our work to find [new ways to explore data]{.accent}.
+:::
+
+::: notes
+what motivates me and my coworkers
+we are curious
+about how LLMs work, about how to build around LLMs to make them useful, and how to turn them into tools that open up new worlds of analysis for all of you
+:::
+
+# {#transition-to-whats-changed .paper-slide}
+
+::: notes
+I also want to spend a few minutes talking about what's changed since a year ago
+:::
+
 
 ## The models got better {#models-got-better .beat-slide}
 
@@ -463,13 +515,16 @@ ggplot(bluffbench_diamonds, aes(x = carat, y = price)) +
 
 :::
 
-<div class="fragment plot-overlay-caption" data-fragment-index="1">Can models interpret plots that contradict their expectations?</div>
+<div class="fragment fade-in-then-out plot-model-quote" data-fragment-index="1"><strong>Model:</strong> &ldquo;There&rsquo;s a strong positive relationship between carat and price!&rdquo;</div>
+
+<div class="fragment plot-overlay-caption" data-fragment-index="2">Can models interpret plots that contradict their expectations?</div>
 
 ::: notes
 around a year ago we did an experiment
 we wanted to know how well models interpret plots
-we showed them plots like this one of well known datasets
-if youre thinking uh thats not right. you are correct. 
+we showed them plots like this one, which plots diamonds and asked them to interpret them
+and they said stuff like this: 
+and that sounds good until you release: that is not ...
 
 this is what we wanted to know: would models correctly interpret plots that contradicted their expectations?
 :::
@@ -523,8 +578,7 @@ posit-dev.github.io/bluffbench
 
 ::: notes
 We tried a range of interventions to improve these scores, but none moved them
-much. Even when a model noticed during its reasoning that the association did
-not look as expected, it often still reported the expected relationship.
+much. 
 :::
 
 ## September 2026 {#bluffbench-september-2026 .paper-slide}
@@ -585,7 +639,20 @@ bluffbench_latest_results |>
 posit-dev.github.io/bluffbench
 :::
 
+::: notes
+until we waited 6 months
+
+these are results from now
+:::
+
 ## Correct analysis still takes more than a good model. {#frontier-model-not-enough .beat-slide}
+
+::: notes
+but this doesn't mean that data science is solved
+good analysis requires more than just a good model and a dataset
+
+after we did that experiment, we wanted to know something else: can models spot data quality issues in visualizations?
+:::
 
 ## {#bluffbench2-data-artifact .paper-slide}
 
@@ -634,9 +701,7 @@ github.com/posit-dev/bluffbench2
 :::
 
 ::: notes
-bluffbench2 tests whether models notice subtle data quality issues in
-visualizations.
-
+we showed them plots that look like this
 take a look at this plot. what do you notice?
 
 one thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.
@@ -683,6 +748,10 @@ github.com/posit-dev/bluffbench2
 
 ::: notes
 even frontier models don't do very well
+so they've gotten better, but it's not like they've solved data science and don't make mistakes
+they still fail at this task and others that are likely to come up in data science workflows
+
+but there's another problem
 :::
 
 # {#context-outside-the-data .statement-slide .paper-slide}
@@ -694,63 +763,14 @@ Data analysis depends on [context]{.accent} that is not in the data.
 ::: notes
 but there is a second problem: data analysis depends on context that is not in the data
 
-documentation, etc all shape whether an analysis is correct
+all data is constructed, and it is often meaningless without its context
 
-a human expert often holds that context
-:::
+that context might live in documentation files, in data dictionaries, in semantic views, or in the mind of your coworker who's been at the organization for 20 years and knows absolutely everything but has never written anything down
 
-## {#transition .paper-slide}
+it's not that this information is impenetrable to an llm...but...
 
-## New ways to understand data. {#llms-and-data-exploration .beat-slide}
-
-::: notes
-but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration
-:::
-
-## {#exploration}
-
-## {#mission-ocean background-image="figures/mission-ocean.jpg" background-size="cover" background-position="center"}
-
-::: notes
-for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place. 
-
-Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics. 
-
-But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it. 
-
-learning the tidyverse, and data science...these tools gave me a way to investigate any topic and learn about the world.
-:::
-
-## {#below-the-surface .split-image-slide background-image="figures/oceanimagebank-rays.jpg"}
-
-::: {.columns}
-
-::: {.column}
-### The right tools let us see below the surface. {.split-title}
-:::
-
-::: {.column role="img" aria-label="A school of rays swimming below the ocean surface"}
-:::
-
-:::
-
-<div class="image-credit">Photo: Lars von Ritter Zahony / Ocean Image Bank</div>
-
-::: notes
-the right tools let us see below the surface
-The tools enable the curiosity. 
-:::
-
-# {#ai-as-continuation .statement-slide .paper-slide}
-
-::: {.statement}
-AI is a [continuation]{.accent} of our work to find [new ways to explore data]{.accent}.
-:::
-
-::: notes
-But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis. 
-
-all three point in the same direction: we are going to keep going down the LLM path. so then the question becomes... 
+so the models got better, but they still aren't perfect they are going to make mistakes
+so if we are going to use AI for data analysis, the question becomes...
 :::
 
 # {#correct-ai-analysis .header-slide .blue-slide}
@@ -769,24 +789,6 @@ How do we make AI-involved analysis correct?
 
 ## {#human-in-the-loop-intro}
 
-## {#slap-a-human-on-it .paper-slide}
-
-::: {style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;"}
-![](figures/flextape.png){style="width: auto; max-height: 600px; margin: 0; border-radius: 0.75rem;"}
-
-<div class="fragment" style="min-height: 1.15em; margin: 0; font-size: 1em; line-height: 1.15;">*the <strong>slap a human on it</strong> approach</div>
-:::
-
-::: notes
-this sounds so nice! the human is there to prevent mistakes and all will be good. so we should just apply this anywhere we see a problem.
-
-I like to call this simplistic division of labor the "slap a human on it" approach.
-
-there's only one problem: this simple view is not how these systems work.
-
-you can't assume that just because a human is present and technically "in the loop," you've solved the issue of correctness by asking them to verify something.
-:::
-
 # {#human-in-the-loop .paper-slide .diagram-slide}
 
 {{< include includes/hitl-diagram.html >}}
@@ -797,6 +799,24 @@ you can't assume that just because a human is present and technically "in the lo
   - To make it trustworthy, we need people to verify the output from or supervise agents.
 
 it is an intuitively appealing division of labor. the agent does what it's good at, the human provides the judgment to keep it from going off the rails.
+:::
+
+## {#slap-a-human-on-it .paper-slide}
+
+::: {style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;"}
+![](figures/flextape.png){style="width: auto; max-height: 600px; margin: 0; border-radius: 0.75rem;"}
+
+<div class="fragment" style="min-height: 1.15em; margin: 0; font-size: 1em; line-height: 1.15;">*the <strong>slap a human on it</strong> approach</div>
+:::
+
+::: notes
+this sounds so nice! it's really tempting to just do this everything and call it a day
+
+the human is there to prevent mistakes and all will be good. 
+
+I like to call this simplistic division of labor the "slap a human on it" approach. we're not really thinking about what the human will do or how exactly, but we are glad they are there and just hope for the best
+
+and I'm being a bit facetious but ...
 :::
 
 # {#user-responsibility background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
@@ -811,13 +831,15 @@ These skills help you <span style="color:#dd5d7b;">catch errors, interpret resul
 :::
 
 ::: notes
+this isn't too far from what we wrote about databot a year ago
+
 we wrote a whole article about the dangers of Databot and why users needed to remain skeptical and apply their expertise
 
 All of that is still true. I stand by it. It's inspirational! I would love to avoid being misled by confident but incorrect claims.
 
 but notice that this puts the responsibility for correctness on the user: be there, remain vigilant, and apply your expertise
 
-underneath it was one implicit strategy: stay vigilant and read the code
+but we didn't say HOW
 :::
 
 # {#human-ai-evidence .paper-slide .hitl-evidence-slide}
@@ -827,25 +849,20 @@ Adding a human [does not guarantee]{.accent} a better result.
 :::
 
 ::: {.hitl-evidence-points .incremental}
-- Human-AI combination often underperforms one or the other. 
+- Human–AI combinations do not reliably outperform the better of the two.
 - Approval fatigue.
 - Trust, timing, cognitive load, social cues, and information design all shape decisions.
 :::
 
 ::: {.footer .hitl-footer}
-Vaccaro et al. (2024); Parasuraman and Manzey (2010); Anthropic (2026)
+[Vaccaro et al. (2024)](https://doi.org/10.1038/s41562-024-02024-1); [Crootof et al. (2023)](https://scholarship.law.vanderbilt.edu/vlr/vol76/iss2/2/); Anthropic (2026) [[1]](https://claude.com/blog/auto-mode-default-in-claude-code) [[2]](https://www.anthropic.com/engineering/claude-code-auto-mode)
 :::
 
 ::: notes
-a 2024 meta-analysis looked at 106 experimental studies that compared humans alone, AI alone, and human-AI teams
-
-on average, the combination performed worse than the better of the human or AI alone. decision tasks showed particular losses
 
 this does not mean every human-AI team is worse. it means that adding a human does not automatically produce a better system
 
-human judgment does not stay fixed when we put someone into an agent system
-
-automation bias is one example: in soem situations, people can follow an automated recommendation even when it is wrong
+people get tired of approving things
 
 approval fatigue can be a big issue
 think about your own coding agent. when it asks you to approve a command, how often do you carefully read it, and how often do you just hit accept?
@@ -853,9 +870,10 @@ think about your own coding agent. when it asks you to approve a command, how of
 trust, timing, cognitive load, social cues, the interface, and the amount of information all affect how someone decides whether code or an action is correct or safe
 
 full citations, in case anyone asks:
-- Vaccaro, M., Almaatouq, M., & Malone, T. W. (2024). "When combinations of humans and AI are useful: A systematic review and meta-analysis." Nature Human Behaviour, 8, 2296–2309.
-- Parasuraman, R., & Manzey, D. H. (2010). "Complacency and bias in human use of automation: An attentional integration." Human Factors, 52(3), 381–410.
-- Hughes, J. & Anthropic (2026). "How we built Claude Code auto mode: a safer way to skip permissions." anthropic.com/engineering/claude-code-auto-mode
+- Vaccaro, M., Almaatouq, A., & Malone, T. W. (2024). ["When combinations of humans and AI are useful: A systematic review and meta-analysis."](https://doi.org/10.1038/s41562-024-02024-1) *Nature Human Behaviour, 8*, 2293–2303.
+- Crootof, R., Kaminski, M. E., & Price, W. N., II. (2023). ["Humans in the Loop."](https://scholarship.law.vanderbilt.edu/vlr/vol76/iss2/2/) *Vanderbilt Law Review, 76*, 429.
+- Hughes, J. (2026, March 25). ["How we built Claude Code auto mode: A safer way to skip permissions."](https://www.anthropic.com/engineering/claude-code-auto-mode) Anthropic.
+- Phillippi, C. (2026, August 7). ["Auto mode is now the default in Claude Code for Pro, Max, and Team plans."](https://claude.com/blog/auto-mode-default-in-claude-code) Claude by Anthropic.
 :::
 
 # {#people-are-not-fixed .statement-slide .paper-slide}
@@ -867,6 +885,8 @@ People are [not fixed safety components.]{.accent}
 ::: notes
 because people are not fixed safety components 
 we can't just slot them in whenever we are worried an agent system might be wrong
+
+that doesn't mean they shouldn't be there! but we need to go further 
 :::
 
 # {#design-the-entire-system .beat-slide}
@@ -882,7 +902,7 @@ the question is how we design the interaction and the entire system so that huma
 ::: {.bullet-replace}
 
 ::: {.statement .regular-weight .replace-parents .fragment .fade-out data-fragment-index="0"}
-Build trust and correctness into the agent itself<br><br>
+Build trust and correctness into the agents themselves<br><br>
 Consider how the agent will interact with the user and support their expertise
 :::
 
@@ -894,10 +914,12 @@ Make it less bad when the agent is wrong
 :::
 
 ::: notes 
+these end up mapping onto two principles that we're going to get coming back to
+help the agent...
 
-In other words: help the agent be correct, and make it less bad when it's wrong.
+but we know it's going to make mistakes, so
 
-so for the rest of our time today instead as we go through what we've been working on we are going to focus on these two goals
+make it less bad...
 :::
 
 ## {#posit-assistant .blue-slide .posit-assistant-blue-slide}
@@ -1060,10 +1082,16 @@ That said, what about people that don't have data expertise and don't know how t
 
 # {.paper-slide}
 
+::: notes
+posit assistant assumes you are a data scientist
+who wants to work in an ide
+:::
+
 # But what if the user is not a data scientist? {#non-data-scientist .blue-slide}
 
 ::: notes
-The VP does not have data science expertise and does not know how to use R and Python. Posit Assistant does not serve them. What can we do for the non data scientist users?
+but what if the user is not a data scientist?
+how do we help them get correct answers too?
 :::
 
 ## {#vp-site-traffic-reminder}
@@ -1108,22 +1136,20 @@ The VP does not have data science expertise and does not know how to use R and P
 ```
 
 ::: notes
-I want to take a step back and revisit this conversation with the VP.
-
-In the same way that convenience and correctness can't be at battle, you can't be at battle with your VP.
-
-The VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them. 
+let's go back to that vibe-analyzing VP
+easy to say...
+but they are curious too! they had a question and reached for the tool that was accessible to them. 
 
 Unfortunately, the answer they got was wrong.
 
-I mentioned earlier that this isn't the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.
+This isn't the table that the data scientists usually use to measure site traffic...they have code they often use to analyze site traffic that gives them the correct results, and they vet and maintain this
 :::
 
 # [_Trusted_ code]{#trusted-code style="color: #ee6331; font-size: 1.4em;"}
 
 ::: notes
-This semantic view is an example of what we'll call _trusted_ code
-It's code that has been vetted and maintained by the data team
+This vetted code used by the data scientists is what we'll called _trusted_ code
+they rely on it and trust it to give them the right answers
 
 They also might have trusted code in
 
@@ -1148,6 +1174,8 @@ https://pos.it/commons
 commons helps data scientists build trustworthy data agents for their collaborators.
 
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
+
+and it's a bird because...
 :::
 
 ## {#commons-trusted-calculation-start}
@@ -1343,6 +1371,7 @@ thank you and momentous feelings
 ::: notes
 we showed you commons in the example of the vp
 but commons is not just for bi
+it's for anyone
 :::
 
 ## {#commons-examples .agent-examples-slide .paper-slide}
@@ -1381,6 +1410,7 @@ but commons is not just for bi
 its for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data
 this could be ...
 including where correctness really matters
+and also cases where you might run really complex code
 :::
 
 # {#clinical-trials-agent .header-slide .blue-slide}
@@ -1397,17 +1427,58 @@ Clinical trials agent
 
 :::
 
-:::footer
-https://pos.it/clinical-trials-agent
+::: {.footer .clinical-trials-header-footer}
+[pos.it/clinical-trials-agent](https://pos.it/clinical-trials-agent)
 :::
 
 ## {#clinical-trials-agent-demo}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Click to play or pause.">
+<video class="rounded click-to-toggle" width="100%" data-autoplay muted preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Plays automatically; click to pause or resume.">
   <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
 
-# {#conclusion .paper-slide}
+::: {.footer .clinical-trials-footer}
+[pos.it/clinical-trials-agent](https://pos.it/clinical-trials-agent)
+:::
+
+# {#conclusion .beat-slide .conclusion-thesis-slide}
+
+It's (still) very bad to be wrong
+
+::: notes
+this was actually a prototype title for like three versions of this talk ago ago...
+it's now incredibly easy to ask an agent a question about your data and get a wrong answer that looks completely plausible
+
+the problem is not only that the answer is wrong. we may also be unable to tell how it was calculated or reproduce it
+
+and if these answers are fast and convenient enough, we may start to tolerate that loss of correctness and trust as the price of using AI
+
+but Posit has always built tools to support correct analysis. we do not think that standard should change just because the interface has changed
+
+and it really still is bad to be wrong! correct answers, and correct answers whose methodology we can see and reproduce, are still important
+:::
+
+# {#conclusion-infrastructure .beat-slide .conclusion-thesis-slide}
+
+::: {.conclusion-thesis}
+AI has expanded who can get answers from data.
+
+That changes the infrastructure we need for correct, transparent, and reproducible analysis.
+:::
+
+::: notes
+and this is the part we find really motivating
+
+AI has expanded who can ask questions about data and get answers directly. that changes the infrastructure we need around those answers
+
+with Commons, a data team establishes which code and calculations it trusts and provides the organizational context the agent needs
+
+the team can then give that agent to someone who might otherwise do a vibe analysis. that person keeps the convenience of asking questions in natural language, but the answers are grounded in the data team's trusted work and can be traced and reproduced
+
+and that is where all of you data people come in. this infrastructure has to be built by people who understand the data, the calculations, and the organization
+
+Commons is the package that helps you build it and make it available to others
+:::
 
 ## {#looking-forward .header-slide .blue-slide}
 
@@ -1422,8 +1493,6 @@ Looking forward
 ::: notes
 databot 2025
 we were pushing the frontier
-as models get better, easy access code becomes less important
-leaves room for something else
 :::
 
 
@@ -1461,10 +1530,14 @@ Learn more at Joe Cheng's talk: _Lanier Ballroom A&F, Tuesday at 3:20_
       <span class="thank-you-resource-label">Commons</span>
       <span class="thank-you-resource-link">pos.it/commons</span>
     </a>
-    <div class="thank-you-resource thank-you-newsletter-card">
-      <img src="figures/ai-newsletter-qr.png" alt="QR code for the Posit AI Newsletter">
+    <a class="thank-you-resource thank-you-link-card thank-you-newsletter-card" href="https://pos.it/ai-newsletter">
       <span class="thank-you-resource-label">AI Newsletter</span>
-    </div>
+      <span class="thank-you-resource-link">pos.it/ai-newsletter</span>
+    </a>
   </div>
 </div>
 ```
+
+::: notes
+we will be in the lounge
+:::

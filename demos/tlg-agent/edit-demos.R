@@ -43,12 +43,20 @@ edit_tlg_demos <- function(
 }
 
 stitch_tlg_demos <- function(
+  # The talk shows the adverse-event table followed by the validated
+  # Kaplan-Meier plot, ending shortly after the plot zooms out.
   inputs = c(
     "figures/tlg-agent-table-demo.mp4",
-    "figures/tlg-agent-plot-demo.mp4",
-    "figures/tlg-agent-custom-analysis-demo.mp4"
+    "figures/tlg-agent-plot-demo.mp4"
   ),
   output = "figures/clinical-trials-agent-demo.mp4",
+  duration = 37.87,
+  cuts = data.frame(
+    start = 9,
+    end = 21.633333
+  ),
+  preset = "slow",
+  crf = 18,
   call = rlang::caller_env()
 ) {
   missing_inputs <- inputs[!file.exists(inputs)]
@@ -58,6 +66,16 @@ stitch_tlg_demos <- function(
       call = call
     )
   }
+  if (
+    !is.null(duration) &&
+      (length(duration) != 1L || !is.finite(duration) || duration <= 0)
+  ) {
+    cli::cli_abort(
+      "{.arg duration} must be a single positive number or {.code NULL}.",
+      call = call
+    )
+  }
+  cuts <- validate_tlg_demo_cuts(cuts, duration, call = call)
 
   manifest <- tempfile(fileext = ".txt")
   on.exit(unlink(manifest), add = TRUE)
@@ -65,6 +83,19 @@ stitch_tlg_demos <- function(
     sprintf("file '%s'", normalizePath(inputs)),
     manifest
   )
+  duration_args <- if (is.null(duration)) {
+    character()
+  } else {
+    c("-t", format_number(duration))
+  }
+  stitched_output <- if (nrow(cuts) > 0) {
+    tempfile(fileext = ".mp4")
+  } else {
+    output
+  }
+  if (!identical(stitched_output, output)) {
+    on.exit(unlink(stitched_output), add = TRUE)
+  }
 
   status <- system2(
     "ffmpeg",
@@ -78,17 +109,29 @@ stitch_tlg_demos <- function(
       "0",
       "-i",
       shQuote(manifest),
+      duration_args,
       "-an",
       "-c",
       "copy",
       "-movflags",
       "+faststart",
-      shQuote(output)
+      shQuote(stitched_output)
     )
   )
   if (!identical(status, 0L)) {
     cli::cli_abort(
       "FFmpeg failed to stitch {.file {output}}.",
+      call = call
+    )
+  }
+  if (nrow(cuts) > 0) {
+    remove_tlg_demo_ranges(
+      stitched_output,
+      output,
+      cuts,
+      duration,
+      preset,
+      crf,
       call = call
     )
   }
@@ -103,6 +146,7 @@ edit_tlg_demo <- function(
   keyframes,
   preset,
   crf,
+  input_range = "full",
   call = rlang::caller_env()
 ) {
   if (!file.exists(input)) {
@@ -111,8 +155,17 @@ edit_tlg_demo <- function(
       call = call
     )
   }
+  if (
+    length(input_range) != 1L ||
+      !input_range %in% c("full", "tv")
+  ) {
+    cli::cli_abort(
+      "{.arg input_range} must be either {.val full} or {.val tv}.",
+      call = call
+    )
+  }
 
-  filter <- tlg_demo_filter(segments, keyframes)
+  filter <- tlg_demo_filter(segments, keyframes, input_range = input_range)
 
   status <- system2(
     "ffmpeg",
@@ -143,6 +196,121 @@ edit_tlg_demo <- function(
   }
 
   invisible(output)
+}
+
+remove_tlg_demo_ranges <- function(
+  input,
+  output,
+  cuts,
+  duration,
+  preset,
+  crf,
+  call = rlang::caller_env()
+) {
+  starts <- c(0, cuts$end)
+  ends <- c(cuts$start, duration)
+  segment_filters <- vapply(
+    seq_along(starts),
+    \(i) sprintf(
+      "[0:v]trim=start=%.3f:end=%.3f,setpts=PTS-STARTPTS[v%d]",
+      starts[[i]],
+      ends[[i]],
+      i
+    ),
+    character(1)
+  )
+  inputs <- paste0("[v", seq_along(starts), "]", collapse = "")
+  filter <- paste(
+    c(
+      segment_filters,
+      paste0(
+        inputs,
+        "concat=n=",
+        length(starts),
+        ":v=1:a=0,format=yuv420p[v]"
+      )
+    ),
+    collapse = ";"
+  )
+
+  status <- system2(
+    "ffmpeg",
+    c(
+      "-y",
+      "-loglevel",
+      "error",
+      "-i",
+      shQuote(input),
+      "-filter_complex",
+      shQuote(filter),
+      "-map",
+      "[v]",
+      "-an",
+      "-c:v",
+      "libx264",
+      "-preset",
+      preset,
+      "-crf",
+      as.character(crf),
+      "-color_range",
+      "tv",
+      "-movflags",
+      "+faststart",
+      shQuote(output)
+    )
+  )
+  if (!identical(status, 0L)) {
+    cli::cli_abort(
+      "FFmpeg failed to remove pauses from {.file {output}}.",
+      call = call
+    )
+  }
+
+  invisible(output)
+}
+
+validate_tlg_demo_cuts <- function(
+  cuts,
+  duration,
+  call = rlang::caller_env()
+) {
+  if (is.null(cuts)) {
+    return(data.frame(start = numeric(), end = numeric()))
+  }
+  if (
+    !is.data.frame(cuts) ||
+      !all(c("start", "end") %in% names(cuts)) ||
+      !is.numeric(cuts$start) ||
+      !is.numeric(cuts$end)
+  ) {
+    cli::cli_abort(
+      "{.arg cuts} must be a data frame with numeric {.field start} and {.field end} columns.",
+      call = call
+    )
+  }
+  if (is.null(duration)) {
+    cli::cli_abort(
+      "{.arg duration} cannot be {.code NULL} when {.arg cuts} are supplied.",
+      call = call
+    )
+  }
+
+  cuts <- cuts[order(cuts$start), , drop = FALSE]
+  invalid <- !is.finite(cuts$start) |
+    !is.finite(cuts$end) |
+    cuts$start < 0 |
+    cuts$end <= cuts$start |
+    cuts$end >= duration
+  overlaps <- length(cuts$start) > 1L &&
+    any(cuts$start[-1] < cuts$end[-nrow(cuts)])
+  if (any(invalid) || overlaps) {
+    cli::cli_abort(
+      "{.arg cuts} must contain ordered, non-overlapping ranges within the video duration.",
+      call = call
+    )
+  }
+
+  cuts
 }
 
 tlg_demo_edit_specs <- function() {
@@ -322,13 +490,15 @@ tlg_demo_edit_specs <- function() {
           18.85,
           23.6
         ),
+        # Opens near the zoom the plot demo ends on so the stitched video does
+        # not snap wide at the segment boundary.
         zoom = c(
-          1.02,
-          1.02,
-          2.25,
-          2.25,
           2,
           2,
+          2.5,
+          2.5,
+          2.1,
+          2.1,
           1.58,
           1.58,
           1.58,
@@ -343,8 +513,8 @@ tlg_demo_edit_specs <- function() {
           0.5,
           0.5,
           0.5,
-          0.54,
-          0.54,
+          0.5,
+          0.5,
           0.5,
           0.5,
           0.5,
@@ -354,16 +524,18 @@ tlg_demo_edit_specs <- function() {
           0.5,
           0.5
         ),
+        # The conversation column spans x 0.348-0.652 and grows downward, so y
+        # tracks the content centre to keep the question bubble from clipping.
         y = c(
-          0.5,
-          0.5,
+          0.52,
+          0.52,
           0.55,
           0.55,
           0.18,
           0.18,
-          0.34,
-          0.34,
-          0.42,
+          0.3,
+          0.3,
+          0.37,
           0.67,
           0.67,
           0.67,
@@ -375,7 +547,7 @@ tlg_demo_edit_specs <- function() {
   )
 }
 
-tlg_demo_filter <- function(segments, keyframes) {
+tlg_demo_filter <- function(segments, keyframes, input_range = "full") {
   segment_filters <- vapply(
     seq_len(nrow(segments)),
     function(i) {
@@ -422,7 +594,9 @@ tlg_demo_filter <- function(segments, keyframes) {
     y,
     "':",
     "d=1:s=3340x1874:fps=60,",
-    "scale=iw:ih:in_range=full:out_range=tv,",
+    "scale=iw:ih:in_range=",
+    input_range,
+    ":out_range=tv,",
     "format=yuv420p[v]"
   )
 
@@ -457,6 +631,6 @@ format_number <- function(x) {
 }
 
 if (sys.nframe() == 0L) {
-  outputs <- edit_tlg_demos()
-  stitch_tlg_demos(unname(outputs))
+  edit_tlg_demos()
+  stitch_tlg_demos()
 }

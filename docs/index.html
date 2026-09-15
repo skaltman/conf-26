@@ -6,8 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>index</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,13 +19,10 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -34,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-b4e6899b4b12bc7ef897ecd3b693a490.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-9a9a5117186783f844fbeeafc87bbd22.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -529,7 +526,7 @@ Correct and convenient
 <h1></h1>
 
 <img data-src="figures/databot.png" style="display: block; margin: 0 auto;" class="r-stretch"><aside class="notes">
-<p>because we were all so excited about databot, but also so worried about people trusting its answers when it was wrong</p>
+<p>because we were all so excited about databot, felt like you were flying through data, but also so worried about people trusting its answers when it was wrong</p>
 <p>that we wrote an entire blog post explaining the ways in which it might fail</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -554,7 +551,7 @@ Joe Cheng, Posit CTO
 </footer>
 </blockquote>
 <aside class="notes">
-<p>and if you were here at conf last year, you might remember Joe’s keynote where said somethign a bit like this</p>
+<p>and if you were here at conf last year, you might remember Joe’s keynote where said something a bit like this</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -571,7 +568,7 @@ Joe Cheng, Posit CTO
 <section id="why-build-ai" class="title-slide slide level1 paper-slide center">
 <h1></h1>
 <aside class="notes">
-<p>and given that I think at this point there might be a question on your mind, which I think is fair to ask and I think we all have asked ourselves in the past few years</p>
+<p>and given that I think at this point there might be a question on your mind, which I think is fair to ask and people ask me and I think we all have asked ourselves in the past few years</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -593,196 +590,7 @@ Joe Cheng, Posit CTO
 </div>
 <aside class="notes">
 <p>if AI is this agent of chaos that we are so worried, why involve ourselves at all</p>
-<p>and there are many answers, one of which is that things change quickly. something you might have worried abotu yesterday is no longer true today</p>
-<p>and so in light of that its worth briefly checking in on how we see llms for data analysis right now in september 2026</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="models-got-better" class="slide level2 beat-slide">
-<h2>The models got better</h2>
-</section>
-<section id="bluffbench-counterintuitive-plot" class="slide level2 paper-slide">
-<h2></h2>
-<div class="plot-slide-content fragment" data-fragment-index="0">
-<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" style="width:92.0%" alt="A scatterplot of price against carat. The points form a clear negative association, with price generally falling as carat rises."></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment plot-overlay-caption" data-fragment-index="1">
-Can models interpret plots that contradict their expectations?
-</div>
-<aside class="notes">
-<p>around a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one of well known datasets if youre thinking uh thats not right. you are correct.</p>
-<p>this is what we wanted to know: would models correctly interpret plots that contradicted their expectations?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="bluffbench-november-2025" class="slide level2 paper-slide">
-<h2>November 2025</h2>
-<div class="plot-slide-content">
-<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%" alt="A horizontal stacked bar chart titled 'Models often report what they expect to see, not what's plotted.' GPT-5, Gemini Pro 2.5, and Claude Sonnet 4.5 are mostly incorrect."></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>posit-dev.github.io/bluffbench</p>
-</div>
-<aside class="notes">
-<p>We tried a range of interventions to improve these scores, but none moved them much. Even when a model noticed during its reasoning that the association did not look as expected, it often still reported the expected relationship.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="bluffbench-september-2026" class="slide level2 paper-slide">
-<h2>September 2026</h2>
-<div class="plot-slide-content">
-<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%" alt="A faceted horizontal stacked bar chart of percent correct across recent models, split into thinking and no-thinking groups. Thinking models perform better, while most models still give many incorrect answers."></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>posit-dev.github.io/bluffbench</p>
-</div>
-</section>
-<section id="frontier-model-not-enough" class="slide level2 beat-slide">
-<h2>Correct analysis still takes more than a good model.</h2>
-</section>
-<section id="bluffbench2-data-artifact" class="slide level2 paper-slide">
-<h2></h2>
-<div class="plot-slide-content">
-<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" style="width:92.0%" alt="A scatterplot of sleep hours against stress score with a negative trend. A subset of points falls exactly along a straight line, suggesting a data-quality artifact."></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>github.com/posit-dev/bluffbench2</p>
-</div>
-<aside class="notes">
-<p>bluffbench2 tests whether models notice subtle data quality issues in visualizations.</p>
-<p>take a look at this plot. what do you notice?</p>
-<p>one thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.</p>
-<p>we wanted to see if models would be able to pick up on this kind of subtle visual artifact</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="bluffbench2-results" class="slide level2 paper-slide">
-<h2></h2>
-<div class="plot-slide-content">
-<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" style="width:78.0%" alt="A horizontal bar chart of bluffbench2 scores by model. Every model scores below 50 percent, showing that frontier models still struggle to notice subtle data-quality issues."></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>github.com/posit-dev/bluffbench2</p>
-</div>
-<aside class="notes">
-<p>even frontier models don’t do very well</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section>
-<section id="context-outside-the-data" class="title-slide slide level1 statement-slide paper-slide center">
-<h1></h1>
-<div class="statement">
-<p>Data analysis depends on <span class="accent">context</span> that is not in the data.</p>
-</div>
-<aside class="notes">
-<p>but there is a second problem: data analysis depends on context that is not in the data</p>
-<p>documentation, etc all shape whether an analysis is correct</p>
-<p>a human expert often holds that context</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="transition" class="slide level2 paper-slide">
-<h2></h2>
-</section>
-<section id="llms-and-data-exploration" class="slide level2 beat-slide">
-<h2>New ways to understand data.</h2>
-<aside class="notes">
-<p>but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration</p>
+<p>and there are many answers. I’m going to talk about one.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -801,10 +609,10 @@ Can models interpret plots that contradict their expectations?
 <section id="mission-ocean" class="slide level2" data-background-image="figures/mission-ocean.jpg" data-background-size="cover" data-background-position="center">
 <h2></h2>
 <aside class="notes">
-<p>for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place.</p>
-<p>Maybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.</p>
+<p>before this, I worked in data science education. I taught people data science… for a lot of people, including myself, curiosity is what gets them into this</p>
+<p>Maybe it was curiosity about a scientific field that led you to data analysis (doing a PhD), or curiosity about the tools themselves, how computers work, or statistics.</p>
 <p>But without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it.</p>
-<p>learning the tidyverse, and data science…these tools gave me a way to investigate any topic and learn about the world.</p>
+<p>learning the tidyverse, and data science…these tools actually gave me a way to investigate my data</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -848,8 +656,226 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 <p>AI is a <span class="accent">continuation</span> of our work to find <span class="accent">new ways to explore data</span>.</p>
 </div>
 <aside class="notes">
-<p>But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis.</p>
-<p>all three point in the same direction: we are going to keep going down the LLM path. so then the question becomes…</p>
+<p>what motivates me and my coworkers we are curious about how LLMs work, about how to build around LLMs to make them useful, and how to turn them into tools that open up new worlds of analysis for all of you</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="transition-to-whats-changed" class="title-slide slide level1 paper-slide center">
+<h1></h1>
+<aside class="notes">
+<p>I also want to spend a few minutes talking about what’s changed since a year ago</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="models-got-better" class="slide level2 beat-slide">
+<h2>The models got better</h2>
+</section>
+<section id="bluffbench-counterintuitive-plot" class="slide level2 paper-slide">
+<h2></h2>
+<div class="plot-slide-content fragment" data-fragment-index="0">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" style="width:92.0%" alt="A scatterplot of price against carat. The points form a clear negative association, with price generally falling as carat rises."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out plot-model-quote" data-fragment-index="1">
+<strong>Model:</strong> “There’s a strong positive relationship between carat and price!”
+</div>
+<div class="fragment plot-overlay-caption" data-fragment-index="2">
+Can models interpret plots that contradict their expectations?
+</div>
+<aside class="notes">
+<p>around a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one, which plots diamonds and asked them to interpret them and they said stuff like this: and that sounds good until you release: that is not …</p>
+<p>this is what we wanted to know: would models correctly interpret plots that contradicted their expectations?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bluffbench-november-2025" class="slide level2 paper-slide">
+<h2>November 2025</h2>
+<div class="plot-slide-content">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%" alt="A horizontal stacked bar chart titled 'Models often report what they expect to see, not what's plotted.' GPT-5, Gemini Pro 2.5, and Claude Sonnet 4.5 are mostly incorrect."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>posit-dev.github.io/bluffbench</p>
+</div>
+<aside class="notes">
+<p>We tried a range of interventions to improve these scores, but none moved them much.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bluffbench-september-2026" class="slide level2 paper-slide">
+<h2>September 2026</h2>
+<div class="plot-slide-content">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%" alt="A faceted horizontal stacked bar chart of percent correct across recent models, split into thinking and no-thinking groups. Thinking models perform better, while most models still give many incorrect answers."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>posit-dev.github.io/bluffbench</p>
+</div>
+<aside class="notes">
+<p>until we waited 6 months</p>
+<p>these are results from now</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="frontier-model-not-enough" class="slide level2 beat-slide">
+<h2>Correct analysis still takes more than a good model.</h2>
+<aside class="notes">
+<p>but this doesn’t mean that data science is solved good analysis requires more than just a good model and a dataset</p>
+<p>after we did that experiment, we wanted to know something else: can models spot data quality issues in visualizations?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bluffbench2-data-artifact" class="slide level2 paper-slide">
+<h2></h2>
+<div class="plot-slide-content">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" style="width:92.0%" alt="A scatterplot of sleep hours against stress score with a negative trend. A subset of points falls exactly along a straight line, suggesting a data-quality artifact."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>github.com/posit-dev/bluffbench2</p>
+</div>
+<aside class="notes">
+<p>we showed them plots that look like this take a look at this plot. what do you notice?</p>
+<p>one thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.</p>
+<p>we wanted to see if models would be able to pick up on this kind of subtle visual artifact</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bluffbench2-results" class="slide level2 paper-slide">
+<h2></h2>
+<div class="plot-slide-content">
+<div class="cell" data-layout-align="center" data-fig-bg="#f5f2ec">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" style="width:78.0%" alt="A horizontal bar chart of bluffbench2 scores by model. Every model scores below 50 percent, showing that frontier models still struggle to notice subtle data-quality issues."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>github.com/posit-dev/bluffbench2</p>
+</div>
+<aside class="notes">
+<p>even frontier models don’t do very well so they’ve gotten better, but it’s not like they’ve solved data science and don’t make mistakes they still fail at this task and others that are likely to come up in data science workflows</p>
+<p>but there’s another problem</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="context-outside-the-data" class="title-slide slide level1 statement-slide paper-slide center">
+<h1></h1>
+<div class="statement">
+<p>Data analysis depends on <span class="accent">context</span> that is not in the data.</p>
+</div>
+<aside class="notes">
+<p>but there is a second problem: data analysis depends on context that is not in the data</p>
+<p>all data is constructed, and it is often meaningless without its context</p>
+<p>that context might live in documentation files, in data dictionaries, in semantic views, or in the mind of your coworker who’s been at the organization for 20 years and knows absolutely everything but has never written anything down</p>
+<p>it’s not that this information is impenetrable to an llm…but…</p>
+<p>so the models got better, but they still aren’t perfect they are going to make mistakes so if we are going to use AI for data analysis, the question becomes…</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -875,32 +901,8 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 </section>
 <section id="human-in-the-loop-intro" class="slide level2">
 <h2></h2>
-</section>
-<section id="slap-a-human-on-it" class="slide level2 paper-slide">
-<h2></h2>
-<div style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
-<p><img data-src="figures/flextape.png" style="width: auto; max-height: 600px; margin: 0; border-radius: 0.75rem;"></p>
-<div class="fragment" style="min-height: 1.15em; margin: 0; font-size: 1em; line-height: 1.15;">
-*the <strong>slap a human on it</strong> approach
-</div>
-</div>
-<aside class="notes">
-<p>this sounds so nice! the human is there to prevent mistakes and all will be good. so we should just apply this anywhere we see a problem.</p>
-<p>I like to call this simplistic division of labor the “slap a human on it” approach.</p>
-<p>there’s only one problem: this simple view is not how these systems work.</p>
-<p>you can’t assume that just because a human is present and technically “in the loop,” you’ve solved the issue of correctness by asking them to verify something.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section></section>
+<section>
 <section id="human-in-the-loop" class="title-slide slide level1 paper-slide diagram-slide center">
 <h1></h1>
 <div class="diagram-frame hitl-diagram" role="img" aria-label="Human-in-the-loop cycle: the agent does work, a human verifies it, and the agent tries again.">
@@ -941,7 +943,31 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
           display:block!important;
       }</style></aside>
 </section>
-
+<section id="slap-a-human-on-it" class="slide level2 paper-slide">
+<h2></h2>
+<div style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+<p><img data-src="figures/flextape.png" style="width: auto; max-height: 600px; margin: 0; border-radius: 0.75rem;"></p>
+<div class="fragment" style="min-height: 1.15em; margin: 0; font-size: 1em; line-height: 1.15;">
+*the <strong>slap a human on it</strong> approach
+</div>
+</div>
+<aside class="notes">
+<p>this sounds so nice! it’s really tempting to just do this everything and call it a day</p>
+<p>the human is there to prevent mistakes and all will be good.</p>
+<p>I like to call this simplistic division of labor the “slap a human on it” approach. we’re not really thinking about what the human will do or how exactly, but we are glad they are there and just hope for the best</p>
+<p>and I’m being a bit facetious but …</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
 <section id="user-responsibility" class="title-slide slide level1 center" data-background-image="figures/databot-flotation-beach.png" data-background-size="cover" data-background-position="center">
 <h1></h1>
 <div class="fragment" style="position: absolute; top: 43%; left: 2%; width: 45%; margin: 0; padding: 0.75rem 1rem; background: #f5f2ec; color: #24437b; box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 25%); font-size: 0.72em; font-weight: 700; text-align: left;">
@@ -951,10 +977,11 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 <p><span style="color:#fff1c9;">posit.co/blog/databot-is-not-a-flotation-device</span></p>
 </div>
 <aside class="notes">
+<p>this isn’t too far from what we wrote about databot a year ago</p>
 <p>we wrote a whole article about the dangers of Databot and why users needed to remain skeptical and apply their expertise</p>
 <p>All of that is still true. I stand by it. It’s inspirational! I would love to avoid being misled by confident but incorrect claims.</p>
 <p>but notice that this puts the responsibility for correctness on the user: be there, remain vigilant, and apply your expertise</p>
-<p>underneath it was one implicit strategy: stay vigilant and read the code</p>
+<p>but we didn’t say HOW</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -975,23 +1002,20 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 </div>
 <div class="hitl-evidence-points">
 <ul>
-<li class="fragment">Human-AI combination often underperforms one or the other.</li>
+<li class="fragment">Human–AI combinations do not reliably outperform the better of the two.</li>
 <li class="fragment">Approval fatigue.</li>
 <li class="fragment">Trust, timing, cognitive load, social cues, and information design all shape decisions.</li>
 </ul>
 </div>
 <div class="footer hitl-footer">
-<p>Vaccaro et al.&nbsp;(2024); Parasuraman and Manzey (2010); Anthropic (2026)</p>
+<p><a href="https://doi.org/10.1038/s41562-024-02024-1">Vaccaro et al.&nbsp;(2024)</a>; <a href="https://scholarship.law.vanderbilt.edu/vlr/vol76/iss2/2/">Crootof et al.&nbsp;(2023)</a>; Anthropic (2026) <a href="https://claude.com/blog/auto-mode-default-in-claude-code">[1]</a> <a href="https://www.anthropic.com/engineering/claude-code-auto-mode">[2]</a></p>
 </div>
 <aside class="notes">
-<p>a 2024 meta-analysis looked at 106 experimental studies that compared humans alone, AI alone, and human-AI teams</p>
-<p>on average, the combination performed worse than the better of the human or AI alone. decision tasks showed particular losses</p>
 <p>this does not mean every human-AI team is worse. it means that adding a human does not automatically produce a better system</p>
-<p>human judgment does not stay fixed when we put someone into an agent system</p>
-<p>automation bias is one example: in soem situations, people can follow an automated recommendation even when it is wrong</p>
+<p>people get tired of approving things</p>
 <p>approval fatigue can be a big issue think about your own coding agent. when it asks you to approve a command, how often do you carefully read it, and how often do you just hit accept?</p>
 <p>trust, timing, cognitive load, social cues, the interface, and the amount of information all affect how someone decides whether code or an action is correct or safe</p>
-<p>full citations, in case anyone asks: - Vaccaro, M., Almaatouq, M., &amp; Malone, T. W. (2024). “When combinations of humans and AI are useful: A systematic review and meta-analysis.” Nature Human Behaviour, 8, 2296–2309. - Parasuraman, R., &amp; Manzey, D. H. (2010). “Complacency and bias in human use of automation: An attentional integration.” Human Factors, 52(3), 381–410. - Hughes, J. &amp; Anthropic (2026). “How we built Claude Code auto mode: a safer way to skip permissions.” anthropic.com/engineering/claude-code-auto-mode</p>
+<p>full citations, in case anyone asks: - Vaccaro, M., Almaatouq, A., &amp; Malone, T. W. (2024). <a href="https://doi.org/10.1038/s41562-024-02024-1">“When combinations of humans and AI are useful: A systematic review and meta-analysis.”</a> <em>Nature Human Behaviour, 8</em>, 2293–2303. - Crootof, R., Kaminski, M. E., &amp; Price, W. N., II. (2023). <a href="https://scholarship.law.vanderbilt.edu/vlr/vol76/iss2/2/">“Humans in the Loop.”</a> <em>Vanderbilt Law Review, 76</em>, 429. - Hughes, J. (2026, March 25). <a href="https://www.anthropic.com/engineering/claude-code-auto-mode">“How we built Claude Code auto mode: A safer way to skip permissions.”</a> Anthropic. - Phillippi, C. (2026, August 7). <a href="https://claude.com/blog/auto-mode-default-in-claude-code">“Auto mode is now the default in Claude Code for Pro, Max, and Team plans.”</a> Claude by Anthropic.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1012,6 +1036,7 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 </div>
 <aside class="notes">
 <p>because people are not fixed safety components we can’t just slot them in whenever we are worried an agent system might be wrong</p>
+<p>that doesn’t mean they shouldn’t be there! but we need to go further</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1048,15 +1073,16 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 <h1></h1>
 <div class="bullet-replace">
 <div class="statement regular-weight replace-parents fragment fade-out" data-fragment-index="0">
-<p>Build trust and correctness into the agent itself<br><br> Consider how the agent will interact with the user and support their expertise</p>
+<p>Build trust and correctness into the agents themselves<br><br> Consider how the agent will interact with the user and support their expertise</p>
 </div>
 <div class="statement regular-weight replace-subs fragment" data-fragment-index="0">
 <p>Help the agent be correct<br><br> Make it less bad when the agent is wrong</p>
 </div>
 </div>
 <aside class="notes">
-<p>In other words: help the agent be correct, and make it less bad when it’s wrong.</p>
-<p>so for the rest of our time today instead as we go through what we’ve been working on we are going to focus on these two goals</p>
+<p>these end up mapping onto two principles that we’re going to get coming back to help the agent…</p>
+<p>but we know it’s going to make mistakes, so</p>
+<p>make it less bad…</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1301,14 +1327,26 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 
 <section id="section" class="title-slide slide level1 paper-slide center">
 <h1></h1>
-
+<aside class="notes">
+<p>posit assistant assumes you are a data scientist who wants to work in an ide</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
 <section>
 <section id="non-data-scientist" class="title-slide slide level1 blue-slide center">
 <h1>But what if the user is not a data scientist?</h1>
 <aside class="notes">
-<p>The VP does not have data science expertise and does not know how to use R and Python. Posit Assistant does not serve them. What can we do for the non data scientist users?</p>
+<p>but what if the user is not a data scientist? how do we help them get correct answers too?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1360,11 +1398,9 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
   </div>
 </div>
 <aside class="notes">
-<p>I want to take a step back and revisit this conversation with the VP.</p>
-<p>In the same way that convenience and correctness can’t be at battle, you can’t be at battle with your VP.</p>
-<p>The VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them.</p>
+<p>let’s go back to that vibe-analyzing VP easy to say… but they are curious too! they had a question and reached for the tool that was accessible to them.</p>
 <p>Unfortunately, the answer they got was wrong.</p>
-<p>I mentioned earlier that this isn’t the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database.</p>
+<p>This isn’t the table that the data scientists usually use to measure site traffic…they have code they often use to analyze site traffic that gives them the correct results, and they vet and maintain this</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1380,7 +1416,7 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 <section id="trusted-code" class="title-slide slide level1 center">
 <h1><span id="trusted-code" style="color: #ee6331; font-size: 1.4em;"><em>Trusted</em> code</span></h1>
 <aside class="notes">
-<p>This semantic view is an example of what we’ll call <em>trusted</em> code It’s code that has been vetted and maintained by the data team</p>
+<p>This vetted code used by the data scientists is what we’ll called <em>trusted</em> code they rely on it and trust it to give them the right answers</p>
 <p>They also might have trusted code in</p>
 <ul>
 <li>Shiny apps</li>
@@ -1412,6 +1448,7 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 <aside class="notes">
 <p>commons helps data scientists build trustworthy data agents for their collaborators.</p>
 <p>It’s an open source R and Python package built on <code>ellmer</code> / <code>chatlas</code> and <code>shinychat</code>. You can use it with whatever model from whatever provider you want.</p>
+<p>and it’s a bird because…</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1652,7 +1689,7 @@ Photo: Lars von Ritter Zahony / Ocean Image Bank
 <section id="commons-beyond-bi" class="slide level2 beat-slide">
 <h2>Not just BI</h2>
 <aside class="notes">
-<p>we showed you commons in the example of the vp but commons is not just for bi</p>
+<p>we showed you commons in the example of the vp but commons is not just for bi it’s for anyone</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1720,7 +1757,7 @@ Program lead
 </table>
 </div>
 <aside class="notes">
-<p>its for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters</p>
+<p>its for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters and also cases where you might run really complex code</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1742,20 +1779,66 @@ Program lead
 </div><div class="column" style="width:36%;">
 <p><img data-src="figures/clinical-trials-agent-logo-orange.png" class="header-image" alt="Clinical trials agent logo"></p>
 </div></div>
-<div class="footer">
-<p>https://pos.it/clinical-trials-agent</p>
+<div class="footer clinical-trials-header-footer">
+<p><a href="https://pos.it/clinical-trials-agent">pos.it/clinical-trials-agent</a></p>
 </div>
 </section>
 <section id="clinical-trials-agent-demo" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Click to play or pause.">
+<video class="rounded click-to-toggle" width="100%" data-autoplay="" muted="" preload="auto" tabindex="0" aria-label="Clinical Trials Agent demo. Plays automatically; click to pause or resume.">
 <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
+<div class="footer clinical-trials-footer">
+<p><a href="https://pos.it/clinical-trials-agent">pos.it/clinical-trials-agent</a></p>
+</div>
 </section></section>
-<section>
-<section id="conclusion" class="title-slide slide level1 paper-slide center">
+<section id="conclusion" class="title-slide slide level1 beat-slide conclusion-thesis-slide center">
 <h1></h1>
+<p>It’s (still) very bad to be wrong</p>
+<aside class="notes">
+<p>this was actually a prototype title for like three versions of this talk ago ago… it’s now incredibly easy to ask an agent a question about your data and get a wrong answer that looks completely plausible</p>
+<p>the problem is not only that the answer is wrong. we may also be unable to tell how it was calculated or reproduce it</p>
+<p>and if these answers are fast and convenient enough, we may start to tolerate that loss of correctness and trust as the price of using AI</p>
+<p>but Posit has always built tools to support correct analysis. we do not think that standard should change just because the interface has changed</p>
+<p>and it really still is bad to be wrong! correct answers, and correct answers whose methodology we can see and reproduce, are still important</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 
+<section>
+<section id="conclusion-infrastructure" class="title-slide slide level1 beat-slide conclusion-thesis-slide center">
+<h1></h1>
+<div class="conclusion-thesis">
+<p>AI has expanded who can get answers from data.</p>
+<p>That changes the infrastructure we need for correct, transparent, and reproducible analysis.</p>
+</div>
+<aside class="notes">
+<p>and this is the part we find really motivating</p>
+<p>AI has expanded who can ask questions about data and get answers directly. that changes the infrastructure we need around those answers</p>
+<p>with Commons, a data team establishes which code and calculations it trusts and provides the organizational context the agent needs</p>
+<p>the team can then give that agent to someone who might otherwise do a vibe analysis. that person keeps the convenience of asking questions in natural language, but the answers are grounded in the data team’s trusted work and can be traced and reproduced</p>
+<p>and that is where all of you data people come in. this infrastructure has to be built by people who understand the data, the calculations, and the organization</p>
+<p>Commons is the package that helps you build it and make it available to others</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="looking-forward" class="slide level2 header-slide blue-slide">
 <h2></h2>
@@ -1764,7 +1847,7 @@ Program lead
 <p>Looking forward</p>
 </div></div>
 <aside class="notes">
-<p>databot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else</p>
+<p>databot 2025 we were pushing the frontier</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1819,12 +1902,25 @@ Program lead
       <span class="thank-you-resource-label">Commons</span>
       <span class="thank-you-resource-link">pos.it/commons</span>
     </a>
-    <div class="thank-you-resource thank-you-newsletter-card">
-      <img src="figures/ai-newsletter-qr.png" alt="QR code for the Posit AI Newsletter">
+    <a class="thank-you-resource thank-you-link-card thank-you-newsletter-card" href="https://pos.it/ai-newsletter">
       <span class="thank-you-resource-label">AI Newsletter</span>
-    </div>
+      <span class="thank-you-resource-link">pos.it/ai-newsletter</span>
+    </a>
   </div>
 </div>
+<aside class="notes">
+<p>we will be in the lounge</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
 </section>

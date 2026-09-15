@@ -4,8 +4,15 @@ record_tlg_demos <- function(
     unset = "http://127.0.0.1:8766"
   ),
   output_dir = "figures/raw",
+  output_prefix = "tlg-agent",
   viewport_width = 2400,
   viewport_height = 1350,
+  device_scale_factor = 1,
+  capture_method = "screencast",
+  capture_format = "jpeg",
+  capture_quality = 90,
+  encoding_crf = 20,
+  encoding_pixel_format = "yuv420p",
   slugs = c("table", "plot", "custom-analysis-short")
 ) {
   source("demos/vp-agent/record-demos.R")
@@ -83,9 +90,15 @@ record_tlg_demos <- function(
       hover_source = isTRUE(demo$hover_source),
       url = url,
       output_dir = output_dir,
-      output_prefix = "tlg-agent",
+      output_prefix = output_prefix,
       viewport_width = viewport_width,
-      viewport_height = viewport_height
+      viewport_height = viewport_height,
+      device_scale_factor = device_scale_factor,
+      capture_method = capture_method,
+      capture_format = capture_format,
+      capture_quality = capture_quality,
+      encoding_crf = encoding_crf,
+      encoding_pixel_format = encoding_pixel_format
     )
   }
 
