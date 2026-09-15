@@ -374,17 +374,7 @@ Why are we doing this?!
 ::: notes
 if AI is this agent of chaos that we are so worried, why involve ourselves at all
 
-and there are many answers, one of which is that things change quickly. something you might have worried abotu yesterday is no longer true today
-
-and so in light of that its worth briefly checking in on how we see llms for data analysis right now in september 2026
-:::
-
-## {#transition .paper-slide}
-
-## New ways to understand data. {#llms-and-data-exploration .beat-slide}
-
-::: notes
-but for me and I think many of us at posit, much of the answer has to do with a sense of curiosity and exploration
+and there are many answers. I'm going to talk about one.
 :::
 
 ## {#exploration}
@@ -428,10 +418,16 @@ AI is a [continuation]{.accent} of our work to find [new ways to explore data]{.
 :::
 
 ::: notes
-But AI is also a continuation of work that Posit and this community have always done. We are curious about new tools: how they work, what they make possible, and we turn drive into tools that open up new worlds of analysis. 
-
-all three point in the same direction: we are going to keep going down the LLM path. so then the question becomes... 
+we are curious, motivated by curiosity
+about how LLMs work, about how to build around LLMs to make them useful, and how to turn them into tools that open up new worlds of analysis for all of you
 :::
+
+# {#transition-to-whats-changed .paper-slide}
+
+::: notes
+I also want to talk about what's changed since a year ago
+:::
+
 
 ## The models got better {#models-got-better .beat-slide}
 
@@ -759,6 +755,18 @@ How do we make AI-involved analysis correct?
 
 ## {#human-in-the-loop-intro}
 
+# {#human-in-the-loop .paper-slide .diagram-slide}
+
+{{< include includes/hitl-diagram.html >}}
+
+::: notes
+- Here’s a common thought about AI
+  - It’s untrustworthy, but useful.
+  - To make it trustworthy, we need people to verify the output from or supervise agents.
+
+it is an intuitively appealing division of labor. the agent does what it's good at, the human provides the judgment to keep it from going off the rails.
+:::
+
 ## {#slap-a-human-on-it .paper-slide}
 
 ::: {style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;"}
@@ -775,18 +783,6 @@ I like to call this simplistic division of labor the "slap a human on it" approa
 there's only one problem: this simple view is not how these systems work.
 
 you can't assume that just because a human is present and technically "in the loop," you've solved the issue of correctness by asking them to verify something.
-:::
-
-# {#human-in-the-loop .paper-slide .diagram-slide}
-
-{{< include includes/hitl-diagram.html >}}
-
-::: notes
-- Here’s a common thought about AI
-  - It’s untrustworthy, but useful.
-  - To make it trustworthy, we need people to verify the output from or supervise agents.
-
-it is an intuitively appealing division of labor. the agent does what it's good at, the human provides the judgment to keep it from going off the rails.
 :::
 
 # {#user-responsibility background-image="figures/databot-flotation-beach.png" background-size="cover" background-position="center"}
@@ -823,7 +819,7 @@ Adding a human [does not guarantee]{.accent} a better result.
 :::
 
 ::: {.footer .hitl-footer}
-Vaccaro et al. (2024); Parasuraman and Manzey (2010); Anthropic (2026)
+[Vaccaro et al. (2024)](https://doi.org/10.1038/s41562-024-02024-1); [Crootof et al. (2023)](https://scholarship.law.vanderbilt.edu/vlr/vol76/iss2/2/); Anthropic (2026) [[1]](https://claude.com/blog/auto-mode-default-in-claude-code) [[2]](https://www.anthropic.com/engineering/claude-code-auto-mode)
 :::
 
 ::: notes
@@ -843,9 +839,10 @@ think about your own coding agent. when it asks you to approve a command, how of
 trust, timing, cognitive load, social cues, the interface, and the amount of information all affect how someone decides whether code or an action is correct or safe
 
 full citations, in case anyone asks:
-- Vaccaro, M., Almaatouq, M., & Malone, T. W. (2024). "When combinations of humans and AI are useful: A systematic review and meta-analysis." Nature Human Behaviour, 8, 2296–2309.
-- Parasuraman, R., & Manzey, D. H. (2010). "Complacency and bias in human use of automation: An attentional integration." Human Factors, 52(3), 381–410.
-- Hughes, J. & Anthropic (2026). "How we built Claude Code auto mode: a safer way to skip permissions." anthropic.com/engineering/claude-code-auto-mode
+- Vaccaro, M., Almaatouq, A., & Malone, T. W. (2024). ["When combinations of humans and AI are useful: A systematic review and meta-analysis."](https://doi.org/10.1038/s41562-024-02024-1) *Nature Human Behaviour, 8*, 2293–2303.
+- Crootof, R., Kaminski, M. E., & Price, W. N., II. (2023). ["Humans in the Loop."](https://scholarship.law.vanderbilt.edu/vlr/vol76/iss2/2/) *Vanderbilt Law Review, 76*, 429.
+- Hughes, J. (2026, March 25). ["How we built Claude Code auto mode: A safer way to skip permissions."](https://www.anthropic.com/engineering/claude-code-auto-mode) Anthropic.
+- Phillippi, C. (2026, August 7). ["Auto mode is now the default in Claude Code for Pro, Max, and Team plans."](https://claude.com/blog/auto-mode-default-in-claude-code) Claude by Anthropic.
 :::
 
 # {#people-are-not-fixed .statement-slide .paper-slide}
@@ -1319,7 +1316,40 @@ https://pos.it/clinical-trials-agent
   <source src="figures/clinical-trials-agent-demo.mp4" type="video/mp4">
 </video>
 
-# {#conclusion .paper-slide}
+:::footer
+https://pos.it/clinical-trials-agent
+:::
+
+# {#conclusion .beat-slide .conclusion-thesis-slide}
+
+It's (still) very bad to be wrong
+
+::: notes
+with vibe analysis, it's not just that the answers might be wrong, or that you can't tell how they were arrived at
+it's also that we might just kind of tolerate this shift in correctness
+this was always a problem and we've always made tools that push you towards correctness
+but it's now incredibly easy to get a wrong-looking answer that has the feel and ephemera of a right one
+:::
+
+# {#conclusion-infrastructure .beat-slide .conclusion-thesis-slide}
+
+::: {.conclusion-thesis}
+AI has expanded who can get answers from data.
+
+That changes the infrastructure we need for correct, transparent, and reproducible analysis.
+:::
+
+::: notes
+and I think we find this really motivating
+AI has expanded who can get answers from data
+and that changes the infrastructure we need for correct, transparent, and reproducible analysis
+we care about correctness, know that you still need to be able to trace how an answer was arrived at and reproduce it
+and so we make tools for that
+with commons specifically, we want data teams to be able to hand someone who otherwise would have done a vibe analysis a commons agent and have them not feel a loss in convenience and get a boost in correctness.
+
+we need all of you data people to build that infrastructure
+commons is the package that can help you do that
+:::
 
 ## {#looking-forward .header-slide .blue-slide}
 
@@ -1380,3 +1410,7 @@ Learn more at Joe Cheng's talk: _Lanier Ballroom A&F, Tuesday at 3:20_
   </div>
 </div>
 ```
+
+::: notes
+we will be in the lounge
+:::
