@@ -1552,17 +1552,17 @@ $link-color: color("pink");
 }
 
 .reveal .month-later-window .history-tool-run.visible {
-  animation: history-tool-run-out 0.25s ease-out 2.45s forwards;
+  animation: history-tool-run-out 0.25s ease-out 2.95s forwards;
 }
 
 .reveal .month-later-window .tool-run.history-tool-run.visible .agent-thinking {
-  animation: agent-thinking-out 0.2s ease-out 2.28s forwards;
+  animation: agent-thinking-out 0.2s ease-out 2.78s forwards;
 }
 
 .reveal .slides section .month-later-window .history-missing.fragment.visible {
   opacity: 0;
   transform: translateY(8px);
-  animation: result-turn-in 0.3s ease-out 2.58s forwards;
+  animation: result-turn-in 0.3s ease-out 3.08s forwards;
 }
 
 .reveal .month-later-window .agent-thinking {
@@ -1726,6 +1726,22 @@ $link-color: color("pink");
   animation: tool-check-in 0.22s ease-out calc(var(--tool-delay) + 1.02s) forwards;
 }
 
+.reveal .history-tool-run.visible .history-file-check .tool-spinner {
+  animation: tool-spin 0.55s linear calc(var(--tool-delay) + 0.12s) 3, tool-spinner-out 0.12s linear calc(var(--tool-delay) + 1.5s) forwards;
+}
+
+.reveal .history-tool-run.visible .history-file-check .tool-check {
+  animation-delay: calc(var(--tool-delay) + 1.52s);
+}
+
+.reveal section#site-traffic-recreated .tool-run:not(.history-tool-run).visible .tool-spinner {
+  animation: tool-spin 0.55s linear calc(var(--tool-delay) + 0.12s) 3, tool-spinner-out 0.12s linear calc(var(--tool-delay) + 1.5s) forwards;
+}
+
+.reveal section#site-traffic-recreated .tool-run:not(.history-tool-run).visible .tool-check {
+  animation-delay: calc(var(--tool-delay) + 1.52s);
+}
+
 .reveal .result-turn p {
   margin: 0 0 7px;
   color: #344550;
@@ -1845,6 +1861,46 @@ $link-color: color("pink");
 
 .reveal .slow-tool-calls .result-turn.visible .chart-end {
   animation-delay: 5s;
+}
+
+.reveal .slides section#site-traffic-analysis .tool-run.visible .agent-thinking {
+  animation-delay: 6.4s;
+}
+
+.reveal .slides section#site-traffic-analysis .result-turn.fragment.visible {
+  animation-delay: 6.75s;
+}
+
+.reveal section#site-traffic-analysis .result-turn.visible .chart-area {
+  animation-delay: 7s;
+}
+
+.reveal section#site-traffic-analysis .result-turn.visible .chart-line {
+  animation-delay: 6.85s;
+}
+
+.reveal section#site-traffic-analysis .result-turn.visible .chart-end {
+  animation-delay: 8.05s;
+}
+
+.reveal .slides section#site-traffic-recreated .tool-run:not(.history-tool-run).visible .agent-thinking {
+  animation-delay: 5.05s;
+}
+
+.reveal .slides section#site-traffic-recreated .result-turn.fragment.visible {
+  animation-delay: 5.2s;
+}
+
+.reveal section#site-traffic-recreated .result-turn.visible .chart-area {
+  animation-delay: 5.45s;
+}
+
+.reveal section#site-traffic-recreated .result-turn.visible .chart-line {
+  animation-delay: 5.3s;
+}
+
+.reveal section#site-traffic-recreated .result-turn.visible .chart-end {
+  animation-delay: 6.5s;
 }
 
 @keyframes agent-pulse {

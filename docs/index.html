@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-57d12b60e25b36cc60eed0dfcf6f0817.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-9a9a5117186783f844fbeeafc87bbd22.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -169,7 +169,7 @@
               <span><strong>Querying warehouse</strong><small>analytics.pageviews</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
             </div>
-            <div class="tool-card" style="--tool-delay: 3.5s">
+            <div class="tool-card" style="--tool-delay: 4.5s">
               <span class="tool-card-icon">∿</span>
               <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
               <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
@@ -239,7 +239,7 @@
           <span><strong>Searching conversations</strong><small>site traffic chart</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 1.25s">
+        <div class="tool-card history-file-check" style="--tool-delay: 1.25s">
           <span class="tool-card-icon">◫</span>
           <span><strong>Checking generated files</strong><small>temporary workspace</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
@@ -264,12 +264,12 @@
           <span><strong>Searching workspace</strong><small>web analytics</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 1.25s">
+        <div class="tool-card" style="--tool-delay: 1.75s">
           <span class="tool-card-icon">◫</span>
           <span><strong>Querying warehouse</strong><small>analytics.sessions</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
         </div>
-        <div class="tool-card" style="--tool-delay: 2.5s">
+        <div class="tool-card" style="--tool-delay: 3.5s">
           <span class="tool-card-icon">∿</span>
           <span><strong>Calculating daily visits</strong><small>last 90 days</small></span>
           <span class="tool-progress"><i class="tool-spinner"></i><i class="tool-check">✓</i></span>
@@ -320,6 +320,24 @@
           display:block!important;
       }</style></aside>
 </section>
+<section id="test-set" class="slide level2">
+<h2></h2>
+
+<img data-src="figures/rogue-analysis-in-cursor.png" class="rounded r-stretch"><aside class="notes">
+<p>This is something that we’ve seen quite a bit internally at Posit, and also with many of the organizations we work with. It’s becoming normal to vibe-analyze data.</p>
+<p>The idea for this hypothetical came from this hilariously-titled episode of The Test Set podcast.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="convenience-versus-correctness" class="slide level2 quote-slide paper-slide">
 <h2></h2>
 <blockquote>
@@ -329,7 +347,7 @@ Joe Cheng (CTO @ Posit)
 </footer>
 </blockquote>
 <aside class="notes">
-<p>We’ve seen situations like this internally and with the organizations we work with. Posit’s CTO recently summarized it like so:</p>
+<p>Posit’s CTO recently summarized this trend like so:</p>
 <p>It is true that AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.</p>
 <p>It just so happened that Joe said this a month ago, but he could have said it 6/7 years ago (ayyy) and it would still have been true.</p>
 <style type="text/css">
@@ -391,7 +409,7 @@ Joe Cheng (CTO @ Posit)
 <section id="rstudio-project-blog" class="slide level2">
 <h2></h2>
 <div class="fragment">
-<p><img data-src="figures/rstudio-blog.png" style="display: block; margin: 0 auto;" height="650"></p>
+<p><img data-src="figures/rstudio-blog.png" style="display: block; margin: 0 auto;" height="700"></p>
 <aside class="notes">
 <p>I bring these examples up to say that there have always been threats to correctness in data analysis. This is why Posit was founded; correctness in high-stakes data analysis has always been our thing. But our stance is not “you need to forgo convenience in favor of correctess.”</p>
 <p>I was doing some research for this talk when I came across this old weblog…</p>
@@ -445,7 +463,7 @@ JJ Allaire (Founder @ Posit), 2011
 <div class="circle-pair circle-pair-animated" aria-hidden="true">
 <span class="circle periwinkle-circle"></span><span class="circle orange-circle"></span><span class="fragment circle-overlap-trigger" data-fragment-index="0"></span>
 </div>
-<div class="cc-text fragment fade-up" data-fragment-index="1">
+<div class="cc-text fragment fade-up" data-fragment-index="0">
 Correct and convenient
 </div>
 </div>
@@ -1115,10 +1133,14 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section>
+<section id="posit-assistant-web-fetch-start" class="slide level2">
+<h2></h2>
+<p><img data-src="figures/01-pa-demo-webfetch-first-frame.png" class="rounded" style="width:100.0%"></p>
+</section>
 <section id="posit-assistant-web-fetch" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-<source src="figures/01-pa-demo-webfetch.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/01-pa-demo-webfetch-a.mp4">
 </video>
 <aside class="notes">
 <p>I’m in Positron, with Posit Assistant pulled up on the left hand side and a live R session. I’ll start off by asking the agent about R packages that could help me grab data on flights.</p>
@@ -1136,10 +1158,16 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section>
+<section id="posit-assistant-web-fetch-b" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/01-pa-demo-webfetch-b.mp4">
+</video>
+</section>
 <section id="posit-assistant-docs" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-<source src="figures/02-pa-demo-docs.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/02-pa-demo-docs-a.mp4">
 </video>
 <aside class="notes">
 <p>It can read documentation (in the same way that you would, too)</p>
@@ -1156,10 +1184,16 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section>
+<section id="posit-assistant-docs-b" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/02-pa-demo-docs-b.mp4">
+</video>
+</section>
 <section id="posit-assistant-clean-data" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-<source src="figures/03-pa-demo-clean-data.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/03-pa-demo-clean-data-a.mp4">
 </video>
 <aside class="notes">
 <ul>
@@ -1179,10 +1213,28 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section>
+<section id="posit-assistant-clean-data-b" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/03-pa-demo-clean-data-b.mp4">
+</video>
+</section>
+<section id="posit-assistant-clean-data-c" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/03-pa-demo-clean-data-c.mp4">
+</video>
+</section>
+<section id="posit-assistant-clean-data-d" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/03-pa-demo-clean-data-d.mp4">
+</video>
+</section>
 <section id="posit-assistant-carriers" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-<source src="figures/05-pa-demo-carriers.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/05-pa-demo-carriers-a.mp4">
 </video>
 <aside class="notes">
 <p>You can see plots</p>
@@ -1199,9 +1251,21 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section>
+<section id="posit-assistant-carriers-b" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/05-pa-demo-carriers-b.mp4">
+</video>
+</section>
+<section id="posit-assistant-carriers-c" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/05-pa-demo-carriers-c.mp4">
+</video>
+</section>
 <section id="posit-assistant-report" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
 <source src="figures/06-pa-demo-report.mp4">
 </video>
 <aside class="notes">
@@ -1220,7 +1284,7 @@ Can models interpret plots that contradict their expectations?
 </section>
 <section id="posit-assistant-model-cost" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
 <source src="figures/08-pa-demo-model-cost.mp4">
 </video>
 <aside class="notes">
@@ -1397,10 +1461,14 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section>
+<section id="commons-trusted-calculation-start" class="slide level2">
+<h2></h2>
+<p><img data-src="figures/commons-01-traffic-trend-first-frame.png" class="rounded" style="width:100.0%"></p>
+</section>
 <section id="commons-trusted-calculation" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-<source src="figures/commons-01-traffic-trend.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-01-traffic-trend-a.mp4">
 </video>
 <aside class="notes">
 <p>let’s see how the VP’s analysis would work with a commons agent</p>
@@ -1418,10 +1486,28 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section>
+<section id="commons-trusted-calculation-b" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-01-traffic-trend-b.mp4">
+</video>
+</section>
+<section id="commons-trusted-calculation-c" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-01-traffic-trend-c.mp4">
+</video>
+</section>
+<section id="commons-trusted-calculation-d" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-01-traffic-trend-d.mp4">
+</video>
+</section>
 <section id="commons-context-citations" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-<source src="figures/commons-02-page-views.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-02-page-views-a.mp4">
 </video>
 <aside class="notes">
 <p>However, its unlikely that this trusted code will cover all questions a user might have. For these situations, the agent can write custom r, python, or sql.</p>
@@ -1440,10 +1526,16 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section>
+<section id="commons-context-citations-b" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-02-page-views-b.mp4">
+</video>
+</section>
 <section id="commons-lower-trust-answer" class="slide level2">
 <h2></h2>
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-<source src="figures/commons-03-most-visits.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-03-most-visits-a.mp4">
 </video>
 <aside class="notes">
 <p>There’s one more possible path, which is that the model cannot find trusted context to justify its approach. In this case, we mark the answer with this little yellow tag, which lets the user know that this answer should be considered less trusted.</p>
@@ -1459,6 +1551,12 @@ Can models interpret plots that contradict their expectations?
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="commons-lower-trust-answer-b" class="slide level2">
+<h2></h2>
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay="" tabindex="0" aria-label="Click to play or pause">
+<source src="figures/commons-03-most-visits-b.mp4">
+</video>
 </section>
 <section id="commons-trust-flow" class="slide level2 trust-flow-slide paper-slide">
 <h2></h2>
@@ -1547,14 +1645,13 @@ Can models interpret plots that contradict their expectations?
           display:block!important;
       }</style></aside>
 </section></section>
-<section id="commons-momentous" class="title-slide slide level1 beat-slide center">
+<section id="commons-correctness" class="title-slide slide level1 statement-slide paper-slide center">
 <h1></h1>
-<div class="momentous-row">
-<p><img data-src="figures/commons-hex.png" class="" alt="Commons logo"></p>
-<p><a href="https://pos.it/commons">pos.it/commons</a></p>
+<div class="statement regular-weight">
+<p>Help the agent be correct <span class="fragment"><strong>with trusted calculations and context</strong></span><br><br> Make it less bad when the agent is wrong <span class="fragment"><strong>by signaling trust and introducing feedback loops</strong></span></p>
 </div>
 <aside class="notes">
-<p>thank you and momentous feelings</p>
+<p>Let’s revisit those guidelines one more time.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1569,13 +1666,14 @@ Can models interpret plots that contradict their expectations?
 </section>
 
 <section>
-<section id="commons-correctness" class="title-slide slide level1 statement-slide paper-slide center">
+<section id="commons-momentous" class="title-slide slide level1 beat-slide center">
 <h1></h1>
-<div class="statement regular-weight">
-<p>Help the agent be correct <span class="fragment"><strong>with trusted calculations and context</strong></span><br><br> Make it less bad when the agent is wrong <span class="fragment"><strong>by signaling trust and introducing feedback loops</strong></span></p>
+<div class="momentous-row">
+<p><img data-src="figures/commons-hex.png" class="" alt="Commons logo"></p>
+<p><a href="https://pos.it/commons">pos.it/commons</a></p>
 </div>
 <aside class="notes">
-<p>Let’s revisit those guidelines one more time.</p>
+<p>thank you and momentous feelings</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
