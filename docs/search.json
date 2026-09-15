@@ -354,42 +354,42 @@
     "href": "index.html#bluffbench-counterintuitive-plot",
     "title": "",
     "section": "",
-    "text": "Can models interpret plots that contradict their expectations?\n\n\naround a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one of well known datasets if youre thinking uh thats not right. you are correct.\nthis is what we wanted to know: would models correctly interpret plots that contradicted their expectations?"
+    "text": "Model: “There’s a strong positive relationship between carat and price!”\n\n\nCan models interpret plots that contradict their expectations?\n\n\naround a year ago we did an experiment we wanted to know how well models interpret plots we showed them plots like this one, which plots diamonds and asked them to interpret them and they said stuff like this: and that sounds good until you release: that is not …\nthis is what we wanted to know: would models correctly interpret plots that contradicted their expectations?"
   },
   {
     "objectID": "index.html#bluffbench-november-2025",
     "href": "index.html#bluffbench-november-2025",
     "title": "",
     "section": "November 2025",
-    "text": "November 2025\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench\n\n\nWe tried a range of interventions to improve these scores, but none moved them much. Even when a model noticed during its reasoning that the association did not look as expected, it often still reported the expected relationship."
+    "text": "November 2025\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench\n\n\nWe tried a range of interventions to improve these scores, but none moved them much."
   },
   {
     "objectID": "index.html#bluffbench-september-2026",
     "href": "index.html#bluffbench-september-2026",
     "title": "",
     "section": "September 2026",
-    "text": "September 2026\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench"
+    "text": "September 2026\n\n\n\n\n\n\n\n\n\n\n\n\nposit-dev.github.io/bluffbench\n\n\nuntil we waited 6 months\nthese are results from now"
   },
   {
     "objectID": "index.html#frontier-model-not-enough",
     "href": "index.html#frontier-model-not-enough",
     "title": "",
     "section": "Correct analysis still takes more than a good model.",
-    "text": "Correct analysis still takes more than a good model."
+    "text": "Correct analysis still takes more than a good model.\n\nbut this doesn’t mean that data science is solved good analysis requires more than just a good model and a dataset\nafter we did that experiment, we wanted to know something else: can models spot data quality issues in visualizations?"
   },
   {
     "objectID": "index.html#bluffbench2-data-artifact",
     "href": "index.html#bluffbench2-data-artifact",
     "title": "",
     "section": "",
-    "text": "github.com/posit-dev/bluffbench2\n\n\nbluffbench2 tests whether models notice subtle data quality issues in visualizations.\ntake a look at this plot. what do you notice?\none thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.\nwe wanted to see if models would be able to pick up on this kind of subtle visual artifact"
+    "text": "github.com/posit-dev/bluffbench2\n\n\nwe showed them plots that look like this take a look at this plot. what do you notice?\none thing that flags my attention is these points through the middle of the cloud that fall exactly on a straight line. this is something i might want to dig into further and make sure nothing strange was happening in the underlying data.\nwe wanted to see if models would be able to pick up on this kind of subtle visual artifact"
   },
   {
     "objectID": "index.html#bluffbench2-results",
     "href": "index.html#bluffbench2-results",
     "title": "",
     "section": "",
-    "text": "github.com/posit-dev/bluffbench2\n\n\neven frontier models don’t do very well"
+    "text": "github.com/posit-dev/bluffbench2\n\n\neven frontier models don’t do very well so they’ve gotten better, but it’s not like they’ve solved data science and don’t make mistakes they still fail at this task and others that are likely to come up in data science workflows\nbut there’s another problem"
   },
   {
     "objectID": "index.html#llms-and-data-exploration",
@@ -403,7 +403,7 @@
     "href": "index.html#mission-ocean",
     "title": "",
     "section": "",
-    "text": "for myself and i imagine for many of you, a sense of exploration and curiosity are what got us here in the first place.\nMaybe it was curiosity about a scientific field that led you to data analysis, or curiosity about the tools themselves, how computers work, or statistics.\nBut without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it.\nlearning the tidyverse, and data science…these tools gave me a way to investigate any topic and learn about the world."
+    "text": "before this, I worked in data science education. I taught people data science… for a lot of people, including myself, curiosity is what gets them into this\nMaybe it was curiosity about a scientific field that led you to data analysis (doing a PhD), or curiosity about the tools themselves, how computers work, or statistics.\nBut without the right tools, data can be impenetrable. As an undergraduate with knowledge of statistics and some R as an undergraduate, I felt like I was looking at an ocean from above.You know there is an incredible amount there, but you cannot see it.\nlearning the tidyverse, and data science…these tools actually gave me a way to investigate my data"
   },
   {
     "objectID": "index.html#below-the-surface",
@@ -417,7 +417,7 @@
     "href": "index.html#slap-a-human-on-it",
     "title": "",
     "section": "",
-    "text": "*the slap a human on it approach\n\n\n\nthis sounds so nice! the human is there to prevent mistakes and all will be good. so we should just apply this anywhere we see a problem.\nI like to call this simplistic division of labor the “slap a human on it” approach.\nthere’s only one problem: this simple view is not how these systems work.\nyou can’t assume that just because a human is present and technically “in the loop,” you’ve solved the issue of correctness by asking them to verify something."
+    "text": "*the slap a human on it approach\n\n\n\nthis sounds so nice! it’s really tempting to just do this everything and call it a day\nthe human is there to prevent mistakes and all will be good.\nI like to call this simplistic division of labor the “slap a human on it” approach. we’re not really thinking about what the human will do or how exactly, but we are glad they are there and just hope for the best\nand I’m being a bit facetious but …"
   },
   {
     "objectID": "index.html#posit-assistant",
@@ -487,7 +487,7 @@
     "href": "index.html#vp-site-traffic-reminder",
     "title": "",
     "section": "",
-    "text": "how is traffic trending for our site?\n      \n    \n    \n      \n        Daily visits are down 64% over the last 90 days.\n        \n          Daily site visits−64%\n          \n            \n              \n                \n                \n              \n            \n            \n              \n              \n            \n            \n              60k40k20k\n              90 days ago45 days agoToday\n            \n            \n            \n            \n          \n        \n      \n    \n  \n\n\nI want to take a step back and revisit this conversation with the VP.\nIn the same way that convenience and correctness can’t be at battle, you can’t be at battle with your VP.\nThe VP had good intentions. They were driven by that same sense of curiosity and exploration that we are. Like we would, they reached for the tool that was accessible to them.\nUnfortunately, the answer they got was wrong.\nI mentioned earlier that this isn’t the table that the data scientists usually use to measure site traffic. The data scientists calculate that metric against a different table, and the code that they use to do lives in a semantic view in their database."
+    "text": "how is traffic trending for our site?\n      \n    \n    \n      \n        Daily visits are down 64% over the last 90 days.\n        \n          Daily site visits−64%\n          \n            \n              \n                \n                \n              \n            \n            \n              \n              \n            \n            \n              60k40k20k\n              90 days ago45 days agoToday\n            \n            \n            \n            \n          \n        \n      \n    \n  \n\n\nlet’s go back to that vibe-analyzing VP easy to say… but they are curious too! they had a question and reached for the tool that was accessible to them.\nUnfortunately, the answer they got was wrong.\nThis isn’t the table that the data scientists usually use to measure site traffic…they have code they often use to analyze site traffic that gives them the correct results, and they vet and maintain this"
   },
   {
     "objectID": "index.html#commons-trusted-calculation",
@@ -529,27 +529,27 @@
     "href": "index.html#commons-beyond-bi",
     "title": "",
     "section": "Not just BI",
-    "text": "Not just BI\n\nwe showed you commons in the example of the vp but commons is not just for bi"
+    "text": "Not just BI\n\nwe showed you commons in the example of the vp but commons is not just for bi it’s for anyone"
   },
   {
     "objectID": "index.html#commons-examples",
     "href": "index.html#commons-examples",
     "title": "",
     "section": "",
-    "text": "commons creator\n\n\ncommons user\n\n\nExample question\n\n\n\n\n\n\nBiostatistician\n\n\nMD\n\n\n“Compare treatment groups.”\n\n\n\n\nUX researcher\n\n\nProduct manager\n\n\n“Summarize experiment results and explain which segments changed.”\n\n\n\n\nPolicy analyst\n\n\nProgram lead\n\n\n“Simulate the budget impact of this policy change.”\n\n\n\n\n\n\nits for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters"
+    "text": "commons creator\n\n\ncommons user\n\n\nExample question\n\n\n\n\n\n\nBiostatistician\n\n\nMD\n\n\n“Compare treatment groups.”\n\n\n\n\nUX researcher\n\n\nProduct manager\n\n\n“Summarize experiment results and explain which segments changed.”\n\n\n\n\nPolicy analyst\n\n\nProgram lead\n\n\n“Simulate the budget impact of this policy change.”\n\n\n\n\n\n\nits for any data scientist or data analyst who works with non-data people who still want trustworthy answers from their data this could be … including where correctness really matters and also cases where you might run really complex code"
   },
   {
     "objectID": "index.html#clinical-trials-agent-demo",
     "href": "index.html#clinical-trials-agent-demo",
     "title": "",
-    "section": "(Draft)",
-    "text": "(Draft)"
+    "section": "",
+    "text": "pos.it/clinical-trials-agent"
   },
   {
     "objectID": "index.html#looking-forward",
     "href": "index.html#looking-forward",
     "title": "",
     "section": "",
-    "text": "Looking forward\n\n\ndatabot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else"
+    "text": "Looking forward\n\n\ndatabot 2025 we were pushing the frontier"
   }
 ]
