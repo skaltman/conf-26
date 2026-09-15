@@ -1020,7 +1020,7 @@ The agent shows restraint in interpretation; is concerned about sample sizes bef
 
 ## {#posit-assistant-report}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
   <source src="figures/06-pa-demo-report.mp4">
 </video>
 
@@ -1030,7 +1030,7 @@ Slash commands (has a bunch of specialized skills) + can write quarto reports
 
 ## {#posit-assistant-model-cost}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
   <source src="figures/08-pa-demo-model-cost.mp4">
 </video>
 
