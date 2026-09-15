@@ -666,6 +666,28 @@ $link-color: color("pink");
   transform: translate(-50%, -50%);
 }
 
+.reveal .slide .plot-model-quote {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  max-width: 80%;
+  padding: 20px 30px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 0.35rem 1rem rgb(0 0 0 / 14%);
+  color: color("pink");
+  font-size: 36px;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: left;
+  transform: translate(-50%, -50%);
+
+  strong {
+    color: color("reference-navy");
+  }
+}
+
 /* Momentous slide: commons hex next to big link */
 
 .reveal .slide .momentous-row {
