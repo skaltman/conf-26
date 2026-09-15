@@ -305,7 +305,7 @@
     "href": "index.html#convenience-versus-correctness",
     "title": "",
     "section": "",
-    "text": "In the battle between convenience and correctness, convenience is winning.\n\nJoe Cheng (CTO @ Posit)\n\n\n\nWe’ve seen situations like this internally and with the organizations we work with. Posit’s CTO recently summarized it like so:\nIt is true that AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.\nIt just so happened that Joe said this a month ago, but he could have said it 6/7 years ago (ayyy) and it would still have been true."
+    "text": "In the battle between convenience and correctness, convenience is winning.\n\nJoe Cheng (CTO @ Posit)\n\n\n\nPosit’s CTO recently summarized this trend like so:\nIt is true that AI has largely been a threat to correctness. A broader population of people can now convincingly do data analysis.\nIt just so happened that Joe said this a month ago, but he could have said it 6/7 years ago (ayyy) and it would still have been true."
   },
   {
     "objectID": "index.html#conviviality-spreadsheet-error",
@@ -551,5 +551,12 @@
     "title": "",
     "section": "",
     "text": "Looking forward\n\n\ndatabot 2025 we were pushing the frontier as models get better, easy access code becomes less important leaves room for something else"
+  },
+  {
+    "objectID": "index.html#test-set",
+    "href": "index.html#test-set",
+    "title": "",
+    "section": "",
+    "text": "This is something that we’ve seen quite a bit internally at Posit, and also with many of the organizations we work with. It’s becoming normal to vibe-analyze data.\nThe idea for this hypothetical came from this hilariously-titled episode of The Test Set podcast."
   }
 ]

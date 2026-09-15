@@ -922,10 +922,14 @@ The first time I felt this way, I had been asked to use R to understand what aff
 In demoing Posit Assistant, I thought I might revisit that moment with you. 
 :::
 
+## {#posit-assistant-web-fetch-start}
+
+![](figures/01-pa-demo-webfetch-first-frame.png){.rounded .nostretch width="100%"}
+
 ## {#posit-assistant-web-fetch}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/01-pa-demo-webfetch.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/01-pa-demo-webfetch-a.mp4">
 </video>
 
 :::notes
@@ -936,10 +940,16 @@ I'm in Positron, with Posit Assistant pulled up on the left hand side and a live
 It can do normal coding agent stuff
 :::
 
+## {#posit-assistant-web-fetch-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/01-pa-demo-webfetch-b.mp4">
+</video>
+
 ## {#posit-assistant-docs}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/02-pa-demo-docs.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/02-pa-demo-docs-a.mp4">
 </video>
 
 :::notes
@@ -948,10 +958,16 @@ It can read documentation (in the same way that you would, too)
 Also, note that it preferred to keep data in the file system
 :::
 
+## {#posit-assistant-docs-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/02-pa-demo-docs-b.mp4">
+</video>
+
 ## {#posit-assistant-clean-data}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/03-pa-demo-clean-data.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/03-pa-demo-clean-data-a.mp4">
 </video>
 
 :::notes
@@ -960,10 +976,28 @@ Also, note that it preferred to keep data in the file system
 * Cleaning script is persisted
 :::
 
+## {#posit-assistant-clean-data-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/03-pa-demo-clean-data-b.mp4">
+</video>
+
+## {#posit-assistant-clean-data-c}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/03-pa-demo-clean-data-c.mp4">
+</video>
+
+## {#posit-assistant-clean-data-d}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/03-pa-demo-clean-data-d.mp4">
+</video>
+
 ## {#posit-assistant-carriers}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/05-pa-demo-carriers.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/05-pa-demo-carriers-a.mp4">
 </video>
 
 :::notes
@@ -972,9 +1006,21 @@ You can see plots
 The agent shows restraint in interpretation; is concerned about sample sizes before interpreting this anomoly in the plot
 :::
 
+## {#posit-assistant-carriers-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/05-pa-demo-carriers-b.mp4">
+</video>
+
+## {#posit-assistant-carriers-c}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/05-pa-demo-carriers-c.mp4">
+</video>
+
 ## {#posit-assistant-report}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
   <source src="figures/06-pa-demo-report.mp4">
 </video>
 
@@ -984,7 +1030,7 @@ Slash commands (has a bunch of specialized skills) + can write quarto reports
 
 ## {#posit-assistant-model-cost}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
   <source src="figures/08-pa-demo-model-cost.mp4">
 </video>
 
@@ -1104,10 +1150,14 @@ commons helps data scientists build trustworthy data agents for their collaborat
 It's an open source R and Python package built on `ellmer` / `chatlas` and `shinychat`. You can use it with whatever model from whatever provider you want.
 :::
 
+## {#commons-trusted-calculation-start}
+
+![](figures/commons-01-traffic-trend-first-frame.png){.rounded .nostretch width="100%"}
+
 ## {#commons-trusted-calculation}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/commons-01-traffic-trend.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend-a.mp4">
 </video>
 
 ::: notes
@@ -1119,10 +1169,28 @@ finds and runs the data scientist's site traffic calculation
 the answer is marked as verified to signify that it used vetted code
 :::
 
+## {#commons-trusted-calculation-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend-b.mp4">
+</video>
+
+## {#commons-trusted-calculation-c}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend-c.mp4">
+</video>
+
+## {#commons-trusted-calculation-d}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-01-traffic-trend-d.mp4">
+</video>
+
 ## {#commons-context-citations}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/commons-02-page-views.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-02-page-views-a.mp4">
 </video>
 
 ::: notes
@@ -1137,10 +1205,16 @@ Finally, when it presents an answer, it can provides a citation to that context.
 
 :::
 
+## {#commons-context-citations-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-02-page-views-b.mp4">
+</video>
+
 ## {#commons-lower-trust-answer}
 
-<video class="rounded click-to-toggle" width="100%" preload="auto" tabindex="0" aria-label="Click to play or pause">
-  <source src="figures/commons-03-most-visits.mp4">
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-03-most-visits-a.mp4">
 </video>
 
 ::: notes
@@ -1148,6 +1222,12 @@ There's one more possible path, which is that the model cannot find trusted cont
 
 This is how we've chosen to balance convenience and correctness. The tool has to feel convenient enough that the user actually wants to reach for it. Basically, it needs to feel like a normal chat. In the situation where we suspect the correctness is similar to a normal coding agent, we signal to the user that they ought to be more skeptical of this answer.
 :::
+
+## {#commons-lower-trust-answer-b}
+
+<video class="rounded click-to-toggle" width="100%" preload="auto" data-autoplay tabindex="0" aria-label="Click to play or pause">
+  <source src="figures/commons-03-most-visits-b.mp4">
+</video>
 
 ## {#commons-trust-flow .trust-flow-slide .paper-slide}
 
